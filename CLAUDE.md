@@ -20,8 +20,9 @@ touching recipe data and `docs/INGEST.md` for the publishing flow.
 New recipes are **format 3** — follow `docs/RECIPE-SPEC.md` exactly: ingredient ids,
 keyed `portions` when an ingredient is used in more than one place (toddler share
 included), and every instruction references what it uses as `{@id}` / `{@id:key}`.
+The prompt that writes recipes is `docs/RECIPE-PROMPT.md`.
 
-1. Save the v2 HTML (or JSON) as `inbox/<category>-<dish>.html`.
+1. Save the JSON as `inbox/<category>-<dish>.json` (older v2 `.html` still works).
 2. `python3 tools/recipes.py ingest` — fix any ✗ errors it reports (content
    problems go back to the user; don't silently rewrite their recipe).
    Use `--replace` only when the user confirmed replacing an existing recipe.

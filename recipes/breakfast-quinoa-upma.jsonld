@@ -14,6 +14,7 @@
   "recipeIngredient": [
     "1 cup Quinoa, rinsed and soaked",
     "1¾ cups Water",
+    "⅓ cup Water, for her pan",
     "1 tsp Fresh ginger, grated",
     "1–2 (adults) Green chili, slit",
     "2 tbsp Ghee",
@@ -37,7 +38,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Rinse quinoa thoroughly in cold water until it runs clear (removes saponin bitterness)"
+          "text": "Rinse quinoa (1 cup) thoroughly in cold water until it runs clear (removes saponin bitterness)"
         },
         {
           "@type": "HowToStep",
@@ -81,7 +82,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Scoop out vegetables (3–4 tbsp) before adding chili to the main pan"
+          "text": "Scoop out the cooked vegetables (3–4 tbsp) before adding chili to the main pan"
         },
         {
           "@type": "HowToStep",
@@ -93,7 +94,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Mash lightly if needed; add a drop of ghee"
+          "text": "Mash lightly if needed; add ghee (a drop)"
         }
       ]
     },
@@ -107,7 +108,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add remaining quinoa (rest of the 1 cup) to the tempering pan; stir to coat 1 min"
+          "text": "Add remaining quinoa (¾ cup + 1 tbsp) to the tempering pan; stir to coat 1 min"
         },
         {
           "@type": "HowToStep",

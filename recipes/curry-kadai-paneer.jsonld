@@ -13,24 +13,24 @@
   "keywords": "Paneer · Curry, Meal prep, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
     "3 tbsp Coriander seeds",
-    "2–3 (1 milder) Kashmiri red chilies",
+    "2–3 (1 milder) Kashmiri red chilies (adults)",
     "1½ tsp Fennel seeds (saunf)",
     "4–5 Green cardamoms",
     "3 Cloves",
     "¼ in, max Ceylon cinnamon",
     "1½ tbsp Ghee",
     "400g Fresh tomatoes",
-    "2 tbsp Tomato paste",
+    "3 tbsp Tomato paste",
     "12 Cashews",
     "¼ tsp Salt",
     "400g Paneer, cubed",
     "1½ cups Mixed bell peppers",
     "2 stalks Celery, sliced",
     "1 tbsp Ghee, for tossing",
+    "½ cup Carrot or potato, boiled & diced (toddler only)",
     "1 tbsp Ghee",
     "¼ tsp Hing",
     "1½ tsp Fresh ginger paste",
-    "1 tbsp Tomato paste",
     "½ tsp Kashmiri chili powder",
     "¾ tsp Garam masala",
     "1¼ tsp Salt, adjust",
@@ -47,7 +47,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Add coriander seeds (3 tbsp), Kashmiri chilies (2–3, deseeded), fennel seeds (1½ tsp), cardamoms (4–5), cloves (3), and cinnamon (¼ in — hard limit, don't increase) to a spice grinder; blitz to a fine-ish powder. No need to roast — set aside."
+          "text": "Add coriander seeds (3 tbsp), Kashmiri chilies (2–3) (deseeded), fennel seeds (1½ tsp), cardamoms (4–5), cloves (3) and cinnamon (¼ in, max) (hard limit — don't increase) to a spice grinder; blitz to a fine-ish powder. No need to roast — set aside."
         },
         {
           "@type": "HowToStep",
@@ -55,7 +55,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add tomatoes (400g, chopped) and salt (¼ tsp); once softened (3–4 min), stir in tomato paste (2 tbsp)"
+          "text": "Add chopped tomatoes (400g) and salt (¼ tsp); once softened (3–4 min), stir in tomato paste (2 tbsp)"
         },
         {
           "@type": "HowToStep",
@@ -77,15 +77,15 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add celery (2 stalks, sliced) and bell peppers (1½ cups, cubed); toss constantly 90 sec — charred edges, not steamed"
+          "text": "Add celery (2 stalks) and cubed bell peppers (1½ cups); toss constantly 90 sec — charred edges, not steamed"
         },
         {
           "@type": "HowToStep",
-          "text": "Add paneer (400g, cubed, patted dry); toss 60–90 sec only — do not overcook"
+          "text": "Add paneer (400g), patted dry; toss 60–90 sec only — do not overcook"
         },
         {
           "@type": "HowToStep",
-          "text": "Set aside a small handful of paneer and capsicum separately for the toddler portion"
+          "text": "Set aside paneer (25g) and bell peppers (2 tbsp) separately for the toddler portion"
         },
         {
           "@type": "HowToStep",
@@ -95,7 +95,7 @@
     },
     {
       "@type": "HowToSection",
-      "name": "Bloom hing, build the masala",
+      "name": "Bloom hing, add the base",
       "itemListElement": [
         {
           "@type": "HowToStep",
@@ -111,49 +111,43 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add all the kadai masala (from Step 1); sauté on low-medium 2–3 min until deeply fragrant — don't rush"
+          "text": "Add the blended tomato-cashew paste (from Step 1); sauté 3–4 min until it tightens and ghee separates at the sides"
         }
       ]
     },
     {
       "@type": "HowToSection",
-      "name": "Add the base and simmer",
+      "name": "👶 Toddler portion — pull before the kadai masala goes in",
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Add the blended tomato-cashew paste (from Step 1); sauté 3–4 min until the masala tightens and ghee separates at the sides"
+          "text": "Right now, before the kadai masala, chili powder or garam masala: scoop out ¼ cup of the base — hing, ginger and the tomato-cashew base are all fine for her"
         },
         {
           "@type": "HowToStep",
-          "text": "Pour in water (1½–2 cups) and salt (1¼ tsp, adjust); bring to a boil, then simmer 5 min"
+          "text": "Add the paneer (25g) and capsicum (2 tbsp) set aside earlier, plus boiled diced carrot or potato (½ cup)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Loosen with water (a splash); simmer 1 minute"
         }
       ]
     },
     {
       "@type": "HowToSection",
-      "name": "👶 Toddler portion — pull before chili powder goes in",
+      "name": "Spice, simmer and finish",
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Right now, before chili powder or garam masala go in: scoop out ½ cup of gravy — hing, ginger, and the tomato-cashew base are all fine for her"
+          "text": "Add the ground spice blend (from Step 1) to the adult pan; sauté on low-medium 2–3 min until deeply fragrant — don't rush"
         },
         {
           "@type": "HowToStep",
-          "text": "Add the paneer and capsicum pieces set aside earlier, plus ½ cup boiled diced carrot or potato"
+          "text": "Pour in water (1½–2 cups) and salt (1¼ tsp); bring to a boil, then simmer 5 min"
         },
         {
           "@type": "HowToStep",
-          "text": "Thin with 2 tbsp water if needed; simmer 1 minute"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Spice and finish the gravy",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Add Kashmiri chili powder (½ tsp) and garam masala (¾ tsp) to the adult gravy; simmer 3–5 more min until it thickens and oil floats on top"
+          "text": "Add Kashmiri chili powder (½ tsp) and garam masala (¾ tsp); simmer 3–5 more min until it thickens and oil floats on top"
         },
         {
           "@type": "HowToStep",
@@ -165,37 +159,19 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add the remaining sautéed paneer (rest of the 400g), capsicum (rest of the 1½ cups) and celery (2 stalks) back into the gravy; stir gently to coat"
+          "text": "Add the remaining paneer (375g), capsicum (1¼ cups + 2 tbsp) and celery (2 stalks) back into the gravy; stir gently to coat"
         },
         {
           "@type": "HowToStep",
-          "text": "Turn off the heat; scatter ginger juliennes (½ inch, matchsticks) over the top"
+          "text": "Turn off the heat; scatter ginger juliennes (½ inch) and fresh coriander (3 tbsp) over the top; cover 2 min — the juliennes bloom in residual heat"
         },
         {
           "@type": "HowToStep",
-          "text": "Add fresh coriander (3 tbsp, chopped); cover and rest 2 min — the juliennes bloom in residual heat"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Rest before serving",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Transfer to a serving vessel; rest at least 15 min off heat — this is when paneer absorbs the masala flavors, don't skip"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Serve with fresh roti, paratha, or jeera rice"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Reheats well with a splash of water on the stovetop — don't microwave at high power, it toughens the paneer; keeps 3 days refrigerated"
+          "text": "Rest at least 15 min off heat before serving — this is when paneer absorbs the masala; serve with roti, paratha or jeera rice"
         },
         {
           "@type": "HowToTip",
-          "text": "You'll use just under half the 170g tomato paste can — refrigerate the rest, it keeps 1–2 weeks. The ginger juliennes at the end aren't redundant with the ginger paste earlier — raw and matchstick-cut, they add a fresh, sharp bite the cooked paste doesn't have."
+          "text": "You'll use just under half the 170g tomato paste can — refrigerate the rest, it keeps 1–2 weeks. The ginger juliennes at the end aren't redundant with the ginger paste earlier — raw and matchstick-cut, they add a fresh, sharp bite the cooked paste doesn't have. Keeps 3 days refrigerated; reheat on the stovetop with a splash of water — high-power microwaving toughens the paneer."
         }
       ]
     }

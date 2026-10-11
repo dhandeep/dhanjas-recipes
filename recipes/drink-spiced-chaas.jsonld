@@ -30,29 +30,19 @@
   "recipeInstructions": [
     {
       "@type": "HowToSection",
-      "name": "Blend aromatics",
+      "name": "Blend the chaas",
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Add mint (10–12 leaves), coriander (small handful) and ginger (½ inch) to a blender"
+          "text": "Add mint leaves (10–12), coriander (small handful) and ginger (½ inch) to a blender"
         },
         {
           "@type": "HowToStep",
-          "text": "Add yogurt (¼ cup)"
+          "text": "Add yogurt (¼ cup) and blend until completely smooth"
         },
         {
           "@type": "HowToStep",
-          "text": "Blend until completely smooth"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Mix chaas",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Add remaining yogurt (¾ cup) and chilled water (2 cups)"
+          "text": "Add the remaining yogurt (¾ cup) and chilled water (2 cups)"
         },
         {
           "@type": "HowToStep",
@@ -74,7 +64,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Optional: stir in a tiny pinch of hing (1 pinch) and serve chilled"
+          "text": "Optional: stir in hing (a tiny pinch) and serve chilled"
         }
       ]
     },
@@ -84,7 +74,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Stir green chili (½, minced) and black pepper (1 pinch) into the remaining chaas"
+          "text": "Stir green chili (½) and black pepper (1 pinch) into the remaining chaas"
         },
         {
           "@type": "HowToStep",

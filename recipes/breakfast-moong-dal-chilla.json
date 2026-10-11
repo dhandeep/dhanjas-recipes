@@ -40,17 +40,12 @@
       ]
     },
     {
-      "label": "Fillings (optional)",
+      "label": "Fillings (optional) & cooking",
       "items": [
         {"id": "spinach", "name": "Spinach, finely chopped", "short": "spinach", "amount": "¼ cup"},
         {"id": "capsicum", "name": "Capsicum, finely diced", "short": "capsicum", "amount": "¼ cup"},
         {"id": "paneer", "name": "Paneer, crumbled", "short": "paneer", "amount": "½ cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
-        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander", "amount": "2 tbsp"}
-      ]
-    },
-    {
-      "label": "For cooking",
-      "items": [
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander", "amount": "2 tbsp"},
         {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "1 tsp per chilla", "portions": {"grease": "½ tsp", "drizzle": "½ tsp"}}
       ]
     }

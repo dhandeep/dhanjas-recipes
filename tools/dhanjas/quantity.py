@@ -188,7 +188,13 @@ class Q:
 
 
 def parse_q(text):
-    """The leading quantity of an amount as a Q, or None ('to taste', 'a pinch')."""
+    """The leading quantity of an amount as a Q, or None ('to taste', 'a pinch').
+    Added volumes count in full: '¾ cup + 1 tbsp'."""
+    head, plus, tail = text.partition(" + ")
+    if plus:
+        a, b = parse_q(head), parse_q(tail)
+        if a is not None and b is not None and a.kind == b.kind == "volume" and a.hi is None and b.hi is None:
+            return a + b
     m = TOKEN.match(text.strip().lstrip("~≈ "))
     if not m:
         return None
@@ -247,4 +253,6 @@ def format_q(q):
     if len(lo_parts) == 2 and len(hi_parts) == 2 and "+" not in lo + hi and \
             SINGULAR.get(lo_parts[1], lo_parts[1]) == SINGULAR.get(hi_parts[1], hi_parts[1]):
         return "%s–%s" % (lo_parts[0], hi)
+    if " " not in lo + hi:
+        return "%s–%s" % (lo, hi)      # plain counts / grams: "10–13", "200–250g"
     return "%s – %s" % (lo, hi)

@@ -16,6 +16,7 @@
     "3 cups Water",
     "¾ tsp Turmeric",
     "1 tsp Salt",
+    "3 tbsp Boiled potato, mashed (toddler only)",
     "3 tbsp Ghee",
     "1 tsp Cumin seeds",
     "¼ tsp Hing",
@@ -29,8 +30,7 @@
     "⅓ cup Heavy cream",
     "2 tbsp Butter",
     "Salt, to taste, as needed",
-    "3 tbsp Boiled potato, mashed",
-    "½ tsp Butter, extra"
+    "½ tsp Butter, extra (toddler)"
   ],
   "recipeInstructions": [
     {
@@ -87,7 +87,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add celery (3 tbsp), sauté 2 minutes until softened — it's standing in for the aromatic bulk onion would give, don't skip it"
+          "text": "Add celery (3 tbsp), sauté 2 minutes until softened — it gives the aromatic bulk the base needs, don't skip it"
         },
         {
           "@type": "HowToStep",
@@ -95,7 +95,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add the cooked dal from Step 1; stir well, adding water as needed to reach a thick, creamy consistency"
+          "text": "Add the cooked dal from Step 1; stir well, adding water (as needed) to reach a thick, creamy consistency"
         },
         {
           "@type": "HowToStep",
@@ -123,59 +123,27 @@
     },
     {
       "@type": "HowToSection",
-      "name": "Spice the remaining adult portion",
+      "name": "Spice and finish the adult dal, store",
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "To the pan with the remaining dal, add Kashmiri chili powder (1½ tsp)"
+          "text": "To the remaining dal add Kashmiri chili powder (1½ tsp), garam masala (1 tsp) and sugar (¼ tsp); simmer 5 minutes on low heat"
         },
         {
           "@type": "HowToStep",
-          "text": "Add garam masala (1 tsp) and sugar (¼ tsp), stir to combine"
+          "text": "Stir in crushed kasuri methi (1½ tbsp), cream (⅓ cup) and butter (2 tbsp)"
         },
         {
           "@type": "HowToStep",
-          "text": "Simmer 5 more minutes on low heat"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Finish the dal",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Stir in crushed kasuri methi (1½ tbsp)"
+          "text": "Adjust salt (as needed); simmer 2 more minutes on low heat, then turn off"
         },
         {
           "@type": "HowToStep",
-          "text": "Stir in cream (⅓ cup) and butter (2 tbsp)"
+          "text": "Cool to room temperature, then refrigerate in an airtight container — keeps 4–5 days"
         },
         {
           "@type": "HowToStep",
-          "text": "Adjust salt to taste"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Simmer 2 more minutes on low heat, then turn off"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Cool and store for meal prep",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Let the dal cool to room temperature before refrigerating"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Store in an airtight container — keeps well for 4–5 days refrigerated"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Reheat gently on the stovetop, adding a splash of water or milk to loosen the texture if it's thickened"
+          "text": "Reheat gently on the stovetop with a splash of water or milk if it has thickened"
         },
         {
           "@type": "HowToTip",

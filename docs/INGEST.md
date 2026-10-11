@@ -1,17 +1,18 @@
 # Adding recipes
 
-The recipe prompt keeps doing what it does — producing a v2 HTML file that has
-passed `dhanjas-recipe-validator` — and the file goes into this repo's `inbox/`
-instead of (or as well as) Google Drive. Pick whichever route is handiest:
+Each recipe is written offline, one at a time, by Claude using the recipe prompt
+([`RECIPE-PROMPT.md`](RECIPE-PROMPT.md)). The prompt produces one **format-3 JSON file**
+([`RECIPE-SPEC.md`](RECIPE-SPEC.md)), and that file goes into this repo's `inbox/`.
+Use whichever route is handiest:
 
 | Route | How |
 |---|---|
-| **GitHub web / mobile app** | Open `inbox/` on github.com → *Add file → Upload files* → drop the `.html` → *Commit to main*. The **Recipes** Action ingests it and the site updates a minute later. |
-| **Claude with the GitHub connector** | Ask Claude to commit the generated file to `inbox/<slug>.html` on `main` in `dhandeep/dhanjas-recipes`. |
+| **GitHub web / mobile app** | Open `inbox/` on github.com → *Add file → Upload files* → drop the `.json` → *Commit to main*. The **Recipes** Action ingests it and the site updates a minute later. |
+| **Claude with the GitHub connector** | Ask Claude to commit the generated file to `inbox/<slug>.json` on `main` in `dhandeep/dhanjas-recipes`. |
 | **Claude Code in this repo** | "Add this recipe" — it writes the file to `inbox/` and runs `python3 tools/recipes.py ingest` (see `CLAUDE.md`). |
 | **Local** | Copy the file into `inbox/`, run `python3 tools/recipes.py ingest`, commit and push. |
 
-`ingest` parses the HTML, runs the checks below, writes `data/recipes/<slug>.json`,
+`ingest` reads the JSON (or an older v2 `.html`), runs the checks below, writes `data/recipes/<slug>.json`,
 rebuilds every page and deletes the inbox file. If a check fails the file stays in
 `inbox/` and nothing is published.
 
@@ -51,25 +52,12 @@ self-contained v2 file with the stylesheet inlined, identical in structure to wh
 the prompt produces. Use it for sharing a single file or keeping Drive in sync.
 `--format json` / `jsonld` / `all` gives the house JSON or schema.org versions.
 
-## Suggested prompt change
+## The recipe prompt
 
-New recipes should be written in **format 3** (`docs/RECIPE-SPEC.md`) and submitted as
-JSON. Section 8 of the spec has a drop-in replacement for the **Recipe Output Format**
-section of the recipe prompt; copy `RECIPE-SPEC.md` into the Claude project next to
-the prompt so it can be read before each recipe.
-
-Then replace the **Saving to Google Drive** section with:
-
-> ## Publishing to dhanjas.com
->
-> After the recipe passes validation, commit the JSON file to the GitHub repo
-> `dhandeep/dhanjas-recipes` on branch `main` at `inbox/<category>-<dish>.json`.
-> A GitHub Action validates it, builds the page and publishes it at
-> `https://dhanjas.com/recipes/<category>-<dish>.html` within a couple of minutes.
->
-> Before committing, check `data/recipes/<category>-<dish>.json` doesn't already
-> exist. If it does, ask whether this replaces the existing recipe — the Action
-> refuses to overwrite one.
+[`RECIPE-PROMPT.md`](RECIPE-PROMPT.md) is the full prompt for the Claude project that
+writes recipes. Paste it into the project instructions and add `RECIPE-SPEC.md` and
+`data/recipes/breakfast-rava-upma.json` as project files. It replaces the v2-HTML
+and Google Drive sections of the old prompt.
 
 v2 HTML files (the older format) still ingest, but can't carry portions — use them
 only for recipes written before format 3.

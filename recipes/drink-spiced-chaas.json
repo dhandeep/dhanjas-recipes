@@ -1,5 +1,6 @@
 {
   "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
   "slug": "drink-spiced-chaas",
   "category": "drink",
   "title": "Spiced Chaas",
@@ -22,49 +23,42 @@
     {
       "label": "Base",
       "items": [
-        {"name": "Plain yogurt (curd)", "amount": "1 cup"},
-        {"name": "Chilled water", "amount": "2 cups"},
-        {"name": "Roasted cumin powder", "amount": "½ tsp"},
-        {"name": "Black salt (kala namak)", "amount": "½ tsp"},
-        {"name": "Regular salt", "amount": "to taste"}
+        {"id": "yogurt", "name": "Plain yogurt (curd)", "short": "yogurt", "amount": "1 cup", "portions": {"blend": "¼ cup", "main": "rest"}},
+        {"id": "water", "name": "Chilled water", "short": "chilled water", "amount": "2 cups"},
+        {"id": "cumin", "name": "Roasted cumin powder", "short": "roasted cumin powder", "amount": "½ tsp"},
+        {"id": "black-salt", "name": "Black salt (kala namak)", "short": "black salt", "amount": "½ tsp"},
+        {"id": "salt", "name": "Regular salt", "short": "salt", "amount": "to taste"}
       ]
     },
     {
       "label": "Aromatics",
       "items": [
-        {"name": "Mint leaves", "amount": "10–12"},
-        {"name": "Fresh coriander", "amount": "small handful"},
-        {"name": "Fresh ginger", "amount": "½ inch"},
-        {"name": "Green chili, minced", "amount": "½ (adults)"}
+        {"id": "mint", "name": "Mint leaves", "short": "mint leaves", "amount": "10–12"},
+        {"id": "coriander", "name": "Fresh coriander", "short": "coriander", "amount": "small handful"},
+        {"id": "ginger", "name": "Fresh ginger", "short": "ginger", "amount": "½ inch"},
+        {"id": "green-chili", "name": "Green chili, minced", "short": "green chili", "amount": "½ (adults)"}
       ]
     },
     {
       "label": "Adult finish (optional)",
       "items": [
-        {"name": "Ghee", "amount": "½ tsp"},
-        {"name": "Hing (asafoetida)", "amount": "1 pinch"},
-        {"name": "Curry leaves", "amount": "5–6"},
-        {"name": "Black pepper, ground", "amount": "1 pinch"},
-        {"name": "Chaat masala", "amount": "¼ tsp"}
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing (asafoetida)", "short": "hing", "amount": "1 pinch", "portions": {"tempering": "1 pinch", "toddler": "a tiny pinch"}},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "5–6"},
+        {"id": "pepper", "name": "Black pepper, ground", "short": "black pepper", "amount": "1 pinch"},
+        {"id": "chaat-masala", "name": "Chaat masala", "short": "chaat masala", "amount": "¼ tsp"}
       ]
     }
   ],
   "method": [
     {
       "type": "step",
-      "title": "Blend aromatics",
+      "title": "Blend the chaas",
       "items": [
-        "Add mint {10–12 leaves}, coriander {small handful} and ginger {½ inch} to a blender",
-        "Add yogurt {¼ cup}",
-        "Blend until completely smooth"
-      ]
-    },
-    {
-      "type": "step",
-      "title": "Mix chaas",
-      "items": [
-        "Add remaining yogurt {¾ cup} and chilled water {2 cups}",
-        "Add roasted cumin powder {½ tsp}, black salt {½ tsp} and salt {to taste}",
+        "Add {@mint}, {@coriander} and {@ginger} to a blender",
+        "Add {@yogurt:blend} and blend until completely smooth",
+        "Add {@yogurt:main|the remaining yogurt} and {@water}",
+        "Add {@cumin}, {@black-salt} and {@salt}",
         "Blend or whisk until light and frothy"
       ]
     },
@@ -73,17 +67,17 @@
       "label": "Toddler — pour now, before chili and pepper",
       "items": [
         "Pour her glass {½ cup} from the chaas",
-        "Optional: stir in a tiny pinch of hing {1 pinch} and serve chilled"
+        "Optional: stir in {@hing:toddler} and serve chilled"
       ]
     },
     {
       "type": "step",
       "title": "Adult spicing",
       "items": [
-        "Stir green chili {½, minced} and black pepper {1 pinch} into the remaining chaas",
-        "Heat ghee {½ tsp} in a small pan on low",
-        "Add hing {1 pinch} and curry leaves {5–6}; sizzle 10 seconds",
-        "Pour the tempering over the chaas; add chaat masala {¼ tsp}",
+        "Stir {@green-chili} and {@pepper} into the remaining chaas",
+        "Heat {@ghee} in a small pan on low",
+        "Add {@hing:tempering} and {@curry-leaves}; sizzle 10 seconds",
+        "Pour the tempering over the chaas; add {@chaat-masala}",
         "Chill 15 minutes or serve over ice"
       ]
     },

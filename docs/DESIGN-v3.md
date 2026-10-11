@@ -1,8 +1,8 @@
 # Design: structured ingredients and quantity references (v3)
 
 Status: **built as format 3.** The input contract is [`RECIPE-SPEC.md`](RECIPE-SPEC.md);
-`tools/dhanjas/portions.py` implements it. Rava upma and moong dal chilla are converted;
-the other 18 recipes are still format 2 and render the same way. (The rest of this
+`tools/dhanjas/portions.py` implements it. All 20 recipes are format 3, and new ones come
+from [`RECIPE-PROMPT.md`](RECIPE-PROMPT.md). (The rest of this
 document is the original proposal, kept for the reasoning.)
 
 Update: the rule "every instruction carries its quantity" is now enforced on the

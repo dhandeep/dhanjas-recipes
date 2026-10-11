@@ -139,7 +139,9 @@ def check(recipe):
             scan(b["text"], where, False, report=W)
 
     toddler_idx = [i for i, b in enumerate(method) if b.get("type") == "toddler"]
-    if toddler_idx and recipe.get("category") != "powder":  # pantry blends: the toddler box is a usage note
+    if toddler_idx and recipe.get("category") == "powder":
+        pass  # pantry blends: the toddler box is a usage note, there's no pan to pull from
+    elif toddler_idx:
         for b in method[:toddler_idx[0]]:
             if b.get("type") != "step":
                 continue
@@ -148,7 +150,8 @@ def check(recipe):
                 t = plain(item)
                 if TODDLER_RE.search(t):
                     pulled = True
-                elif ADULT_HEAT.search(t) and not pulled and not NEGATION.search(t):
+                elif ADULT_HEAT.search(t) and not pulled and not NEGATION.search(t) and not re.search(r"\bbowl\b", t, re.I):
+                    # (a sauce whisked in a separate bowl never touches her portion)
                     W("chili/pepper goes in before the first toddler box (step %r): %s" % (b.get("title"), t))
                     break
     elif "toddler" in (recipe.get("subtitle", "") + " ".join(recipe.get("badges", []))).lower():

@@ -12,19 +12,19 @@
   "suitableForDiet": "https://schema.org/VegetarianDiet",
   "keywords": "No-cook · Snack, Quick, Night prep, High-protein, No-cook, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
-    "1 cup Roasted makhana (fox nuts)",
-    "8–10 Almonds",
-    "4–5 halves Walnuts, broken",
-    "1 tbsp Pumpkin seeds",
-    "1 tbsp Hemp seeds",
-    "1 tbsp Raisins or dried cranberries",
-    "½ cup Full-fat yogurt or hung curd",
-    "½ cup Fresh fruit",
-    "1 tsp Honey",
     "3–4 cups Makhana (fox nuts), raw",
     "1 tsp Ghee",
     "a pinch Salt",
-    "a pinch Black pepper, optional"
+    "1 cup per bowl Roasted makhana",
+    "8–10 per bowl Almonds",
+    "4–5 halves per bowl Walnuts, broken",
+    "1 tbsp per bowl Pumpkin seeds",
+    "1 tbsp per bowl Hemp seeds",
+    "1 tbsp per bowl Raisins or dried cranberries",
+    "a pinch Black pepper, optional (adults)",
+    "½ cup per bowl Full-fat yogurt or hung curd",
+    "½ cup per bowl Fresh fruit",
+    "1 tsp per bowl Jaggery powder, optional"
   ],
   "recipeInstructions": [
     {
@@ -33,7 +33,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Roast makhana in a dry pan on low heat 8–10 min until crisp; season lightly with ghee and salt"
+          "text": "Roast the makhana ahead (step 1) — one batch lasts 1–2 weeks"
         },
         {
           "@type": "HowToStep",
@@ -55,29 +55,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add ghee (1 tsp), salt (pinch), black pepper (a pinch) if using; toss well for 1 min"
+          "text": "Add ghee (1 tsp) and salt (a pinch); toss well for 1 min — no pepper, so the jar suits the toddler too"
         },
         {
           "@type": "HowToStep",
           "text": "Cool completely on a plate; store in an airtight jar once fully cool"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Morning assembly",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Add roasted makhana (1 cup) to bowl"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Add almonds (8–10), walnuts (4–5 halves), pumpkin seeds (1 tbsp), hemp seeds (1 tbsp), raisins (1 tbsp)"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Serve yogurt (½ cup) and fruit (½ cup) alongside for dipping, with a drizzle of honey (1 tsp) if desired — keeps the makhana crisp"
         }
       ]
     },
@@ -91,19 +73,41 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Give whole makhana (¼ cup) — she'll enjoy the crunch"
+          "text": "Give whole roasted makhana (¼ cup) — she'll enjoy the crunch"
         },
         {
           "@type": "HowToStep",
-          "text": "Serve with yogurt for dipping — makes it interactive and fun"
+          "text": "Serve with yogurt (a small bowl) for dipping — makes it interactive and fun"
         },
         {
           "@type": "HowToStep",
-          "text": "Grind almonds finely (1 tsp) before adding; skip whole walnuts (too hard to chew)"
+          "text": "Grind almonds (1 tsp) finely before adding; skip whole walnuts (too hard to chew)"
         },
         {
           "@type": "HowToStep",
-          "text": "Add soft fruit pieces (¼ cup) to round it out"
+          "text": "Add soft fruit pieces (¼ cup)"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Morning assembly (adults)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Add roasted makhana (1 cup) to each bowl"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add almonds (8–10), walnuts (4–5 halves), pumpkin seeds (1 tbsp), hemp seeds (1 tbsp), raisins (1 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Sprinkle black pepper (a pinch) over and toss, if using"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve yogurt (½ cup) and fruit (½ cup) alongside for dipping, with jaggery powder (1 tsp) if desired — keeps the makhana crisp"
         },
         {
           "@type": "HowToTip",

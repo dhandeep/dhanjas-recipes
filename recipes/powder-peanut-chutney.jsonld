@@ -14,36 +14,32 @@
   "recipeIngredient": [
     "3 cups Raw peanuts, skin-on",
     "3 tbsp White sesame seeds",
+    "½ cup Roasted chana dal (dalia)",
+    "2 tsp, adjust Salt",
+    "¾ tsp Hing",
     "12 whole Kashmiri red chilies",
     "1 tbsp Cumin seeds",
     "4 tbsp Dry coconut, grated",
     "1½ tsp Tamarind, seedless",
     "2 sprigs Curry leaves",
-    "2 tsp Neutral oil, tempering",
-    "½ cup Roasted chana dal (dalia)",
-    "2 tsp, adjust Salt",
-    "¾ tsp Hing"
+    "2 tsp Neutral oil, tempering"
   ],
   "recipeInstructions": [
     {
       "@type": "HowToSection",
-      "name": "Roast peanuts (Ninja Crispi)",
+      "name": "Roast peanuts (Ninja Crispi) and sesame",
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Spread peanuts (3 cups) in the Crispi basket in a single layer — you'll likely need 2 batches of 1½ cups each to avoid steaming"
+          "text": "Spread peanuts (3 cups) in the Crispi basket in a single layer — you'll likely need 2 batches of (1½ cups) each to avoid steaming"
         },
         {
           "@type": "HowToStep",
-          "text": "Set to 330°F, 6 min — this is the Crispi's lowest usable setting, it won't run cooler"
+          "text": "Set to 330°F, 6 min — the Crispi's lowest usable setting; shake the basket at the 3-minute mark"
         },
         {
           "@type": "HowToStep",
-          "text": "Shake the basket at the 3-minute mark"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Check at 5 min: peanuts should be fragrant, skins loosening and crackled; since 330°F runs hot for this, add only 1 min at a time from here"
+          "text": "Check at 5 min: fragrant, skins loosening and crackled; since 330°F runs hot for this, add only 1 min at a time from here"
         },
         {
           "@type": "HowToStep",
@@ -52,28 +48,14 @@
         {
           "@type": "HowToStep",
           "text": "Rub between palms to loosen skins; sieve or blow away (a little remaining skin is fine)"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Roast sesame (cooktop)",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "In a dry pan over low flame, add sesame seeds (3 tbsp)"
         },
         {
           "@type": "HowToStep",
-          "text": "Stir constantly 60–90 sec — they will pop and jump; keep a lid nearby"
+          "text": "Meanwhile, in a dry pan on low, stir sesame seeds (3 tbsp) constantly 60–90 sec — they pop and jump; keep a lid nearby"
         },
         {
           "@type": "HowToStep",
-          "text": "Remove the moment they turn lightly golden and smell toasty — they burn in seconds if you walk away"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Cool completely on a separate plate; keep aside for grinding"
+          "text": "Remove the moment they turn lightly golden and smell toasty — they burn in seconds; cool on a separate plate"
         }
       ]
     },
@@ -91,15 +73,15 @@
         },
         {
           "@type": "HowToStep",
-          "text": "In the same pan on low, add Kashmiri chilies (12) and cumin seeds (1 tbsp); roast, stirring, 60–90 sec until cumin is golden — do not blacken"
+          "text": "In the same pan on low, add Kashmiri chilies (12 whole) and cumin seeds (1 tbsp); roast, stirring, 60–90 sec until cumin is golden — do not blacken"
         },
         {
           "@type": "HowToStep",
-          "text": "Add coconut (4 tbsp, or 2½ tbsp if thawed frozen) and tamarind (1½ tsp); toss 30 sec until coconut is lightly golden"
+          "text": "Add coconut (4 tbsp) (or (2½ tbsp) if thawed frozen) and tamarind (1½ tsp); toss 30 sec until coconut is lightly golden"
         },
         {
           "@type": "HowToStep",
-          "text": "Return the curry leaves (2 sprigs) to the pan; transfer everything to a plate and cool completely"
+          "text": "Return the fried leaves to the pan; transfer everything to a plate and cool completely"
         }
       ]
     },
@@ -113,11 +95,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add chana dal (½ cup) and the toasted sesame (3 tbsp) — these must be ground fine now, not pulsed later with the peanuts"
+          "text": "Add chana dal (½ cup) and the toasted sesame seeds (3 tbsp) — these must be ground fine now, not pulsed later with the peanuts"
         },
         {
           "@type": "HowToStep",
-          "text": "Add hing (¾ tsp) and salt (2 tsp); grind to a fine powder, 25–35 sec"
+          "text": "Add hing (¾ tsp) and salt (2 tsp, adjust); grind to a fine powder, 25–35 sec"
         },
         {
           "@type": "HowToStep",
@@ -165,7 +147,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Transfer to a clean, dry, airtight glass jar"
+          "text": "Transfer to a clean, dry, airtight glass jar and label it with the date made"
         },
         {
           "@type": "HowToStep",
@@ -174,10 +156,6 @@
         {
           "@type": "HowToStep",
           "text": "Always use a dry spoon — a single drop of moisture shortens shelf life fast"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Label the jar with the date made"
         },
         {
           "@type": "HowToTip",

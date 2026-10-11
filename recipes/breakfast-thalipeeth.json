@@ -1,5 +1,6 @@
 {
   "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
   "slug": "breakfast-thalipeeth",
   "category": "breakfast",
   "title": "Thalipeeth",
@@ -20,7 +21,7 @@
   "nightPrep": {
     "label": "Night Before",
     "items": [
-      "Mix dry flour blend and store in a jar — lasts months, make a big batch",
+      "Mix {@jowar}, {@besan}, {@wheat} and {@rice-flour} into the bhajani blend and store in a jar — lasts months, make a big batch",
       "Mix dough the night before with all additions; refrigerate wrapped in damp cloth"
     ]
   },
@@ -28,38 +29,39 @@
     {
       "label": "Bhajani flour blend (large batch)",
       "items": [
-        {"name": "Jowar (sorghum) flour", "amount": "1 cup"},
-        {"name": "Besan (chickpea flour)", "amount": "½ cup"},
-        {"name": "Whole wheat flour", "amount": "½ cup"},
-        {"name": "Rice flour", "amount": "¼ cup"}
+        {"id": "jowar", "name": "Jowar (sorghum) flour", "short": "jowar flour", "amount": "1 cup"},
+        {"id": "besan", "name": "Besan (chickpea flour)", "short": "besan", "amount": "½ cup"},
+        {"id": "wheat", "name": "Whole wheat flour", "short": "whole wheat flour", "amount": "½ cup"},
+        {"id": "rice-flour", "name": "Rice flour", "short": "rice flour", "amount": "¼ cup"}
       ]
     },
     {
       "label": "Dough (per batch, 4–5 thalipeeths)",
       "items": [
-        {"name": "Bhajani flour blend", "amount": "2 cups"},
-        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
-        {"name": "Green chili, very finely chopped", "amount": "1 (adults)"},
-        {"name": "Salt", "amount": "¾ tsp"},
-        {"name": "Hot water, to bind", "amount": "¾–1 cup"}
+        {"id": "bhajani", "name": "Bhajani flour blend", "short": "bhajani flour", "amount": "2 cups"},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1 tsp"},
+        {"id": "green-chili", "name": "Green chili, very finely chopped", "short": "green chili", "amount": "1 (adults)"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "¾ tsp"},
+        {"id": "water", "name": "Hot water, to bind", "short": "hot water", "amount": "¾–1 cup", "portions": {"mix": "¾ cup", "more": "a little more, as needed"}}
       ]
     },
     {
       "label": "Spices & mix-ins",
       "items": [
-        {"name": "Cumin seeds", "amount": "½ tsp"},
-        {"name": "Hing", "amount": "¼ tsp"},
-        {"name": "Turmeric", "amount": "¼ tsp"},
-        {"name": "Coriander leaves, chopped", "amount": "3 tbsp"},
-        {"name": "Sesame seeds", "amount": "1 tbsp"}
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander", "amount": "3 tbsp"},
+        {"id": "sesame", "name": "Sesame seeds", "short": "sesame seeds", "amount": "1 tbsp"}
       ]
     },
     {
-      "label": "For cooking & serving",
+      "label": "To cook & serve",
       "items": [
-        {"name": "Ghee or oil", "amount": "1 tsp/thali"},
-        {"name": "Plain yogurt", "amount": "alongside"},
-        {"name": "White butter (loni)", "amount": "optional"}
+        {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "1 tsp per thali", "portions": {"holes": "½ tsp", "flip": "½ tsp"}},
+        {"id": "water-hands", "name": "Water, for wet hands", "short": "water", "amount": "as needed"},
+        {"id": "yogurt", "name": "Plain yogurt", "short": "yogurt", "amount": "alongside", "portions": {"adult": "alongside", "toddler": "a small bowl"}},
+        {"id": "butter", "name": "White butter (loni)", "short": "white butter", "amount": "optional", "portions": {"adult": "optional", "toddler": "a small cube"}}
       ]
     }
   ],
@@ -68,10 +70,10 @@
       "type": "step",
       "title": "Mix dough (night before)",
       "items": [
-        "Combine bhajani flour {2 cups}, ginger {1 tsp}, cumin seeds {½ tsp}, hing {¼ tsp}, turmeric {¼ tsp}, sesame seeds {1 tbsp}, coriander {3 tbsp}, salt {¾ tsp}",
-        "Add hot water {¾ cup} gradually; mix into a soft pliable dough — add more water as needed",
-        "Set aside toddler portion {¼ cup dough} before adding green chili to adult dough",
-        "Add green chili {1, finely chopped} to adult dough; knead briefly",
+        "Combine {@bhajani}, {@ginger}, {@cumin}, {@hing}, {@turmeric}, {@sesame}, {@coriander}, {@salt}",
+        "Add {@water:mix} gradually; mix into a soft pliable dough — add {@water:more}",
+        "Set aside toddler portion {=¼ cup dough} before adding green chili to adult dough",
+        "Add {@green-chili} to adult dough; knead briefly",
         "Wrap both portions in damp cloth; refrigerate"
       ]
     },
@@ -81,8 +83,8 @@
       "items": [
         "Her ¼ cup portion is already chili-free — same flour blend, same spices except green chili",
         "Make 1–2 smaller, thinner thalipeeths for her — thinner = softer when cooked",
-        "Cook on medium-low; add a small cube of white butter on top while warm",
-        "Serve with a small bowl of yogurt for dipping"
+        "Cook on medium-low; add {@butter:toddler} on top while warm",
+        "Serve with {@yogurt:toddler|yogurt} for dipping"
       ]
     },
     {
@@ -90,13 +92,13 @@
       "title": "Cook (morning)",
       "items": [
         "Remove dough from fridge; let sit 5 min at room temperature",
-        "Wet your palm slightly — thalipeeth dough is patted directly onto the tawa, not rolled",
-        "Place a ball of dough {slightly larger than a golf ball} on a greased medium-hot tawa",
-        "Pat out gently with wet fingers into a thin round circle {~6–7 in}; make 3–4 small holes in the surface with your finger",
-        "Drizzle ghee {½ tsp} into the holes and around the edges",
+        "Keep {@water-hands|a small bowl of water} nearby and wet your palm — thalipeeth dough is patted directly onto the tawa, not rolled",
+        "Place a ball of dough {=slightly larger than a golf ball} on a greased medium-hot tawa",
+        "Pat out gently with wet fingers into a thin round circle {=~6–7 in}; make 3–4 small holes in the surface with your finger",
+        "Drizzle {@ghee:holes} into the holes and around the edges",
         "Cook on medium 3–4 min until underside is golden; flip carefully",
-        "Drizzle ghee {½ tsp} on the other side; cook 2–3 min more",
-        "Serve hot with yogurt {alongside} and white butter {optional}"
+        "Drizzle {@ghee:flip} on the other side; cook 2–3 min more",
+        "Serve hot with {@yogurt:adult} and {@butter:adult}"
       ]
     },
     {

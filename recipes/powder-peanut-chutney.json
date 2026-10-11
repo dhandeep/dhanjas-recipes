@@ -1,5 +1,6 @@
 {
   "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
   "slug": "powder-peanut-chutney",
   "category": "powder",
   "title": "Dry Peanut Chutney",
@@ -21,64 +22,50 @@
   "nightPrep": null,
   "ingredientGroups": [
     {
-      "label": "To roast separately",
+      "label": "Roast & grind",
       "items": [
-        {"name": "Raw peanuts, skin-on", "amount": "3 cups"},
-        {"name": "White sesame seeds", "amount": "3 tbsp"}
+        {"id": "peanuts", "name": "Raw peanuts, skin-on", "short": "peanuts", "amount": "3 cups"},
+        {"id": "sesame", "name": "White sesame seeds", "short": "sesame seeds", "amount": "3 tbsp"},
+        {"id": "chana", "name": "Roasted chana dal (dalia)", "short": "chana dal", "amount": "½ cup"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "2 tsp, adjust"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¾ tsp"}
       ]
     },
     {
       "label": "Tempered spice base",
       "items": [
-        {"name": "Kashmiri red chilies", "amount": "12 whole"},
-        {"name": "Cumin seeds", "amount": "1 tbsp"},
-        {"name": "Dry coconut, grated", "amount": "4 tbsp"},
-        {"name": "Tamarind, seedless", "amount": "1½ tsp"},
-        {"name": "Curry leaves", "amount": "2 sprigs"},
-        {"name": "Neutral oil, tempering", "amount": "2 tsp"}
-      ]
-    },
-    {
-      "label": "Added at grinding",
-      "items": [
-        {"name": "Roasted chana dal (dalia)", "amount": "½ cup"},
-        {"name": "Salt", "amount": "2 tsp, adjust"},
-        {"name": "Hing", "amount": "¾ tsp"}
+        {"id": "chilies", "name": "Kashmiri red chilies", "short": "Kashmiri chilies", "amount": "12 whole"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tbsp"},
+        {"id": "coconut", "name": "Dry coconut, grated", "short": "coconut", "amount": "4 tbsp"},
+        {"id": "tamarind", "name": "Tamarind, seedless", "short": "tamarind", "amount": "1½ tsp"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "2 sprigs"},
+        {"id": "oil", "name": "Neutral oil, tempering", "short": "oil", "amount": "2 tsp"}
       ]
     }
   ],
   "method": [
     {
       "type": "step",
-      "title": "Roast peanuts (Ninja Crispi)",
+      "title": "Roast peanuts (Ninja Crispi) and sesame",
       "items": [
-        "Spread peanuts {3 cups} in the Crispi basket in a single layer — you'll likely need 2 batches of 1½ cups each to avoid steaming",
-        "Set to 330°F, 6 min — this is the Crispi's lowest usable setting, it won't run cooler",
-        "Shake the basket at the 3-minute mark",
-        "Check at 5 min: peanuts should be fragrant, skins loosening and crackled; since 330°F runs hot for this, add only 1 min at a time from here",
+        "Spread {@peanuts} in the Crispi basket in a single layer — you'll likely need 2 batches of {1½ cups} each to avoid steaming",
+        "Set to 330°F, 6 min — the Crispi's lowest usable setting; shake the basket at the 3-minute mark",
+        "Check at 5 min: fragrant, skins loosening and crackled; since 330°F runs hot for this, add only 1 min at a time from here",
         "Spread on a plate and cool completely, at least 15 min — they crisp further as they cool",
-        "Rub between palms to loosen skins; sieve or blow away (a little remaining skin is fine)"
-      ]
-    },
-    {
-      "type": "step",
-      "title": "Roast sesame (cooktop)",
-      "items": [
-        "In a dry pan over low flame, add sesame seeds {3 tbsp}",
-        "Stir constantly 60–90 sec — they will pop and jump; keep a lid nearby",
-        "Remove the moment they turn lightly golden and smell toasty — they burn in seconds if you walk away",
-        "Cool completely on a separate plate; keep aside for grinding"
+        "Rub between palms to loosen skins; sieve or blow away (a little remaining skin is fine)",
+        "Meanwhile, in a dry pan on low, stir {@sesame} constantly 60–90 sec — they pop and jump; keep a lid nearby",
+        "Remove the moment they turn lightly golden and smell toasty — they burn in seconds; cool on a separate plate"
       ]
     },
     {
       "type": "step",
       "title": "Temper the spices",
       "items": [
-        "Heat oil {2 tsp} in a small pan over medium-low",
-        "Add curry leaves {2 sprigs}; fry 20–30 sec until crisp; remove and set aside",
-        "In the same pan on low, add Kashmiri chilies {12} and cumin seeds {1 tbsp}; roast, stirring, 60–90 sec until cumin is golden — do not blacken",
-        "Add coconut {4 tbsp, or 2½ tbsp if thawed frozen} and tamarind {1½ tsp}; toss 30 sec until coconut is lightly golden",
-        "Return the curry leaves {2 sprigs} to the pan; transfer everything to a plate and cool completely"
+        "Heat {@oil} in a small pan over medium-low",
+        "Add {@curry-leaves}; fry 20–30 sec until crisp; remove and set aside",
+        "In the same pan on low, add {@chilies} and {@cumin}; roast, stirring, 60–90 sec until cumin is golden — do not blacken",
+        "Add {@coconut} (or {2½ tbsp} if thawed frozen) and {@tamarind}; toss 30 sec until coconut is lightly golden",
+        "Return the fried leaves to the pan; transfer everything to a plate and cool completely"
       ]
     },
     {
@@ -86,9 +73,9 @@
       "title": "Grind — spice base first, then peanuts",
       "items": [
         "Add the cooled chili-cumin-coconut-tamarind-curry leaf mixture to a grinder",
-        "Add chana dal {½ cup} and the toasted sesame {3 tbsp} — these must be ground fine now, not pulsed later with the peanuts",
-        "Add hing {¾ tsp} and salt {2 tsp}; grind to a fine powder, 25–35 sec",
-        "Add the roasted, cooled peanuts {3 cups}",
+        "Add {@chana} and the toasted {@sesame} — these must be ground fine now, not pulsed later with the peanuts",
+        "Add {@hing} and {@salt}; grind to a fine powder, 25–35 sec",
+        "Add the roasted, cooled {@peanuts}",
         "Pulse only — 3–4 short bursts of 2–3 sec each — until coarse and sandy, not paste",
         "Taste and adjust salt"
       ]
@@ -108,10 +95,9 @@
       "title": "Cool, store, label",
       "items": [
         "Spread the finished chutney on a wide plate; rest uncovered 20 min to drive off residual moisture",
-        "Transfer to a clean, dry, airtight glass jar",
+        "Transfer to a clean, dry, airtight glass jar and label it with the date made",
         "Store at room temperature 3–4 weeks, or refrigerate to extend to 6–8 weeks — if frozen coconut was used, drop to 2–3 weeks and refrigerate after the first week",
-        "Always use a dry spoon — a single drop of moisture shortens shelf life fast",
-        "Label the jar with the date made"
+        "Always use a dry spoon — a single drop of moisture shortens shelf life fast"
       ]
     },
     {

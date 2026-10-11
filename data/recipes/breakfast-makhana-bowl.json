@@ -1,5 +1,6 @@
 {
   "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
   "slug": "breakfast-makhana-bowl",
   "category": "breakfast",
   "title": "Makhana Trail Mix Bowl",
@@ -20,37 +21,37 @@
   "nightPrep": {
     "label": "Batch Roast (lasts 1–2 weeks)",
     "items": [
-      "Roast makhana in a dry pan on low heat 8–10 min until crisp; season lightly with ghee and salt",
+      "Roast the makhana ahead (step 1) — one batch lasts 1–2 weeks",
       "Cool completely before storing in an airtight jar — stays crisp for 2 weeks"
     ]
   },
   "ingredientGroups": [
     {
+      "label": "Batch roast",
+      "items": [
+        {"id": "makhana-raw", "name": "Makhana (fox nuts), raw", "short": "makhana", "amount": "3–4 cups"},
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "a pinch"}
+      ]
+    },
+    {
       "label": "Per adult bowl",
       "items": [
-        {"name": "Roasted makhana (fox nuts)", "amount": "1 cup"},
-        {"name": "Almonds", "amount": "8–10"},
-        {"name": "Walnuts, broken", "amount": "4–5 halves"},
-        {"name": "Pumpkin seeds", "amount": "1 tbsp"},
-        {"name": "Hemp seeds", "amount": "1 tbsp"},
-        {"name": "Raisins or dried cranberries", "amount": "1 tbsp"}
+        {"id": "makhana", "name": "Roasted makhana", "short": "roasted makhana", "amount": "1 cup per bowl", "portions": {"bowl": "1 cup", "toddler": "¼ cup"}},
+        {"id": "almonds", "name": "Almonds", "short": "almonds", "amount": "8–10 per bowl", "portions": {"bowl": "8–10", "toddler": "1 tsp"}},
+        {"id": "walnuts", "name": "Walnuts, broken", "short": "walnuts", "amount": "4–5 halves per bowl"},
+        {"id": "pumpkin", "name": "Pumpkin seeds", "short": "pumpkin seeds", "amount": "1 tbsp per bowl"},
+        {"id": "hemp", "name": "Hemp seeds", "short": "hemp seeds", "amount": "1 tbsp per bowl"},
+        {"id": "raisins", "name": "Raisins or dried cranberries", "short": "raisins", "amount": "1 tbsp per bowl"}
       ]
     },
     {
-      "label": "To serve alongside",
+      "label": "To season & serve alongside",
       "items": [
-        {"name": "Full-fat yogurt or hung curd", "amount": "½ cup"},
-        {"name": "Fresh fruit", "amount": "½ cup"},
-        {"name": "Honey", "amount": "1 tsp"}
-      ]
-    },
-    {
-      "label": "For roasting makhana",
-      "items": [
-        {"name": "Makhana (fox nuts), raw", "amount": "3–4 cups"},
-        {"name": "Ghee", "amount": "1 tsp"},
-        {"name": "Salt", "amount": "a pinch"},
-        {"name": "Black pepper, optional", "amount": "a pinch"}
+        {"id": "pepper", "name": "Black pepper, optional (adults)", "short": "black pepper", "amount": "a pinch"},
+        {"id": "yogurt", "name": "Full-fat yogurt or hung curd", "short": "yogurt", "amount": "½ cup per bowl", "portions": {"bowl": "½ cup", "toddler": "a small bowl"}},
+        {"id": "fruit", "name": "Fresh fruit", "short": "fruit", "amount": "½ cup per bowl", "portions": {"bowl": "½ cup", "toddler": "¼ cup"}},
+        {"id": "jaggery", "name": "Jaggery powder, optional", "short": "jaggery powder", "amount": "1 tsp per bowl"}
       ]
     }
   ],
@@ -60,18 +61,9 @@
       "title": "Roast makhana (batch, not daily)",
       "items": [
         "Heat a wide heavy pan on low — no oil yet",
-        "Add makhana {3–4 cups}; dry roast, stirring constantly, 8–10 min until they feel light and crisp when pressed",
-        "Add ghee {1 tsp}, salt {pinch}, black pepper {a pinch} if using; toss well for 1 min",
+        "Add {@makhana-raw}; dry roast, stirring constantly, 8–10 min until they feel light and crisp when pressed",
+        "Add {@ghee} and {@salt}; toss well for 1 min — no pepper, so the jar suits the toddler too",
         "Cool completely on a plate; store in an airtight jar once fully cool"
-      ]
-    },
-    {
-      "type": "step",
-      "title": "Morning assembly",
-      "items": [
-        "Add roasted makhana {1 cup} to bowl",
-        "Add almonds {8–10}, walnuts {4–5 halves}, pumpkin seeds {1 tbsp}, hemp seeds {1 tbsp}, raisins {1 tbsp}",
-        "Serve yogurt {½ cup} and fruit {½ cup} alongside for dipping, with a drizzle of honey {1 tsp} if desired — keeps the makhana crisp"
       ]
     },
     {
@@ -79,10 +71,20 @@
       "label": "Toddler bowl",
       "items": [
         "Makhana is safe — soft enough once chewed, not a choking risk at age 2",
-        "Give whole makhana {¼ cup} — she'll enjoy the crunch",
-        "Serve with yogurt for dipping — makes it interactive and fun",
-        "Grind almonds finely {1 tsp} before adding; skip whole walnuts (too hard to chew)",
-        "Add soft fruit pieces {¼ cup} to round it out"
+        "Give whole {@makhana:toddler} — she'll enjoy the crunch",
+        "Serve with {@yogurt:toddler} for dipping — makes it interactive and fun",
+        "Grind {@almonds:toddler} finely before adding; skip whole walnuts (too hard to chew)",
+        "Add soft {@fruit:toddler|fruit pieces}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Morning assembly (adults)",
+      "items": [
+        "Add {@makhana:bowl} to each bowl",
+        "Add {@almonds:bowl}, {@walnuts}, {@pumpkin}, {@hemp}, {@raisins}",
+        "Sprinkle {@pepper} over and toss, if using",
+        "Serve {@yogurt:bowl} and {@fruit:bowl} alongside for dipping, with {@jaggery} if desired — keeps the makhana crisp"
       ]
     },
     {

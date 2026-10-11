@@ -12,13 +12,14 @@
   "suitableForDiet": "https://schema.org/VegetarianDiet",
   "keywords": "Peanut · Quick, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
-    "2 Whole wheat roti",
-    "2 tbsp/roti Dry peanut chutney (pudi)",
-    "½ tsp/roti Ghee or butter",
-    "30–40g/roll Paneer, thinly sliced or crumbled",
-    "2–3 tbsp Cucumber, julienned",
-    "2–3 tbsp Capsicum, thinly sliced",
-    "1 tbsp Thick yogurt/hung curd, binder",
+    "2 per adult Whole wheat roti",
+    "2 tbsp per roti Dry peanut chutney (pudi)",
+    "½ tsp per roti Ghee or butter",
+    "1 tsp per roti Yogurt, to loosen the chutney (optional)",
+    "30–40g per roll Paneer, thinly sliced or crumbled",
+    "2–3 tbsp per roll Cucumber, julienned",
+    "2–3 tbsp per roll Capsicum, thinly sliced",
+    "1 tbsp per roll Thick yogurt/hung curd, binder",
     "1 cup Roasted peanuts, skinned",
     "2 (adults) Dry red chili",
     "½ tsp Cumin seeds",
@@ -33,15 +34,11 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Make a batch of dry peanut chutney (shengdana chutney pudi) — keeps for weeks"
+          "text": "Make the dry peanut chutney (step 1) — it keeps for weeks, so one batch covers many mornings"
         },
         {
           "@type": "HowToStep",
-          "text": "Mix chutney with yogurt or ghee to make a spreadable paste; refrigerate"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Optionally make roti dough — keeps overnight in the fridge"
+          "text": "Optionally make the dough for the rotis — keeps overnight in the fridge"
         }
       ]
     },
@@ -55,15 +52,19 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add dry red chili (2), cumin seeds (½ tsp), hing (¼ tsp), salt (½ tsp), aamchur (1 tsp)"
+          "text": "Add cumin seeds (½ tsp), hing (¼ tsp), salt (½ tsp) and aamchur (1 tsp); pulse 2–3 times — keep it coarse and sandy, not smooth"
         },
         {
           "@type": "HowToStep",
-          "text": "Pulse 2–3 more times to combine — keep it coarse and sandy, not smooth"
+          "text": "Set aside (=¼ cup) in a small jar for the toddler now, before the chili goes in"
         },
         {
           "@type": "HowToStep",
-          "text": "Stores in an airtight jar for 2–3 weeks at room temperature"
+          "text": "Add dry red chili (2) to the rest; pulse 2–3 more times to combine"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Store both in airtight jars — 2–3 weeks at room temperature"
         }
       ]
     },
@@ -73,15 +74,15 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Heat roti (2) on tawa — 30 sec per side; smear ghee (½ tsp) while warm"
+          "text": "Heat rotis (2) on tawa — 30 sec per side; smear ghee (½ tsp) on each while warm"
         },
         {
           "@type": "HowToStep",
-          "text": "Spread dry chutney (2 tbsp) over roti — if too dry, mix a spoonful of yogurt into the chutney first"
+          "text": "Spread dry chutney (2 tbsp) over each roti — if too dry, mix in yogurt (1 tsp) first"
         },
         {
           "@type": "HowToStep",
-          "text": "Add filling: paneer (30–40g), cucumber (2–3 tbsp), capsicum (2–3 tbsp)"
+          "text": "Add filling: paneer (30–40g), cucumber (2–3 tbsp), capsicum (2–3 tbsp), bound with thick yogurt (1 tbsp)"
         },
         {
           "@type": "HowToStep",
@@ -95,19 +96,19 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Use chutney made without dry red chili — pulse peanuts with just cumin, hing, salt, aamchur"
+          "text": "Use her chili-free chutney from the small jar"
         },
         {
           "@type": "HowToStep",
-          "text": "Mix (1 tsp) chutney with yogurt (1 tbsp) to make a mild creamy spread"
+          "text": "Mix dry chutney (1 tsp) with yogurt (1 tbsp) to make a mild creamy spread"
         },
         {
           "@type": "HowToStep",
-          "text": "Soft roti cut into strips or small pieces — easier for her to manage than a roll"
+          "text": "Spread on soft roti (1) cut into strips or small pieces — easier for her to manage than a roll"
         },
         {
           "@type": "HowToStep",
-          "text": "Add soft paneer pieces or thinly sliced cucumber inside"
+          "text": "Add soft paneer pieces (a few soft pieces) or thinly sliced cucumber (a few thin slices) inside"
         },
         {
           "@type": "HowToTip",

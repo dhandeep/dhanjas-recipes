@@ -9,12 +9,12 @@
   function apply(k) {
     k = [1, 2, 3].includes(k) ? k : 1;
     for (const m of marks) m.textContent = m.dataset['x' + k] || m.dataset.x1;
-    document.querySelectorAll('[data-scale]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.scale === k)));
+    document.querySelectorAll('.scale-control [data-scale]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.scale === k)));
     document.documentElement.dataset.scale = k;
     return k;
   }
 
-  document.querySelectorAll('[data-scale]').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.scale-control [data-scale]').forEach(b => b.addEventListener('click', () => {
     const k = apply(+b.dataset.scale);
     const p = new URLSearchParams(location.search);
     k === 1 ? p.delete('scale') : p.set('scale', k);

@@ -47,6 +47,10 @@
         {
           "@type": "HowToStep",
           "text": "In the same pan, dry roast peanuts (⅓ cup) on medium 3–4 min until skins blister; set aside"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Let the peanuts cool, then rub off any loose skins"
         }
       ]
     },

@@ -12,7 +12,7 @@ EYEBROW = "dhanjas.com · Jain Kitchen"
 
 # The 1× / 2× / 3× batch control in the nav bar. Scaling already works on every
 # page via ?scale=2 (assets/scale.js); flip this to show the buttons.
-SHOW_SCALE_CONTROL = False
+SHOW_SCALE_CONTROL = True
 SCALE_STEPS = (1, 2, 3)
 
 

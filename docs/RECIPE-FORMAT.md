@@ -3,7 +3,7 @@
 > **Writing a new recipe? Use [`RECIPE-SPEC.md`](RECIPE-SPEC.md) — format 3**, where
 > ingredients have ids and keyed portions and every instruction references the
 > portion it uses (`{@rava:main}`). This page describes the data model as a whole,
-> including format 2, which older recipes still use (amounts typed by hand: `{⅓ cup}`).
+> including format 2 (amounts typed by hand: `{⅓ cup}`) — all 20 published recipes are now format 3; format 2 still ingests.
 > Both render identically; `portions.lower()` turns format 3 into format-2 text at
 > each batch size before anything is rendered.
 

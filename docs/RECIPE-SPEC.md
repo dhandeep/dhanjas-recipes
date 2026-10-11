@@ -74,7 +74,7 @@ toddler's 3 tbsp stays 3 tbsp because she's one toddler however big the batch.
 | `id` | **Required.** Unique in the recipe; lowercase letters, digits, hyphens: `rava`, `green-chili`, `ghee`. If the same ingredient appears on two list lines (e.g. ghee for the base and ghee for the gravy), give each its own id: `ghee-base`, `ghee-gravy`. |
 | `name` | Exactly as the ingredient list should read: `"Rava (semolina / sooji)"`. |
 | `short` | How instructions name it: `"rava"`. Optional — defaults to the name before any comma or bracket, lowercased. |
-| `amount` | **The total for the batch.** Leads with a quantity — `"1 cup"`, `"2–3"`, `"400g"`, `"1½ tbsp"`, `"1 (adults only)"` — or is one of: `"to taste"`, `"a pinch"`, `"as needed"`, `"optional"`, `"alongside"`. A per-piece amount (`"1 tsp per chilla"`) never scales. Prefix `=` to stop an amount scaling. |
+| `amount` | **The total for the batch.** Leads with a quantity — `"1 cup"`, `"2–3"`, `"400g"`, `"1½ tbsp"`, `"1 (adults only)"` — or is one of: `"to taste"`, `"a pinch"`, `"as needed"`, `"optional"`, `"alongside"`. A per-piece amount (`"1 tsp per chilla"`, `"2 tbsp per bowl"`) never scales; inside instructions the "per …" is dropped. Prefix `=` to stop an amount scaling. |
 | `portions` | Only when the ingredient is used in more than one place, or partly by the toddler. See below. |
 
 ### Portions

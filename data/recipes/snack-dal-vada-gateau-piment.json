@@ -1,5 +1,6 @@
 {
   "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
   "slug": "snack-dal-vada-gateau-piment",
   "category": "snack",
   "title": "Moong Dal Vada / Gâteau Piment",
@@ -20,8 +21,8 @@
   "nightPrep": {
     "label": "Night Before — pick your version",
     "items": [
-      "Indian moong dal vada: soak 1 cup yellow moong dal (split, skinned) 2–3 hours",
-      "Mauritian gâteau piment: soak 1 cup yellow split peas 8–12 hours — they need much longer",
+      "Indian moong dal vada: soak {@dal|yellow moong dal (split, skinned)} 2–3 hours",
+      "Mauritian gâteau piment: soak {@dal|yellow split peas} 8–12 hours — they need much longer",
       "Drain well before grinding"
     ]
   },
@@ -29,56 +30,45 @@
     {
       "label": "Vada base",
       "items": [
-        {"name": "Moong dal or split peas, soaked", "amount": "1 cup"},
-        {"name": "Fresh ginger, grated", "amount": "1 tbsp"},
-        {"name": "Hing", "amount": "¼ tsp"},
-        {"name": "Cumin seeds", "amount": "1 tsp"},
-        {"name": "Coriander seeds, crushed", "amount": "1 tsp"},
-        {"name": "Turmeric", "amount": "¼ tsp"},
-        {"name": "Salt", "amount": "to taste"}
+        {"id": "dal", "name": "Moong dal or split peas, soaked", "short": "dal", "amount": "1 cup"},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1 tbsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tsp"},
+        {"id": "coriander-seeds", "name": "Coriander seeds, crushed", "short": "crushed coriander seeds", "amount": "1 tsp"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste", "portions": {"grind": "a pinch", "season": "to taste"}}
       ]
     },
     {
       "label": "Adult spicing (after toddler pull)",
       "items": [
-        {"name": "Green chili, chopped", "amount": "1–2"},
-        {"name": "Curry leaves (or thyme)", "amount": "10 leaves"},
-        {"name": "Fresh cilantro, chopped", "amount": "3 tbsp"}
+        {"id": "green-chili", "name": "Green chili, chopped", "short": "green chili", "amount": "1–2"},
+        {"id": "curry-leaves", "name": "Curry leaves (Indian version)", "short": "curry leaves", "amount": "10 leaves"},
+        {"id": "thyme", "name": "Fresh thyme (Mauritian version)", "short": "fresh thyme", "amount": "1 tbsp"},
+        {"id": "cilantro", "name": "Fresh cilantro, chopped", "short": "cilantro", "amount": "3 tbsp"}
       ]
     },
     {
-      "label": "Toddler portion",
+      "label": "Toddler portion & frying",
       "items": [
-        {"name": "Boiled potato, mashed", "amount": "3 tbsp"},
-        {"name": "Ghee", "amount": "1 tsp"}
-      ]
-    },
-    {
-      "label": "Frying",
-      "items": [
-        {"name": "Neutral oil, for frying", "amount": "as needed"},
-        {"name": "Ghee, for toddler patties", "amount": "1 tbsp"}
+        {"id": "potato", "name": "Boiled potato, mashed (toddler)", "short": "mashed potato", "amount": "3 tbsp", "portions": {"toddler": "3 tbsp"}},
+        {"id": "ghee-batter", "name": "Ghee, for her batter", "short": "ghee", "amount": "1 tsp", "portions": {"toddler": "1 tsp"}},
+        {"id": "ghee-pan", "name": "Ghee, for her patties", "short": "ghee", "amount": "1 tbsp", "portions": {"toddler": "1 tbsp"}},
+        {"id": "oil", "name": "Neutral oil, for frying", "short": "oil", "amount": "as needed"}
       ]
     }
   ],
   "method": [
     {
       "type": "step",
-      "title": "Grind the base",
+      "title": "Grind and season the base",
       "items": [
-        "Drain the soaked dal or split peas {1 cup} well — split peas feel firmer than dal even after a long soak",
-        "Add to a blender with ginger {1 tbsp} and a pinch of the salt",
+        "Drain the soaked {@dal|dal or split peas} well — split peas feel firmer than dal even after a long soak",
+        "Add to a blender with {@ginger} and {@salt:grind|salt}",
         "Pulse to a coarse, thick paste — no added water; batter should hold its shape on a spoon. Split peas grind a bit coarser than moong dal — a few small flecks are normal and give gâteau piment its characteristic bite.",
-        "Transfer to a mixing bowl"
-      ]
-    },
-    {
-      "type": "step",
-      "title": "Season the base",
-      "items": [
-        "Mix in hing {¼ tsp}, cumin seeds {1 tsp}, crushed coriander seeds {1 tsp}, and turmeric {¼ tsp}",
-        "Mix in remaining salt to taste",
-        "This is the shared base — no chili has gone in yet"
+        "Too wet? Add a spoon of chickpea flour. Too dry? A few drops of water at a time.",
+        "Transfer to a mixing bowl; mix in {@hing}, {@cumin}, {@coriander-seeds} and {@turmeric}",
+        "Mix in {@salt:season|the remaining salt} — this is the shared base, no chili has gone in yet"
       ]
     },
     {
@@ -86,24 +76,17 @@
       "label": "Toddler portion — pull now",
       "items": [
         "Scoop out about ⅓ cup of the seasoned base into a separate bowl before any chili is added",
-        "Fold in mashed potato {3 tbsp} and ghee {1 tsp} to soften the texture",
+        "Fold in {@potato:toddler} and {@ghee-batter:toddler} to soften the texture",
         "Set aside — this bowl stays out of all remaining adult steps"
       ]
     },
     {
       "type": "step",
-      "title": "Spice the adult batter",
+      "title": "Spice and fry the adult batch",
       "items": [
-        "Into the remaining base, mix in green chili {1–2}, and your chosen herb — curry leaves {10 leaves} for the Indian version, or fresh thyme {1 tbsp} for Mauritian — plus cilantro {3 tbsp}",
-        "Mix evenly — this is now the adult batter only"
-      ]
-    },
-    {
-      "type": "step",
-      "title": "Shape and fry the adult batch",
-      "items": [
-        "Heat oil {as needed} in a kadai or heavy pot over medium-high heat",
-        "Wet hands, shape adult batter into small flat patties {~2 tbsp each} — for gâteau piment, shape slightly thicker in the center than a typical vada",
+        "Into the remaining base, mix {@green-chili}, your herb — {@curry-leaves} for the Indian version, or {@thyme} for Mauritian — and {@cilantro}",
+        "Heat {@oil} in a kadai or heavy pot over medium-high heat",
+        "Wet hands, shape adult batter into small flat patties {=~2 tbsp each} — for gâteau piment, shape slightly thicker in the center than a typical vada",
         "Fry in batches until deep golden and firm — 3–4 minutes per side for moong dal, 4–5 minutes for split peas, which take a little longer to cook through",
         "Drain on a rack or paper towel"
       ]
@@ -112,7 +95,7 @@
       "type": "step",
       "title": "Cook the toddler patties",
       "items": [
-        "Heat ghee {1 tbsp} in a small nonstick pan over medium-low heat",
+        "Heat {@ghee-pan:toddler} in a small nonstick pan over medium-low heat",
         "Shape the toddler batter into 3–4 small, thin patties (thinner than the adult ones, for a soft bite)",
         "Pan-sear 2–3 minutes per side until set through and lightly golden — no raw batter should remain",
         "Cool and cut into soft strips before serving to reduce choking risk"
@@ -120,13 +103,8 @@
     },
     {
       "type": "tip",
-      "label": "About this recipe",
-      "text": "These are culinary cousins — both trace back to Indian indentured-labor cooking traditions, but diverged: Indian moong dal vada uses skinned split mung bean and curry leaves; Mauritian gâteau piment traditionally uses yellow split peas and thyme (often chives too, swapped here for cilantro to stay onion/garlic-free for Jain). Toor dal isn't offered as a third option — it's too soft and crumbly to hold together fried this way; it's better suited to dal fry or sambar. Texture check: batter should hold together without added water — too wet, add a spoon of chickpea flour; too dry, add a few drops of water at a time."
-    },
-    {
-      "type": "tip",
-      "label": "Appliance & storage",
-      "text": "Stovetop kadai works best for the adult batch either way. For a lighter version in the Ninja Crispi, brush patties with oil and air-fry at 350°F for 8–10 minutes, flipping halfway — add 2–3 minutes for the split-pea version, and check a bit early since the Crispi runs hot. Toddler patties stay stovetop pan-seared, not air-fried; their thin shape dries out fast in the Crispi. Leftover vadas keep 3 days refrigerated and re-crisp nicely in a dry pan, or the Crispi at 330°F for 3–4 minutes."
+      "label": "Notes",
+      "text": "These are culinary cousins — both trace back to Indian indentured-labor cooking traditions, but diverged: Indian moong dal vada uses skinned split mung bean and curry leaves; Mauritian gâteau piment traditionally uses yellow split peas and thyme (often chives too, swapped here for cilantro to keep it Jain). Toor dal isn't offered as a third option — it's too soft and crumbly to hold together fried this way. Lighter version: brush patties with oil and air-fry in the Ninja Crispi at 350°F for 8–10 minutes, flipping halfway — add 2–3 minutes for split peas, and check early since the Crispi runs hot; toddler patties stay pan-seared, their thin shape dries out in the Crispi. Leftover vadas keep 3 days refrigerated and re-crisp in a dry pan, or the Crispi at 330°F for 3–4 minutes."
     }
   ],
   "tags": [

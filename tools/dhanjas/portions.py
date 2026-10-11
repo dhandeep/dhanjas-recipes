@@ -56,6 +56,8 @@ class Ingredient:
             self.errors.append("ingredient %r: the toddler portion can't be 'rest' — give it an amount" % self.id)
         measured = {k: parse_q(v) for k, v in p.items() if k not in rests}
         numeric = {k: q for k, q in measured.items() if q is not None}
+        if self.fixed and not rests:
+            return  # per-piece totals ("1 cup per bowl") describe one piece; portions aren't summed against them
         if self.total is None:
             if rests:
                 self.errors.append("ingredient %r: 'rest' needs a measured total amount, not %r" % (self.id, self.amount))
@@ -110,8 +112,10 @@ class Ingredient:
 
 
 def _bare(text):
-    """Amount as shown inside an instruction: drop list-only notes in brackets."""
-    return re.sub(r"\s*\([^)]*\)", "", text).strip()
+    """Amount as shown inside an instruction: drop list-only notes in brackets and
+    "per bowl"-style suffixes (the step itself says which bowl or piece)."""
+    text = re.sub(r"\s*\([^)]*\)", "", text)
+    return re.sub(r"\s+per\s+[a-z]+$", "", text.strip()).strip()
 
 
 def ingredients(recipe):

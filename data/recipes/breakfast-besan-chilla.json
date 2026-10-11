@@ -1,5 +1,6 @@
 {
   "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
   "slug": "breakfast-besan-chilla",
   "category": "breakfast",
   "title": "Besan Chilla",
@@ -28,37 +29,32 @@
     {
       "label": "Batter",
       "items": [
-        {"name": "Besan (chickpea flour)", "amount": "1½ cups"},
-        {"name": "Water", "amount": "¾–1 cup"},
-        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
-        {"name": "Green chili, chopped", "amount": "1 (adults)"},
-        {"name": "Coriander leaves, chopped", "amount": "2 tbsp"}
+        {"id": "besan", "name": "Besan (chickpea flour)", "short": "besan", "amount": "1½ cups"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "¾–1 cup", "portions": {"batter": "¾ cup", "adjust": "2–3 tbsp"}},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1 tsp"},
+        {"id": "green-chili", "name": "Green chili, chopped", "short": "green chili", "amount": "1 (adults)"},
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander leaves", "amount": "2 tbsp"}
       ]
     },
     {
       "label": "Spices",
       "items": [
-        {"name": "Ajwain (carom seeds)", "amount": "½ tsp"},
-        {"name": "Cumin seeds", "amount": "½ tsp"},
-        {"name": "Turmeric", "amount": "¼ tsp"},
-        {"name": "Red chili powder", "amount": "¼ tsp (adults)"},
-        {"name": "Coriander powder", "amount": "½ tsp"},
-        {"name": "Hing", "amount": "¼ tsp"},
-        {"name": "Salt", "amount": "½ tsp"}
+        {"id": "ajwain", "name": "Ajwain (carom seeds)", "short": "ajwain", "amount": "½ tsp"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "¼ tsp (adults)"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "½ tsp"}
       ]
     },
     {
-      "label": "Optional paneer filling",
+      "label": "Filling & cooking",
       "items": [
-        {"name": "Paneer, crumbled", "amount": "½ cup"},
-        {"name": "Chaat masala", "amount": "¼ tsp"},
-        {"name": "Salt", "amount": "to taste"}
-      ]
-    },
-    {
-      "label": "For cooking",
-      "items": [
-        {"name": "Oil or ghee", "amount": "1 tsp/chilla"}
+        {"id": "paneer", "name": "Paneer, crumbled (optional filling)", "short": "crumbled paneer", "amount": "½ cup"},
+        {"id": "chaat-masala", "name": "Chaat masala", "short": "chaat masala", "amount": "¼ tsp"},
+        {"id": "salt-filling", "name": "Salt, for the filling", "short": "salt", "amount": "to taste"},
+        {"id": "ghee", "name": "Oil or ghee", "short": "ghee", "amount": "½ tsp per chilla", "portions": {"grease": "½ tsp", "toddler-batter": "a few drops", "toddler": "a smear"}}
       ]
     }
   ],
@@ -67,9 +63,10 @@
       "type": "step",
       "title": "Prepare batter (night before)",
       "items": [
-        "Whisk besan {1½ cups} with water {¾ cup} gradually to avoid lumps",
-        "Add ginger {1 tsp}, ajwain {½ tsp}, cumin seeds {½ tsp}, turmeric {¼ tsp}, coriander powder {½ tsp}, hing {¼ tsp}, salt {½ tsp}",
-        "Fold in coriander leaves {2 tbsp}"
+        "Whisk {@besan} with {@water:batter} gradually to avoid lumps",
+        "Add {@ginger}, {@ajwain}, {@cumin}, {@turmeric}, {@coriander-powder}, {@hing}, {@salt}",
+        "Fold in {@coriander}",
+        "Batter should coat a spoon but still pour — like pancake batter"
       ]
     },
     {
@@ -77,7 +74,7 @@
       "label": "Toddler — split before refrigerating",
       "items": [
         "Remove ⅓ cup of batter before adding green chili or red chili powder",
-        "Add a few drops of ghee — keeps her chillas softer",
+        "Stir in {@ghee:toddler-batter} — keeps her chillas softer",
         "Store separately"
       ]
     },
@@ -85,12 +82,12 @@
       "type": "step",
       "title": "Cook (morning)",
       "items": [
-        "Stir batter well — add water {2–3 tbsp} if thickened overnight",
-        "Add green chili {1} and red chili powder {¼ tsp} to adult batter",
-        "If using paneer filling: mix crumbled paneer {½ cup} with chaat masala {¼ tsp} and salt; set aside",
-        "Heat tawa on medium; grease with ghee {½ tsp}",
+        "Stir batter well — add {@water:adjust} if thickened overnight",
+        "Add {@green-chili} and {@chili-powder} to adult batter",
+        "If using the filling: mix {@paneer} with {@chaat-masala} and {@salt-filling}; set aside",
+        "Heat tawa on medium; grease with {@ghee:grease}",
         "Pour {=¼ cup} and spread quickly; cook 2 min until edges golden",
-        "Add paneer filling {=1 tbsp} in center if using; fold and press 1 min more"
+        "Add filling {=1 tbsp} in center if using; fold and press 1 min more"
       ]
     },
     {
@@ -98,7 +95,7 @@
       "label": "Toddler cooking",
       "items": [
         "Cook on medium-low; small chillas {2 tbsp batter}, serve flat",
-        "A smear of ghee while warm adds calories"
+        "Brush with {@ghee:toddler} while warm — adds calories"
       ]
     },
     {

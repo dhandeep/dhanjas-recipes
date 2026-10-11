@@ -1,5 +1,6 @@
 {
   "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
   "slug": "breakfast-peanut-chutney-roll",
   "category": "breakfast",
   "title": "Peanut Chutney Roti Roll",
@@ -20,38 +21,38 @@
   "nightPrep": {
     "label": "Night Before",
     "items": [
-      "Make a batch of dry peanut chutney (shengdana chutney pudi) — keeps for weeks",
-      "Mix chutney with yogurt or ghee to make a spreadable paste; refrigerate",
-      "Optionally make roti dough — keeps overnight in the fridge"
+      "Make the dry peanut chutney (step 1) — it keeps for weeks, so one batch covers many mornings",
+      "Optionally make the dough for the rotis — keeps overnight in the fridge"
     ]
   },
   "ingredientGroups": [
     {
-      "label": "Per adult (2 rolls)",
+      "label": "Rolls (per adult: 2)",
       "items": [
-        {"name": "Whole wheat roti", "amount": "2"},
-        {"name": "Dry peanut chutney (pudi)", "amount": "2 tbsp/roti"},
-        {"name": "Ghee or butter", "amount": "½ tsp/roti"}
+        {"id": "roti", "name": "Whole wheat roti", "short": "roti", "amount": "2 per adult", "portions": {"adult": "2", "toddler": "1"}},
+        {"id": "chutney", "name": "Dry peanut chutney (pudi)", "short": "dry chutney", "amount": "2 tbsp per roti", "portions": {"roll": "2 tbsp", "toddler": "1 tsp"}},
+        {"id": "ghee", "name": "Ghee or butter", "short": "ghee", "amount": "½ tsp per roti"},
+        {"id": "yogurt-spread", "name": "Yogurt, to loosen the chutney (optional)", "short": "yogurt", "amount": "1 tsp per roti", "portions": {"roll": "1 tsp", "toddler": "1 tbsp"}}
       ]
     },
     {
-      "label": "Filling options",
+      "label": "Filling options (per roll)",
       "items": [
-        {"name": "Paneer, thinly sliced or crumbled", "amount": "30–40g/roll"},
-        {"name": "Cucumber, julienned", "amount": "2–3 tbsp"},
-        {"name": "Capsicum, thinly sliced", "amount": "2–3 tbsp"},
-        {"name": "Thick yogurt/hung curd, binder", "amount": "1 tbsp"}
+        {"id": "paneer", "name": "Paneer, thinly sliced or crumbled", "short": "paneer", "amount": "30–40g per roll", "portions": {"roll": "30–40g", "toddler": "a few soft pieces"}},
+        {"id": "cucumber", "name": "Cucumber, julienned", "short": "cucumber", "amount": "2–3 tbsp per roll", "portions": {"roll": "2–3 tbsp", "toddler": "a few thin slices"}},
+        {"id": "capsicum", "name": "Capsicum, thinly sliced", "short": "capsicum", "amount": "2–3 tbsp per roll"},
+        {"id": "binder", "name": "Thick yogurt/hung curd, binder", "short": "thick yogurt", "amount": "1 tbsp per roll"}
       ]
     },
     {
       "label": "For dry peanut chutney",
       "items": [
-        {"name": "Roasted peanuts, skinned", "amount": "1 cup"},
-        {"name": "Dry red chili", "amount": "2 (adults)"},
-        {"name": "Cumin seeds", "amount": "½ tsp"},
-        {"name": "Hing", "amount": "¼ tsp"},
-        {"name": "Salt", "amount": "½ tsp"},
-        {"name": "Lemon juice or aamchur", "amount": "1 tsp"}
+        {"id": "peanuts", "name": "Roasted peanuts, skinned", "short": "roasted peanuts", "amount": "1 cup"},
+        {"id": "red-chili", "name": "Dry red chili", "short": "dry red chili", "amount": "2 (adults)"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "½ tsp"},
+        {"id": "aamchur", "name": "Lemon juice or aamchur", "short": "aamchur", "amount": "1 tsp"}
       ]
     }
   ],
@@ -60,19 +61,20 @@
       "type": "step",
       "title": "Make dry chutney (~10 min)",
       "items": [
-        "Pulse roasted peanuts {1 cup} in a dry blender — 5–6 short pulses until coarse crumble; do not over-blend into paste",
-        "Add dry red chili {2}, cumin seeds {½ tsp}, hing {¼ tsp}, salt {½ tsp}, aamchur {1 tsp}",
-        "Pulse 2–3 more times to combine — keep it coarse and sandy, not smooth",
-        "Stores in an airtight jar for 2–3 weeks at room temperature"
+        "Pulse {@peanuts} in a dry blender — 5–6 short pulses until coarse crumble; do not over-blend into paste",
+        "Add {@cumin}, {@hing}, {@salt} and {@aamchur}; pulse 2–3 times — keep it coarse and sandy, not smooth",
+        "Set aside {=¼ cup} in a small jar for the toddler now, before the chili goes in",
+        "Add {@red-chili} to the rest; pulse 2–3 more times to combine",
+        "Store both in airtight jars — 2–3 weeks at room temperature"
       ]
     },
     {
       "type": "step",
       "title": "Morning assembly",
       "items": [
-        "Heat roti {2} on tawa — 30 sec per side; smear ghee {½ tsp} while warm",
-        "Spread dry chutney {2 tbsp} over roti — if too dry, mix a spoonful of yogurt into the chutney first",
-        "Add filling: paneer {30–40g}, cucumber {2–3 tbsp}, capsicum {2–3 tbsp}",
+        "Heat {@roti:adult|rotis} on tawa — 30 sec per side; smear {@ghee} on each while warm",
+        "Spread {@chutney:roll} over each roti — if too dry, mix in {@yogurt-spread:roll} first",
+        "Add filling: {@paneer:roll}, {@cucumber:roll}, {@capsicum}, bound with {@binder}",
         "Roll tightly and serve immediately or wrap in foil"
       ]
     },
@@ -80,10 +82,10 @@
       "type": "toddler",
       "label": "Toddler version",
       "items": [
-        "Use chutney made without dry red chili — pulse peanuts with just cumin, hing, salt, aamchur",
-        "Mix {1 tsp} chutney with yogurt {1 tbsp} to make a mild creamy spread",
-        "Soft roti cut into strips or small pieces — easier for her to manage than a roll",
-        "Add soft paneer pieces or thinly sliced cucumber inside"
+        "Use her chili-free chutney from the small jar",
+        "Mix {@chutney:toddler} with {@yogurt-spread:toddler} to make a mild creamy spread",
+        "Spread on {@roti:toddler|soft roti} cut into strips or small pieces — easier for her to manage than a roll",
+        "Add {@paneer:toddler|soft paneer pieces} or {@cucumber:toddler|thinly sliced cucumber} inside"
       ]
     },
     {

@@ -27,7 +27,7 @@
     "1½ tbsp Lemon juice",
     "2 tbsp Cilantro, chopped",
     "Salt, to taste, as needed",
-    "½ tsp Ghee, extra"
+    "½ tsp Ghee, extra (toddler)"
   ],
   "recipeInstructions": [
     {
@@ -36,11 +36,11 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Rinse toor dal (¾ cup), urad dal (½ cup), and chana dal (¼ cup) together under water until it runs mostly clear — no soaking needed"
+          "text": "Rinse toor dal (¾ cup), urad dal (½ cup) and chana dal (¼ cup) together under water until it runs mostly clear — no soaking needed"
         },
         {
           "@type": "HowToStep",
-          "text": "Add to the pressure cooker with water (4 cups), turmeric (¾ tsp), and salt (1 tsp)"
+          "text": "Add to the pressure cooker with water (4 cups), turmeric (¾ tsp) and salt (1 tsp)"
         },
         {
           "@type": "HowToStep",
@@ -98,7 +98,7 @@
     },
     {
       "@type": "HowToSection",
-      "name": "Combine and finish the adult portion",
+      "name": "Finish, then store for meal prep",
       "itemListElement": [
         {
           "@type": "HowToStep",
@@ -106,7 +106,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Adjust consistency with water as needed — this dal should be pourable, not thick like a gravy"
+          "text": "Adjust consistency with water (as needed) — this dal should be pourable, not thick like a gravy"
         },
         {
           "@type": "HowToStep",
@@ -114,33 +114,23 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Stir in lemon juice (1½ tbsp) and adjust salt to taste"
+          "text": "Stir in lemon juice (1½ tbsp) and adjust salt (as needed)"
         },
         {
           "@type": "HowToStep",
-          "text": "Garnish with chopped cilantro (2 tbsp) just before serving"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Cool and store for meal prep",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Let the dal cool to room temperature before refrigerating"
+          "text": "Garnish servings with chopped cilantro (2 tbsp) just before eating — store the rest without it"
         },
         {
           "@type": "HowToStep",
-          "text": "Store in an airtight container — keeps well for 4 days refrigerated"
+          "text": "Cool to room temperature, then refrigerate in an airtight container — keeps 4 days"
         },
         {
           "@type": "HowToStep",
-          "text": "Reheat on the stovetop with a splash of water to loosen, and add the cilantro garnish fresh after reheating rather than storing it mixed in"
+          "text": "Reheat on the stovetop with a splash of water to loosen; add the garnish fresh after reheating"
         },
         {
           "@type": "HowToTip",
-          "text": "Stovetop pressure cooker works straight from rinsed dal — no soak needed since these are all split and dehusked; give it one or two extra whistles versus a soaked-dal recipe to make sure the chana dal fully softens. Chana dal is optional — skip it and use 1 cup toor dal + ½ cup urad dal instead (same total volume), dropping back to 5–6 whistles. This is a thinner, everyday dal, not a gravy — meant for rice or roti as a daily-rotation option alongside the richer dal makhani. Ginger is added generously here since it's the main warming element doing the work onion and garlic would otherwise do in a lighter dal like this."
+          "text": "Stovetop pressure cooker works straight from rinsed dal — no soak needed since these are all split and dehusked; give it one or two extra whistles versus a soaked-dal recipe to make sure the chana dal fully softens. Chana dal is optional — skip it and use 1 cup toor dal + ½ cup urad dal instead (same total volume), dropping back to 5–6 whistles. This is a thinner, everyday dal, not a gravy — meant for rice or roti as a daily-rotation option alongside the richer dal makhani. Ginger is added generously here since it's the main warming element in a light, Jain dal like this."
         }
       ]
     }

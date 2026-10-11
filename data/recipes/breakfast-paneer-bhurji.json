@@ -1,5 +1,6 @@
 {
   "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
   "slug": "breakfast-paneer-bhurji",
   "category": "breakfast",
   "title": "Paneer Bhurji",
@@ -20,84 +21,80 @@
   "nightPrep": {
     "label": "Night Before (optional)",
     "items": [
-      "Crumble paneer and refrigerate",
-      "Chop capsicum, tomato, coriander; refrigerate in a small container"
+      "Crumble the {@paneer} and refrigerate",
+      "Chop {@capsicum}, {@tomatoes} and {@coriander}; refrigerate in a small container"
     ]
   },
   "ingredientGroups": [
     {
       "label": "Main",
       "items": [
-        {"name": "Paneer, crumbled", "amount": "400g"},
-        {"name": "Tomatoes, finely chopped", "amount": "2 medium"},
-        {"name": "Capsicum, diced", "amount": "1 medium"},
-        {"name": "Fresh ginger, grated", "amount": "1½ tsp"},
-        {"name": "Green chili, chopped", "amount": "1–2 (adults)"},
-        {"name": "Ghee or butter", "amount": "2 tbsp"}
+        {"id": "paneer", "name": "Paneer, crumbled", "short": "paneer", "amount": "400g", "portions": {"toddler": "100g", "main": "rest"}},
+        {"id": "tomatoes", "name": "Tomatoes, finely chopped (2 medium)", "short": "tomatoes", "amount": "1 cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
+        {"id": "capsicum", "name": "Capsicum, diced (1 medium)", "short": "capsicum", "amount": "¾ cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1½ tsp"},
+        {"id": "green-chili", "name": "Green chili, chopped", "short": "green chili", "amount": "1–2 (adults)"},
+        {"id": "ghee", "name": "Ghee or butter", "short": "ghee", "amount": "2 tbsp + ½ tsp", "portions": {"toddler": "½ tsp", "main": "2 tbsp"}},
+        {"id": "potato", "name": "Boiled potato, optional (toddler only)", "short": "boiled potato", "amount": "½", "portions": {"toddler": "½"}}
       ]
     },
     {
       "label": "Spices",
       "items": [
-        {"name": "Cumin seeds", "amount": "1 tsp"},
-        {"name": "Hing", "amount": "¼ tsp"},
-        {"name": "Turmeric", "amount": "¼ tsp"},
-        {"name": "Kashmiri red chili powder", "amount": "½ tsp"},
-        {"name": "Coriander powder", "amount": "1 tsp"},
-        {"name": "Cumin powder", "amount": "½ tsp"},
-        {"name": "Garam masala", "amount": "¼ tsp"},
-        {"name": "Kasuri methi, crushed", "amount": "1 tsp"}
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tsp", "portions": {"toddler": "a pinch", "main": "1 tsp"}},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp", "portions": {"toddler": "a pinch", "main": "¼ tsp"}},
+        {"id": "chili-powder", "name": "Kashmiri red chili powder", "short": "red chili powder", "amount": "½ tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1 tsp"},
+        {"id": "cumin-powder", "name": "Cumin powder", "short": "cumin powder", "amount": "½ tsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "¼ tsp"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "1 tsp"}
       ]
     },
     {
-      "label": "Garnish & serve",
+      "label": "Finish & serve",
       "items": [
-        {"name": "Fresh coriander, chopped", "amount": "2 tbsp"},
-        {"name": "Lemon juice, optional", "amount": "½ tsp"},
-        {"name": "Whole wheat roti or toast", "amount": "2 per adult"}
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste", "portions": {"toddler": "a pinch", "main": "to taste"}},
+        {"id": "coriander", "name": "Fresh coriander, chopped", "short": "coriander", "amount": "2 tbsp"},
+        {"id": "lemon", "name": "Lemon juice, optional", "short": "lemon juice", "amount": "½ tsp"},
+        {"id": "roti", "name": "Whole wheat roti or toast", "short": "roti", "amount": "2 per adult", "portions": {"adult": "2 per adult", "toddler": "1"}}
       ]
     }
   ],
   "method": [
     {
-      "type": "step",
-      "title": "Toddler portion first",
-      "items": [
-        "Set aside crumbled paneer {100g}, capsicum {2 tbsp}, tomato {2 tbsp}"
-      ]
-    },
-    {
       "type": "toddler",
-      "label": "Toddler cooking (~5 min, do first)",
+      "label": "Toddler portion first (~5 min)",
       "items": [
-        "Heat small pan on low; add butter {½ tsp}",
-        "Add cumin seeds {pinch}, let splutter",
-        "Add tomato and capsicum {2 tbsp each}; cook 2 min until soft",
-        "Add paneer {100g}, pinch turmeric, pinch salt; stir 1–2 min — keep moist",
-        "Optional: mash in ½ boiled potato for extra calories",
-        "Serve with soft roti or toast soldiers"
+        "Heat a small pan on low; add {@ghee:toddler|butter}",
+        "Add {@cumin:toddler}, let splutter",
+        "Add {@tomatoes:toddler} and {@capsicum:toddler} from the chopped batch; cook 2 min until soft",
+        "Add {@paneer:toddler}, {@turmeric:toddler} and {@salt:toddler}; stir 1–2 min — keep moist",
+        "Optional: mash in {@potato:toddler} for extra calories",
+        "Serve with {@roti:toddler|soft roti or toast soldiers}"
       ]
     },
     {
       "type": "step",
       "title": "Build the base",
       "items": [
-        "Heat ghee {2 tbsp} in a wide pan on medium-high",
-        "Add cumin seeds {1 tsp}; splutter 20 sec",
-        "Add hing {¼ tsp} and ginger {1½ tsp}; stir 30 sec",
-        "Add green chili {1–2}; cook 20 sec",
-        "Add remaining tomatoes {rest of the 2 medium}; cook 4–5 min until oil separates",
-        "Add remaining capsicum {rest of the 1 medium}; stir-fry 2 min, keep slight crunch"
+        "Heat {@ghee:main} in a wide pan on medium-high",
+        "Add {@cumin:main}; splutter 20 sec",
+        "Add {@hing} and {@ginger}; stir 30 sec",
+        "Add {@green-chili}; cook 20 sec",
+        "Add {@tomatoes:main|remaining tomatoes}; cook 4–5 min until oil separates",
+        "Add {@capsicum:main|remaining capsicum}; stir-fry 2 min, keep slight crunch"
       ]
     },
     {
       "type": "step",
       "title": "Spice and finish",
       "items": [
-        "Add turmeric {¼ tsp}, red chili powder {½ tsp}, coriander powder {1 tsp}, cumin powder {½ tsp}, salt to taste; stir 30 sec",
-        "Add remaining paneer {~300g}; fold gently — don't mash",
-        "Cook 2–3 min; add garam masala {¼ tsp} and kasuri methi {1 tsp}",
-        "Finish with lemon juice {½ tsp}; garnish with coriander {2 tbsp}"
+        "Add {@turmeric:main}, {@chili-powder}, {@coriander-powder}, {@cumin-powder} and {@salt:main}; stir 30 sec",
+        "Add {@paneer:main|remaining paneer}; fold gently — don't mash",
+        "Cook 2–3 min; add {@garam-masala} and {@kasuri-methi}",
+        "Finish with {@lemon}; garnish with {@coriander}",
+        "Serve with {@roti:adult|roti or toast}"
       ]
     },
     {

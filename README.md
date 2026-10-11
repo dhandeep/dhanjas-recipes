@@ -20,7 +20,7 @@ vegetables — published with GitHub Pages at **https://dhanjas.com**.
 ```
 data/recipes/*.json     source of truth, one file per recipe   → docs/RECIPE-SPEC.md (how to write one)
 schema/                 JSON Schema for the recipe format
-inbox/                  drop new v2 .html / .json recipes here → docs/INGEST.md
+inbox/                  drop new recipe .json files here       → docs/INGEST.md, docs/RECIPE-PROMPT.md
 assets/recipe.css       the fixed v2 recipe stylesheet — never edited
 assets/site.css         nav bar + front page styles
 assets/index.js         front-page filtering

@@ -52,6 +52,11 @@ class RoundTrip(unittest.TestCase):
                          'Cook <span class="amt">(5 min)</span>')
 
 
+def load_v2(slug="breakfast-besan-chilla"):
+    """A recipe as format-2 text (amounts written by hand) — for the prose rules older files follow."""
+    return portions.lower(load(slug), 1)
+
+
 class Validator(unittest.TestCase):
     def errors(self, recipe):
         return validate.check(recipe)[0]
@@ -77,7 +82,7 @@ class Validator(unittest.TestCase):
         self.assertTrue(any("no quantity to scale" in e for e in self.errors(r)))
 
     def test_every_instruction_carries_its_quantity(self):
-        r = load()
+        r = load_v2()
         r["method"][0]["items"].append("Add salt and stir")                       # no quantity → error
         self.assertTrue(any("without a quantity" in e for e in self.errors(r)))
         for ok in ["Add salt {½ tsp} and stir",                                     # amount
@@ -86,7 +91,7 @@ class Validator(unittest.TestCase):
                    "Pour the batter over the remaining dal",                        # destination, not a use
                    "Cook until the dal is soft",                                    # description
                    "No chili has gone in yet"]:                                     # negation
-            r = load()
+            r = load_v2()
             r["method"][0]["items"].append(ok)
             with self.subTest(bullet=ok):
                 self.assertEqual(self.errors(r), [])
@@ -97,7 +102,7 @@ class Validator(unittest.TestCase):
         self.assertTrue(any("onion" in e for e in self.errors(r)))
 
     def test_root_veg_only_in_toddler_portion(self):
-        r = load()
+        r = load_v2()
         adult = copy.deepcopy(r)
         adult["ingredientGroups"][0]["items"].append({"name": "Potato, boiled", "amount": "1"})
         self.assertTrue(any("root vegetable" in e for e in self.errors(adult)))
@@ -106,7 +111,7 @@ class Validator(unittest.TestCase):
         self.assertEqual(self.errors(toddler), [])
 
     def test_substitution_notes_are_not_violations(self):
-        r = load()
+        r = load_v2()
         r["method"][0]["items"].append("Hing {pinch} stands in — no onion or garlic needed")
         r["ingredientGroups"][0]["items"].append({"name": "Eggless wrappers", "amount": "4"})
         self.assertEqual(self.errors(r), [])
@@ -213,6 +218,8 @@ class Scaling(unittest.TestCase):
         ("~2 tbsp each", "~2 tbsp each"), ("~1 inch layer", "~1 inch layer"), ("~6–7 in", "~6–7 in"),
         ("from Step 1", "from Step 1"), ("to taste", "to taste"), ("=1 cup", "1 cup"),
         ("Night prep: 5 min (soak)", "Night prep: 5 min (soak)"),
+        # computed amounts read back in full
+        ("¾ cup + 1 tbsp", "1½ cups + 2 tbsp"), ("3 tbsp + 1 tsp", "6 tbsp + 2 tsp"),
     ]
 
     def test_cases(self):

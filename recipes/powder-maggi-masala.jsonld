@@ -21,10 +21,10 @@
     "¾ tsp Dry ginger powder (soonth)",
     "1½ tsp Aamchur (mango powder)",
     "¾ tsp Black pepper powder",
-    "1½ tsp Salt",
     "1½ tbsp Corn flour (cornstarch)",
     "1½ tsp Sugar",
-    "½ tsp Hing"
+    "½ tsp Hing",
+    "1½ tsp Salt"
   ],
   "recipeInstructions": [
     {
@@ -49,17 +49,17 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add ginger powder (¾ tsp), aamchur (1½ tsp), black pepper (¾ tsp), salt (1½ tsp)"
+          "text": "Add ginger powder (¾ tsp), aamchur (1½ tsp), black pepper (¾ tsp) — kept small because the chaat and garam masala already carry pepper, cumin, ginger and salt"
         },
         {
           "@type": "HowToStep",
-          "text": "Add corn flour (1½ tbsp), sugar (1½ tsp), hing (½ tsp)"
+          "text": "Add corn flour (1½ tbsp), sugar (1½ tsp), hing (½ tsp), salt (1½ tsp) — aamchur stands in for citric acid, hing adds Jain depth"
         }
       ]
     },
     {
       "@type": "HowToSection",
-      "name": "Mix until uniform",
+      "name": "Mix, then taste dry",
       "itemListElement": [
         {
           "@type": "HowToStep",
@@ -72,13 +72,7 @@
         {
           "@type": "HowToStep",
           "text": "Final color should be a warm reddish-brown — not orange, not dark brown"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "Dry taste test",
-      "itemListElement": [
+        },
         {
           "@type": "HowToStep",
           "text": "Take a tiny pinch — rub between fingers and taste dry before jarring"
@@ -89,13 +83,13 @@
         },
         {
           "@type": "HowToStep",
-          "text": "If something feels off, see the taste tuning notes below before transferring to jar"
+          "text": "If something feels off, see the taste tuning tip below before transferring to the jar"
         }
       ]
     },
     {
       "@type": "HowToSection",
-      "name": "Transfer to jar",
+      "name": "Jar, label and store",
       "itemListElement": [
         {
           "@type": "HowToStep",
@@ -107,11 +101,41 @@
         },
         {
           "@type": "HowToStep",
+          "text": "Never close the lid if anything is warm — moisture causes clumping"
+        },
+        {
+          "@type": "HowToStep",
           "text": "Label with: Maggi Masala · date made · v1 — track adjustments batch to batch"
         },
         {
           "@type": "HowToStep",
-          "text": "Never close the lid if anything is warm — moisture causes clumping"
+          "text": "Keep in a cool, dark spot away from the stove — 3–4 months at room temperature, up to 6 months refrigerated in a sealed bag"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Always scoop with a dry spoon; clumping means moisture got in — break it up and use within 2 weeks"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "How much to use",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Maggi noodles: 1–1½ tsp per adult serving"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir-fried vegetables or sabji: 1 tsp per 2 servings"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Paneer marinade: 1½ tsp per 200g; roasted paneer or peanuts: ¾–1 tsp per batch"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Chaat sprinkle or raita seasoning: ½ tsp to taste"
         }
       ]
     },
@@ -130,18 +154,6 @@
         {
           "@type": "HowToStep",
           "text": "Stir in small cubed boiled carrot or potato for added nutrition and bulk"
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Chaat masala and garam masala both carry pepper, cumin, ginger, and salt, so the standalone amounts of those four are dialed back to avoid doubling up. Aamchur replaces citric acid for a more natural sour note. Hing is added on top for Jain depth."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Maggi noodles: 1–1½ tsp per adult serving. Stir-fried vegetables or sabji: 1 tsp per 2 servings. Paneer marinade: 1½ tsp per 200g. Air-fryer paneer or peanuts: ¾–1 tsp per batch. Chaat sprinkle or raita seasoning: ½ tsp to taste."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Keep in a cool, dark spot away from the stove. Shelf life 3–4 months at room temperature, up to 6 months refrigerated in a sealed bag. Clumping means moisture got in — break it up and use within 2 weeks. Always scoop with a dry spoon, and label the jar with the date and \"v1\" to track adjustments."
         },
         {
           "@type": "HowToTip",

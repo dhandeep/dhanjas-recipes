@@ -24,10 +24,10 @@
     "½ tsp Coriander powder",
     "¼ tsp Hing",
     "½ tsp Salt",
-    "½ cup Paneer, crumbled",
+    "½ cup Paneer, crumbled (optional filling)",
     "¼ tsp Chaat masala",
-    "Salt, to taste",
-    "1 tsp/chilla Oil or ghee"
+    "Salt, for the filling, to taste",
+    "½ tsp per chilla Oil or ghee"
   ],
   "recipeInstructions": [
     {
@@ -59,6 +59,10 @@
         {
           "@type": "HowToStep",
           "text": "Fold in coriander leaves (2 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Batter should coat a spoon but still pour — like pancake batter"
         }
       ]
     },
@@ -72,7 +76,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add a few drops of ghee — keeps her chillas softer"
+          "text": "Stir in ghee (a few drops) — keeps her chillas softer"
         },
         {
           "@type": "HowToStep",
@@ -94,7 +98,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "If using paneer filling: mix crumbled paneer (½ cup) with chaat masala (¼ tsp) and salt; set aside"
+          "text": "If using the filling: mix crumbled paneer (½ cup) with chaat masala (¼ tsp) and salt (to taste); set aside"
         },
         {
           "@type": "HowToStep",
@@ -106,7 +110,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add paneer filling (=1 tbsp) in center if using; fold and press 1 min more"
+          "text": "Add filling (=1 tbsp) in center if using; fold and press 1 min more"
         }
       ]
     },
@@ -120,7 +124,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "A smear of ghee while warm adds calories"
+          "text": "Brush with ghee (a smear) while warm — adds calories"
         },
         {
           "@type": "HowToTip",

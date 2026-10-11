@@ -12,18 +12,21 @@
   "suitableForDiet": "https://schema.org/VegetarianDiet",
   "keywords": "Dairy, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
-    "~¾ cup Hung curd (from 250g yogurt)",
-    "2 tbsp Hemp seeds",
-    "2 tbsp Pumpkin seeds",
-    "8–10 Almonds, roughly chopped",
-    "4–5 halves Walnuts, broken",
-    "1 tsp Honey or jaggery powder",
+    "500g Full-fat yogurt, to hang (makes ~1½ cups hung curd)",
+    "2 tbsp per bowl Hemp seeds",
+    "2 tbsp per bowl Pumpkin seeds",
+    "8–10 per bowl Almonds, roughly chopped",
+    "4–5 halves per bowl Walnuts, broken",
+    "a handful Multigrain toast or makhana, to serve",
+    "1 tsp Jaggery powder",
     "½ cup Seasonal fruit",
     "¼ tsp Roasted cumin powder",
     "a pinch Black salt (kala namak)",
     "¼ cup Cucumber, finely diced",
     "1 tbsp Coriander leaves",
-    "a handful Multigrain toast or makhana"
+    "⅓ cup Full-fat yogurt, not hung",
+    "¼ cup Banana or soft fruit, mashed",
+    "1 small Boiled potato, optional"
   ],
   "recipeInstructions": [
     {
@@ -32,11 +35,29 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Line colander with muslin cloth; pour in yogurt (500g); tie and hang over a bowl in the fridge"
+          "text": "Hang the yogurt (step 1) — 5 min of work, but it needs the whole night in the fridge"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Hang the curd (night before)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Line a colander with muslin cloth and set it over a deep bowl"
         },
         {
           "@type": "HowToStep",
-          "text": "By morning: thick hung curd with ~2× protein density; save drained whey for roti dough"
+          "text": "Pour in yogurt (500g); tie the cloth and hang it over the bowl in the fridge overnight"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "By morning it's thick hung curd with ~2× the protein density"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Save the drained whey for roti dough"
         }
       ]
     },
@@ -46,19 +67,23 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Unwrap hung curd (~1½ cups) — should be thick like labneh"
+          "text": "Unwrap the hung curd (~1½ cups) — should be thick like labneh"
         },
         {
           "@type": "HowToStep",
-          "text": "Divide into two adult bowls (~¾ cup each)"
+          "text": "Divide into two adult bowls (=~¾ cup each)"
         },
         {
           "@type": "HowToStep",
-          "text": "Sweet: drizzle honey (1 tsp), add fruit (½ cup), top with hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5 halves)"
+          "text": "Sweet: stir in jaggery powder (1 tsp), add fruit (½ cup), top with hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5 halves)"
         },
         {
           "@type": "HowToStep",
           "text": "Savory: stir in kala namak (a pinch) and cumin (¼ tsp), top with cucumber (¼ cup), coriander (1 tbsp), hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5 halves)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve multigrain toast or makhana (a handful) alongside"
         }
       ]
     },
@@ -68,7 +93,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Use regular full-fat yogurt (not hung) — easier texture"
+          "text": "Use regular full-fat yogurt (⅓ cup) (not hung) — easier texture"
         },
         {
           "@type": "HowToStep",
@@ -80,11 +105,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Drizzle honey — fine for age 2+"
+          "text": "Sweeten with jaggery powder (a pinch)"
         },
         {
           "@type": "HowToStep",
-          "text": "Optional: mash in a small boiled potato for extra calories"
+          "text": "Optional: mash in boiled potato (1 small) for extra calories"
         },
         {
           "@type": "HowToTip",

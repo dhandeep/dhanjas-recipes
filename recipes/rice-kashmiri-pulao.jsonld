@@ -31,7 +31,8 @@
     "12–15 Cashews, split",
     "1½ tbsp Raisins",
     "⅓ cup Pomegranate arils",
-    "¾ cup Apple + pineapple, diced"
+    "¾ cup Apple + pineapple, diced",
+    "1–2 tbsp Boiled carrot or potato, finely diced (toddler only)"
   ],
   "recipeInstructions": [
     {
@@ -56,7 +57,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Dice apple and pineapple (¾ cup total); refrigerate until serving"
+          "text": "Dice the apple and pineapple (¾ cup); refrigerate until serving"
         }
       ]
     },
@@ -78,7 +79,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Remove cashews (12–15) and raisins (1½ tbsp) to a plate and set aside for garnish"
+          "text": "Remove both to a plate and set aside for garnish"
         },
         {
           "@type": "HowToStep",
@@ -90,7 +91,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add crushed fennel (¾ tsp), dry ginger powder (¾ tsp) and hing (⅛ tsp); stir 10 sec"
+          "text": "Add the crushed fennel seeds (¾ tsp), dry ginger powder (¾ tsp) and hing (⅛ tsp); stir 10 sec"
         }
       ]
     },
@@ -100,7 +101,7 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Add drained rice (1½ cups), salt (½ tsp), sugar (1½ tbsp) and ghee (1 tbsp)"
+          "text": "Add the drained rice (1½ cups), salt (½ tsp), sugar (1½ tbsp) and ghee (1 tbsp)"
         },
         {
           "@type": "HowToStep",
@@ -108,7 +109,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Pour in saffron milk (4½ tbsp) and water (1¾ cups); scrape the bottom clean"
+          "text": "Pour in the saffron milk and water (1¾ cups); scrape the bottom clean"
         },
         {
           "@type": "HowToStep",
@@ -116,11 +117,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Lock the lid, seal the valve, Pressure Cook on High (5 min)"
+          "text": "Lock the lid, seal the valve, Pressure Cook on High (=5 min)"
         },
         {
           "@type": "HowToStep",
-          "text": "Natural release (5–6 min), then vent"
+          "text": "Natural release (=5–6 min), then vent"
         },
         {
           "@type": "HowToStep",
@@ -142,11 +143,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Optional: stir in soft boiled carrot or potato, finely diced (1–2 tbsp)"
+          "text": "Optional: stir in soft boiled carrot or potato (1–2 tbsp)"
         },
         {
           "@type": "HowToStep",
-          "text": "Top with cashews crushed to coarse crumbs (1 tsp) and chopped raisins (1 tsp)"
+          "text": "Top with cashews (2) crushed to coarse crumbs and chopped raisins (1 tsp)"
         },
         {
           "@type": "HowToStep",
@@ -168,19 +169,15 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Top with the set-aside cashews and raisins (rest)"
+          "text": "Top with the set-aside cashews (10–13) and raisins (1 tbsp + ½ tsp)"
         },
         {
           "@type": "HowToStep",
-          "text": "Scatter pomegranate arils (⅓ cup) and diced apple and pineapple (rest of the ¾ cup)"
+          "text": "Scatter pomegranate arils (⅓ cup) and diced apple and pineapple (½ cup + 2 tbsp)"
         },
         {
           "@type": "HowToStep",
-          "text": "Serve warm"
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Store leftover rice plain in the fridge; add fruit fresh to each serving"
+          "text": "Serve warm; store leftover rice plain in the fridge and add fruit fresh to each serving"
         },
         {
           "@type": "HowToStep",

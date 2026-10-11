@@ -13,11 +13,12 @@
   "keywords": "Paneer, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
     "400g Paneer, crumbled",
-    "2 medium Tomatoes, finely chopped",
-    "1 medium Capsicum, diced",
+    "1 cup Tomatoes, finely chopped (2 medium)",
+    "¾ cup Capsicum, diced (1 medium)",
     "1½ tsp Fresh ginger, grated",
     "1–2 (adults) Green chili, chopped",
-    "2 tbsp Ghee or butter",
+    "2 tbsp + ½ tsp Ghee or butter",
+    "½ Boiled potato, optional (toddler only)",
     "1 tsp Cumin seeds",
     "¼ tsp Hing",
     "¼ tsp Turmeric",
@@ -26,6 +27,7 @@
     "½ tsp Cumin powder",
     "¼ tsp Garam masala",
     "1 tsp Kasuri methi, crushed",
+    "Salt, to taste",
     "2 tbsp Fresh coriander, chopped",
     "½ tsp Lemon juice, optional",
     "2 per adult Whole wheat roti or toast"
@@ -37,51 +39,41 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Crumble paneer and refrigerate"
+          "text": "Crumble the paneer (400g) and refrigerate"
         },
         {
           "@type": "HowToStep",
-          "text": "Chop capsicum, tomato, coriander; refrigerate in a small container"
+          "text": "Chop capsicum (¾ cup), tomatoes (1 cup) and coriander (2 tbsp); refrigerate in a small container"
         }
       ]
     },
     {
       "@type": "HowToSection",
-      "name": "Toddler portion first",
+      "name": "👶 Toddler portion first (~5 min)",
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Set aside crumbled paneer (100g), capsicum (2 tbsp), tomato (2 tbsp)"
-        }
-      ]
-    },
-    {
-      "@type": "HowToSection",
-      "name": "👶 Toddler cooking (~5 min, do first)",
-      "itemListElement": [
-        {
-          "@type": "HowToStep",
-          "text": "Heat small pan on low; add butter (½ tsp)"
+          "text": "Heat a small pan on low; add butter (½ tsp)"
         },
         {
           "@type": "HowToStep",
-          "text": "Add cumin seeds (pinch), let splutter"
+          "text": "Add cumin seeds (a pinch), let splutter"
         },
         {
           "@type": "HowToStep",
-          "text": "Add tomato and capsicum (2 tbsp each); cook 2 min until soft"
+          "text": "Add tomatoes (2 tbsp) and capsicum (2 tbsp) from the chopped batch; cook 2 min until soft"
         },
         {
           "@type": "HowToStep",
-          "text": "Add paneer (100g), pinch turmeric, pinch salt; stir 1–2 min — keep moist"
+          "text": "Add paneer (100g), turmeric (a pinch) and salt (a pinch); stir 1–2 min — keep moist"
         },
         {
           "@type": "HowToStep",
-          "text": "Optional: mash in ½ boiled potato for extra calories"
+          "text": "Optional: mash in boiled potato (½) for extra calories"
         },
         {
           "@type": "HowToStep",
-          "text": "Serve with soft roti or toast soldiers"
+          "text": "Serve with soft roti or toast soldiers (1)"
         }
       ]
     },
@@ -107,11 +99,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add remaining tomatoes (rest of the 2 medium); cook 4–5 min until oil separates"
+          "text": "Add remaining tomatoes (¾ cup + 2 tbsp); cook 4–5 min until oil separates"
         },
         {
           "@type": "HowToStep",
-          "text": "Add remaining capsicum (rest of the 1 medium); stir-fry 2 min, keep slight crunch"
+          "text": "Add remaining capsicum (½ cup + 2 tbsp); stir-fry 2 min, keep slight crunch"
         }
       ]
     },
@@ -121,11 +113,11 @@
       "itemListElement": [
         {
           "@type": "HowToStep",
-          "text": "Add turmeric (¼ tsp), red chili powder (½ tsp), coriander powder (1 tsp), cumin powder (½ tsp), salt to taste; stir 30 sec"
+          "text": "Add turmeric (¼ tsp), red chili powder (½ tsp), coriander powder (1 tsp), cumin powder (½ tsp) and salt (to taste); stir 30 sec"
         },
         {
           "@type": "HowToStep",
-          "text": "Add remaining paneer (~300g); fold gently — don't mash"
+          "text": "Add remaining paneer (300g); fold gently — don't mash"
         },
         {
           "@type": "HowToStep",
@@ -134,6 +126,10 @@
         {
           "@type": "HowToStep",
           "text": "Finish with lemon juice (½ tsp); garnish with coriander (2 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve with roti or toast (2)"
         },
         {
           "@type": "HowToTip",
