@@ -137,7 +137,7 @@ Never drop content the cook needs.
 
 - **Anything that carries chili or pepper counts as chili.** That includes spice blends ground with dried chilies (kadai masala, sambar powder), chili flakes, chili crisp, black and white pepper. Pull the toddler portion **before** any of these touch the pan, not just before the chili powder.
 - When her portion comes from a component made ahead (a chutney powder, a sauce), set her share aside **before** the chili goes into that component. For example, "Set aside {=¼ cup} in a small jar for the toddler, before the chili goes in".
-- A pantry blend (`powder-` category) has no pan to pull from. Its toddler box is a usage note, e.g. "¼ tsp maximum per toddler serving".
+- A pantry blend (`"category": "powder"`) has no pan to pull from. Its toddler box is a usage note, e.g. "¼ tsp maximum per toddler serving".
 - Keep a batch roast or base that both adults and the toddler eat chili- and pepper-free. Season the adult bowls at serving.
 - In tips, describe substitutions as "→" (onion → celery + hing). Say "aren't Jain" instead of naming the restricted ingredient they contain.
 
