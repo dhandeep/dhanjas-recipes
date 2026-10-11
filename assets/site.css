@@ -25,6 +25,27 @@
 .scale-control button[aria-pressed="true"] { background: var(--cream); color: var(--green); }
 @media print { .site-nav { display: none; } }
 
+/* ---------- instruction checkboxes (assets/checklist.js) ---------- */
+.cl { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.step ul li.cl, .toddler-box li.cl, .night-prep li.cl { padding-left: 1.7rem; }
+.cl::before { content: none !important; }
+.cl > .tick {
+  position: absolute; left: 0.1rem; top: 0.33rem;
+  width: 1.05rem; height: 1.05rem; margin: 0;
+  accent-color: var(--green); cursor: pointer;
+}
+.night-prep li.cl > .tick { top: 0.1rem; width: 0.95rem; height: 0.95rem; }
+.cl.done { opacity: 0.5; text-decoration: line-through; text-decoration-thickness: 1px; }
+.tick-status { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; margin-right: 0.8rem; }
+.tick-status[hidden] { display: none; }
+.tick-count { font-size: 0.7rem; color: #DCEBCC; }
+.tick-clear {
+  font: inherit; font-size: 0.66rem; cursor: pointer; color: var(--cream);
+  background: none; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 0.1rem 0.55rem;
+}
+/* on paper: empty boxes to tick with a pen */
+@media print { .cl.done { opacity: 1; text-decoration: none; } .cl > .tick:checked { opacity: 0.4; } }
+
 /* ---------- front page ---------- */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden;

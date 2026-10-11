@@ -25,5 +25,8 @@ touching recipe data and `docs/INGEST.md` for the publishing flow.
    `npm install` once), then commit `data/`, `recipes/`, `index.html`,
    `assets/recipes.json`.
 
-Quantities: every ingredient amount and every step `{amount}` must lead with a
-number the scaler can read; `{=…}` marks an amount that must never scale.
+Quantities (non-negotiable): every ingredient line has a readable quantity, and every
+step line that uses an ingredient says how much — `{¼ tsp}`, `{rest of the 1 cup}`,
+`{from Step 1}` or "to taste". `validate` enforces both. `{=…}` marks an amount that
+must never scale. When fixing a recipe that fails this, derive amounts from the
+recipe's own numbers and tell the user what you changed.

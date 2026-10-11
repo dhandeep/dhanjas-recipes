@@ -18,18 +18,20 @@ rebuilds every page and deletes the inbox file. If a check fails the file stays 
 - **Errors (block publishing):** anything that breaks `schema/recipe.schema.json`
   (bad slug prefix, missing title or subtitle, unknown fields, empty steps),
   ingredient amounts with no quantity the 1×/2× control can read (write `1 tsp`,
-  `2–3`, `200g`, or `to taste` / `a pinch` / `as needed` / `optional`),
+  `2–3`, `200g`, or `to taste` / `a pinch` / `as needed` / `optional`), step lines
+  that use an ingredient without its quantity (write `{¼ tsp}`,
+  `{rest of the 1 cup}`, `{from Step 1}` — see RECIPE-FORMAT.md),
   onion/garlic/eggs/meat anywhere in the dish, root vegetables outside a toddler
   portion.
 - **Warnings (printed, don't block):** density budget (3–5 groups of 4–8 lines,
   2–4 steps of 4–8 bullets, 1 tip), chili going in before the first toddler box,
-  "add …" bullets with no `{amount}`, honey/mushroom/yeast for a second look, and
+  honey/mushroom/yeast for a second look, and
   restricted words inside tips.
 
 After the build, the workflow renders every page in Chromium
 (`tools/browser-check.mjs`): desktop and phone widths, no sideways scrolling, every
-ingredient line showing an amount, 2× scaling matching the Python reference, and
-each page pixel-identical to the standalone v2 file. Nothing is committed unless
+ingredient line showing an amount, 2× scaling matching the Python reference, the
+instruction checkboxes working, and each page pixel-identical to the standalone v2 file. Nothing is committed unless
 that passes, and the screenshots are kept on the workflow run for 14 days.
 
 These checks are a backstop. They don't replace the full `dhanjas-recipe-validator`

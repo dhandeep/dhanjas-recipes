@@ -255,6 +255,7 @@ def recipe_page(r, css, standalone=False):
             json_ld(r),
             "</script>",
             '<script src="../assets/scale.js" defer></script>',
+            '<script src="../assets/checklist.js" defer></script>',
         ]
     head += ["</head>", "<body>", ""]
     nav = []

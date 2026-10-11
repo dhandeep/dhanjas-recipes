@@ -2,6 +2,11 @@
 
 Status: **proposal — not built yet.** Everything in "Today" is live.
 
+Update: the rule "every instruction carries its quantity" is now enforced on the
+current format by a prose check (`tools/dhanjas/mentions.py`), and the 22 gaps it
+found in the 20 recipes were fixed. This proposal is what would make the rule
+*provable* rather than heuristic, and let "rest of" be computed instead of written.
+
 ## The question
 
 Most recipe sites (indianhealthyrecipes.com and thousands of others) use the same

@@ -84,6 +84,35 @@ Text inside method bullets, night-prep bullets, ingredient names and tips can us
 
 Everything else is plain text (HTML is escaped).
 
+### Every instruction carries its quantity
+
+Non-negotiable, and enforced: `validate` fails a recipe when a step *uses* a listed
+ingredient without saying how much (`tools/dhanjas/mentions.py`). A use is an
+ingredient named after a cooking verb — "Add hing…", "…, top with coriander",
+"Drain the soaked dal…". Each one needs, before the next ingredient or the end of the
+clause, one of:
+
+| Write | When |
+|---|---|
+| `{¼ tsp}` | the amount used in this step |
+| `{rest of the 1 cup}` | whatever earlier steps (often the toddler pull) left — states the total, and scales |
+| `{from Step 1}` / `{all}` | an intermediate made earlier (the masala, the cooked dal) |
+| `to taste`, `a pinch`, `a splash` | in the sentence itself |
+| `{alongside}`, `{optional}`, `{as needed}` | the ingredient list's own wording for unmeasured items |
+
+Descriptions ("the celery should stay crisp"), negations ("no chili has gone in
+yet"), destinations ("add hing to the cold ghee") and mentions after "until" aren't
+uses. The check reads prose, so it's a strong safety net rather than a proof;
+`docs/DESIGN-v3.md` describes the fully structured version.
+
+### Instruction checkboxes
+
+Every night-prep, step and toddler line on the website has a checkbox. Tap anywhere
+on a line to tick it while cooking. Ticks are remembered per recipe on that device,
+and "Clear ticks" in the top bar resets them. Printed copies show empty boxes to tick
+with a pen. This is site-only (`assets/checklist.js`): the recipe markup and the
+standalone v2 export are unchanged.
+
 ### Scaling (1× / 2× / 3×)
 
 Quantities stay human-written, and `tools/dhanjas/quantity.py` reads the numbers in

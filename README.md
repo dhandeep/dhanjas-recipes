@@ -10,7 +10,8 @@ vegetables — published with GitHub Pages at **https://dhanjas.com**.
   be bookmarked.
 - **Recipe pages** (`recipes/<slug>.html`): the v2 house format, all pages sharing
   one stylesheet, with schema.org Recipe metadata so recipe apps can import them.
-  Every quantity is batch-scalable — try `?scale=2` on any recipe.
+  Every quantity is batch-scalable — try `?scale=2` on any recipe — and every
+  instruction line has a checkbox to tick off while cooking.
 - **Data** (`recipes/<slug>.json`, `.jsonld`): each recipe in the house format
   (defined by `schema/recipe.schema.json`) and as schema.org JSON-LD.
 
@@ -24,6 +25,7 @@ assets/recipe.css       the fixed v2 recipe stylesheet — never edited
 assets/site.css         nav bar + front page styles
 assets/index.js         front-page filtering
 assets/scale.js         batch scaling (?scale=2)
+assets/checklist.js     instruction checkboxes
 tools/recipes.py        ingest · build · validate · retag · export · scaled
 tools/browser-check.mjs renders every page in Chromium and checks it
 index.html, recipes/    generated — don't edit by hand

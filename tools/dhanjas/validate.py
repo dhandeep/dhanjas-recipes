@@ -7,7 +7,8 @@ do not fail the build — tighten the writing, never the CSS.
 import re
 
 from . import schema
-from .model import AMT_RE, CATEGORIES, SLUG_RE, TAG_NAMES, plain
+from .model import CATEGORIES, SLUG_RE, TAG_NAMES, plain
+from .mentions import unquantified
 from .quantity import needs_quantity
 
 # Never allowed, for anyone.
@@ -140,11 +141,10 @@ def check(recipe):
     elif "toddler" in (recipe.get("subtitle", "") + " ".join(recipe.get("badges", []))).lower():
         W("header mentions the toddler but the method has no toddler box")
 
-    # ---- every ingredient mention in a step carries its amount ----
-    for b in steps:
-        for item in b.get("items", []):
-            if not AMT_RE.search(item) and re.search(r"\b(add|stir in|mix in|fold in|pour)\b", item, re.I):
-                W("bullet adds something but carries no {amount}: %s" % plain(item))
+    # ---- every instruction carries its quantity (non-negotiable) ----
+    for title, bullet, word, why in unquantified(recipe):
+        E("step %r uses %r without a quantity (%s) — e.g. \"add %s {¼ cup}\", "
+          "\"{rest of the 1 cup}\", \"{from Step 1}\" or \"to taste\": %s" % (title, word, why, word, bullet))
 
     # ---- tags ----
     for t in recipe.get("tags", []):

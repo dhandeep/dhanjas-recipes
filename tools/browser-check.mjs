@@ -10,6 +10,10 @@
 //     standalone v2 file (stylesheet inlined) that `recipes.py export` writes
 //   · ?scale=2 — every scalable number matches `recipes.py scaled` (Python is the
 //     reference), toddler boxes untouched; ?scale=1 changes nothing
+//   · checkboxes — one per instruction line; tapping a line ticks it, ticks survive
+//     a reload, "Clear ticks" resets them, nothing overflows on a phone
+// (Parity is checked with checklist.js blocked, since the boxes intentionally
+// indent each line; the checkboxes are then checked on their own.)
 // Front page: one card per recipe, every Type/Tag filter count matches the data.
 //
 // Exits non-zero on any failure. Set CHROMIUM_PATH to use a specific browser.
@@ -50,10 +54,11 @@ const BASE = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
 const VIEWPORTS = { desktop: { width: 1280, height: 900 }, phone: { width: 390, height: 844 } };
 
-async function page(viewport, errors) {
+async function page(viewport, errors, { checklist = false } = {}) {
   const p = await browser.newPage({ viewport, deviceScaleFactor: 1 });
+  if (!checklist) await p.route('**/checklist.js', r => r.abort());
   p.on('pageerror', e => errors.push(String(e)));
-  p.on('console', m => m.type() === 'error' && errors.push(m.text()));
+  p.on('console', m => m.type() === 'error' && !/checklist\.js|ERR_FAILED/.test(m.text()) && errors.push(m.text()));
   return p;
 }
 
@@ -144,8 +149,40 @@ for (const slug of slugs) {
       const back = await p.evaluate(() => { window.dhanjasScale.apply(1); return [...document.querySelectorAll('data.q')].map(s => s.textContent); });
       if (JSON.stringify(back) !== JSON.stringify(before)) fail(where, 'scale: 1× does not restore the original amounts');
     }
-    if (errors.length) fail(where, `browser errors: ${errors.join(' | ')}`);
     await p.close();
+
+    // instruction checkboxes
+    const c = await page(viewport, errors, { checklist: true });
+    await c.goto(`${BASE}/recipes/${slug}.html`);
+    await c.evaluate(() => localStorage.clear());
+    await c.reload();
+    const wantLines = (r.nightPrep ? r.nightPrep.items.length : 0)
+      + r.method.filter(b => b.type !== 'tip').reduce((n, b) => n + b.items.length, 0);
+    const ticks = await c.locator('li.cl > input.tick').count();
+    if (ticks !== wantLines) fail(where, `checkboxes: ${ticks} boxes for ${wantLines} instruction lines`);
+    const steps = c.locator('.step li.cl');
+    await steps.nth(0).click({ position: { x: 200, y: 8 } });
+    await steps.nth(1).locator('input.tick').click();
+    const status = async () => c.evaluate(() => ({
+      checked: [...document.querySelectorAll('li.cl > input.tick')].map(b => b.checked),
+      done: document.querySelectorAll('li.cl.done').length,
+      bar: !document.querySelector('.tick-status').hidden,
+      count: document.querySelector('.tick-count').textContent,
+      overflow: document.documentElement.scrollWidth - innerWidth,
+    }));
+    let st = await status();
+    if (st.done !== 2 || st.checked.filter(Boolean).length !== 2) fail(where, `checkboxes: ${st.done} lines ticked after 2 taps`);
+    if (!st.bar || st.count !== `✓ 2 of ${wantLines}`) fail(where, `checkboxes: status bar shows "${st.count}"`);
+    if (st.overflow > 0) fail(where, `checkboxes: page is ${st.overflow}px wider than the screen`);
+    if (SHOTS) await c.screenshot({ path: join(ROOT, SHOTS, `${slug}.${vpName}.ticks.png`), fullPage: true });
+    await c.reload();
+    st = await status();
+    if (st.done !== 2) fail(where, `checkboxes: ${st.done} ticks after reload, expected 2`);
+    await c.click('.tick-clear');
+    st = await status();
+    if (st.done !== 0 || st.bar) fail(where, 'checkboxes: "Clear ticks" did not reset');
+    await c.close();
+    if (errors.length) fail(where, `browser errors: ${errors.join(' | ')}`);
   }
 }
 

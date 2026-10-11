@@ -73,6 +73,21 @@ class Validator(unittest.TestCase):
         r["ingredientGroups"][0]["items"].append({"name": "Paneer", "amount": "some"})
         self.assertTrue(any("no quantity to scale" in e for e in self.errors(r)))
 
+    def test_every_instruction_carries_its_quantity(self):
+        r = load()
+        r["method"][0]["items"].append("Add salt and stir")                       # no quantity → error
+        self.assertTrue(any("without a quantity" in e for e in self.errors(r)))
+        for ok in ["Add salt {½ tsp} and stir",                                     # amount
+                   "Add salt to taste and stir",                                    # phrase
+                   "Add the remaining moong dal {rest of the 1 cup}",               # remainder
+                   "Pour the batter over the remaining dal",                        # destination, not a use
+                   "Cook until the dal is soft",                                    # description
+                   "No chili has gone in yet"]:                                     # negation
+            r = load()
+            r["method"][0]["items"].append(ok)
+            with self.subTest(bullet=ok):
+                self.assertEqual(self.errors(r), [])
+
     def test_onion_in_ingredients_is_an_error(self):
         r = load()
         r["ingredientGroups"][0]["items"].append({"name": "Red onion, chopped", "amount": "1"})
