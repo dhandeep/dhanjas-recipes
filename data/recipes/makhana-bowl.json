@@ -37,21 +37,21 @@
     {
       "label": "Per adult bowl",
       "items": [
-        {"id": "makhana", "name": "Roasted makhana", "short": "roasted makhana", "amount": "1 cup per bowl", "portions": {"bowl": "1 cup", "toddler": "¼ cup"}},
-        {"id": "almonds", "name": "Almonds", "short": "almonds", "amount": "8–10 per bowl", "portions": {"bowl": "8–10", "toddler": "1 tsp"}},
-        {"id": "walnuts", "name": "Walnuts, broken", "short": "walnuts", "amount": "4–5 halves per bowl"},
-        {"id": "pumpkin", "name": "Pumpkin seeds", "short": "pumpkin seeds", "amount": "1 tbsp per bowl"},
-        {"id": "hemp", "name": "Hemp seeds", "short": "hemp seeds", "amount": "1 tbsp per bowl"},
-        {"id": "raisins", "name": "Raisins or dried cranberries", "short": "raisins", "amount": "1 tbsp per bowl"}
+        {"id": "makhana", "name": "Roasted makhana", "short": "roasted makhana", "amount": "=1 cup", "portions": {"bowl": "1 cup", "toddler": "¼ cup"}},
+        {"id": "almonds", "name": "Almonds", "short": "almonds", "amount": "=8–10", "portions": {"bowl": "8–10", "toddler": "1 tsp"}},
+        {"id": "walnuts", "name": "Walnut halves", "short": "walnuts", "amount": "=4–5"},
+        {"id": "pumpkin", "name": "Pumpkin seeds", "short": "pumpkin seeds", "amount": "=1 tbsp"},
+        {"id": "hemp", "name": "Hemp seeds", "short": "hemp seeds", "amount": "=1 tbsp"},
+        {"id": "raisins", "name": "Raisins or dried cranberries", "short": "raisins", "amount": "=1 tbsp"}
       ]
     },
     {
-      "label": "To season & serve alongside",
+      "label": "Alongside (per adult bowl)",
       "items": [
         {"id": "pepper", "name": "Black pepper, optional (adults)", "short": "black pepper", "amount": "a pinch"},
-        {"id": "yogurt", "name": "Full-fat yogurt or hung curd", "short": "yogurt", "amount": "½ cup per bowl", "portions": {"bowl": "½ cup", "toddler": "a small bowl"}},
-        {"id": "fruit", "name": "Fresh fruit", "short": "fruit", "amount": "½ cup per bowl", "portions": {"bowl": "½ cup", "toddler": "¼ cup"}},
-        {"id": "jaggery", "name": "Jaggery powder, optional", "short": "jaggery powder", "amount": "1 tsp per bowl"}
+        {"id": "yogurt", "name": "Full-fat yogurt or hung curd", "short": "yogurt", "amount": "=½ cup", "portions": {"bowl": "½ cup", "toddler": "a small bowl"}},
+        {"id": "fruit", "name": "Fresh fruit", "short": "fruit", "amount": "=½ cup", "portions": {"bowl": "½ cup", "toddler": "¼ cup"}},
+        {"id": "jaggery", "name": "Jaggery powder, optional", "short": "jaggery powder", "amount": "=1 tsp"}
       ]
     }
   ],

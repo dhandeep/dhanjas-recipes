@@ -30,12 +30,12 @@
       "label": "Main",
       "items": [
         {"id": "paneer", "name": "Paneer, crumbled", "short": "paneer", "amount": "400g", "portions": {"toddler": "100g", "main": "rest"}},
-        {"id": "tomatoes", "name": "Tomatoes, finely chopped (2 medium)", "short": "tomatoes", "amount": "1 cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
+        {"id": "tomatoes", "name": "Tomatoes, chopped (2 medium)", "short": "tomatoes", "amount": "1 cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
         {"id": "capsicum", "name": "Capsicum, diced (1 medium)", "short": "capsicum", "amount": "¾ cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
         {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1½ tsp"},
         {"id": "green-chili", "name": "Green chili, chopped", "short": "green chili", "amount": "1–2 (adults)"},
         {"id": "ghee", "name": "Ghee or butter", "short": "ghee", "amount": "2 tbsp + ½ tsp", "portions": {"toddler": "½ tsp", "main": "2 tbsp"}},
-        {"id": "potato", "name": "Boiled potato, optional (toddler only)", "short": "boiled potato", "amount": "½", "portions": {"toddler": "½"}}
+        {"id": "potato", "name": "Boiled potato (toddler, optional)", "short": "boiled potato", "amount": "½", "portions": {"toddler": "½"}}
       ]
     },
     {

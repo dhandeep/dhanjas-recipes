@@ -4,7 +4,9 @@ The system prompt for the Claude project that writes dhanjas.com recipes. Copy
 everything below the line into the project instructions, and add
 [`RECIPE-SPEC.md`](RECIPE-SPEC.md) and
 [`../data/recipes/rava-upma.json`](../data/recipes/rava-upma.json)
-(the worked example) to the project files.
+(the worked example) to the project files. Install the validator skill from
+[`.claude/skills/dhanjas-recipe-validator/SKILL.md`](../.claude/skills/dhanjas-recipe-validator/SKILL.md)
+as a Claude skill (it replaces the old v2-HTML validator).
 
 Compared with the previous prompt:
 - The output is now one JSON file in format 3, not a v2 HTML file.
@@ -145,7 +147,7 @@ Never drop content the cook needs.
 
 ## Validation
 
-Before publishing, check the file against the spec's checklist (`RECIPE-SPEC.md` §6) and use the `dhanjas-recipe-validator` skill for cooking logic. Fix every error.
+Before publishing, check the file against the spec's checklist (`RECIPE-SPEC.md` §6) and run the `dhanjas-recipe-validator` skill for cooking logic. Fix every error.
 
 When working in the repo itself (Claude Code), run `python3 tools/recipes.py validate`. It enforces all of the following:
 - the schema

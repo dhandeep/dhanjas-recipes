@@ -35,8 +35,11 @@ ingredient line showing an amount, 2× scaling matching the Python reference, th
 instruction checkboxes working, and each page pixel-identical to the standalone v2 file. Nothing is committed unless
 that passes, and the screenshots are kept on the workflow run for 14 days.
 
-These checks are a backstop. They don't replace the full `dhanjas-recipe-validator`
-skill, which also judges cooking logic.
+These checks are a backstop. They don't replace the `dhanjas-recipe-validator`
+skill ([`.claude/skills/dhanjas-recipe-validator/SKILL.md`](../.claude/skills/dhanjas-recipe-validator/SKILL.md)),
+which also judges cooking logic: toddler timing with spice blends and pepper,
+set-aside items coming back, portions that make sense, scaling at 2×. Claude Code
+uses it from the repo automatically; upload the same file as a skill in Claude chat.
 
 ### Updating a recipe
 

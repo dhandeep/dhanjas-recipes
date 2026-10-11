@@ -8,6 +8,8 @@ import re
 
 from . import portions, schema
 from .model import CATEGORIES, RESERVED_SLUGS, SLUG_RE, TAG_NAMES, plain
+
+NAME_MAX, AMOUNT_MAX = 34, 14   # characters; the v2 ingredient columns
 from .mentions import unquantified
 from .quantity import needs_quantity
 
@@ -184,5 +186,14 @@ def check(recipe):
             W("density: step %r has %d bullets (budget 4–8)" % (b.get("title"), n))
     if len(tips) != 1:
         W("density: %d tip boxes (budget 1)" % len(tips))
+    # ingredient lines sit in narrow columns: longer than this and they wrap awkwardly
+    for g in groups:
+        for it in g.get("items", []):
+            if len(it.get("name", "")) > NAME_MAX:
+                W("field length: ingredient name %r is %d characters (keep to %d)" % (it["name"], len(it["name"]), NAME_MAX))
+            amount = it.get("amount", "").lstrip("=")
+            if len(amount) > AMOUNT_MAX:
+                W("field length: amount %r for %r is %d characters (keep to %d) — put \"per bowl\" in the name "
+                  "or group label and mark the amount fixed with '='" % (amount, it.get("name"), len(amount), AMOUNT_MAX))
 
     return errors, warnings

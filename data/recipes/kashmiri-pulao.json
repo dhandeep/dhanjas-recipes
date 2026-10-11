@@ -58,7 +58,7 @@
         {"id": "raisins", "name": "Raisins", "short": "raisins", "amount": "1½ tbsp", "portions": {"toddler": "1 tsp", "garnish": "rest"}},
         {"id": "pomegranate", "name": "Pomegranate arils", "short": "pomegranate arils", "amount": "⅓ cup"},
         {"id": "fruit", "name": "Apple + pineapple, diced", "short": "apple and pineapple", "amount": "¾ cup", "portions": {"toddler": "2 tbsp", "garnish": "rest"}},
-        {"id": "carrot", "name": "Boiled carrot or potato, finely diced (toddler only)", "short": "soft boiled carrot or potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
+        {"id": "carrot", "name": "Boiled carrot or potato (toddler)", "short": "finely diced boiled carrot or potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
       ]
     }
   ],

@@ -51,10 +51,10 @@
     {
       "label": "Filling & cooking",
       "items": [
-        {"id": "paneer", "name": "Paneer, crumbled (optional filling)", "short": "crumbled paneer", "amount": "½ cup"},
+        {"id": "paneer", "name": "Paneer, crumbled (filling)", "short": "crumbled paneer", "amount": "½ cup"},
         {"id": "chaat-masala", "name": "Chaat masala", "short": "chaat masala", "amount": "¼ tsp"},
         {"id": "salt-filling", "name": "Salt, for the filling", "short": "salt", "amount": "to taste"},
-        {"id": "ghee", "name": "Oil or ghee", "short": "ghee", "amount": "½ tsp per chilla", "portions": {"grease": "½ tsp", "toddler-batter": "a few drops", "toddler": "a smear"}}
+        {"id": "ghee", "name": "Oil or ghee, per chilla", "short": "ghee", "amount": "=½ tsp", "portions": {"grease": "½ tsp", "toddler-batter": "a few drops", "toddler": "a smear"}}
       ]
     }
   ],

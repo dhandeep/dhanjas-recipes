@@ -30,18 +30,18 @@
       "label": "Rolls (per adult: 2)",
       "items": [
         {"id": "roti", "name": "Whole wheat roti", "short": "roti", "amount": "2 per adult", "portions": {"adult": "2", "toddler": "1"}},
-        {"id": "chutney", "name": "Dry peanut chutney (pudi)", "short": "dry chutney", "amount": "2 tbsp per roti", "portions": {"roll": "2 tbsp", "toddler": "1 tsp"}},
-        {"id": "ghee", "name": "Ghee or butter", "short": "ghee", "amount": "½ tsp per roti"},
-        {"id": "yogurt-spread", "name": "Yogurt, to loosen the chutney (optional)", "short": "yogurt", "amount": "1 tsp per roti", "portions": {"roll": "1 tsp", "toddler": "1 tbsp"}}
+        {"id": "chutney", "name": "Dry peanut chutney, per roti", "short": "dry chutney", "amount": "=2 tbsp", "portions": {"roll": "2 tbsp", "toddler": "1 tsp"}},
+        {"id": "ghee", "name": "Ghee or butter, per roti", "short": "ghee", "amount": "=½ tsp"},
+        {"id": "yogurt-spread", "name": "Yogurt to loosen, per roti", "short": "yogurt", "amount": "=1 tsp", "portions": {"roll": "1 tsp", "toddler": "1 tbsp"}}
       ]
     },
     {
       "label": "Filling options (per roll)",
       "items": [
-        {"id": "paneer", "name": "Paneer, thinly sliced or crumbled", "short": "paneer", "amount": "30–40g per roll", "portions": {"roll": "30–40g", "toddler": "a few soft pieces"}},
-        {"id": "cucumber", "name": "Cucumber, julienned", "short": "cucumber", "amount": "2–3 tbsp per roll", "portions": {"roll": "2–3 tbsp", "toddler": "a few thin slices"}},
-        {"id": "capsicum", "name": "Capsicum, thinly sliced", "short": "capsicum", "amount": "2–3 tbsp per roll"},
-        {"id": "binder", "name": "Thick yogurt/hung curd, binder", "short": "thick yogurt", "amount": "1 tbsp per roll"}
+        {"id": "paneer", "name": "Paneer, thinly sliced or crumbled", "short": "paneer", "amount": "=30–40g", "portions": {"roll": "30–40g", "toddler": "a few soft pieces"}},
+        {"id": "cucumber", "name": "Cucumber, julienned", "short": "cucumber", "amount": "=2–3 tbsp", "portions": {"roll": "2–3 tbsp", "toddler": "a few thin slices"}},
+        {"id": "capsicum", "name": "Capsicum, thinly sliced", "short": "capsicum", "amount": "=2–3 tbsp"},
+        {"id": "binder", "name": "Thick yogurt/hung curd, binder", "short": "thick yogurt", "amount": "=1 tbsp"}
       ]
     },
     {

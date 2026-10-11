@@ -23,7 +23,8 @@ included), and every instruction references what it uses as `{@id}` / `{@id:key}
 The prompt that writes recipes is `docs/RECIPE-PROMPT.md`.
 
 1. Save the JSON as `inbox/<dish>.json` (older v2 `.html` still works).
-2. `python3 tools/recipes.py ingest` — fix any ✗ errors it reports (content
+2. Run the `dhanjas-recipe-validator` skill (`.claude/skills/`) on it, then
+   `python3 tools/recipes.py ingest` — fix any ✗ errors it reports (content
    problems go back to the user; don't silently rewrite their recipe).
    Use `--replace` only when the user confirmed replacing an existing recipe.
 3. `python3 -m unittest discover -s tools` and `npm run check:browser` (needs

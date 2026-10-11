@@ -116,6 +116,14 @@ class Validator(unittest.TestCase):
         r["ingredientGroups"][0]["items"].append({"name": "Eggless wrappers", "amount": "4"})
         self.assertEqual(self.errors(r), [])
 
+    def test_long_ingredient_fields_warn(self):
+        r = load()
+        r["ingredientGroups"][0]["items"][0]["name"] = "Besan (chickpea flour), sifted twice for a smooth batter"
+        r["ingredientGroups"][0]["items"][1]["amount"] = "¾–1 cup, adjust as you go"
+        warnings = validate.check(r)[1]
+        self.assertTrue(any("ingredient name" in w for w in warnings))
+        self.assertTrue(any("amount '¾–1 cup" in w for w in warnings))
+
     def test_bad_slug(self):
         for bad in ("Rava Upma", "breakfast_rava", "assets", "recipes"):   # not a slug / a site folder
             r = load()

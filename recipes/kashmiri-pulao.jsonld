@@ -32,7 +32,7 @@
     "1½ tbsp Raisins",
     "⅓ cup Pomegranate arils",
     "¾ cup Apple + pineapple, diced",
-    "1–2 tbsp Boiled carrot or potato, finely diced (toddler only)"
+    "1–2 tbsp Boiled carrot or potato (toddler)"
   ],
   "recipeInstructions": [
     {
@@ -143,7 +143,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Optional: stir in soft boiled carrot or potato (1–2 tbsp)"
+          "text": "Optional: stir in finely diced boiled carrot or potato (1–2 tbsp)"
         },
         {
           "@type": "HowToStep",

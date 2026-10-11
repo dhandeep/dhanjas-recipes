@@ -48,7 +48,7 @@
         {"id": "peppers", "name": "Mixed bell peppers", "short": "bell peppers", "amount": "1½ cups", "portions": {"toddler": "2 tbsp", "main": "rest"}},
         {"id": "celery", "name": "Celery, sliced", "short": "celery", "amount": "2 stalks"},
         {"id": "ghee-toss", "name": "Ghee, for tossing", "short": "ghee", "amount": "1 tbsp"},
-        {"id": "carrot", "name": "Carrot or potato, boiled & diced (toddler only)", "short": "boiled diced carrot or potato", "amount": "½ cup", "portions": {"toddler": "½ cup"}}
+        {"id": "carrot", "name": "Boiled carrot or potato (toddler)", "short": "boiled diced carrot or potato", "amount": "½ cup", "portions": {"toddler": "½ cup"}}
       ]
     },
     {

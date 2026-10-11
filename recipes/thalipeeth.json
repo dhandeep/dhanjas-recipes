@@ -58,7 +58,7 @@
     {
       "label": "To cook & serve",
       "items": [
-        {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "1 tsp per thali", "portions": {"holes": "½ tsp", "flip": "½ tsp"}},
+        {"id": "ghee", "name": "Ghee or oil, per thali", "short": "ghee", "amount": "=1 tsp", "portions": {"holes": "½ tsp", "flip": "½ tsp"}},
         {"id": "water-hands", "name": "Water, for wet hands", "short": "water", "amount": "as needed"},
         {"id": "yogurt", "name": "Plain yogurt", "short": "yogurt", "amount": "alongside", "portions": {"adult": "alongside", "toddler": "a small bowl"}},
         {"id": "butter", "name": "White butter (loni)", "short": "white butter", "amount": "optional", "portions": {"adult": "optional", "toddler": "a small cube"}}

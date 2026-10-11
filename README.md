@@ -8,9 +8,9 @@ vegetables — published with GitHub Pages at **https://recipes.dhanjas.com**.
   High-protein, Instant Pot…), with search across names and ingredients and sorting by type, A–Z,
   newest or quickest. Filters live in the URL, so `/?cat=dal&tag=Meal%20prep` can
   be bookmarked.
-- **Recipe pages** (`<slug>.html` (served as `/<slug>`)): the v2 house format, all pages sharing
+- **Recipe pages** (`/<slug>`, built as `<slug>.html`): the v2 house format, all pages sharing
   one stylesheet, with schema.org Recipe metadata so recipe apps can import them.
-  Every quantity is batch-scalable — try `?scale=2` on any recipe — and every
+  Every quantity scales with the 1×/2×/3× buttons (or `?scale=2`), and every
   instruction line has a checkbox to tick off while cooking.
 - **Data** (`recipes/<slug>.json`, `.jsonld`): each recipe in the house format
   (defined by `schema/recipe.schema.json`) and as schema.org JSON-LD.
@@ -21,6 +21,7 @@ vegetables — published with GitHub Pages at **https://recipes.dhanjas.com**.
 data/recipes/*.json     source of truth, one file per recipe   → docs/RECIPE-SPEC.md (how to write one)
 schema/                 JSON Schema for the recipe format
 inbox/                  drop new recipe .json files here       → docs/INGEST.md, docs/RECIPE-PROMPT.md
+.claude/skills/         dhanjas-recipe-validator — the recipe review skill (also for Claude chat)
 assets/recipe.css       the fixed v2 recipe stylesheet — never edited
 assets/site.css         nav bar + front page styles
 assets/index.js         front-page filtering

@@ -28,12 +28,12 @@
     {
       "label": "Base & toppings",
       "items": [
-        {"id": "yogurt", "name": "Full-fat yogurt, to hang (makes ~1½ cups hung curd)", "short": "yogurt", "amount": "500g"},
-        {"id": "hemp", "name": "Hemp seeds", "short": "hemp seeds", "amount": "2 tbsp per bowl"},
-        {"id": "pumpkin", "name": "Pumpkin seeds", "short": "pumpkin seeds", "amount": "2 tbsp per bowl"},
-        {"id": "almonds", "name": "Almonds, roughly chopped", "short": "almonds", "amount": "8–10 per bowl", "portions": {"bowl": "8–10", "toddler": "1 tsp"}},
-        {"id": "walnuts", "name": "Walnuts, broken", "short": "walnuts", "amount": "4–5 halves per bowl"},
-        {"id": "toast", "name": "Multigrain toast or makhana, to serve", "short": "multigrain toast or makhana", "amount": "a handful"}
+        {"id": "yogurt", "name": "Full-fat yogurt, to hang", "short": "yogurt", "amount": "500g"},
+        {"id": "hemp", "name": "Hemp seeds, per bowl", "short": "hemp seeds", "amount": "=2 tbsp"},
+        {"id": "pumpkin", "name": "Pumpkin seeds, per bowl", "short": "pumpkin seeds", "amount": "=2 tbsp"},
+        {"id": "almonds", "name": "Almonds, chopped, per bowl", "short": "almonds", "amount": "=8–10", "portions": {"bowl": "8–10", "toddler": "1 tsp"}},
+        {"id": "walnuts", "name": "Walnut halves, per bowl", "short": "walnuts", "amount": "=4–5"},
+        {"id": "toast", "name": "Toast or makhana, to serve", "short": "multigrain toast or makhana", "amount": "a handful"}
       ]
     },
     {

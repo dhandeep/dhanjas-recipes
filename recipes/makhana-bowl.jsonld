@@ -15,16 +15,16 @@
     "3–4 cups Makhana (fox nuts), raw",
     "1 tsp Ghee",
     "a pinch Salt",
-    "1 cup per bowl Roasted makhana",
-    "8–10 per bowl Almonds",
-    "4–5 halves per bowl Walnuts, broken",
-    "1 tbsp per bowl Pumpkin seeds",
-    "1 tbsp per bowl Hemp seeds",
-    "1 tbsp per bowl Raisins or dried cranberries",
+    "1 cup Roasted makhana",
+    "8–10 Almonds",
+    "4–5 Walnut halves",
+    "1 tbsp Pumpkin seeds",
+    "1 tbsp Hemp seeds",
+    "1 tbsp Raisins or dried cranberries",
     "a pinch Black pepper, optional (adults)",
-    "½ cup per bowl Full-fat yogurt or hung curd",
-    "½ cup per bowl Fresh fruit",
-    "1 tsp per bowl Jaggery powder, optional"
+    "½ cup Full-fat yogurt or hung curd",
+    "½ cup Fresh fruit",
+    "1 tsp Jaggery powder, optional"
   ],
   "recipeInstructions": [
     {
@@ -99,7 +99,7 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Add almonds (8–10), walnuts (4–5 halves), pumpkin seeds (1 tbsp), hemp seeds (1 tbsp), raisins (1 tbsp)"
+          "text": "Add almonds (8–10), walnuts (4–5), pumpkin seeds (1 tbsp), hemp seeds (1 tbsp), raisins (1 tbsp)"
         },
         {
           "@type": "HowToStep",

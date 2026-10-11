@@ -12,12 +12,12 @@
   "suitableForDiet": "https://schema.org/VegetarianDiet",
   "keywords": "Dairy, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
-    "500g Full-fat yogurt, to hang (makes ~1½ cups hung curd)",
-    "2 tbsp per bowl Hemp seeds",
-    "2 tbsp per bowl Pumpkin seeds",
-    "8–10 per bowl Almonds, roughly chopped",
-    "4–5 halves per bowl Walnuts, broken",
-    "a handful Multigrain toast or makhana, to serve",
+    "500g Full-fat yogurt, to hang",
+    "2 tbsp Hemp seeds, per bowl",
+    "2 tbsp Pumpkin seeds, per bowl",
+    "8–10 Almonds, chopped, per bowl",
+    "4–5 Walnut halves, per bowl",
+    "a handful Toast or makhana, to serve",
     "1 tsp Jaggery powder",
     "½ cup Seasonal fruit",
     "¼ tsp Roasted cumin powder",
@@ -75,11 +75,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Sweet: stir in jaggery powder (1 tsp), add fruit (½ cup), top with hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5 halves)"
+          "text": "Sweet: stir in jaggery powder (1 tsp), add fruit (½ cup), top with hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5)"
         },
         {
           "@type": "HowToStep",
-          "text": "Savory: stir in kala namak (a pinch) and cumin (¼ tsp), top with cucumber (¼ cup), coriander (1 tbsp), hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5 halves)"
+          "text": "Savory: stir in kala namak (a pinch) and cumin (¼ tsp), top with cucumber (¼ cup), coriander (1 tbsp), hemp seeds (2 tbsp), pumpkin seeds (2 tbsp), almonds (8–10) and walnuts (4–5)"
         },
         {
           "@type": "HowToStep",

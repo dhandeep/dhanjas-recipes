@@ -33,7 +33,7 @@
         {"id": "water", "name": "Water", "short": "water", "amount": "3 cups", "portions": {"cook": "3 cups", "adjust": "as needed"}},
         {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¾ tsp"},
         {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"},
-        {"id": "potato", "name": "Boiled potato, mashed (toddler only)", "short": "boiled potato", "amount": "3 tbsp", "portions": {"toddler": "3 tbsp"}}
+        {"id": "potato", "name": "Boiled potato, mashed (toddler)", "short": "boiled potato", "amount": "3 tbsp", "portions": {"toddler": "3 tbsp"}}
       ]
     },
     {

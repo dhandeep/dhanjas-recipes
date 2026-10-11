@@ -61,7 +61,7 @@
         {"id": "water-sauce", "name": "Water", "short": "water", "amount": "6 tbsp"},
         {"id": "sesame-oil", "name": "Toasted sesame oil", "short": "toasted sesame oil", "amount": "2 tbsp"},
         {"id": "cornstarch", "name": "Cornstarch", "short": "cornstarch", "amount": "1 tbsp"},
-        {"id": "gochujang", "name": "Jain gochujang, from the batch above", "short": "Jain gochujang", "amount": "2 tbsp"},
+        {"id": "gochujang", "name": "Jain gochujang (from above)", "short": "Jain gochujang", "amount": "2 tbsp"},
         {"id": "ghee", "name": "Ghee (toddler)", "short": "ghee", "amount": "½ tsp", "portions": {"toddler": "½ tsp"}}
       ]
     },
@@ -73,7 +73,7 @@
         {"id": "white-pepper", "name": "White pepper", "short": "white pepper", "amount": "¼ tsp"},
         {"id": "lettuce", "name": "Butter lettuce", "short": "butter lettuce", "amount": "2 heads"},
         {"id": "celery-leaves", "name": "Celery leaves or coriander", "short": "celery leaves", "amount": "¼ cup"},
-        {"id": "chili-crisp", "name": "Jain chili crisp, from the batch above", "short": "Jain chili crisp", "amount": "to taste"}
+        {"id": "chili-crisp", "name": "Jain chili crisp (from above)", "short": "Jain chili crisp", "amount": "to taste"}
       ]
     }
   ],
