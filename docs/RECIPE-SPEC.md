@@ -225,7 +225,7 @@ instructions always agree.
         {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
         {"id": "lemon", "name": "Lemon juice", "short": "lemon juice", "amount": "1 tsp"},
         {"id": "coriander", "name": "Fresh coriander", "short": "coriander", "amount": "2 tbsp"},
-        {"id": "potato", "name": "Boiled potato, finely diced (toddler only)", "short": "boiled potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
       ]
     }
   ],
