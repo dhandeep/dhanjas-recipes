@@ -1,0 +1,114 @@
+{
+  "slug": "breakfast-paneer-bhurji",
+  "category": "breakfast",
+  "title": "Paneer Bhurji",
+  "subtitle": "Creamy scrambled paneer with tomato and capsicum — a fast, high-protein weekday breakfast.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Paneer"
+  ],
+  "meta": [
+    "Night prep: optional 5 min",
+    "Morning: 20 min",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~28–32g protein per adult serving",
+  "nightPrep": {
+    "label": "Night Before (optional)",
+    "items": [
+      "Crumble paneer and refrigerate",
+      "Chop capsicum, tomato, coriander; refrigerate in a small container"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Main",
+      "items": [
+        {"name": "Paneer, crumbled", "amount": "400g"},
+        {"name": "Tomatoes, finely chopped", "amount": "2 medium"},
+        {"name": "Capsicum, diced", "amount": "1 medium"},
+        {"name": "Fresh ginger, grated", "amount": "1½ tsp"},
+        {"name": "Green chili, chopped", "amount": "1–2 (adults)"},
+        {"name": "Ghee or butter", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "Spices",
+      "items": [
+        {"name": "Cumin seeds", "amount": "1 tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Turmeric", "amount": "¼ tsp"},
+        {"name": "Kashmiri red chili powder", "amount": "½ tsp"},
+        {"name": "Coriander powder", "amount": "1 tsp"},
+        {"name": "Cumin powder", "amount": "½ tsp"},
+        {"name": "Garam masala", "amount": "¼ tsp"},
+        {"name": "Kasuri methi, crushed", "amount": "1 tsp"}
+      ]
+    },
+    {
+      "label": "Garnish & serve",
+      "items": [
+        {"name": "Fresh coriander, chopped", "amount": "2 tbsp"},
+        {"name": "Lemon juice, optional", "amount": "½ tsp"},
+        {"name": "Whole wheat roti or toast", "amount": "2 per adult"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Toddler portion first",
+      "items": [
+        "Set aside crumbled paneer {100g}, capsicum {2 tbsp}, tomato {2 tbsp}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler cooking (~5 min, do first)",
+      "items": [
+        "Heat small pan on low; add butter {½ tsp}",
+        "Add cumin seeds {pinch}, let splutter",
+        "Add tomato and capsicum {2 tbsp each}; cook 2 min until soft",
+        "Add paneer {100g}, pinch turmeric, pinch salt; stir 1–2 min — keep moist",
+        "Optional: mash in ½ boiled potato for extra calories",
+        "Serve with soft roti or toast soldiers"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Build the base",
+      "items": [
+        "Heat ghee {2 tbsp} in a wide pan on medium-high",
+        "Add cumin seeds {1 tsp}; splutter 20 sec",
+        "Add hing {¼ tsp} and ginger {1½ tsp}; stir 30 sec",
+        "Add green chili {1–2}; cook 20 sec",
+        "Add remaining tomatoes; cook 4–5 min until oil separates",
+        "Add remaining capsicum; stir-fry 2 min, keep slight crunch"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice and finish",
+      "items": [
+        "Add turmeric {¼ tsp}, red chili powder {½ tsp}, coriander powder {1 tsp}, cumin powder {½ tsp}, salt to taste; stir 30 sec",
+        "Add remaining paneer {~300g}; fold gently — don't mash",
+        "Cook 2–3 min; add garam masala {¼ tsp} and kasuri methi {1 tsp}",
+        "Finish with lemon juice {½ tsp}; garnish with coriander {2 tbsp}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "High heat when cooking tomatoes is key — it develops flavor fast. Don't overcook after adding paneer; it should stay soft and moist."
+    }
+  ],
+  "tags": [
+    "High-protein",
+    "Night prep",
+    "Toddler-adapted"
+  ],
+  "added": "2026-09-06"
+}

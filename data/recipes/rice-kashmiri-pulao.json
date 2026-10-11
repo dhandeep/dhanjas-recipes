@@ -1,0 +1,136 @@
+{
+  "slug": "rice-kashmiri-pulao",
+  "category": "rice",
+  "title": "Kashmiri Pulao",
+  "subtitle": "Saffron pilaf · Instant Pot · 3 adult servings + toddler",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Pilaf"
+  ],
+  "meta": [
+    "Soak: 30 min",
+    "Cook: ~30 min (Instant Pot)",
+    "1½ cups rice · 3 adult servings + toddler"
+  ],
+  "protein": "~9g protein per adult serving — pair with raita, dal or a paneer sabji",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Rice & liquid",
+      "items": [
+        {"name": "Basmati rice, aged", "amount": "1½ cups"},
+        {"name": "Water", "amount": "1¾ cups"},
+        {"name": "Milk, warm", "amount": "4½ tbsp"},
+        {"name": "Saffron strands", "amount": "3 pinches"},
+        {"name": "Salt", "amount": "½ tsp"},
+        {"name": "Sugar (optional)", "amount": "1½ tbsp"}
+      ]
+    },
+    {
+      "label": "Whole spices",
+      "items": [
+        {"name": "Bay leaf", "amount": "1"},
+        {"name": "Green cardamom", "amount": "4"},
+        {"name": "Cloves", "amount": "6"},
+        {"name": "Cinnamon stick", "amount": "1 inch"},
+        {"name": "Black cardamom", "amount": "1"},
+        {"name": "Caraway seeds (shahi jeera)", "amount": "¾ tsp"}
+      ]
+    },
+    {
+      "label": "Ghee & ground spices",
+      "items": [
+        {"name": "Ghee", "amount": "3½ tbsp"},
+        {"name": "Fennel seeds, crushed", "amount": "¾ tsp"},
+        {"name": "Dry ginger powder", "amount": "¾ tsp"},
+        {"name": "Hing", "amount": "⅛ tsp"}
+      ]
+    },
+    {
+      "label": "Nuts & fruit",
+      "items": [
+        {"name": "Cashews, split", "amount": "12–15"},
+        {"name": "Raisins", "amount": "1½ tbsp"},
+        {"name": "Pomegranate arils", "amount": "⅓ cup"},
+        {"name": "Apple + pineapple, diced", "amount": "¾ cup"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Prep & soak",
+      "items": [
+        "Rinse rice {1½ cups} in several changes of water until mostly clear",
+        "Soak in fresh water for 30 min, then drain completely",
+        "Warm milk {4½ tbsp} for 20–30 sec; stir in saffron {3 pinches} and set aside",
+        "Coarsely crush fennel seeds {¾ tsp}",
+        "Dice apple and pineapple {¾ cup total}; refrigerate until serving"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Fry nuts, then spices",
+      "items": [
+        "Set Instant Pot to Sauté; heat ghee {1½ tbsp}",
+        "Fry cashews {12–15} until light golden, about 1 min",
+        "Add raisins {1½ tbsp}; fry 15–20 sec until plump",
+        "Remove cashews and raisins to a plate and set aside for garnish",
+        "Add ghee {1 tbsp}, then bay leaf {1}, green cardamom {4}, cloves {6}, cinnamon {1 inch}, black cardamom {1} and caraway {¾ tsp}",
+        "Stir 20–30 sec until fragrant; don't let them darken",
+        "Add crushed fennel {¾ tsp}, dry ginger powder {¾ tsp} and hing {⅛ tsp}; stir 10 sec"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Roast rice & pressure cook",
+      "items": [
+        "Add drained rice {1½ cups}, salt {½ tsp}, sugar {1½ tbsp} and ghee {1 tbsp}",
+        "Fry gently 2–3 min until grains look dry and smell nutty",
+        "Pour in saffron milk {4½ tbsp} and water {1¾ cups}; scrape the bottom clean",
+        "Taste the water — it should be lightly salty",
+        "Lock the lid, seal the valve, Pressure Cook on High {5 min}",
+        "Natural release {5–6 min}, then vent",
+        "Open and fluff gently with a fork"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — scoop after fluffing, before garnish",
+      "items": [
+        "Scoop about {½ cup} pulao into a small bowl before any garnish goes on",
+        "Pick out every whole spice: bay leaf, cardamom, cloves, cinnamon",
+        "Optional: stir in soft boiled carrot or potato, finely diced {1–2 tbsp}",
+        "Top with cashews crushed to coarse crumbs {1 tsp} and chopped raisins {1 tsp}",
+        "Add finely diced apple and pineapple {2 tbsp}",
+        "Let it cool to warm before serving"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Garnish & serve",
+      "items": [
+        "Transfer the adult pulao to a serving bowl",
+        "Top with the set-aside cashews and raisins {rest}",
+        "Scatter pomegranate arils {⅓ cup} and diced apple and pineapple {rest of the ¾ cup}",
+        "Serve warm",
+        "Store leftover rice plain in the fridge; add fruit fresh to each serving",
+        "Reheat with a splash of water in the microwave"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Water ratio assumes aged basmati in the Instant Pot; on the stovetop use 3 cups and cook covered on the lowest heat. Best with a pomegranate raita."
+    }
+  ],
+  "tags": [
+    "Toddler-adapted",
+    "Instant Pot",
+    "Pressure cooker"
+  ],
+  "added": "2026-09-20"
+}

@@ -1,0 +1,112 @@
+{
+  "slug": "breakfast-thalipeeth",
+  "category": "breakfast",
+  "title": "Thalipeeth",
+  "subtitle": "A multigrain flatbread of jowar, besan, and wheat, patted straight onto the tawa.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Multigrain · Flatbread"
+  ],
+  "meta": [
+    "Night prep: mix dry flour blend",
+    "Morning: 20 min",
+    "Makes 4–5 thalipeeths (2 adults + toddler)"
+  ],
+  "protein": "~18–22g protein per adult (2 thalipeeths) — besan + jowar + wheat combined",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Mix dry flour blend and store in a jar — lasts months, make a big batch",
+      "Mix dough the night before with all additions; refrigerate wrapped in damp cloth"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Bhajani flour blend (large batch)",
+      "items": [
+        {"name": "Jowar (sorghum) flour", "amount": "1 cup"},
+        {"name": "Besan (chickpea flour)", "amount": "½ cup"},
+        {"name": "Whole wheat flour", "amount": "½ cup"},
+        {"name": "Rice flour", "amount": "¼ cup"}
+      ]
+    },
+    {
+      "label": "Dough (per batch, 4–5 thalipeeths)",
+      "items": [
+        {"name": "Bhajani flour blend", "amount": "2 cups"},
+        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
+        {"name": "Green chili, very finely chopped", "amount": "1 (adults)"},
+        {"name": "Salt", "amount": "¾ tsp"},
+        {"name": "Hot water, to bind", "amount": "¾–1 cup"}
+      ]
+    },
+    {
+      "label": "Spices & mix-ins",
+      "items": [
+        {"name": "Cumin seeds", "amount": "½ tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Turmeric", "amount": "¼ tsp"},
+        {"name": "Coriander leaves, chopped", "amount": "3 tbsp"},
+        {"name": "Sesame seeds", "amount": "1 tbsp"}
+      ]
+    },
+    {
+      "label": "For cooking & serving",
+      "items": [
+        {"name": "Ghee or oil", "amount": "1 tsp/thali"},
+        {"name": "Plain yogurt", "amount": "alongside"},
+        {"name": "White butter (loni)", "amount": "optional"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Mix dough (night before)",
+      "items": [
+        "Combine bhajani flour {2 cups}, ginger {1 tsp}, cumin seeds {½ tsp}, hing {¼ tsp}, turmeric {¼ tsp}, sesame seeds {1 tbsp}, coriander {3 tbsp}, salt {¾ tsp}",
+        "Add hot water {¾ cup} gradually; mix into a soft pliable dough — add more water as needed",
+        "Set aside toddler portion {¼ cup dough} before adding green chili to adult dough",
+        "Add green chili {1, finely chopped} to adult dough; knead briefly",
+        "Wrap both portions in damp cloth; refrigerate"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler dough",
+      "items": [
+        "Her ¼ cup portion is already chili-free — same flour blend, same spices except green chili",
+        "Make 1–2 smaller, thinner thalipeeths for her — thinner = softer when cooked",
+        "Cook on medium-low; add a small cube of white butter on top while warm",
+        "Serve with a small bowl of yogurt for dipping"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook (morning)",
+      "items": [
+        "Remove dough from fridge; let sit 5 min at room temperature",
+        "Wet your palm slightly — thalipeeth dough is patted directly onto the tawa, not rolled",
+        "Place a ball of dough {slightly larger than a golf ball} on a greased medium-hot tawa",
+        "Pat out gently with wet fingers into a thin round circle {~6–7 in}; make 3–4 small holes in the surface with your finger",
+        "Drizzle ghee {½ tsp} into the holes and around the edges",
+        "Cook on medium 3–4 min until underside is golden; flip carefully",
+        "Drizzle ghee {½ tsp} on the other side; cook 2–3 min more",
+        "Serve hot with yogurt and white butter"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Wet hands are essential — thalipeeth dough is sticky and can't be rolled with a pin. Keep a small bowl of water nearby and re-wet between each one."
+    }
+  ],
+  "tags": [
+    "Night prep",
+    "Toddler-adapted"
+  ],
+  "added": "2026-09-07"
+}

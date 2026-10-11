@@ -1,0 +1,107 @@
+{
+  "slug": "breakfast-quinoa-upma",
+  "category": "breakfast",
+  "title": "Quinoa Upma",
+  "subtitle": "A complete-protein upma, tempered with mustard seed and curry leaf.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Quinoa · High protein"
+  ],
+  "meta": [
+    "Night prep: rinse and soak quinoa",
+    "Morning: 20 min",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~20–24g protein per adult serving — quinoa is a complete protein",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Rinse quinoa thoroughly in cold water until it runs clear (removes saponin bitterness)",
+      "Soak 15–20 min, drain, refrigerate — cuts morning cook time"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Main",
+      "items": [
+        {"name": "Quinoa, rinsed and soaked", "amount": "1 cup"},
+        {"name": "Water", "amount": "1¾ cups"},
+        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
+        {"name": "Green chili, slit", "amount": "1–2 (adults)"},
+        {"name": "Ghee", "amount": "2 tbsp"},
+        {"name": "Lemon juice", "amount": "1 tsp"}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"name": "Mustard seeds", "amount": "1 tsp"},
+        {"name": "Cumin seeds", "amount": "½ tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Curry leaves", "amount": "8–10"},
+        {"name": "Cashews, optional", "amount": "10"}
+      ]
+    },
+    {
+      "label": "Vegetables & finish",
+      "items": [
+        {"name": "Capsicum, finely diced", "amount": "½ cup"},
+        {"name": "Tomato, chopped", "amount": "1 medium"},
+        {"name": "Green peas, frozen", "amount": "¼ cup"},
+        {"name": "Turmeric", "amount": "¼ tsp"},
+        {"name": "Salt", "amount": "to taste"},
+        {"name": "Fresh coriander", "amount": "2 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Tempering",
+      "items": [
+        "Heat ghee {2 tbsp} in a heavy pan on medium",
+        "Add mustard seeds {1 tsp} — splutter; add cumin seeds {½ tsp}",
+        "Add hing {¼ tsp}, curry leaves {8–10}, cashews {10} — stir 30 sec",
+        "Add ginger {1 tsp} — cook 20 sec",
+        "Add capsicum {½ cup} and tomato {1 medium}; cook 2 min",
+        "Add peas {¼ cup}, turmeric {¼ tsp}, salt; stir"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull portion here",
+      "items": [
+        "Scoop out vegetables {3–4 tbsp} before adding chili to the main pan",
+        "Add water {⅓ cup} and rinsed quinoa {3 tbsp} to a small pan with her vegetables",
+        "Cover and cook on low 12 min until quinoa is soft and water absorbed",
+        "Mash lightly if needed; add a drop of ghee"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Add chili and cook quinoa",
+      "items": [
+        "Add green chili {1–2} to the adult pan; cook 20 sec",
+        "Add remaining quinoa to the tempering pan; stir to coat 1 min",
+        "Add water {1¾ cups} and bring to a boil",
+        "Reduce to low; cover and cook 12–14 min until water absorbed and quinoa tails appear",
+        "Rest covered 5 min; fluff with fork",
+        "Finish with lemon juice {1 tsp} and coriander {2 tbsp}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The white \"tail\" curling out of each quinoa grain means it's cooked. Don't skip the 5-minute covered rest — it makes the texture fluffy rather than sticky."
+    }
+  ],
+  "tags": [
+    "High-protein",
+    "Night prep",
+    "Toddler-adapted"
+  ],
+  "added": "2026-09-07"
+}

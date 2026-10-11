@@ -1,0 +1,99 @@
+{
+  "slug": "drink-spiced-chaas",
+  "category": "drink",
+  "title": "Spiced Chaas",
+  "subtitle": "Mint · Roasted cumin · 5 min · 2 adults + toddler",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Yogurt"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Makes ~3 cups",
+    "2 adults + toddler"
+  ],
+  "protein": "~8g protein per batch (~3g per 1-cup glass)",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Base",
+      "items": [
+        {"name": "Plain yogurt (curd)", "amount": "1 cup"},
+        {"name": "Chilled water", "amount": "2 cups"},
+        {"name": "Roasted cumin powder", "amount": "½ tsp"},
+        {"name": "Black salt (kala namak)", "amount": "½ tsp"},
+        {"name": "Regular salt", "amount": "to taste"}
+      ]
+    },
+    {
+      "label": "Aromatics",
+      "items": [
+        {"name": "Mint leaves", "amount": "10–12"},
+        {"name": "Fresh coriander", "amount": "small handful"},
+        {"name": "Fresh ginger", "amount": "½ inch"},
+        {"name": "Green chili, minced", "amount": "½ (adults)"}
+      ]
+    },
+    {
+      "label": "Adult finish (optional)",
+      "items": [
+        {"name": "Ghee", "amount": "½ tsp"},
+        {"name": "Hing (asafoetida)", "amount": "1 pinch"},
+        {"name": "Curry leaves", "amount": "5–6"},
+        {"name": "Black pepper, ground", "amount": "1 pinch"},
+        {"name": "Chaat masala", "amount": "¼ tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Blend aromatics",
+      "items": [
+        "Add mint {10–12 leaves}, coriander {small handful} and ginger {½ inch} to a blender",
+        "Add yogurt {¼ cup}",
+        "Blend until completely smooth"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Mix chaas",
+      "items": [
+        "Add remaining yogurt {¾ cup} and chilled water {2 cups}",
+        "Add roasted cumin powder {½ tsp}, black salt {½ tsp} and salt {to taste}",
+        "Blend or whisk until light and frothy"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pour now, before chili and pepper",
+      "items": [
+        "Pour her glass {½ cup} from the chaas",
+        "Optional: stir in a tiny pinch of hing {1 pinch} and serve chilled"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Adult spicing",
+      "items": [
+        "Stir green chili {½, minced} and black pepper {1 pinch} into the remaining chaas",
+        "Heat ghee {½ tsp} in a small pan on low",
+        "Add hing {1 pinch} and curry leaves {5–6}; sizzle 10 seconds",
+        "Pour the tempering over the chaas; add chaat masala {¼ tsp}",
+        "Chill 15 minutes or serve over ice"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Chaas separates as it sits — whisk again just before pouring."
+    }
+  ],
+  "tags": [
+    "Toddler-adapted"
+  ],
+  "added": "2026-10-07"
+}

@@ -1,0 +1,103 @@
+/* =====================================================================
+   dhanjas.com site chrome — nav bar and front page.
+   recipe.css is the fixed v2 recipe stylesheet and is never edited;
+   anything the website needs on top of it goes here.
+   ===================================================================== */
+
+/* ---------- nav bar (recipe pages) ---------- */
+.site-nav {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  background: var(--green); color: var(--cream);
+  padding: 0.55rem var(--gut) 0;
+  font-size: 0.74rem;
+}
+.site-nav a { text-decoration: none; color: #DCEBCC; padding: 0.25rem 0; }
+.site-nav a:hover { color: var(--cream); text-decoration: underline; }
+.site-nav-cat {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 0.15rem 0.6rem !important;
+}
+@media print { .site-nav { display: none; } }
+
+/* ---------- front page ---------- */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.finder { padding: 1.2rem 0 0.4rem; }
+.finder .section-title { margin-top: 0.9rem; }
+
+.search input {
+  width: 100%; font: inherit; font-size: 0.95rem; color: var(--ink);
+  background: #fff; border: 1.5px solid var(--rule); border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+}
+.search input:focus { outline: none; border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(232,130,42,0.18); }
+
+.pill-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pill {
+  font: inherit; font-size: 0.78rem; cursor: pointer;
+  background: var(--cream-dark); color: var(--ink-soft);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.75rem;
+  display: inline-flex; align-items: baseline; gap: 0.35rem;
+}
+.pill .n { font-size: 0.66rem; color: var(--clay); font-weight: 700; }
+.pill:hover { border-color: var(--saffron); }
+.pill[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: var(--cream); }
+.pill[aria-pressed="true"] .n { color: #A8C08C; }
+.pill:disabled { opacity: 0.4; cursor: default; border-color: var(--rule); }
+
+.more-tags { flex-basis: 100%; }
+.more-tags summary {
+  display: inline-block; cursor: pointer; font-size: 0.74rem; color: var(--amount);
+  text-decoration: underline; padding: 0.2rem 0; list-style: none;
+}
+.more-tags summary::-webkit-details-marker { display: none; }
+.more-tags[open] summary { margin-bottom: 0.4rem; }
+
+.finder-foot {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem;
+  margin-top: 1rem; font-size: 0.78rem; color: var(--ink-soft);
+}
+#count { font-weight: 700; color: var(--clay); }
+.sort select {
+  font: inherit; font-size: 0.78rem; color: var(--ink);
+  background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 0.15rem 0.3rem; margin-left: 0.25rem;
+}
+.link-btn {
+  font: inherit; font-size: 0.78rem; background: none; border: none; cursor: pointer;
+  color: var(--amount); text-decoration: underline; padding: 0;
+}
+
+.cards {
+  list-style: none;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.9rem; margin-top: 1rem;
+}
+.card[hidden] { display: none; }
+.card a {
+  display: flex; flex-direction: column; gap: 0.3rem; height: 100%;
+  text-decoration: none; background: #fff;
+  border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1rem 0.8rem;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.card a:hover { border-color: var(--saffron); box-shadow: 0 4px 14px rgba(60,30,0,0.10); transform: translateY(-1px); }
+.card-cat {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--saffron);
+}
+.card-title {
+  font-family: Georgia, 'Times New Roman', serif; font-size: 1.2rem; line-height: 1.2; color: var(--ink);
+}
+.card-sub { font-size: 0.76rem; color: var(--ink-soft); line-height: 1.4; }
+.card-protein { font-size: 0.74rem; font-weight: 600; color: var(--green); }
+.card-protein:empty { display: none; }
+.card-chips { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: auto; padding-top: 0.35rem; }
+.chip {
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--cream-dark); color: var(--clay); padding: 0.1rem 0.45rem; border-radius: 999px;
+}
+.card-foot { font-size: 0.7rem; color: var(--ink-soft); }
+.card-foot:empty { display: none; }
+
+.empty { margin: 2rem 0; text-align: center; color: var(--ink-soft); }

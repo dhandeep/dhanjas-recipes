@@ -1,0 +1,110 @@
+{
+  "slug": "breakfast-moong-dal-chilla",
+  "category": "breakfast",
+  "title": "Moong Dal Chilla",
+  "subtitle": "High-protein · Night prep · 2 adults + toddler",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Lentil"
+  ],
+  "meta": [
+    "Night prep: 5 min (soak)",
+    "Morning: 25 min",
+    "Makes 6–7 chillas"
+  ],
+  "protein": "~18–22g protein per adult serving (3 chillas)",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Rinse moong dal and soak in water overnight (minimum 6 hrs)",
+      "Blend and refrigerate batter — takes 5 min; set toddler portion aside before adding chili"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Batter",
+      "items": [
+        {"name": "Yellow moong dal (split, skinned)", "amount": "1 cup"},
+        {"name": "Water (for blending)", "amount": "⅓–½ cup"},
+        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
+        {"name": "Green chili, finely chopped", "amount": "1 (adults only)"},
+        {"name": "Cumin seeds", "amount": "½ tsp"},
+        {"name": "Hing (asafoetida)", "amount": "¼ tsp"},
+        {"name": "Turmeric", "amount": "¼ tsp"},
+        {"name": "Salt", "amount": "½ tsp"}
+      ]
+    },
+    {
+      "label": "Fillings (optional)",
+      "items": [
+        {"name": "Spinach, finely chopped", "amount": "¼ cup"},
+        {"name": "Capsicum, finely diced", "amount": "¼ cup"},
+        {"name": "Paneer, crumbled", "amount": "½ cup"},
+        {"name": "Coriander leaves, chopped", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "For cooking",
+      "items": [
+        {"name": "Ghee or oil", "amount": "1 tsp per chilla"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Make batter (night before)",
+      "items": [
+        "Drain soaked moong dal completely",
+        "Blend with water {⅓ cup} until smooth — should coat a spoon but pour easily",
+        "Add ginger {1 tsp}, cumin seeds {½ tsp}, hing {¼ tsp}, turmeric {¼ tsp}, salt {½ tsp}",
+        "Fold in spinach {¼ cup} and capsicum {¼ cup} by hand — do not blend"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — set aside now (night before)",
+      "items": [
+        "Remove ⅓ cup of batter before adding green chili",
+        "Stir in a pinch of turmeric and hing {tiny pinch} — skip green chili only",
+        "Optionally stir in crumbled paneer {2 tbsp} for extra protein",
+        "Store separately, labelled, in fridge"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook (morning)",
+      "items": [
+        "Stir batter well — add water {1–2 tbsp} if too thick",
+        "Stir green chili {1, chopped} into adult batter",
+        "Heat tawa on medium; grease with ghee {½ tsp}",
+        "Pour {~¼ cup} and spread in a circle; cook 2–3 min until edges lift",
+        "Drizzle ghee {½ tsp} around edges, flip, cook 1–2 min more",
+        "Cook toddler batter on medium-low first — smaller chillas, serve flat"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler cooking",
+      "items": [
+        "Cook on medium-low; make 2 small chillas {2–3 tbsp batter each}",
+        "Press gently with spatula — no aggressive flipping",
+        "Serve with plain yogurt or mild coriander chutney"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "If chillas tear, the tawa isn't hot enough — wait 30 seconds before spreading."
+    }
+  ],
+  "tags": [
+    "High-protein",
+    "Night prep",
+    "Toddler-adapted"
+  ],
+  "added": "2026-09-06"
+}
