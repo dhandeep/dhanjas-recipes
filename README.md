@@ -1,14 +1,14 @@
 # dhanjas.com
 
 Jain vegetarian recipes for two adults and a toddler — no onion, garlic or root
-vegetables — published with GitHub Pages at **https://dhanjas.com**.
+vegetables — published with GitHub Pages at **https://recipes.dhanjas.com**.
 
 - **Front page** (`index.html`): every recipe as a card, filterable by type
   (breakfast, curry, dal…) and a short fixed tag list (Quick, Night prep, Meal prep,
   High-protein, Instant Pot…), with search across names and ingredients and sorting by type, A–Z,
   newest or quickest. Filters live in the URL, so `/?cat=dal&tag=Meal%20prep` can
   be bookmarked.
-- **Recipe pages** (`recipes/<slug>.html`): the v2 house format, all pages sharing
+- **Recipe pages** (`<slug>.html` (served as `/<slug>`)): the v2 house format, all pages sharing
   one stylesheet, with schema.org Recipe metadata so recipe apps can import them.
   Every quantity is batch-scalable — try `?scale=2` on any recipe — and every
   instruction line has a checkbox to tick off while cooking.
@@ -37,7 +37,7 @@ Python 3.8+, no dependencies.
 
 ```sh
 python3 tools/recipes.py ingest          # inbox/ → data/recipes/, then build
-python3 tools/recipes.py build           # regenerate index.html + recipes/*.html
+python3 tools/recipes.py build           # regenerate index.html + <slug>.html pages
 python3 tools/recipes.py validate        # Jain/toddler/structure checks + density budget
 python3 tools/recipes.py retag           # recompute auto-detected tags
 python3 tools/recipes.py export <slug>   # standalone v2 HTML in export/ (--format json|jsonld|all)

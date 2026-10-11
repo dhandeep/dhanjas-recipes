@@ -1,0 +1,103 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "peanut-chutney-roll",
+  "category": "breakfast",
+  "title": "Peanut Chutney Roti Roll",
+  "subtitle": "Whole wheat roti rolled around a coarse, spiced peanut chutney.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Peanut · Quick"
+  ],
+  "meta": [
+    "Night prep: make chutney ahead",
+    "Morning: 10 min",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~18–22g protein per adult (2 rolls) — peanuts + wheat",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Make the dry peanut chutney (step 1) — it keeps for weeks, so one batch covers many mornings",
+      "Optionally make the dough for the rotis — keeps overnight in the fridge"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Rolls (per adult: 2)",
+      "items": [
+        {"id": "roti", "name": "Whole wheat roti", "short": "roti", "amount": "2 per adult", "portions": {"adult": "2", "toddler": "1"}},
+        {"id": "chutney", "name": "Dry peanut chutney (pudi)", "short": "dry chutney", "amount": "2 tbsp per roti", "portions": {"roll": "2 tbsp", "toddler": "1 tsp"}},
+        {"id": "ghee", "name": "Ghee or butter", "short": "ghee", "amount": "½ tsp per roti"},
+        {"id": "yogurt-spread", "name": "Yogurt, to loosen the chutney (optional)", "short": "yogurt", "amount": "1 tsp per roti", "portions": {"roll": "1 tsp", "toddler": "1 tbsp"}}
+      ]
+    },
+    {
+      "label": "Filling options (per roll)",
+      "items": [
+        {"id": "paneer", "name": "Paneer, thinly sliced or crumbled", "short": "paneer", "amount": "30–40g per roll", "portions": {"roll": "30–40g", "toddler": "a few soft pieces"}},
+        {"id": "cucumber", "name": "Cucumber, julienned", "short": "cucumber", "amount": "2–3 tbsp per roll", "portions": {"roll": "2–3 tbsp", "toddler": "a few thin slices"}},
+        {"id": "capsicum", "name": "Capsicum, thinly sliced", "short": "capsicum", "amount": "2–3 tbsp per roll"},
+        {"id": "binder", "name": "Thick yogurt/hung curd, binder", "short": "thick yogurt", "amount": "1 tbsp per roll"}
+      ]
+    },
+    {
+      "label": "For dry peanut chutney",
+      "items": [
+        {"id": "peanuts", "name": "Roasted peanuts, skinned", "short": "roasted peanuts", "amount": "1 cup"},
+        {"id": "red-chili", "name": "Dry red chili", "short": "dry red chili", "amount": "2 (adults)"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "½ tsp"},
+        {"id": "aamchur", "name": "Lemon juice or aamchur", "short": "aamchur", "amount": "1 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Make dry chutney (~10 min)",
+      "items": [
+        "Pulse {@peanuts} in a dry blender — 5–6 short pulses until coarse crumble; do not over-blend into paste",
+        "Add {@cumin}, {@hing}, {@salt} and {@aamchur}; pulse 2–3 times — keep it coarse and sandy, not smooth",
+        "Set aside {=¼ cup} in a small jar for the toddler now, before the chili goes in",
+        "Add {@red-chili} to the rest; pulse 2–3 more times to combine",
+        "Store both in airtight jars — 2–3 weeks at room temperature"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Morning assembly",
+      "items": [
+        "Heat {@roti:adult|rotis} on tawa — 30 sec per side; smear {@ghee} on each while warm",
+        "Spread {@chutney:roll} over each roti — if too dry, mix in {@yogurt-spread:roll} first",
+        "Add filling: {@paneer:roll}, {@cucumber:roll}, {@capsicum}, bound with {@binder}",
+        "Roll tightly and serve immediately or wrap in foil"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler version",
+      "items": [
+        "Use her chili-free chutney from the small jar",
+        "Mix {@chutney:toddler} with {@yogurt-spread:toddler} to make a mild creamy spread",
+        "Spread on {@roti:toddler|soft roti} cut into strips or small pieces — easier for her to manage than a roll",
+        "Add {@paneer:toddler|soft paneer pieces} or {@cucumber:toddler|thinly sliced cucumber} inside"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The chutney is the protein workhorse here — 2 tbsp of dry peanut chutney has ~7–8g protein. Double-layer it for more flavor and protein."
+    }
+  ],
+  "tags": [
+    "Quick",
+    "Night prep",
+    "High-protein"
+  ],
+  "added": "2026-09-07"
+}

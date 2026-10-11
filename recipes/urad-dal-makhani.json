@@ -1,0 +1,120 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "urad-dal-makhani",
+  "category": "dal",
+  "title": "Urad Dal Makhani",
+  "subtitle": "Creamy black urad dal, tempered with hing and ginger in place of onion and garlic.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Dal · Meal Prep"
+  ],
+  "meta": [
+    "Soak: overnight",
+    "Cook: ~45 min",
+    "6 adult portions + toddler"
+  ],
+  "protein": "~14–16g protein per adult serving — from urad dal",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Rinse {@urad|whole black urad dal} and soak in plenty of water at least 6 hours, or overnight",
+      "Drain before pressure cooking"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Dal",
+      "items": [
+        {"id": "urad", "name": "Whole urad dal (kali dal)", "short": "urad dal", "amount": "1½ cups"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "3 cups", "portions": {"cook": "3 cups", "adjust": "as needed"}},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¾ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"},
+        {"id": "potato", "name": "Boiled potato, mashed (toddler only)", "short": "boiled potato", "amount": "3 tbsp", "portions": {"toddler": "3 tbsp"}}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "3 tbsp"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "ginger", "name": "Ginger, grated", "short": "grated ginger", "amount": "1½ tbsp"},
+        {"id": "celery", "name": "Celery, chopped", "short": "celery", "amount": "3 tbsp"},
+        {"id": "tomato-paste", "name": "Tomato paste", "short": "tomato paste", "amount": "4 tbsp"}
+      ]
+    },
+    {
+      "label": "Spicing & finish (adults)",
+      "items": [
+        {"id": "chili-powder", "name": "Kashmiri chili powder", "short": "Kashmiri chili powder", "amount": "1½ tsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1 tsp"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "¼ tsp"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "crushed kasuri methi", "amount": "1½ tbsp"},
+        {"id": "cream", "name": "Heavy cream", "short": "cream", "amount": "⅓ cup"},
+        {"id": "butter", "name": "Butter", "short": "butter", "amount": "2 tbsp"},
+        {"id": "salt-finish", "name": "Salt, to taste", "short": "salt", "amount": "as needed"},
+        {"id": "butter-toddler", "name": "Butter, extra (toddler)", "short": "butter", "amount": "½ tsp", "portions": {"toddler": "½ tsp"}}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Pressure-cook the dal",
+      "items": [
+        "Drain soaked {@urad} and add to the pressure cooker with {@water:cook}",
+        "Add {@turmeric} and {@salt}",
+        "Pressure cook 5–6 whistles on medium heat, until dal is soft and starting to break down",
+        "Once pressure releases naturally, mash lightly with the back of a ladle for a creamier texture — leave some texture, don't purée"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Build the gravy, combine with dal",
+      "items": [
+        "Heat {@ghee} in a heavy-bottomed pan over medium heat",
+        "Add {@cumin} and let them sizzle 10 seconds",
+        "Add {@hing} and {@ginger}, sauté 30 seconds until fragrant",
+        "Add {@celery}, sauté 2 minutes until softened — it gives the aromatic bulk the base needs, don't skip it",
+        "Add {@tomato-paste}, cook 4–5 minutes until the raw smell is gone and ghee separates at the edges",
+        "Add the cooked dal from Step 1; stir well, adding {@water:adjust} to reach a thick, creamy consistency",
+        "Simmer uncovered on low heat for 10 minutes, stirring occasionally so it doesn't catch at the bottom"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull before any chili goes in",
+      "items": [
+        "Scoop out a small bowl (about ¾ cup) of the plain dal now, before spicing",
+        "Mash in {@potato:toddler} and a small pat of {@butter-toddler:toddler} for extra calories and softness",
+        "Hing is fine for her — no need to skip it. Set this bowl aside; it needs no further cooking."
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice and finish the adult dal, store",
+      "items": [
+        "To the remaining dal add {@chili-powder}, {@garam-masala} and {@sugar}; simmer 5 minutes on low heat",
+        "Stir in {@kasuri-methi}, {@cream} and {@butter}",
+        "Adjust {@salt-finish}; simmer 2 more minutes on low heat, then turn off",
+        "Cool to room temperature, then refrigerate in an airtight container — keeps 4–5 days",
+        "Reheat gently on the stovetop with a splash of water or milk if it has thickened"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Notes",
+      "text": "Use the stovetop pressure cooker for the dal — it needs less water than open-pot cooking and gives the creamy, broken-down texture dal makhani needs. Build the gravy in a separate pan; the Instant Pot's sauté mode works too if you'd rather do it all in one pot. Serve with rice, roti, or jeera rice, plus a simple stir-fried seasonal vegetable. The sugar isn't for sweetness — it's a traditional balancing touch that rounds out the tang from tomato and bitterness from kasuri methi."
+    }
+  ],
+  "tags": [
+    "Night prep",
+    "Meal prep",
+    "Instant Pot"
+  ],
+  "added": "2026-09-07"
+}

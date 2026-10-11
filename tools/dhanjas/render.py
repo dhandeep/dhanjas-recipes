@@ -8,6 +8,8 @@ from .model import AMT_RE, BOLD_RE, CATEGORIES, plain, protein_grams, times, yie
 from .portions import lower
 
 SITE = "dhanjas.com"
+# stamped on every generated recipe page, so a rebuild can tell its own pages from other HTML at the site root
+GENERATOR = '<meta name="generator" content="dhanjas recipes.py">'
 EYEBROW = "dhanjas.com · Jain Kitchen"
 
 # The 1× / 2× / 3× batch control in the nav bar. Scaling already works on every
@@ -242,25 +244,26 @@ def recipe_page(recipe, css, standalone=False):
     else:
         slug = e(r["slug"])
         head += [
+            GENERATOR,
             '<meta name="description" content="%s">' % e(r.get("subtitle", "")),
-            '<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">',
-            '<link rel="stylesheet" href="../assets/recipe.css">',
-            '<link rel="stylesheet" href="../assets/site.css">',
-            '<link rel="alternate" type="application/json" href="%s.json" title="Recipe data (dhanjas format)">' % slug,
-            '<link rel="alternate" type="application/ld+json" href="%s.jsonld" title="Recipe data (schema.org)">' % slug,
+            '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">',
+            '<link rel="stylesheet" href="assets/recipe.css">',
+            '<link rel="stylesheet" href="assets/site.css">',
+            '<link rel="alternate" type="application/json" href="recipes/%s.json" title="Recipe data (dhanjas format)">' % slug,
+            '<link rel="alternate" type="application/ld+json" href="recipes/%s.jsonld" title="Recipe data (schema.org)">' % slug,
             '<script type="application/ld+json">',
             json_ld(r),
             "</script>",
-            '<script src="../assets/scale.js" defer></script>',
-            '<script src="../assets/checklist.js" defer></script>',
+            '<script src="assets/scale.js" defer></script>',
+            '<script src="assets/checklist.js" defer></script>',
         ]
     head += ["</head>", "<body>", ""]
     nav = []
     if not standalone:
         cat = CATEGORIES.get(r["category"], r["category"])
         nav = ['<nav class="site-nav" aria-label="Site">',
-               '  <a class="site-nav-home" href="../">← All recipes</a>']
+               '  <a class="site-nav-home" href="./">← All recipes</a>']
         if SHOW_SCALE_CONTROL:
             nav.append(scale_control())
-        nav += ['  <a class="site-nav-cat" href="../?cat=%s">%s</a>' % (e(r["category"]), e(cat)), "</nav>", ""]
+        nav += ['  <a class="site-nav-cat" href="./?cat=%s">%s</a>' % (e(r["category"]), e(cat)), "</nav>", ""]
     return "\n".join(head + nav + [recipe_body(r, alts), "", TO_TOP, "</body>", "</html>", ""])

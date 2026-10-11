@@ -117,9 +117,12 @@ def parse(html, slug):
     subtitle = header.find("subtitle") if header else None
     title = (h1 or name).text()
 
+    category, _, dish = slug.partition("-")
+    if category not in CATEGORIES or not dish:
+        raise ValueError("v2 file names start with a category (breakfast-, curry-, …) — got %r" % slug)
     recipe = {
-        "slug": slug,
-        "category": slug.split("-", 1)[0],
+        "slug": dish,
+        "category": category,
         "title": title,
         "subtitle": subtitle.text() if subtitle else "",
         "badges": [b.text() for b in header.find_all("badge")] if header else [],

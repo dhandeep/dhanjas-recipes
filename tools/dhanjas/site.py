@@ -20,7 +20,7 @@ def card_data(r):
         "minutes": t.get("total"),
         "added": r.get("added", ""),
         "ingredients": [plain(i["name"]) for g in r["ingredientGroups"] for i in g["items"]],
-        "url": "recipes/%s.html" % r["slug"],
+        "url": r["slug"],  # GitHub Pages serves <slug>.html at /<slug>
     }
 
 

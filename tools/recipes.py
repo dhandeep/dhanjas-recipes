@@ -2,7 +2,7 @@
 """dhanjas.com recipe tool.
 
   python3 tools/recipes.py ingest [FILES...]   v2 HTML or JSON from inbox/ -> data/recipes/, then build
-  python3 tools/recipes.py build               data/recipes/*.json -> index.html + recipes/*.html
+  python3 tools/recipes.py build               data/recipes/*.json -> index.html + <slug>.html pages
   python3 tools/recipes.py validate [SLUGS...] check recipes against the household + template rules
   python3 tools/recipes.py retag               recompute auto-detected tags (keeps hand-added ones)
   python3 tools/recipes.py export SLUG... [--format html|json|jsonld|all] [--all]
@@ -29,12 +29,13 @@ from dhanjas.portions import lower  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "recipes"
 INBOX = ROOT / "inbox"
-PAGES = ROOT / "recipes"
+PAGES = ROOT                     # recipe pages sit at the site root: /<slug> serves <slug>.html
+FEEDS = ROOT / "recipes"         # published data: recipes/<slug>.json and .jsonld
 ASSETS = ROOT / "assets"
 EXPORT = ROOT / "export"
 
 SCHEMA_REF = "../../schema/recipe.schema.json"            # for editors, relative to data/recipes/
-SCHEMA_URL = "https://dhanjas.com/schema/recipe.schema.json"
+SCHEMA_URL = "https://recipes.dhanjas.com/schema/recipe.schema.json"
 
 FIELD_ORDER = ["$schema", "format", "slug", "category", "title", "name", "subtitle", "badges", "labels", "meta", "protein",
                "nightPrep", "ingredientsTitle", "ingredientGroups", "methodTitle", "method", "tags", "added", "source"]
@@ -84,7 +85,7 @@ def report(slug, errors, warnings, quiet=False):
 def cmd_build(args):
     recipes = load_all()
     css = (ASSETS / "recipe.css").read_text("utf-8")
-    PAGES.mkdir(exist_ok=True)
+    FEEDS.mkdir(exist_ok=True)
     wanted = set()
     failed = False
     for r in recipes:
@@ -93,12 +94,16 @@ def cmd_build(args):
             failed = True
             report(r["slug"], errors, [], quiet=True)
         for name, content in exports(r, css, published=True).items():
-            wanted.add(name)
-            (PAGES / name).write_text(content, "utf-8")
-    for stale in [p for ext in ("*.html", "*.json", "*.jsonld") for p in PAGES.glob(ext)]:
-        if stale.name not in wanted:
-            stale.unlink()
-            print("removed %s" % stale.relative_to(ROOT))
+            path = (PAGES if name.endswith(".html") else FEEDS) / name
+            wanted.add(path)
+            path.write_text(content, "utf-8")
+    # a page is ours if the generator stamped it; never touch other HTML at the root
+    stale = [p for p in PAGES.glob("*.html") if render.GENERATOR in p.read_text("utf-8")[:2000]]
+    stale += [p for ext in ("*.json", "*.jsonld") for p in FEEDS.glob(ext)]
+    for path in stale:
+        if path not in wanted:
+            path.unlink()
+            print("removed %s" % path.relative_to(ROOT))
     views = [lower(r, 1) for r in recipes]
     (ROOT / "index.html").write_text(site.index_page(views), "utf-8")
     (ASSETS / "recipes.json").write_text(site.search_index(views), "utf-8")
@@ -124,7 +129,7 @@ def cmd_ingest(args):
     files = [Path(f) for f in args.files] if args.files else sorted(
         p for p in INBOX.glob("*") if p.suffix.lower() in (".html", ".htm", ".json"))
     if not files:
-        print("nothing to ingest — drop v2 .html or .json recipe files into inbox/")
+        print("nothing to ingest — drop recipe .json (or older v2 .html) files into inbox/")
         return 0
     today = datetime.date.today().isoformat()
     ok, failed = 0, 0
@@ -134,7 +139,6 @@ def cmd_ingest(args):
                 recipe = json.loads(path.read_text("utf-8"))
                 recipe.pop("$schema", None)
                 recipe.setdefault("slug", parse_html.slug_from_filename(path.stem))
-                recipe.setdefault("category", recipe["slug"].split("-", 1)[0])
                 if "tags" not in recipe:
                     recipe["tags"] = detect_tags(recipe)
             else:

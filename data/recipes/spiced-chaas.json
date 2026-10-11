@@ -1,0 +1,94 @@
+{
+  "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
+  "slug": "spiced-chaas",
+  "category": "drink",
+  "title": "Spiced Chaas",
+  "subtitle": "Mint · Roasted cumin · 5 min · 2 adults + toddler",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Yogurt"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Makes ~3 cups",
+    "2 adults + toddler"
+  ],
+  "protein": "~8g protein per batch (~3g per 1-cup glass)",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Base",
+      "items": [
+        {"id": "yogurt", "name": "Plain yogurt (curd)", "short": "yogurt", "amount": "1 cup", "portions": {"blend": "¼ cup", "main": "rest"}},
+        {"id": "water", "name": "Chilled water", "short": "chilled water", "amount": "2 cups"},
+        {"id": "cumin", "name": "Roasted cumin powder", "short": "roasted cumin powder", "amount": "½ tsp"},
+        {"id": "black-salt", "name": "Black salt (kala namak)", "short": "black salt", "amount": "½ tsp"},
+        {"id": "salt", "name": "Regular salt", "short": "salt", "amount": "to taste"}
+      ]
+    },
+    {
+      "label": "Aromatics",
+      "items": [
+        {"id": "mint", "name": "Mint leaves", "short": "mint leaves", "amount": "10–12"},
+        {"id": "coriander", "name": "Fresh coriander", "short": "coriander", "amount": "small handful"},
+        {"id": "ginger", "name": "Fresh ginger", "short": "ginger", "amount": "½ inch"},
+        {"id": "green-chili", "name": "Green chili, minced", "short": "green chili", "amount": "½ (adults)"}
+      ]
+    },
+    {
+      "label": "Adult finish (optional)",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing (asafoetida)", "short": "hing", "amount": "1 pinch", "portions": {"tempering": "1 pinch", "toddler": "a tiny pinch"}},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "5–6"},
+        {"id": "pepper", "name": "Black pepper, ground", "short": "black pepper", "amount": "1 pinch"},
+        {"id": "chaat-masala", "name": "Chaat masala", "short": "chaat masala", "amount": "¼ tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Blend the chaas",
+      "items": [
+        "Add {@mint}, {@coriander} and {@ginger} to a blender",
+        "Add {@yogurt:blend} and blend until completely smooth",
+        "Add {@yogurt:main|the remaining yogurt} and {@water}",
+        "Add {@cumin}, {@black-salt} and {@salt}",
+        "Blend or whisk until light and frothy"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pour now, before chili and pepper",
+      "items": [
+        "Pour her glass {½ cup} from the chaas",
+        "Optional: stir in {@hing:toddler} and serve chilled"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Adult spicing",
+      "items": [
+        "Stir {@green-chili} and {@pepper} into the remaining chaas",
+        "Heat {@ghee} in a small pan on low",
+        "Add {@hing:tempering} and {@curry-leaves}; sizzle 10 seconds",
+        "Pour the tempering over the chaas; add {@chaat-masala}",
+        "Chill 15 minutes or serve over ice"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Chaas separates as it sits — whisk again just before pouring."
+    }
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-10-07"
+}

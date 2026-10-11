@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
+  "slug": "quick-tri-dal",
+  "category": "dal",
+  "title": "Quick Tri-Dal",
+  "subtitle": "A light, everyday tempered dal — toor, urad, and chana, no soaking required.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Tri-Dal · Meal Prep"
+  ],
+  "meta": [
+    "No soak needed",
+    "Cook: ~30 min",
+    "6 adult portions + toddler"
+  ],
+  "protein": "~10–12g protein per adult serving — from toor, urad & chana dal",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Dal (washed only, no soak)",
+      "items": [
+        {"id": "toor", "name": "Toor dal, split & dehusked", "short": "toor dal", "amount": "¾ cup"},
+        {"id": "urad", "name": "Urad dal, split & dehusked", "short": "urad dal", "amount": "½ cup"},
+        {"id": "chana", "name": "Chana dal, split, optional", "short": "chana dal", "amount": "¼ cup"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "4 cups", "portions": {"cook": "4 cups", "adjust": "as needed"}},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¾ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"}
+      ]
+    },
+    {
+      "label": "Tempering (tadka)",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "2½ tbsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "½ tsp"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "ginger", "name": "Ginger, grated", "short": "grated ginger", "amount": "1 tbsp"},
+        {"id": "chili-powder", "name": "Kashmiri chili powder", "short": "Kashmiri chili powder", "amount": "1 tsp"}
+      ]
+    },
+    {
+      "label": "Finish & garnish",
+      "items": [
+        {"id": "lemon", "name": "Lemon juice", "short": "lemon juice", "amount": "1½ tbsp"},
+        {"id": "cilantro", "name": "Cilantro, chopped", "short": "chopped cilantro", "amount": "2 tbsp"},
+        {"id": "salt-finish", "name": "Salt, to taste", "short": "salt", "amount": "as needed"},
+        {"id": "ghee-toddler", "name": "Ghee, extra (toddler)", "short": "ghee", "amount": "½ tsp", "portions": {"toddler": "½ tsp"}}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Rinse and pressure-cook the dals",
+      "items": [
+        "Rinse {@toor}, {@urad} and {@chana} together under water until it runs mostly clear — no soaking needed",
+        "Add to the pressure cooker with {@water:cook}, {@turmeric} and {@salt}",
+        "Pressure cook 6–7 whistles on medium heat — the extra whistle or two makes up for skipping the soak, especially for the chana dal",
+        "Let pressure release naturally, then whisk lightly with a ladle until the dal is smooth but still has a little texture"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull before the tempering",
+      "items": [
+        "Scoop out a small bowl (about ¾ cup) of the plain cooked dal now, before tempering",
+        "Stir in a small pat of {@ghee-toddler:toddler} for richness — her bowl stays plain and mild since it's set aside before the chili-spiced tempering is made",
+        "Set the bowl aside"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the tempering (tadka)",
+      "items": [
+        "Heat {@ghee} in a small pan over medium heat",
+        "Add {@mustard} and let them pop",
+        "Add {@cumin}, sizzle 10 seconds",
+        "Add {@hing} and {@ginger}, sauté 20–30 seconds until fragrant",
+        "Add {@chili-powder}, stir for just a few seconds so it doesn't scorch"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Finish, then store for meal prep",
+      "items": [
+        "Pour the hot tempering over the remaining dal (the toddler portion has already been set aside) and stir well",
+        "Adjust consistency with {@water:adjust} — this dal should be pourable, not thick like a gravy",
+        "Simmer 3–4 minutes on low heat so the flavors settle",
+        "Stir in {@lemon} and adjust {@salt-finish}",
+        "Garnish servings with {@cilantro} just before eating — store the rest without it",
+        "Cool to room temperature, then refrigerate in an airtight container — keeps 4 days",
+        "Reheat on the stovetop with a splash of water to loosen; add the garnish fresh after reheating"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Notes",
+      "text": "Stovetop pressure cooker works straight from rinsed dal — no soak needed since these are all split and dehusked; give it one or two extra whistles versus a soaked-dal recipe to make sure the chana dal fully softens. Chana dal is optional — skip it and use 1 cup toor dal + ½ cup urad dal instead (same total volume), dropping back to 5–6 whistles. This is a thinner, everyday dal, not a gravy — meant for rice or roti as a daily-rotation option alongside the richer dal makhani. Ginger is added generously here since it's the main warming element in a light, Jain dal like this."
+    }
+  ],
+  "tags": [
+    "Meal prep",
+    "Instant Pot"
+  ],
+  "added": "2026-09-07"
+}

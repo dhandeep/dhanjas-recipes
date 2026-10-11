@@ -1,0 +1,114 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "dry-peanut-chutney",
+  "category": "powder",
+  "title": "Dry Peanut Chutney",
+  "name": "Dry Peanut Chutney (Shengdana Pudi)",
+  "subtitle": "A ground peanut condiment with chana dal and sesame — mild enough for the whole family.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Condiment · Bulk Batch"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: 20 min",
+    "Yields ~5 cups (stores 3–4 wks)"
+  ],
+  "protein": "~3g protein per 2 tbsp serving — from peanuts, chana dal & sesame",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Roast & grind",
+      "items": [
+        {"id": "peanuts", "name": "Raw peanuts, skin-on", "short": "peanuts", "amount": "3 cups"},
+        {"id": "sesame", "name": "White sesame seeds", "short": "sesame seeds", "amount": "3 tbsp"},
+        {"id": "chana", "name": "Roasted chana dal (dalia)", "short": "chana dal", "amount": "½ cup"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "2 tsp, adjust"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¾ tsp"}
+      ]
+    },
+    {
+      "label": "Tempered spice base",
+      "items": [
+        {"id": "chilies", "name": "Kashmiri red chilies", "short": "Kashmiri chilies", "amount": "12 whole"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tbsp"},
+        {"id": "coconut", "name": "Dry coconut, grated", "short": "coconut", "amount": "4 tbsp"},
+        {"id": "tamarind", "name": "Tamarind, seedless", "short": "tamarind", "amount": "1½ tsp"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "2 sprigs"},
+        {"id": "oil", "name": "Neutral oil, tempering", "short": "oil", "amount": "2 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Roast peanuts (Ninja Crispi) and sesame",
+      "items": [
+        "Spread {@peanuts} in the Crispi basket in a single layer — you'll likely need 2 batches of {1½ cups} each to avoid steaming",
+        "Set to 330°F, 6 min — the Crispi's lowest usable setting; shake the basket at the 3-minute mark",
+        "Check at 5 min: fragrant, skins loosening and crackled; since 330°F runs hot for this, add only 1 min at a time from here",
+        "Spread on a plate and cool completely, at least 15 min — they crisp further as they cool",
+        "Rub between palms to loosen skins; sieve or blow away (a little remaining skin is fine)",
+        "Meanwhile, in a dry pan on low, stir {@sesame} constantly 60–90 sec — they pop and jump; keep a lid nearby",
+        "Remove the moment they turn lightly golden and smell toasty — they burn in seconds; cool on a separate plate"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Temper the spices",
+      "items": [
+        "Heat {@oil} in a small pan over medium-low",
+        "Add {@curry-leaves}; fry 20–30 sec until crisp; remove and set aside",
+        "In the same pan on low, add {@chilies} and {@cumin}; roast, stirring, 60–90 sec until cumin is golden — do not blacken",
+        "Add {@coconut} (or {2½ tbsp} if thawed frozen) and {@tamarind}; toss 30 sec until coconut is lightly golden",
+        "Return the fried leaves to the pan; transfer everything to a plate and cool completely"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Grind — spice base first, then peanuts",
+      "items": [
+        "Add the cooled chili-cumin-coconut-tamarind-curry leaf mixture to a grinder",
+        "Add {@chana} and the toasted {@sesame} — these must be ground fine now, not pulsed later with the peanuts",
+        "Add {@hing} and {@salt}; grind to a fine powder, 25–35 sec",
+        "Add the roasted, cooled {@peanuts}",
+        "Pulse only — 3–4 short bursts of 2–3 sec each — until coarse and sandy, not paste",
+        "Taste and adjust salt"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler notes",
+      "items": [
+        "This whole batch is already toddler-mild — the 12 Kashmiri chilies give color, not real heat",
+        "For more adult heat, add chili flakes separately at serving time rather than into the batch",
+        "Serve her portion mixed with a few drops of ghee, or stirred into warm dal-rice for easier eating",
+        "Great sprinkled on her soft roti with ghee, or mixed into yogurt rice"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cool, store, label",
+      "items": [
+        "Spread the finished chutney on a wide plate; rest uncovered 20 min to drive off residual moisture",
+        "Transfer to a clean, dry, airtight glass jar and label it with the date made",
+        "Store at room temperature 3–4 weeks, or refrigerate to extend to 6–8 weeks — if frozen coconut was used, drop to 2–3 weeks and refrigerate after the first week",
+        "Always use a dry spoon — a single drop of moisture shortens shelf life fast"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Grind the spice base to a fine powder before the peanuts ever go in, then only pulse the peanuts in short bursts — their oil releases fast and a few seconds too long turns the whole batch into peanut butter. If using frozen coconut, dry it on the stovetop first, not in the Crispi (it browns the dry bits before the wet ones catch up). Great over hot rice with ghee, mixed into yogurt rice, or stuffed into a roti roll."
+    }
+  ],
+  "tags": [
+    "Meal prep",
+    "Air fryer"
+  ],
+  "added": "2026-09-07"
+}

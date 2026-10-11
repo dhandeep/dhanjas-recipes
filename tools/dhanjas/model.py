@@ -4,7 +4,7 @@ A recipe lives in data/recipes/<slug>.json. The shape mirrors the v2 HTML
 template one-to-one, so a recipe can round-trip between the two:
 
     {
-      "slug": "breakfast-moong-dal-chilla",
+      "slug": "moong-dal-chilla",
       "category": "breakfast",
       "title": "Moong Dal Chilla",           # <h1> and <h2 class="recipe-name">
       "subtitle": "High-protein · Night prep · 2 adults + toddler",
@@ -45,7 +45,10 @@ CATEGORIES = {
     "drink": "Drink",
 }
 
-SLUG_RE = re.compile(r"^(%s)-[a-z0-9]+(-[a-z0-9]+)*$" % "|".join(CATEGORIES))
+SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# pages live at the site root (/<slug>), so a slug can't be one of the site's own names
+RESERVED_SLUGS = {"index", "404", "assets", "data", "docs", "schema", "tools", "inbox", "export",
+                  "screenshots", "recipes", "node_modules", "cname"}
 
 # The only tags the site uses — a short, fixed list so filters never overlap the
 # Type row or each other. Detected on import; any of these can also be added by

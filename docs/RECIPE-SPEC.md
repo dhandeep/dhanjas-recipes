@@ -33,16 +33,16 @@ toddler's 3 tbsp stays 3 tbsp because she's one toddler however big the batch.
 
 ## 2. The file
 
-- One recipe per file, named `<category>-<dish>.json` — the same name as the slug.
-- Category prefixes: `breakfast` `curry` `dal` `rice` `bread` `snack` `chaat` `powder` `sweet` `drink`.
+- One recipe per file, named `<dish>.json` — the same name as the slug (`rava-upma.json`). No category prefix.
+- Categories (the `category` field): `breakfast` `curry` `dal` `rice` `bread` `snack` `chaat` `powder` `sweet` `drink`.
 - Publish by committing it to `inbox/` in the `dhandeep/dhanjas-recipes` repo (see `docs/INGEST.md`).
 
 | Field | Required | What it is |
 |---|---|---|
-| `"$schema"` | recommended | `"https://dhanjas.com/schema/recipe.schema.json"` — editors then check the file as you type |
+| `"$schema"` | recommended | `"https://recipes.dhanjas.com/schema/recipe.schema.json"` — editors then check the file as you type |
 | `"format"` | **yes** | `3` |
-| `slug` | yes | `<category>-<dish>`, lowercase, hyphens |
-| `category` | yes | the slug's prefix |
+| `slug` | yes | the dish name, lowercase, hyphens: `rava-upma`. The page is `recipes.dhanjas.com/<slug>` |
+| `category` | yes | one of the categories above; drives the Type filter |
 | `title` | yes | dish name (page heading) |
 | `name` | no | only if the recipe-name heading differs from the title |
 | `subtitle` | yes | one line under the title |
@@ -170,13 +170,13 @@ instructions always agree.
 
 ## 7. Worked example — the complete file
 
-`data/recipes/breakfast-rava-upma.json`:
+`data/recipes/rava-upma.json`:
 
 ```json
 {
-  "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
   "format": 3,
-  "slug": "breakfast-rava-upma",
+  "slug": "rava-upma",
   "category": "breakfast",
   "title": "Rava Upma with Peanuts",
   "subtitle": "A quick semolina upma, roasted golden and studded with peanuts.",
@@ -236,7 +236,8 @@ instructions always agree.
       "items": [
         "Heat a wide pan on medium; add {@rava} — dry roast 3–4 min, stirring constantly until lightly golden and fragrant",
         "Remove and set aside",
-        "In the same pan, dry roast {@peanuts} on medium 3–4 min until skins blister; set aside"
+        "In the same pan, dry roast {@peanuts} on medium 3–4 min until skins blister; set aside",
+        "Let the peanuts cool, then rub off any loose skins"
       ]
     },
     {
@@ -298,7 +299,7 @@ How some of its lines read on the page:
 
 The toddler line is identical at both sizes; the main portions absorb the change.
 A second example with night prep, a split water amount, toddler pinches and
-per-chilla ghee: `data/recipes/breakfast-moong-dal-chilla.json`.
+per-chilla ghee: `data/recipes/moong-dal-chilla.json`.
 
 ---
 
@@ -311,7 +312,7 @@ Replace the **Recipe Output Format** section of the recipe prompt with:
 > Every recipe is one JSON file following **`RECIPE-SPEC.md` (format 3)** — read it
 > before writing any recipe, and follow it exactly. In short:
 >
-> - Name the file `<category>-<dish>.json`; set `"format": 3`.
+> - Name the file `<dish>.json` (e.g. `rava-upma.json`, no category prefix); set `"format": 3` and a `category`.
 > - List each ingredient once with an `id` and its **total** `amount`.
 > - When an ingredient is used in more than one place — including the toddler's
 >   share — split the total into keyed `portions` (`"toddler": "3 tbsp", "main": "rest"`).
@@ -324,7 +325,7 @@ Replace the **Recipe Output Format** section of the recipe prompt with:
 > - Steps as bullets, one action per bullet; toddler boxes inline at the moment her
 >   portion is pulled, before chili; 3–5 ingredient groups, 2–4 steps, 1 tip.
 >
-> Commit the file to `inbox/<category>-<dish>.json` on `main` in
+> Commit the file to `inbox/<dish>.json` on `main` in
 > `dhandeep/dhanjas-recipes`. The site validates it, builds the page (with batch
 > scaling and checkboxes) and publishes it. If validation fails, the Action log says
 > exactly which line to fix.

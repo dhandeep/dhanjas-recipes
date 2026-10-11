@@ -1,12 +1,12 @@
 # dhanjas.com recipe site
 
 Static GitHub Pages site. Recipes live as JSON in `data/recipes/`; `tools/recipes.py`
-generates `index.html` and `recipes/*.html`. Read `docs/RECIPE-FORMAT.md` before
+generates `index.html` and the `<slug>.html` recipe pages. Read `docs/RECIPE-FORMAT.md` before
 touching recipe data and `docs/INGEST.md` for the publishing flow.
 
 ## Rules
 
-- Never hand-edit `index.html`, `recipes/*.html` or `assets/recipes.json` — edit the
+- Never hand-edit `index.html`, the root `<slug>.html` pages or `assets/recipes.json` — edit the
   JSON (or tools) and run `python3 tools/recipes.py build`.
 - `assets/recipe.css` is the fixed v2 stylesheet from the recipe spec. Never change
   it. Site-only styling goes in `assets/site.css`.
@@ -22,7 +22,7 @@ keyed `portions` when an ingredient is used in more than one place (toddler shar
 included), and every instruction references what it uses as `{@id}` / `{@id:key}`.
 The prompt that writes recipes is `docs/RECIPE-PROMPT.md`.
 
-1. Save the JSON as `inbox/<category>-<dish>.json` (older v2 `.html` still works).
+1. Save the JSON as `inbox/<dish>.json` (older v2 `.html` still works).
 2. `python3 tools/recipes.py ingest` — fix any ✗ errors it reports (content
    problems go back to the user; don't silently rewrite their recipe).
    Use `--replace` only when the user confirmed replacing an existing recipe.

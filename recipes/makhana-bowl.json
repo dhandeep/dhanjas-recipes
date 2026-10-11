@@ -1,0 +1,103 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "makhana-bowl",
+  "category": "breakfast",
+  "title": "Makhana Trail Mix Bowl",
+  "subtitle": "A crisp, no-cook bowl of roasted fox nuts, nuts, and seeds.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "No-cook · Snack"
+  ],
+  "meta": [
+    "Night prep: roast makhana ahead",
+    "Morning: 3 min assembly",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~16–20g protein per adult bowl (makhana + nuts + seeds)",
+  "nightPrep": {
+    "label": "Batch Roast (lasts 1–2 weeks)",
+    "items": [
+      "Roast the makhana ahead (step 1) — one batch lasts 1–2 weeks",
+      "Cool completely before storing in an airtight jar — stays crisp for 2 weeks"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Batch roast",
+      "items": [
+        {"id": "makhana-raw", "name": "Makhana (fox nuts), raw", "short": "makhana", "amount": "3–4 cups"},
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "a pinch"}
+      ]
+    },
+    {
+      "label": "Per adult bowl",
+      "items": [
+        {"id": "makhana", "name": "Roasted makhana", "short": "roasted makhana", "amount": "1 cup per bowl", "portions": {"bowl": "1 cup", "toddler": "¼ cup"}},
+        {"id": "almonds", "name": "Almonds", "short": "almonds", "amount": "8–10 per bowl", "portions": {"bowl": "8–10", "toddler": "1 tsp"}},
+        {"id": "walnuts", "name": "Walnuts, broken", "short": "walnuts", "amount": "4–5 halves per bowl"},
+        {"id": "pumpkin", "name": "Pumpkin seeds", "short": "pumpkin seeds", "amount": "1 tbsp per bowl"},
+        {"id": "hemp", "name": "Hemp seeds", "short": "hemp seeds", "amount": "1 tbsp per bowl"},
+        {"id": "raisins", "name": "Raisins or dried cranberries", "short": "raisins", "amount": "1 tbsp per bowl"}
+      ]
+    },
+    {
+      "label": "To season & serve alongside",
+      "items": [
+        {"id": "pepper", "name": "Black pepper, optional (adults)", "short": "black pepper", "amount": "a pinch"},
+        {"id": "yogurt", "name": "Full-fat yogurt or hung curd", "short": "yogurt", "amount": "½ cup per bowl", "portions": {"bowl": "½ cup", "toddler": "a small bowl"}},
+        {"id": "fruit", "name": "Fresh fruit", "short": "fruit", "amount": "½ cup per bowl", "portions": {"bowl": "½ cup", "toddler": "¼ cup"}},
+        {"id": "jaggery", "name": "Jaggery powder, optional", "short": "jaggery powder", "amount": "1 tsp per bowl"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Roast makhana (batch, not daily)",
+      "items": [
+        "Heat a wide heavy pan on low — no oil yet",
+        "Add {@makhana-raw}; dry roast, stirring constantly, 8–10 min until they feel light and crisp when pressed",
+        "Add {@ghee} and {@salt}; toss well for 1 min — no pepper, so the jar suits the toddler too",
+        "Cool completely on a plate; store in an airtight jar once fully cool"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler bowl",
+      "items": [
+        "Makhana is safe — soft enough once chewed, not a choking risk at age 2",
+        "Give whole {@makhana:toddler} — she'll enjoy the crunch",
+        "Serve with {@yogurt:toddler} for dipping — makes it interactive and fun",
+        "Grind {@almonds:toddler} finely before adding; skip whole walnuts (too hard to chew)",
+        "Add soft {@fruit:toddler|fruit pieces}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Morning assembly (adults)",
+      "items": [
+        "Add {@makhana:bowl} to each bowl",
+        "Add {@almonds:bowl}, {@walnuts}, {@pumpkin}, {@hemp}, {@raisins}",
+        "Sprinkle {@pepper} over and toss, if using",
+        "Serve {@yogurt:bowl} and {@fruit:bowl} alongside for dipping, with {@jaggery} if desired — keeps the makhana crisp"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Serve the yogurt and makhana in separate bowls — pouring yogurt over makes makhana go soggy fast. Dip and eat as you go."
+    }
+  ],
+  "tags": [
+    "Quick",
+    "Night prep",
+    "High-protein",
+    "No-cook"
+  ],
+  "added": "2026-09-07"
+}

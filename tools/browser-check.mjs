@@ -39,12 +39,14 @@ execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'export', '--all', '--f
 const slugs = readdirSync(join(ROOT, 'data/recipes')).filter(f => f.endsWith('.json')).map(f => f.slice(0, -5)).sort();
 const recipes = Object.fromEntries(slugs.map(s => [s, JSON.parse(readFileSync(join(ROOT, 'data/recipes', s + '.json'), 'utf8'))]));
 
-// ---- static server for the repo root ----
+// ---- static server for the repo root (behaves like GitHub Pages) ----
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml' };
 const server = createServer((req, res) => {
   let path = normalize(decodeURIComponent(new URL(req.url, 'http://x').pathname));
   if (path.endsWith('/')) path += 'index.html';
-  const file = join(ROOT, path);
+  let file = join(ROOT, path);
+  // like GitHub Pages: /rava-upma serves rava-upma.html
+  if (!extname(file) && existsSync(file + '.html')) file += '.html';
   if (!file.startsWith(ROOT) || !existsSync(file)) { res.writeHead(404); return res.end(); }
   res.writeHead(200, { 'content-type': TYPES[extname(file)] || 'application/octet-stream' });
   res.end(readFileSync(file));
@@ -76,7 +78,7 @@ for (const slug of slugs) {
     const where = `${slug} @${vpName}`;
     const errors = [];
     const p = await page(viewport, errors);
-    const resp = await p.goto(`${BASE}/recipes/${slug}.html`);
+    const resp = await p.goto(`${BASE}/${slug}`);
     if (!resp.ok()) { fail(where, `HTTP ${resp.status()}`); continue; }
 
     const info = await p.evaluate(() => ({
@@ -133,7 +135,7 @@ for (const slug of slugs) {
 
     if (vpName === 'desktop') {
       // scaling: browser (assets/scale.js) vs Python reference
-      await p.goto(`${BASE}/recipes/${slug}.html`);
+      await p.goto(`${BASE}/${slug}`);
       const want = JSON.parse(execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'scaled', slug, '2'], { cwd: ROOT }).toString());
       const before = await p.evaluate(() => [...document.querySelectorAll('data.q')].map(s => s.textContent));
       const toddlerBefore = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
@@ -164,7 +166,7 @@ for (const slug of slugs) {
 
     // instruction checkboxes
     const c = await page(viewport, errors, { checklist: true });
-    await c.goto(`${BASE}/recipes/${slug}.html`);
+    await c.goto(`${BASE}/${slug}`);
     await c.evaluate(() => localStorage.clear());
     await c.reload();
     const wantLines = (r.nightPrep ? r.nightPrep.items.length : 0)
@@ -230,7 +232,7 @@ for (const [vpName, viewport] of Object.entries(VIEWPORTS)) {
     }
     await p.locator('.card a').first().click();
     await p.waitForLoadState();
-    if (!/\/recipes\/.+\.html$/.test(p.url())) fail(where, `card link went to ${p.url()}`);
+    if (!/\/[a-z0-9-]+$/.test(p.url()) || !(await p.locator('.recipe').count())) fail(where, `card link went to ${p.url()}`);
   }
   if (errors.length) fail(where, `browser errors: ${errors.join(' | ')}`);
   await p.close();

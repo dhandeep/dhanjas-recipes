@@ -1,0 +1,127 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "besan-dhokla",
+  "category": "breakfast",
+  "title": "Instant Besan Dhokla",
+  "subtitle": "A Sunday-batch steamed chickpea cake with a tangy mustard-seed tempering.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Chickpea · Batch"
+  ],
+  "meta": [
+    "Batch: 40 min (make Sunday)",
+    "Morning: 5 min reheat",
+    "Makes ~20 pieces"
+  ],
+  "protein": "~16–18g protein per adult serving",
+  "nightPrep": {
+    "label": "Batch on Sunday",
+    "items": [
+      "Make the full batch Sunday — keeps refrigerated 4–5 days",
+      "Reheat: microwave with a sprinkle of water, 60–90 sec, covered loosely"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Batter",
+      "items": [
+        {"id": "besan", "name": "Besan (chickpea flour)", "short": "besan", "amount": "2 cups"},
+        {"id": "yogurt", "name": "Full-fat yogurt", "short": "yogurt", "amount": "½ cup"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "¾ cup"},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1 tsp"},
+        {"id": "chili-paste", "name": "Green chili paste", "short": "green chili paste", "amount": "1 tsp (adults)"},
+        {"id": "lemon", "name": "Lemon juice", "short": "lemon juice", "amount": "3 tbsp", "portions": {"batter": "2 tbsp", "tempering": "1 tbsp"}}
+      ]
+    },
+    {
+      "label": "Spices & leavening",
+      "items": [
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "2 tsp", "portions": {"batter": "1 tsp", "tempering": "1 tsp"}},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "eno", "name": "Eno fruit salt, plain", "short": "Eno", "amount": "2 tsp", "portions": {"toddler": "½ tsp", "adult": "1½ tsp"}},
+        {"id": "water-steam", "name": "Water, for the Instant Pot", "short": "water", "amount": "=1½ cups"}
+      ]
+    },
+    {
+      "label": "Tempering & garnish",
+      "items": [
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "2 tbsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "1 tsp"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "10–12"},
+        {"id": "green-chili", "name": "Green chili, slit", "short": "green chili", "amount": "2 (adults)"},
+        {"id": "water-tempering", "name": "Water, for the tempering", "short": "water", "amount": "3 tbsp"},
+        {"id": "coriander", "name": "Fresh coriander, chopped", "short": "coriander", "amount": "2 tbsp"},
+        {"id": "coconut", "name": "Fresh coconut, grated, optional", "short": "coconut", "amount": "2 tbsp"}
+      ]
+    }
+  ],
+  "methodTitle": "Method (Sunday batch)",
+  "method": [
+    {
+      "type": "step",
+      "title": "Make batter",
+      "items": [
+        "Whisk {@besan} with {@yogurt} and {@water} — no lumps",
+        "Add {@ginger}, {@turmeric}, {@hing}, {@lemon:batter}, {@sugar:batter}, {@salt}",
+        "Split batter now — remove {=¾ cup} into a separate dish for toddler before adding chili",
+        "Add {@chili-paste} to adult batter only; rest both 5 min"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler batch",
+      "items": [
+        "Her ¾ cup is already set aside — mild, chili-free",
+        "Add {@eno:toddler}, pour into greased katori; steam 8–10 min (thinner layer)"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Steam (Instant Pot)",
+      "items": [
+        "Add {@water-steam} to IP inner pot; place trivet",
+        "Add {@eno:adult} to adult batter — stir quickly until foamy; do not overmix",
+        "Pour immediately into greased tin {=~1 inch layer}; place on trivet",
+        "Steam 12–15 min with valve open — toothpick should come out clean",
+        "Cool 5 min before cutting"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Tempering",
+      "items": [
+        "Heat {@oil}; add {@mustard} — splutter",
+        "Add {@curry-leaves} and {@green-chili}",
+        "Add {@water-tempering}, {@sugar:tempering}, {@lemon:tempering}; quick boil",
+        "Pour evenly over cut dhokla; let soak 5 min",
+        "Garnish with {@coriander} and {@coconut}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler reheat",
+      "items": [
+        "Reheat her pieces separately — microwave {45 sec} with a splash of water",
+        "Serve in small pieces; pair with plain yogurt or warm milk"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Key to fluffy dhokla",
+      "text": "Add Eno at the last second and get batter into the steamer within 60 seconds — the reaction is fast. Waiting = flat dhokla."
+    }
+  ],
+  "tags": [
+    "Night prep",
+    "Meal prep",
+    "High-protein",
+    "Instant Pot"
+  ],
+  "added": "2026-09-07"
+}

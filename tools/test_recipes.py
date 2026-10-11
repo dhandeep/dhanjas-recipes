@@ -17,7 +17,7 @@ RECIPES = sorted((ROOT / "data" / "recipes").glob("*.json"))
 CSS = (ROOT / "assets" / "recipe.css").read_text("utf-8")
 
 
-def load(name="breakfast-besan-chilla"):
+def load(name="besan-chilla"):
     r = json.loads((ROOT / "data" / "recipes" / ("%s.json" % name)).read_text("utf-8"))
     r.pop("$schema", None)
     return r
@@ -31,7 +31,7 @@ class RoundTrip(unittest.TestCase):
             raw.pop("$schema", None)
             for standalone in (False, True):
                 want = portions.lower(raw, 1)      # format 3 renders as its resolved text
-                got = parse_html.parse(render.recipe_page(want, CSS, standalone), want["slug"])
+                got = parse_html.parse(render.recipe_page(want, CSS, standalone), "%s-%s" % (want["category"], want["slug"]))
                 for r in (want, got):
                     for k in ("tags", "added"):
                         r.pop(k, None)
@@ -52,7 +52,7 @@ class RoundTrip(unittest.TestCase):
                          'Cook <span class="amt">(5 min)</span>')
 
 
-def load_v2(slug="breakfast-besan-chilla"):
+def load_v2(slug="besan-chilla"):
     """A recipe as format-2 text (amounts written by hand) — for the prose rules older files follow."""
     return portions.lower(load(slug), 1)
 
@@ -117,8 +117,13 @@ class Validator(unittest.TestCase):
         self.assertEqual(self.errors(r), [])
 
     def test_bad_slug(self):
+        for bad in ("Rava Upma", "breakfast_rava", "assets", "recipes"):   # not a slug / a site folder
+            r = load()
+            r["slug"] = bad
+            with self.subTest(slug=bad):
+                self.assertTrue(self.errors(r))
         r = load()
-        r["slug"] = "dinner-thing"
+        r["category"] = "dinner"
         self.assertTrue(self.errors(r))
 
 
@@ -126,7 +131,7 @@ class Portions(unittest.TestCase):
     """Format 3: keyed portions and {@id:key} references (docs/RECIPE-SPEC.md)."""
 
     def rava(self):
-        return load("breakfast-rava-upma")
+        return load("rava-upma")
 
     def item(self, r, i):
         return next(it for g in r["ingredientGroups"] for it in g["items"] if it.get("id") == i)
@@ -151,11 +156,11 @@ class Portions(unittest.TestCase):
         self.assertEqual(boxes[0], boxes[2])
 
     def test_per_piece_ingredients_never_scale(self):
-        r = load("breakfast-moong-dal-chilla")
+        r = load("moong-dal-chilla")
         self.assertTrue(any("ghee {½ tsp}" in t for t in self.bullets(r, 3)))
 
     def test_valid_examples(self):
-        for slug in ("breakfast-rava-upma", "breakfast-moong-dal-chilla"):
+        for slug in ("rava-upma", "moong-dal-chilla"):
             with self.subTest(slug=slug):
                 self.assertEqual(validate.check(load(slug))[0], [])
 
@@ -248,7 +253,7 @@ class Scaling(unittest.TestCase):
                     self.assertFalse(needs_quantity(i["amount"]), (r["slug"], i))
 
     def test_toddler_boxes_and_tips_never_get_scale_markers(self):
-        page = render.recipe_page(load("rice-kashmiri-pulao"), CSS)
+        page = render.recipe_page(load("kashmiri-pulao"), CSS)
         toddler = page[page.index('class="toddler-box"'):]
         toddler = toddler[:toddler.index("</div>\n      <div")]
         self.assertNotIn('class="q"', toddler)

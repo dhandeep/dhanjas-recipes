@@ -56,7 +56,7 @@ the prompt produces. Use it for sharing a single file or keeping Drive in sync.
 
 [`RECIPE-PROMPT.md`](RECIPE-PROMPT.md) is the full prompt for the Claude project that
 writes recipes. Paste it into the project instructions and add `RECIPE-SPEC.md` and
-`data/recipes/breakfast-rava-upma.json` as project files. It replaces the v2-HTML
+`data/recipes/rava-upma.json` as project files. It replaces the v2-HTML
 and Google Drive sections of the old prompt.
 
 v2 HTML files (the older format) still ingest, but can't carry portions — use them

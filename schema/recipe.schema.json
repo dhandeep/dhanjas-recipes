@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://dhanjas.com/schema/recipe.schema.json",
+  "$id": "https://recipes.dhanjas.com/schema/recipe.schema.json",
   "title": "dhanjas.com recipe",
   "description": "One recipe in the dhanjas.com house format. Format 3 (current): ingredients have ids and optional keyed portions, and every instruction references the ingredient and portion it uses — {@id} or {@id:key}. Full rules and a worked example: docs/RECIPE-SPEC.md. Format 2 (older recipes) writes amounts by hand: {⅓ cup}.",
   "type": "object",
@@ -26,8 +26,8 @@
     },
     "slug": {
       "type": "string",
-      "pattern": "^(breakfast|curry|dal|rice|bread|snack|chaat|powder|sweet|drink)-[a-z0-9]+(-[a-z0-9]+)*$",
-      "description": "<category>-<dish>; the page lives at /recipes/<slug>.html"
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "The dish name, lowercase words joined by hyphens (rava-upma); the page lives at /<slug>"
     },
     "category": {
       "type": "string",
@@ -43,7 +43,7 @@
         "sweet",
         "drink"
       ],
-      "description": "Must match the slug prefix. Drives the Type filter."
+      "description": "Drives the Type filter on the front page."
     },
     "title": {
       "type": "string",

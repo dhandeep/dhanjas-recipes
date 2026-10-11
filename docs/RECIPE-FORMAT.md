@@ -12,7 +12,7 @@ truth: the recipe page, the front-page card, the search index and the
 schema.org metadata are all generated from it.
 
 The format is formally defined by **[`schema/recipe.schema.json`](../schema/recipe.schema.json)**
-(JSON Schema 2020-12, published at `https://dhanjas.com/schema/recipe.schema.json`).
+(JSON Schema 2020-12, published at `https://recipes.dhanjas.com/schema/recipe.schema.json`).
 Each recipe file starts with `"$schema": "../../schema/recipe.schema.json"`, so VS Code
 and other editors validate and autocomplete it as you type, and any JSON Schema
 validator (ajv, python-jsonschema…) can check it. `recipes.py validate` checks the
@@ -26,7 +26,7 @@ and back without changing a word (the test suite checks this for every recipe).
 
 ```json
 {
-  "slug": "breakfast-moong-dal-chilla",
+  "slug": "moong-dal-chilla",
   "category": "breakfast",
   "title": "Moong Dal Chilla",
   "subtitle": "High-protein · Night prep · 2 adults + toddler",
@@ -65,7 +65,7 @@ and back without changing a word (the test suite checks this for every recipe).
 
 | Field | Required | v2 HTML element | Notes |
 |---|---|---|---|
-| `slug` | yes | file name | `<category>-<dish>`, lowercase, hyphens. Becomes the URL: `/recipes/<slug>.html`. |
+| `slug` | yes | file name | The dish name, lowercase, hyphens (`rava-upma`) — no category prefix. Becomes the URL: `/<slug>`. |
 | `category` | yes | file-name prefix | One of `breakfast curry dal rice bread snack chaat powder sweet drink`. Drives the **Type** filter. |
 | `title` | yes | `<h1>` and `.recipe-name` | |
 | `name` | no | `.recipe-name` | Only when the `<h2>` differs from the `<h1>` (e.g. "Sambar Powder (Sambar Masala)"). |
@@ -163,7 +163,7 @@ the same files locally:
 
 | File | What it is |
 |---|---|
-| `/recipes/<slug>.html` | the web page (shared CSS, scaling) |
+| `/<slug>` | the web page (shared CSS, scaling) |
 | `/recipes/<slug>.json` | the house format, validated by the JSON Schema |
 | `/recipes/<slug>.jsonld` | schema.org Recipe — importable by recipe apps |
 | `/assets/recipes.json` | every recipe's card data and full text, for search or other tools |

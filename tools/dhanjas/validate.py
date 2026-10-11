@@ -7,7 +7,7 @@ do not fail the build — tighten the writing, never the CSS.
 import re
 
 from . import portions, schema
-from .model import CATEGORIES, SLUG_RE, TAG_NAMES, plain
+from .model import CATEGORIES, RESERVED_SLUGS, SLUG_RE, TAG_NAMES, plain
 from .mentions import unquantified
 from .quantity import needs_quantity
 
@@ -63,9 +63,11 @@ def check(recipe):
     # ---- structure ----
     slug = recipe.get("slug", "")
     if not SLUG_RE.match(slug):
-        E("slug %r must be <category>-<dish> with a known prefix: %s" % (slug, ", ".join(CATEGORIES)))
-    if recipe.get("category") != slug.split("-", 1)[0]:
-        E("category %r does not match the slug prefix" % recipe.get("category"))
+        E("slug %r must be the dish name in lowercase words joined by hyphens, e.g. rava-upma" % slug)
+    elif slug in RESERVED_SLUGS:
+        E("slug %r is one of the site's own names — pick another" % slug)
+    if recipe.get("category") not in CATEGORIES:
+        E("category %r isn't one of: %s" % (recipe.get("category"), ", ".join(CATEGORIES)))
     for field in ("title", "subtitle"):
         if not recipe.get(field):
             E("missing %s" % field)
