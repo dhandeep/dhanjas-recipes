@@ -6,7 +6,7 @@ do not fail the build — tighten the writing, never the CSS.
 
 import re
 
-from . import schema
+from . import portions, schema
 from .model import CATEGORIES, SLUG_RE, TAG_NAMES, plain
 from .mentions import unquantified
 from .quantity import needs_quantity
@@ -46,6 +46,19 @@ def check(recipe):
 
     # ---- shape: schema/recipe.schema.json ----
     errors += schema.check(recipe)
+
+    # ---- format 3: ingredient ids, portions and {@id:key} references ----
+    if recipe.get("format") == 3:
+        e3, w3 = portions.check(recipe)
+        errors += e3
+        warnings += w3
+        for title, bullet, word, why in unquantified(recipe, refs_only=True):
+            E("step %r uses %r without a reference — write {@id} or {@id:key} so the quantity comes from the "
+              "ingredient list: %s" % (title, word, bullet))
+        raw = recipe
+        recipe = portions.lower(recipe, 1)
+    else:
+        raw = None
 
     # ---- structure ----
     slug = recipe.get("slug", "")
@@ -142,7 +155,7 @@ def check(recipe):
         W("header mentions the toddler but the method has no toddler box")
 
     # ---- every instruction carries its quantity (non-negotiable) ----
-    for title, bullet, word, why in unquantified(recipe):
+    for title, bullet, word, why in ([] if raw else unquantified(recipe)):
         E("step %r uses %r without a quantity (%s) — e.g. \"add %s {¼ cup}\", "
           "\"{rest of the 1 cup}\", \"{from Step 1}\" or \"to taste\": %s" % (title, word, why, word, bullet))
 

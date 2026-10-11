@@ -177,6 +177,8 @@ def _clauses(text):
 
 
 def detect_tags(recipe):
+    from .portions import lower        # format-3 refs → plain text first
+    recipe = lower(recipe)
     text = _clauses(all_text(recipe))
     labels = " ".join(recipe.get("labels", []))
     appliances = _clauses(appliance_text(recipe))

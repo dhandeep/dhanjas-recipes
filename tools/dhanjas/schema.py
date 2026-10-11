@@ -56,11 +56,18 @@ def _check(value, schema, path, errors):
             if key not in value:
                 errors.append("%s is missing %r" % (path, key))
         props = schema.get("properties", {})
+        extra = schema.get("additionalProperties")
+        if len(value) < schema.get("minProperties", 0):
+            errors.append("%s needs at least %d entries" % (path, schema["minProperties"]))
         for key, item in value.items():
+            if "propertyNames" in schema:
+                _check(key, schema["propertyNames"], "%s key %r" % (path, key), errors)
             if key in props:
                 _check(item, props[key], "%s.%s" % (path, key), errors)
-            elif schema.get("additionalProperties") is False:
+            elif extra is False:
                 errors.append("%s has unknown field %r" % (path, key))
+            elif isinstance(extra, dict):
+                _check(item, extra, "%s.%s" % (path, key), errors)
 
 
 def check(recipe, schema=None):

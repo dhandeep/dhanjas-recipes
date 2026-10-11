@@ -53,23 +53,23 @@ the prompt produces. Use it for sharing a single file or keeping Drive in sync.
 
 ## Suggested prompt change
 
-Replace the **Saving to Google Drive** section of the recipe prompt with this
-(keep the Drive part if you still want copies there):
+New recipes should be written in **format 3** (`docs/RECIPE-SPEC.md`) and submitted as
+JSON. Section 8 of the spec has a drop-in replacement for the **Recipe Output Format**
+section of the recipe prompt; copy `RECIPE-SPEC.md` into the Claude project next to
+the prompt so it can be read before each recipe.
+
+Then replace the **Saving to Google Drive** section with:
 
 > ## Publishing to dhanjas.com
 >
-> After the recipe passes `dhanjas-recipe-validator`, commit the HTML file to the
-> GitHub repo `dhandeep/dhanjas-recipes` on branch `main` at `inbox/<category>-<dish>.html`.
-> A GitHub Action converts it, rebuilds the site and publishes it at
+> After the recipe passes validation, commit the JSON file to the GitHub repo
+> `dhandeep/dhanjas-recipes` on branch `main` at `inbox/<category>-<dish>.json`.
+> A GitHub Action validates it, builds the page and publishes it at
 > `https://dhanjas.com/recipes/<category>-<dish>.html` within a couple of minutes.
 >
 > Before committing, check `data/recipes/<category>-<dish>.json` doesn't already
 > exist. If it does, ask whether this replaces the existing recipe — the Action
 > refuses to overwrite one.
->
-> The site regenerates the page from the recipe's content, so the stylesheet in
-> the file doesn't matter to it — but keep following `RECIPE-HTML-SPEC.md` exactly,
-> because the class names are how the content is read.
 
-If you use Claude in a project without the GitHub connector, the GitHub
-web-upload route above is the fallback: download the file and upload it to `inbox/`.
+v2 HTML files (the older format) still ingest, but can't carry portions — use them
+only for recipes written before format 3.

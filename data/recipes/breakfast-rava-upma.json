@@ -1,5 +1,6 @@
 {
   "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
   "slug": "breakfast-rava-upma",
   "category": "breakfast",
   "title": "Rava Upma with Peanuts",
@@ -22,33 +23,34 @@
     {
       "label": "Main",
       "items": [
-        {"name": "Rava (semolina / sooji)", "amount": "1 cup"},
-        {"name": "Raw peanuts", "amount": "⅓ cup"},
-        {"name": "Water", "amount": "2½ cups"},
-        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
-        {"name": "Green chili, slit", "amount": "1–2 (adults)"},
-        {"name": "Ghee", "amount": "2 tbsp"}
+        {"id": "rava", "name": "Rava (semolina / sooji)", "short": "rava", "amount": "1 cup", "portions": {"toddler": "3 tbsp", "main": "rest"}},
+        {"id": "peanuts", "name": "Raw peanuts", "short": "peanuts", "amount": "⅓ cup", "portions": {"toddler": "1 tsp", "main": "rest"}},
+        {"id": "water", "name": "Water", "short": "water", "amount": "2¾ cups", "portions": {"toddler": "¼ cup", "main": "2½ cups"}},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "1 tsp"},
+        {"id": "green-chili", "name": "Green chili, slit", "short": "green chili", "amount": "1–2 (adults)"},
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "2 tbsp", "portions": {"tempering": "2 tbsp", "toddler": "a drop"}}
       ]
     },
     {
       "label": "Tempering",
       "items": [
-        {"name": "Mustard seeds", "amount": "1 tsp"},
-        {"name": "Cumin seeds", "amount": "½ tsp"},
-        {"name": "Hing", "amount": "¼ tsp"},
-        {"name": "Curry leaves", "amount": "8–10"},
-        {"name": "Cashews, optional", "amount": "10–12"}
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "1 tsp"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "8–10"},
+        {"id": "cashews", "name": "Cashews, optional", "short": "cashews", "amount": "10–12"}
       ]
     },
     {
       "label": "Vegetables",
       "items": [
-        {"name": "Capsicum, finely diced", "amount": "½ cup"},
-        {"name": "Tomato, chopped", "amount": "1 medium"},
-        {"name": "Turmeric", "amount": "¼ tsp"},
-        {"name": "Salt", "amount": "to taste"},
-        {"name": "Lemon juice", "amount": "1 tsp"},
-        {"name": "Fresh coriander", "amount": "2 tbsp"}
+        {"id": "capsicum", "name": "Capsicum, finely diced", "short": "capsicum", "amount": "½ cup"},
+        {"id": "tomato", "name": "Tomato, chopped", "short": "tomato", "amount": "1 medium"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "lemon", "name": "Lemon juice", "short": "lemon juice", "amount": "1 tsp"},
+        {"id": "coriander", "name": "Fresh coriander", "short": "coriander", "amount": "2 tbsp"},
+        {"id": "potato", "name": "Boiled potato, finely diced (toddler only)", "short": "boiled potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
       ]
     }
   ],
@@ -57,21 +59,21 @@
       "type": "step",
       "title": "Dry roast rava and peanuts",
       "items": [
-        "Heat a wide pan on medium; add rava {1 cup} — dry roast 3–4 min, stirring constantly until lightly golden and fragrant",
+        "Heat a wide pan on medium; add {@rava} — dry roast 3–4 min, stirring constantly until lightly golden and fragrant",
         "Remove and set aside",
-        "In the same pan, dry roast peanuts {⅓ cup} on medium 3–4 min until skins blister; set aside"
+        "In the same pan, dry roast {@peanuts} on medium 3–4 min until skins blister; set aside"
       ]
     },
     {
       "type": "step",
       "title": "Tempering",
       "items": [
-        "Heat ghee {2 tbsp} in the pan on medium",
-        "Add mustard seeds {1 tsp} — splutter; add cumin seeds {½ tsp}",
-        "Add hing {¼ tsp}, curry leaves {8–10}, cashews {10–12} if using — stir 30 sec",
-        "Add ginger {1 tsp} — cook 20 sec",
-        "Add capsicum {½ cup} and tomato {1 medium}; cook 2 min",
-        "Add turmeric {¼ tsp} and salt {to taste}; stir"
+        "Heat {@ghee:tempering} in the pan on medium",
+        "Add {@mustard} — splutter; add {@cumin}",
+        "Add {@hing}, {@curry-leaves}, {@cashews} if using — stir 30 sec",
+        "Add {@ginger} — cook 20 sec",
+        "Add {@capsicum} and {@tomato}; cook 2 min",
+        "Add {@turmeric} and {@salt}; stir"
       ]
     },
     {
@@ -79,21 +81,21 @@
       "label": "Toddler — pull portion here (before chili)",
       "items": [
         "Scoop out the cooked vegetables {3–4 tbsp} into a separate small pan now — before adding green chili to the main pan",
-        "Add water {¼ cup} and roasted rava {3 tbsp} to her pan; cook on low, stirring until soft and water absorbed",
-        "Stir in crushed peanuts {1 tsp} or a drop of ghee",
-        "Optional: add finely diced boiled potato for extra bulk"
+        "Add {@water:toddler} and roasted {@rava:toddler} to her pan; cook on low, stirring until soft and water absorbed",
+        "Stir in crushed {@peanuts:toddler} or {@ghee:toddler}",
+        "Optional: add {@potato:toddler|finely diced boiled potato} for extra bulk"
       ]
     },
     {
       "type": "step",
       "title": "Add chili and cook upma",
       "items": [
-        "Add green chili {1–2} to the adult pan; cook 20 sec",
-        "Bring water {2½ cups} to a boil in a separate pot; pour into the tempering pan carefully",
-        "Reduce heat to medium-low; slowly add remaining roasted rava {rest of the 1 cup} while stirring continuously to avoid lumps",
-        "Stir in remaining roasted peanuts {rest of the ⅓ cup}",
+        "Add {@green-chili} to the adult pan; cook 20 sec",
+        "Bring {@water:main} to a boil in a separate pot; pour into the tempering pan carefully",
+        "Reduce heat to medium-low; slowly add {@rava:main|remaining roasted rava} while stirring continuously to avoid lumps",
+        "Stir in {@peanuts:main|remaining roasted peanuts}",
         "Cover and cook 3–4 min on low until rava absorbs all water",
-        "Finish with lemon juice {1 tsp} and coriander {2 tbsp}"
+        "Finish with {@lemon} and {@coriander}"
       ]
     },
     {

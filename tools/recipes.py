@@ -14,7 +14,6 @@ Python 3.8+, standard library only.
 
 import argparse
 import datetime
-from fractions import Fraction
 from html import unescape as html_unescape
 import json
 import re
@@ -25,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from dhanjas import parse_html, render, site, validate  # noqa: E402
 from dhanjas.model import detect_tags, retag  # noqa: E402
+from dhanjas.portions import lower  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "recipes"
@@ -36,7 +36,7 @@ EXPORT = ROOT / "export"
 SCHEMA_REF = "../../schema/recipe.schema.json"            # for editors, relative to data/recipes/
 SCHEMA_URL = "https://dhanjas.com/schema/recipe.schema.json"
 
-FIELD_ORDER = ["$schema", "slug", "category", "title", "name", "subtitle", "badges", "labels", "meta", "protein",
+FIELD_ORDER = ["$schema", "format", "slug", "category", "title", "name", "subtitle", "badges", "labels", "meta", "protein",
                "nightPrep", "ingredientsTitle", "ingredientGroups", "methodTitle", "method", "tags", "added", "source"]
 
 
@@ -53,9 +53,18 @@ def dump(recipe, schema_ref):
     recipe = dict(recipe, **{"$schema": schema_ref})
     ordered = {k: recipe[k] for k in FIELD_ORDER if k in recipe}
     ordered.update({k: v for k, v in recipe.items() if k not in ordered})
+    # One ingredient per line (portions included) keeps the files easy to read and diff.
+    lines = {}
+    for g in ordered.get("ingredientGroups", []):
+        for i, it in enumerate(g.get("items", [])):
+            token = "\u0000ING%d\u0000" % len(lines)
+            lines[token] = json.dumps(it, ensure_ascii=False)
+            g["items"][i] = token
     text = json.dumps(ordered, ensure_ascii=False, indent=2)
-    # One ingredient per line keeps the files easy to read and diff.
-    text = re.sub(r'\{\n\s+("name": .*?),\n\s+("amount": .*?)\n\s+\}', r"{\1, \2}", text)
+    for token, line in lines.items():
+        text = text.replace(json.dumps(token), line)
+    for g in ordered.get("ingredientGroups", []):          # put the items back
+        g["items"] = [json.loads(lines[t]) for t in g["items"]]
     return text + "\n"
 
 
@@ -90,8 +99,9 @@ def cmd_build(args):
         if stale.name not in wanted:
             stale.unlink()
             print("removed %s" % stale.relative_to(ROOT))
-    (ROOT / "index.html").write_text(site.index_page(recipes), "utf-8")
-    (ASSETS / "recipes.json").write_text(site.search_index(recipes), "utf-8")
+    views = [lower(r, 1) for r in recipes]
+    (ROOT / "index.html").write_text(site.index_page(views), "utf-8")
+    (ASSETS / "recipes.json").write_text(site.search_index(views), "utf-8")
     print("built %d recipe pages + index.html" % len(recipes))
     return 1 if failed and args.strict else 0
 
@@ -150,6 +160,9 @@ def cmd_ingest(args):
 
         errors, warnings = validate.check(recipe)
         print("%s %s -> data/recipes/%s.json" % ("✗" if errors else "✓", path.name, slug))
+        if recipe.get("format") != 3:
+            print("  · %s: format 2 — new recipes should use format 3 (docs/RECIPE-SPEC.md) so portions "
+                  "like the toddler's share and 'rest' are computed" % slug)
         report(slug, errors, warnings)
         if errors and not args.force:
             failed += 1
@@ -208,13 +221,12 @@ def cmd_export(args):
 def cmd_scaled(args):
     """Print a recipe's scalable amounts at a factor — a preview, and the reference
     the browser check compares assets/scale.js against."""
-    from dhanjas.quantity import scale_token, TOKEN
     recipes = {r["slug"]: r for r in load_all()}
     page = render.recipe_page(recipes[args.slug], "")
     out = []
     for attrs, original in re.findall(r'<data class="q"([^>]*)>([^<]*)</data>', page):
-        m = TOKEN.fullmatch(html_unescape(original))
-        out.append({"original": html_unescape(original), "scaled": scale_token(m, Fraction(args.factor))})
+        scaled = re.search(r'data-x%s="([^"]*)"' % args.factor, attrs)
+        out.append({"original": html_unescape(original), "scaled": html_unescape(scaled.group(1)) if scaled else html_unescape(original)})
     print(json.dumps(out, ensure_ascii=False, indent=1 if args.pretty else None))
     return 0
 
@@ -252,7 +264,7 @@ def main():
 
     p = sub.add_parser("scaled", help="show a recipe's scalable amounts at a factor, e.g. scaled dal-urad-makhani 2")
     p.add_argument("slug")
-    p.add_argument("factor", nargs="?", default="2")
+    p.add_argument("factor", nargs="?", default="2", choices=("2", "3"))
     p.add_argument("--pretty", action="store_true")
     p.set_defaults(fn=cmd_scaled)
 

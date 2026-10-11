@@ -14,7 +14,7 @@
   "recipeIngredient": [
     "1 cup Rava (semolina / sooji)",
     "⅓ cup Raw peanuts",
-    "2½ cups Water",
+    "2¾ cups Water",
     "1 tsp Fresh ginger, grated",
     "1–2 (adults) Green chili, slit",
     "2 tbsp Ghee",
@@ -28,7 +28,8 @@
     "¼ tsp Turmeric",
     "Salt, to taste",
     "1 tsp Lemon juice",
-    "2 tbsp Fresh coriander"
+    "2 tbsp Fresh coriander",
+    "1–2 tbsp Boiled potato, finely diced (toddler only)"
   ],
   "recipeInstructions": [
     {
@@ -93,11 +94,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Stir in crushed peanuts (1 tsp) or a drop of ghee"
+          "text": "Stir in crushed peanuts (1 tsp) or ghee (a drop)"
         },
         {
           "@type": "HowToStep",
-          "text": "Optional: add finely diced boiled potato for extra bulk"
+          "text": "Optional: add finely diced boiled potato (1–2 tbsp) for extra bulk"
         }
       ]
     },
@@ -115,11 +116,11 @@
         },
         {
           "@type": "HowToStep",
-          "text": "Reduce heat to medium-low; slowly add remaining roasted rava (rest of the 1 cup) while stirring continuously to avoid lumps"
+          "text": "Reduce heat to medium-low; slowly add remaining roasted rava (¾ cup + 1 tbsp) while stirring continuously to avoid lumps"
         },
         {
           "@type": "HowToStep",
-          "text": "Stir in remaining roasted peanuts (rest of the ⅓ cup)"
+          "text": "Stir in remaining roasted peanuts (5 tbsp)"
         },
         {
           "@type": "HowToStep",

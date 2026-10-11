@@ -18,7 +18,7 @@ vegetables — published with GitHub Pages at **https://dhanjas.com**.
 ## Layout
 
 ```
-data/recipes/*.json     source of truth, one file per recipe   → docs/RECIPE-FORMAT.md
+data/recipes/*.json     source of truth, one file per recipe   → docs/RECIPE-SPEC.md (how to write one)
 schema/                 JSON Schema for the recipe format
 inbox/                  drop new v2 .html / .json recipes here → docs/INGEST.md
 assets/recipe.css       the fixed v2 recipe stylesheet — never edited

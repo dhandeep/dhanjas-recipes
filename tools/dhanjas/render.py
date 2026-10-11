@@ -5,7 +5,7 @@ import json
 from html import escape
 
 from .model import AMT_RE, BOLD_RE, CATEGORIES, plain, protein_grams, times, yield_text
-from .quantity import tokens
+from .portions import lower
 
 SITE = "dhanjas.com"
 EYEBROW = "dhanjas.com · Jain Kitchen"
@@ -16,39 +16,32 @@ SHOW_SCALE_CONTROL = False
 SCALE_STEPS = (1, 2, 3)
 
 
-def qty(text, scale=True):
-    """Escape an amount, wrapping each number that scales with the batch in
-    <data class="q" data-…> so assets/scale.js can rewrite it (<data>, not <span>:
-    recipe.css styles every span inside .recipe-meta). With scale=False
-    (toddler boxes, standalone export) it's plain escaped text."""
-    text = text[1:] if text.startswith("=") else text
-    if not scale:
+def amount_html(text, alts=()):
+    """An amount, escaped. When the batch size changes it (alts = the same amount at
+    2× and 3×), it's wrapped in <data class="q" data-x2 data-x3> for assets/scale.js
+    (<data>, not <span>: recipe.css styles every span inside .recipe-meta)."""
+    fixed = text.startswith("=")
+    text = text.lstrip("=")
+    alts = [a.lstrip("=") for a in alts]
+    if fixed or not alts or all(a == text for a in alts):
         return escape(text, quote=False)
-    out, last = [], 0
-    for m, ok in tokens(text):
-        out.append(escape(text[last:m.start()], quote=False))
-        if ok:
-            attrs = ' data-q="%s"' % m.group("lo")
-            if m.group("hi"):
-                attrs += ' data-q2="%s" data-sep="%s"' % (m.group("hi"), escape(m.group("sep")))
-            if m.group("unit"):
-                attrs += ' data-u="%s" data-sp="%s"' % (m.group("unit"), m.group("sp") or "")
-            out.append('<data class="q"%s>%s</data>' % (attrs, escape(m.group(0), quote=False)))
-        else:
-            out.append(escape(m.group(0), quote=False))
-        last = m.end()
-    out.append(escape(text[last:], quote=False))
-    return "".join(out)
+    attrs = "".join(' data-x%d="%s"' % (k, escape(a)) for k, a in zip(SCALE_STEPS[1:], alts))
+    return '<data class="q"%s>%s</data>' % (attrs, escape(text, quote=False))
 
 
-def rich(text, scale=True):
-    """Inline markup -> HTML. {amounts} scale unless scale=False."""
+def rich(text, alts=()):
+    """Inline markup -> HTML. alts: the same text at 2× and 3× (from lower()); each
+    {amount} that differs between them becomes scalable."""
+    alt_amounts = [AMT_RE.findall(a) for a in alts]
+    found = AMT_RE.findall(text)
+    if any(len(a) != len(found) for a in alt_amounts):
+        alt_amounts = []
     parts, last = [], 0
-    for m in AMT_RE.finditer(text):
+    for i, m in enumerate(AMT_RE.finditer(text)):
         parts.append(escape(text[last:m.start()], quote=False))
         amount = m.group(1)
         fixed = ' data-fixed' if amount.startswith("=") else ""
-        parts.append('<span class="amt"%s>(%s)</span>' % (fixed, qty(amount, scale and not fixed)))
+        parts.append('<span class="amt"%s>(%s)</span>' % (fixed, amount_html(amount, [a[i] for a in alt_amounts])))
         last = m.end()
     parts.append(escape(text[last:], quote=False))
     return BOLD_RE.sub(lambda m: "<strong>%s</strong>" % m.group(1), "".join(parts))
@@ -58,18 +51,20 @@ def e(text):
     return escape(text or "", quote=True)
 
 
-def _ul(items, indent, scale=True):
+def _ul(items, indent, alts=()):
     pad = " " * indent
     lines = [pad + "<ul>"]
-    lines += ["%s  <li>%s</li>" % (pad, rich(i, scale)) for i in items]
+    for i, item in enumerate(items):
+        lines.append("%s  <li>%s</li>" % (pad, rich(item, [a[i] for a in alts])))
     lines.append(pad + "</ul>")
     return lines
 
 
-def recipe_body(r, scale=True):
+def recipe_body(r, alts=()):
     """The <header> + <section class="recipe"> markup, byte-compatible with v2.
-    With scale=True, scalable numbers carry <data class="q"> markers (invisible:
-    recipe.css has no rule that matches them)."""
+    r is a lowered recipe (portions.lower(recipe, 1)); alts are the same recipe
+    lowered at 2× and 3× — amounts that differ carry scale markers. No alts (the
+    standalone export) means plain v2 markup."""
     L = []
     L.append('<header class="site-header">')
     L.append('  <div class="eyebrow">%s</div>' % e(EYEBROW))
@@ -91,13 +86,9 @@ def recipe_body(r, scale=True):
     L.append('      <h2 class="recipe-name">%s</h2>' % e(r.get("name") or r["title"]))
     if r.get("meta"):
         L.append('      <div class="recipe-meta">')
-        for m in r["meta"]:
-            text = qty(m, scale)
-            if "<data" in text:
-                # .recipe-meta span is a flex box: wrap the text in one element so it
-                # stays a single flex item, exactly like the plain text it replaces.
-                text = '<data class="qt">%s</data>' % text
-            L.append('        <span><span class="dot">◆</span> %s</span>' % text)
+        for i, m in enumerate(r["meta"]):
+            # the whole entry is one element, so it stays a single flex item
+            L.append('        <span><span class="dot">◆</span> %s</span>' % amount_html(m, [a["meta"][i] for a in alts]))
         L.append("      </div>")
     L.append("    </div>")
 
@@ -108,20 +99,21 @@ def recipe_body(r, scale=True):
         if r.get("nightPrep"):
             L.append('      <div class="night-prep">')
             L.append('        <div class="night-label">🌙 %s</div>' % e(r["nightPrep"]["label"]))
-            L += _ul(r["nightPrep"]["items"], 8, scale)
+            L += _ul(r["nightPrep"]["items"], 8, [a["nightPrep"]["items"] for a in alts])
             L.append("      </div>")
         L.append("    </div>")
 
     L.append('    <div class="ingredients-block">')
     L.append('      <div class="section-title">%s</div>' % e(r.get("ingredientsTitle") or "Ingredients"))
     L.append('      <div class="ingredient-groups">')
-    for g in r["ingredientGroups"]:
+    for gi, g in enumerate(r["ingredientGroups"]):
         L.append('        <div class="ingredient-group">')
         L.append('          <div class="ingredient-group-label">%s</div>' % e(g["label"]))
         L.append('          <ul class="ingredient-list">')
-        for it in g["items"]:
+        for ii, it in enumerate(g["items"]):
+            alt = [a["ingredientGroups"][gi]["items"][ii]["amount"] for a in alts]
             L.append('            <li><span class="ing-name">%s</span><span class="ing-amount">%s</span></li>'
-                     % (rich(it["name"], False), qty(it["amount"], scale)))
+                     % (rich(it["name"]), amount_html(it["amount"], alt)))
         L.append("          </ul>")
         L.append("        </div>")
     L.append("      </div>")
@@ -130,20 +122,21 @@ def recipe_body(r, scale=True):
     L.append('    <div class="steps-block">')
     L.append('      <div class="section-title">%s</div>' % e(r.get("methodTitle") or "Method"))
     n = 0
-    for b in r["method"]:
+    for bi, b in enumerate(r["method"]):
+        balts = [a["method"][bi] for a in alts]
         if b["type"] == "step":
             n += 1
             L.append('      <div class="step">')
             L.append('        <div class="step-title"><span class="step-num">%d</span> %s</div>' % (n, e(b["title"])))
-            L += _ul(b["items"], 8, scale)
+            L += _ul(b["items"], 8, [x["items"] for x in balts])
             L.append("      </div>")
         elif b["type"] == "toddler":
             L.append('      <div class="toddler-box">')
             L.append('        <div class="toddler-label">👶 %s</div>' % e(b["label"]))
-            L += _ul(b["items"], 8, False)  # her portion doesn't grow with the batch
+            L += _ul(b["items"], 8)  # her portion doesn't grow with the batch
             L.append("      </div>")
         elif b["type"] == "tip":
-            L.append('      <div class="tip-box"><strong>%s</strong> %s</div>' % (e(b.get("label") or "Tip"), rich(b["text"], False)))
+            L.append('      <div class="tip-box"><strong>%s</strong> %s</div>' % (e(b.get("label") or "Tip"), rich(b["text"])))
     L.append("    </div>")
     L.append("  </section>")
     L.append("  </main>")
@@ -169,8 +162,9 @@ def json_ld(r):
     return json.dumps(json_ld_data(r), ensure_ascii=False, indent=2).replace("</", "<\\/")
 
 
-def json_ld_data(r):
+def json_ld_data(recipe):
     """schema.org/Recipe — the format Google, Paprika, Mealie, etc. understand."""
+    r = lower(recipe, 1)
     data = {
         "@context": "https://schema.org",
         "@type": "Recipe",
@@ -229,9 +223,12 @@ def scale_control():
     return '  <div class="scale-control" role="group" aria-label="Batch size">%s</div>' % buttons
 
 
-def recipe_page(r, css, standalone=False):
-    """Full recipe page. `css` is the v2 stylesheet text (inlined when standalone,
-    which also drops the site nav, scale markers and JSON-LD — a plain v2 file)."""
+def recipe_page(recipe, css, standalone=False):
+    """Full recipe page from a recipe in either format. `css` is the v2 stylesheet
+    text (inlined when standalone, which also drops the site nav, scale markers and
+    JSON-LD — a plain v2 file)."""
+    r = lower(recipe, 1)
+    alts = () if standalone else [lower(recipe, k) for k in SCALE_STEPS[1:]]
     head = [
         "<!DOCTYPE html>",
         '<html lang="en">',
@@ -266,4 +263,4 @@ def recipe_page(r, css, standalone=False):
         if SHOW_SCALE_CONTROL:
             nav.append(scale_control())
         nav += ['  <a class="site-nav-cat" href="../?cat=%s">%s</a>' % (e(r["category"]), e(cat)), "</nav>", ""]
-    return "\n".join(head + nav + [recipe_body(r, scale=not standalone), "", TO_TOP, "</body>", "</html>", ""])
+    return "\n".join(head + nav + [recipe_body(r, alts), "", TO_TOP, "</body>", "</html>", ""])

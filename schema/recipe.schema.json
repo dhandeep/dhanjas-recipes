@@ -2,12 +2,28 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://dhanjas.com/schema/recipe.schema.json",
   "title": "dhanjas.com recipe",
-  "description": "One recipe in the dhanjas.com house format — the v2 recipe template as data. Field-by-field notes: docs/RECIPE-FORMAT.md. Inline text may use {amount} (amber per-step amount, scales with the batch; {=amount} never scales) and **bold**.",
+  "description": "One recipe in the dhanjas.com house format. Format 3 (current): ingredients have ids and optional keyed portions, and every instruction references the ingredient and portion it uses — {@id} or {@id:key}. Full rules and a worked example: docs/RECIPE-SPEC.md. Format 2 (older recipes) writes amounts by hand: {⅓ cup}.",
   "type": "object",
-  "required": ["slug", "category", "title", "subtitle", "ingredientGroups", "method"],
+  "required": [
+    "slug",
+    "category",
+    "title",
+    "subtitle",
+    "ingredientGroups",
+    "method"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": {"type": "string"},
+    "$schema": {
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        2,
+        3
+      ],
+      "description": "3 = ingredient ids + portions + {@id:key} references (docs/RECIPE-SPEC.md). Omit for format 2."
+    },
     "slug": {
       "type": "string",
       "pattern": "^(breakfast|curry|dal|rice|bread|snack|chaat|powder|sweet|drink)-[a-z0-9]+(-[a-z0-9]+)*$",
@@ -15,48 +31,154 @@
     },
     "category": {
       "type": "string",
-      "enum": ["breakfast", "curry", "dal", "rice", "bread", "snack", "chaat", "powder", "sweet", "drink"],
+      "enum": [
+        "breakfast",
+        "curry",
+        "dal",
+        "rice",
+        "bread",
+        "snack",
+        "chaat",
+        "powder",
+        "sweet",
+        "drink"
+      ],
       "description": "Must match the slug prefix. Drives the Type filter."
     },
-    "title": {"type": "string", "minLength": 1, "description": "<h1> and recipe name"},
-    "name": {"type": "string", "description": "Recipe-name heading, only when it differs from the title"},
-    "subtitle": {"type": "string", "minLength": 1, "description": "One line under the title; card blurb"},
-    "badges": {"type": "array", "items": {"type": "string"}, "description": "Header pills, e.g. Jain Vegetarian, Toddler-adapted"},
-    "labels": {"type": "array", "items": {"type": "string"}, "description": "The recipe-tag pill above the name, e.g. \"Paneer · Curry\""},
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "<h1> and recipe name"
+    },
+    "name": {
+      "type": "string",
+      "description": "Recipe-name heading, only when it differs from the title"
+    },
+    "subtitle": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One line under the title; card blurb"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Header pills, e.g. Jain Vegetarian, Toddler-adapted"
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The recipe-tag pill above the name, e.g. \"Paneer · Curry\""
+    },
     "meta": {
-      "type": "array", "items": {"type": "string"},
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
       "description": "Times and yield, e.g. \"Morning: 25 min\", \"Makes 6–7 chillas\". Yield numbers scale with the batch; times don't."
     },
-    "protein": {"type": ["string", "null"], "description": "Protein bar, e.g. \"~18–22g protein per adult serving\""},
+    "protein": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Protein bar, e.g. \"~18–22g protein per adult serving\""
+    },
     "nightPrep": {
       "oneOf": [
-        {"type": "null"},
         {
-          "type": "object", "required": ["label", "items"], "additionalProperties": false,
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "label",
+            "items"
+          ],
+          "additionalProperties": false,
           "properties": {
-            "label": {"type": "string", "description": "Shown after 🌙, e.g. Night Before"},
-            "items": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+            "label": {
+              "type": "string",
+              "description": "Shown after 🌙, e.g. Night Before"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
           }
         }
       ]
     },
-    "ingredientsTitle": {"type": "string", "description": "Only when not \"Ingredients\""},
-    "methodTitle": {"type": "string", "description": "Only when not \"Method\""},
+    "ingredientsTitle": {
+      "type": "string",
+      "description": "Only when not \"Ingredients\""
+    },
+    "methodTitle": {
+      "type": "string",
+      "description": "Only when not \"Method\""
+    },
     "ingredientGroups": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "items": {
-        "type": "object", "required": ["label", "items"], "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "label",
+          "items"
+        ],
+        "additionalProperties": false,
         "properties": {
-          "label": {"type": "string", "minLength": 1},
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
           "items": {
-            "type": "array", "minItems": 1,
+            "type": "array",
+            "minItems": 1,
             "items": {
-              "type": "object", "required": ["name", "amount"], "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "name",
+                "amount"
+              ],
+              "additionalProperties": false,
               "properties": {
-                "name": {"type": "string", "minLength": 1},
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9-]*$",
+                  "description": "Format 3: unique within the recipe; instructions refer to it as {@id}. e.g. rava, green-chili, ghee-tempering"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "short": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "How instructions name it, e.g. 'rava' for 'Rava (semolina / sooji)'. Default: the name before any comma or bracket, lowercased."
+                },
                 "amount": {
-                  "type": "string", "minLength": 1,
+                  "type": "string",
+                  "minLength": 1,
                   "description": "Leads with a quantity the batch control can scale (\"1½ cups\", \"2–3\", \"200g\"), or is a phrase like \"to taste\". Per-piece amounts (\"1 tsp per chilla\") stay fixed."
+                },
+                "portions": {
+                  "type": "object",
+                  "minProperties": 1,
+                  "propertyNames": {
+                    "pattern": "^[a-z0-9][a-z0-9-]*$"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "description": "Format 3: how the amount splits across instructions, in order — e.g. {\"toddler\": \"3 tbsp\", \"main\": \"rest\"}. Keys starting with 'toddler' never scale. At most one 'rest' (computed: amount minus the others). Measured portions must add up to the amount. Every portion must be referenced as {@id:key}."
                 }
               }
             }
@@ -65,32 +187,79 @@
       }
     },
     "method": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "description": "In page order. Steps are numbered automatically; toddler boxes go at the exact moment her portion is pulled.",
       "items": {
         "oneOf": [
           {
-            "type": "object", "required": ["type", "title", "items"], "additionalProperties": false,
+            "type": "object",
+            "required": [
+              "type",
+              "title",
+              "items"
+            ],
+            "additionalProperties": false,
             "properties": {
-              "type": {"const": "step"},
-              "title": {"type": "string"},
-              "items": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+              "type": {
+                "const": "step"
+              },
+              "title": {
+                "type": "string"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
             }
           },
           {
-            "type": "object", "required": ["type", "label", "items"], "additionalProperties": false,
+            "type": "object",
+            "required": [
+              "type",
+              "label",
+              "items"
+            ],
+            "additionalProperties": false,
             "properties": {
-              "type": {"const": "toddler"},
-              "label": {"type": "string", "description": "Shown after 👶"},
-              "items": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+              "type": {
+                "const": "toddler"
+              },
+              "label": {
+                "type": "string",
+                "description": "Shown after 👶"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
             }
           },
           {
-            "type": "object", "required": ["type", "text"], "additionalProperties": false,
+            "type": "object",
+            "required": [
+              "type",
+              "text"
+            ],
+            "additionalProperties": false,
             "properties": {
-              "type": {"const": "tip"},
-              "label": {"type": "string", "default": "Tip"},
-              "text": {"type": "string", "minLength": 1}
+              "type": {
+                "const": "tip"
+              },
+              "label": {
+                "type": "string",
+                "default": "Tip"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
             }
           }
         ]
@@ -98,10 +267,24 @@
     },
     "tags": {
       "type": "array",
-      "items": {"enum": ["Quick", "Night prep", "Meal prep", "High-protein", "No-cook", "Instant Pot", "Air fryer", "Oven"]},
+      "items": {
+        "enum": [
+          "Quick",
+          "Night prep",
+          "Meal prep",
+          "High-protein",
+          "No-cook",
+          "Instant Pot",
+          "Air fryer",
+          "Oven"
+        ]
+      },
       "uniqueItems": true,
       "description": "Front-page filters — fixed list. Detected on import; can be added by hand."
     },
-    "added": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}
+    "added": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
   }
 }

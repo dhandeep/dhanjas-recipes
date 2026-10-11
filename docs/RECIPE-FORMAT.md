@@ -1,5 +1,12 @@
 # Recipe format
 
+> **Writing a new recipe? Use [`RECIPE-SPEC.md`](RECIPE-SPEC.md) — format 3**, where
+> ingredients have ids and keyed portions and every instruction references the
+> portion it uses (`{@rava:main}`). This page describes the data model as a whole,
+> including format 2, which older recipes still use (amounts typed by hand: `{⅓ cup}`).
+> Both render identically; `portions.lower()` turns format 3 into format-2 text at
+> each batch size before anything is rendered.
+
 Every recipe is one JSON file in `data/recipes/<slug>.json`. It is the source of
 truth: the recipe page, the front-page card, the search index and the
 schema.org metadata are all generated from it.

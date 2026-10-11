@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from dhanjas import parse_html, render, schema, validate  # noqa: E402
+from dhanjas import parse_html, portions, render, schema, validate  # noqa: E402
 from dhanjas.model import TAG_NAMES, detect_tags  # noqa: E402
 from dhanjas.quantity import needs_quantity, scale_text, tokens  # noqa: E402
 
@@ -17,7 +17,7 @@ RECIPES = sorted((ROOT / "data" / "recipes").glob("*.json"))
 CSS = (ROOT / "assets" / "recipe.css").read_text("utf-8")
 
 
-def load(name="breakfast-moong-dal-chilla"):
+def load(name="breakfast-besan-chilla"):
     r = json.loads((ROOT / "data" / "recipes" / ("%s.json" % name)).read_text("utf-8"))
     r.pop("$schema", None)
     return r
@@ -27,9 +27,10 @@ class RoundTrip(unittest.TestCase):
     def test_every_recipe_survives_render_and_parse(self):
         self.assertTrue(RECIPES)
         for path in RECIPES:
-            want = json.loads(path.read_text("utf-8"))
-            want.pop("$schema", None)
+            raw = json.loads(path.read_text("utf-8"))
+            raw.pop("$schema", None)
             for standalone in (False, True):
+                want = portions.lower(raw, 1)      # format 3 renders as its resolved text
                 got = parse_html.parse(render.recipe_page(want, CSS, standalone), want["slug"])
                 for r in (want, got):
                     for k in ("tags", "added"):
@@ -43,10 +44,12 @@ class RoundTrip(unittest.TestCase):
         self.assertNotIn('rel="stylesheet"', page)
 
     def test_amount_markup(self):
-        self.assertEqual(render.rich("Add salt {½ tsp} & **stir**", scale=False),
+        self.assertEqual(render.rich("Add salt {½ tsp} & **stir**"),
                          'Add salt <span class="amt">(½ tsp)</span> &amp; <strong>stir</strong>')
-        self.assertEqual(render.rich("Add {½ tsp}"),
-                         'Add <span class="amt">(<data class="q" data-q="½" data-u="tsp" data-sp=" ">½ tsp</data>)</span>')
+        self.assertEqual(render.rich("Add {½ tsp}", ["Add {1 tsp}", "Add {1½ tsp}"]),
+                         'Add <span class="amt">(<data class="q" data-x2="1 tsp" data-x3="1½ tsp">½ tsp</data>)</span>')
+        self.assertEqual(render.rich("Cook {5 min}", ["Cook {5 min}", "Cook {5 min}"]),
+                         'Cook <span class="amt">(5 min)</span>')
 
 
 class Validator(unittest.TestCase):
@@ -112,6 +115,77 @@ class Validator(unittest.TestCase):
         r = load()
         r["slug"] = "dinner-thing"
         self.assertTrue(self.errors(r))
+
+
+class Portions(unittest.TestCase):
+    """Format 3: keyed portions and {@id:key} references (docs/RECIPE-SPEC.md)."""
+
+    def rava(self):
+        return load("breakfast-rava-upma")
+
+    def item(self, r, i):
+        return next(it for g in r["ingredientGroups"] for it in g["items"] if it.get("id") == i)
+
+    def bullets(self, r, k):
+        return [t for b in portions.lower(r, k)["method"] for t in b.get("items", [])]
+
+    def test_rest_is_computed_and_scales_around_the_fixed_toddler_portion(self):
+        r = self.rava()
+        for k, main, total in [(1, "¾ cup + 1 tbsp", "1 cup"), (2, "1½ cups + 2 tbsp", "1¾ cups + 1 tbsp"),
+                               (3, "2¼ cups + 3 tbsp", "2½ cups + 2 tbsp")]:
+            with self.subTest(k=k):
+                self.assertTrue(any("remaining roasted rava {%s}" % main in t for t in self.bullets(r, k)))
+                low = portions.lower(r, k)
+                self.assertEqual(next(it["amount"] for g in low["ingredientGroups"] for it in g["items"]
+                                      if it["name"].startswith("Rava")), total)
+
+    def test_toddler_boxes_never_scale(self):
+        r = self.rava()
+        boxes = [[b["items"] for b in portions.lower(r, k)["method"] if b["type"] == "toddler"] for k in (1, 2, 3)]
+        self.assertEqual(boxes[0], boxes[1])
+        self.assertEqual(boxes[0], boxes[2])
+
+    def test_per_piece_ingredients_never_scale(self):
+        r = load("breakfast-moong-dal-chilla")
+        self.assertTrue(any("ghee {½ tsp}" in t for t in self.bullets(r, 3)))
+
+    def test_valid_examples(self):
+        for slug in ("breakfast-rava-upma", "breakfast-moong-dal-chilla"):
+            with self.subTest(slug=slug):
+                self.assertEqual(validate.check(load(slug))[0], [])
+
+    def errors(self, r):
+        return validate.check(r)[0]
+
+    def test_portions_must_add_up(self):
+        r = self.rava()
+        self.item(r, "water")["portions"]["main"] = "3 cups"
+        self.assertTrue(any("add up to" in e for e in self.errors(r)))
+
+    def test_every_portion_is_used(self):
+        r = self.rava()
+        self.item(r, "ghee")["portions"]["garnish"] = "a drop"
+        self.assertTrue(any("{@ghee:garnish} is never used" in e for e in self.errors(r)))
+
+    def test_unknown_reference(self):
+        r = self.rava()
+        r["method"][0]["items"].append("Add {@rava:topping}")
+        self.assertTrue(any("no 'topping' portion" in e for e in self.errors(r)))
+
+    def test_ids_are_required(self):
+        r = self.rava()
+        del self.item(r, "hing")["id"]
+        self.assertTrue(any("has no id" in e for e in self.errors(r)))
+
+    def test_listed_ingredient_needs_a_reference_not_a_typed_amount(self):
+        r = self.rava()
+        r["method"][0]["items"].append("Add salt {½ tsp}")
+        self.assertTrue(any("without a reference" in e for e in self.errors(r)))
+
+    def test_rest_needs_something_left(self):
+        r = self.rava()
+        self.item(r, "rava")["portions"]["toddler"] = "1 cup"
+        self.assertTrue(any("nothing left" in e for e in self.errors(r)))
 
 
 class Tags(unittest.TestCase):

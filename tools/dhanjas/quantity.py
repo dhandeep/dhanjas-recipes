@@ -138,3 +138,113 @@ def scale_text(text, factor):
         last = m.end()
     out.append(text[last:])
     return "".join(out).lstrip("=")
+
+
+# ---------------------------------------------------------------------------
+# Arithmetic for ingredient portions (format 3): "1 cup" − "3 tbsp" = "¾ cup + 1 tbsp".
+
+VOLUME_TSP = {"tsp": 1, "tbsp": 3, "cup": 48, "cups": 48}
+MASS_G = {"g": 1, "kg": 1000}
+CUP_FRACTIONS = [Fraction(0), Fraction(1, 4), Fraction(1, 3), Fraction(1, 2), Fraction(2, 3), Fraction(3, 4)]
+
+
+class Q:
+    """A measured amount in a base unit: tsp for volume, g for mass, else a count
+    ('', 'medium', 'stalk', …). hi is set for ranges."""
+
+    def __init__(self, lo, hi=None, kind=""):
+        self.lo, self.hi, self.kind = Fraction(lo), (Fraction(hi) if hi is not None else None), kind
+
+    def compatible(self, other):
+        return other is not None and self.kind == other.kind
+
+    def _pair(self):
+        return self.lo, (self.hi if self.hi is not None else self.lo)
+
+    def __add__(self, other):
+        (a, b), (c, d) = self._pair(), other._pair()
+        hi = b + d if (self.hi is not None or other.hi is not None) else None
+        return Q(a + c, hi, self.kind)
+
+    def __sub__(self, other):
+        # subtracting a fixed portion from a total: low − low, high − high
+        (a, b), (c, d) = self._pair(), other._pair()
+        hi = b - d if (self.hi is not None or other.hi is not None) else None
+        return Q(a - c, hi, self.kind)
+
+    def __mul__(self, k):
+        return Q(self.lo * k, self.hi * k if self.hi is not None else None, self.kind)
+
+    def positive(self):
+        return self.lo > 0
+
+    def within(self, other):
+        """self's range fits inside other's (exact amounts must be equal)."""
+        (a, b), (c, d) = self._pair(), other._pair()
+        return a >= c and b <= d
+
+    def __repr__(self):
+        return "Q(%s, %s, %r)" % (self.lo, self.hi, self.kind)
+
+
+def parse_q(text):
+    """The leading quantity of an amount as a Q, or None ('to taste', 'a pinch')."""
+    m = TOKEN.match(text.strip().lstrip("~≈ "))
+    if not m:
+        return None
+    unit = (m.group("unit") or "").lower()
+    if unit in TIME:
+        return None
+    lo, hi = value(m.group("lo")), (value(m.group("hi")) if m.group("hi") else None)
+    if unit in VOLUME_TSP:
+        f, kind = VOLUME_TSP[unit], "volume"
+    elif unit in MASS_G:
+        f, kind = MASS_G[unit], "mass"
+    else:
+        f, kind = 1, SINGULAR.get(unit, unit)
+    return Q(lo * f, hi * f if hi is not None else None, kind)
+
+
+def _fmt_volume(tsp):
+    """Readable kitchen volume: cups when it's a clean cup fraction or more than ½ cup,
+    tablespoons below that, teaspoons for small amounts; remainders are added on
+    ('¾ cup + 1 tbsp')."""
+    tsp = Fraction(tsp)
+    cups = tsp / 48
+    whole, frac = int(cups), cups - int(cups)
+    if tsp >= 12 and frac in CUP_FRACTIONS:
+        return fmt(cups) + (" cups" if cups > 1 else " cup")
+    if tsp > 24:
+        # largest cup fraction that leaves a clean ½-tablespoon remainder
+        # (the leftover stays under ¼ cup, so it reads as tablespoons)
+        candidates = sorted((f for f in CUP_FRACTIONS if f <= frac and (frac - f) * 48 < 12), reverse=True)
+        below = next((f for f in candidates if ((tsp - (whole + f) * 48) / Fraction(3, 2)).denominator == 1), candidates[0])
+        main = whole + below
+        rest = tsp - main * 48
+        return fmt(main) + (" cups" if main > 1 else " cup") + (" + " + _fmt_volume(rest) if rest > 0 else "")
+    if tsp >= 3:
+        tbsp = tsp / 3
+        if (tbsp * 2).denominator == 1:                 # whole or half tablespoons
+            return fmt(tbsp) + " tbsp"
+        whole_tbsp = int(tbsp)
+        return "%d tbsp + %s" % (whole_tbsp, _fmt_volume(tsp - whole_tbsp * 3))
+    return fmt(tsp) + " tsp"
+
+
+def format_q(q):
+    def one(v):
+        if q.kind == "volume":
+            return _fmt_volume(v)
+        if q.kind == "mass":
+            return fmt(v, "g") + "g"
+        unit = unit_for(q.kind, v) if q.kind else ""
+        return fmt(v) + (" " + unit if unit else "")
+    if q.hi is None or q.hi == q.lo:
+        return one(q.lo)
+    lo, hi = one(q.lo), one(q.hi)
+    # "⅔ cup" + "1 cup" → "⅔–1 cup" when both share a simple unit
+    lo_parts, hi_parts = lo.rsplit(" ", 1), hi.rsplit(" ", 1)
+    if len(lo_parts) == 2 and len(hi_parts) == 2 and "+" not in lo + hi and \
+            SINGULAR.get(lo_parts[1], lo_parts[1]) == SINGULAR.get(hi_parts[1], hi_parts[1]):
+        return "%s–%s" % (lo_parts[0], hi)
+    return "%s – %s" % (lo, hi)

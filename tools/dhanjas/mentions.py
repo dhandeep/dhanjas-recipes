@@ -76,13 +76,23 @@ def terms(name):
     return out
 
 
-def unquantified(recipe):
-    """[(step title, bullet, ingredient word, why)] for every use without an amount."""
+REF = re.compile(r"\{@([a-z0-9][a-z0-9-]*)(?::[a-z0-9-]+)?(?:\|([^{}]*))?\}")
+
+
+def unquantified(recipe, refs_only=False):
+    """[(step title, bullet, ingredient word, why)] for every use without an amount.
+
+    refs_only (format 3): only an {@id…} reference counts as a quantity — a hand-typed
+    {amount} next to a listed ingredient doesn't, because it can't stay in step with
+    the ingredient list."""
     vocab = {}                                  # term → ingredient line it came from
+    shorts = {}
     for g in recipe.get("ingredientGroups", []):
         for it in g.get("items", []):
-            for t in terms(it["name"]):
+            for t in terms(it["name"]) | (terms(it["short"]) if it.get("short") else set()):
                 vocab.setdefault(t.lower(), it["name"])
+            if it.get("id"):
+                shorts[it["id"]] = it.get("short") or re.sub(r"\(.*?\)", "", it["name"]).split(",")[0].strip().lower()
     if not vocab:
         return []
     pattern = re.compile(r"\b(%s)\b" % "|".join(sorted(map(re.escape, vocab), key=len, reverse=True)), re.I)
@@ -91,6 +101,9 @@ def unquantified(recipe):
         if b.get("type") != "step":
             continue
         for item in b.get("items", []):
+            if refs_only:
+                item = re.sub(r"\{(?!@)[^{}]*\}", "", item)
+                item = REF.sub(lambda m: "%s {ref}" % (m.group(2) if m.group(2) is not None else shorts.get(m.group(1), m.group(1))), item)
             text = re.sub(r"\([^)]*\)", lambda m: " " * len(m.group(0)), item)   # brackets aren't uses
             mentions = list(pattern.finditer(text))
             for i, m in enumerate(mentions):
