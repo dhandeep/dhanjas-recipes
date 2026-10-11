@@ -1,7 +1,8 @@
 # dhanjas.com recipe site
 
 Static GitHub Pages site. Recipes live as JSON in `data/recipes/`; `tools/recipes.py`
-generates `index.html` and the `<slug>.html` recipe pages. Read `docs/RECIPE-FORMAT.md` before
+generates `index.html` and the `<slug>.html` recipe pages. Generated files are
+git-ignored: the Recipes workflow builds, checks and deploys them to Pages. Read `docs/RECIPE-FORMAT.md` before
 touching recipe data and `docs/INGEST.md` for the publishing flow.
 
 ## Rules
@@ -28,8 +29,8 @@ The prompt that writes recipes is `docs/RECIPE-PROMPT.md`.
    problems go back to the user; don't silently rewrite their recipe).
    Use `--replace` only when the user confirmed replacing an existing recipe.
 3. `python3 -m unittest discover -s tools` and `npm run check:browser` (needs
-   `npm install` once), then commit `data/`, `recipes/`, `index.html`,
-   `assets/recipes.json`.
+   `npm install` once), then commit `data/` (the generated pages are git-ignored;
+   the workflow rebuilds and deploys them on push to `main`).
 
 Quantities (non-negotiable): every ingredient line has a readable quantity, and every
 step line that uses an ingredient says how much. In format 3 that's a reference

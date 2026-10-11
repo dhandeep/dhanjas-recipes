@@ -2,10 +2,10 @@ name: Recipes
 
 # Push a recipe .json (format 3, docs/RECIPE-SPEC.md — or an older v2 .html) into
 # inbox/ — from the GitHub web UI, the GitHub app, or Claude — and this workflow
-# validates it, saves it as data/recipes/<slug>.json, rebuilds the site (pages at
-# the root: <slug>.html, served as /<slug>), renders every page in Chromium
-# (tools/browser-check.mjs) and only then commits the result.
-# Pull requests get the same checks without the commit.
+# validates it, saves it as data/recipes/<slug>.json, builds the site (<slug>.html,
+# served as /<slug>), renders every page in Chromium (tools/browser-check.mjs), and
+# only then commits the new recipe data and deploys the site to GitHub Pages.
+# Pull requests get the same checks without the commit or deploy.
 
 on:
   push:
@@ -75,34 +75,25 @@ jobs:
           path: screenshots/
           retention-days: 14
 
-      - name: Commit the result
+      # Only the recipe data is committed (an ingested inbox file becomes data/recipes/<slug>.json);
+      # the pages themselves are built fresh on every run and deployed below, never committed.
+      - name: Commit ingested recipes
         if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- data recipes assets/recipes.json inbox ':(glob)*.html'
+          git add -A -- data inbox
           if git diff --cached --quiet; then
-            echo "Site already up to date."
+            echo "No new recipes to commit."
           else
-            git commit -m "Ingest recipes and rebuild site"
+            git commit -m "Ingest recipes"
             git push
           fi
 
-      - name: Site is up to date (PRs)
-        if: github.event_name == 'pull_request'
-        run: |
-          if [ -z "$(ls inbox | grep -v README)" ] && ! git diff --quiet -- recipes assets/recipes.json ':(glob)*.html'; then
-            echo "::error::Generated pages are stale — run 'python3 tools/recipes.py build' and commit."
-            git diff --stat
-            exit 1
-          fi
-
-  # Publishes the checked build. Until Settings → Pages → Source is "GitHub Actions",
-  # Pages keeps serving the files committed on main and this job fails harmlessly.
+  # Publishes the checked build (Settings → Pages → Source: GitHub Actions).
   deploy:
     needs: build
     if: github.event_name != 'pull_request'
-    continue-on-error: true
     runs-on: ubuntu-latest
     permissions:
       pages: write
