@@ -47,29 +47,34 @@ CATEGORIES = {
 
 SLUG_RE = re.compile(r"^(%s)-[a-z0-9]+(-[a-z0-9]+)*$" % "|".join(CATEGORIES))
 
-# Tag vocabulary the importer can detect on its own. Tags are free-form in the
-# JSON — anything added by hand shows up as a filter too.
-AUTO_TAGS = [
-    ("High-protein", r"high[- ]protein"),
-    ("Night prep", None),            # set when the recipe has a night-prep box
-    ("Toddler-adapted", None),       # set when the method has a toddler box
-    ("Meal prep", r"meal[- ]prep|3\s*[×x]\s*(adult )?serving|weekly prep|batch on (saturday|sunday)|sunday[- ]batch|make sunday"),
-    ("Instant Pot", r"instant pot|\bIP\b"),
-    ("Pressure cooker", r"pressure[- ]cook|whistles?\b"),
-    ("Air fryer", r"air[- ]?fr(y|ied|ier|yer)|ninja crispi|\bcrispi\b"),
-    ("Oven", r"\boven\b|\bbake[ds]?\b|\bbaking\b"),
-    ("No-cook", r"no[- ]cook"),
+# The only tags the site uses — a short, fixed list so filters never overlap the
+# Type row or each other. Detected on import; any of these can also be added by
+# hand. Dish labels ("Paneer · Curry") stay on the page and in search, not here.
+# Every recipe is toddler-adapted by design, so that isn't a tag.
+TAGS = [
+    ("Quick", "20 minutes or less, start to finish"),
+    ("Night prep", "has a night-before step"),
+    ("Meal prep", "weekend / mid-week batch dish (every curry and dal) or made ahead in bulk"),
+    ("High-protein", "15 g+ protein per adult serving"),
+    ("No-cook", "assembled, nothing cooked on the day"),
+    ("Instant Pot", "Instant Pot or pressure cooker"),
+    ("Air fryer", "uses the Ninja Crispi"),
+    ("Oven", "baked"),
 ]
-APPLIANCE_TAGS = {"Instant Pot", "Pressure cooker", "Air fryer", "Oven"}
+TAG_NAMES = [name for name, _ in TAGS]
 
-# Sabji/curry and dal are the weekend & mid-week batch dishes (3× adult serving).
-MEAL_PREP_CATEGORIES = {"curry", "dal"}
-
-# Recipe-tag pills ("Paneer · Curry") become separate filters; spelling variants merge.
-TAG_ALIASES = {
-    "high protein": "High-protein", "meal prep": "Meal prep", "no-cook": "No-cook", "no cook": "No-cook",
-    "batch": "Batch", "bulk batch": "Batch", "spice blend": "Spice blend",
+PATTERNS = {
+    "Meal prep": r"meal[- ]prep|3\s*[×x]\s*(adult )?serving|weekly prep|batch on (saturday|sunday)|sunday[- ]batch|make sunday",
+    "High-protein": r"high[- ]protein",
+    "No-cook": r"no[- ]cook",
+    "Instant Pot": r"instant pot|\bIP\b|pressure[- ]cook|whistles?\b",
+    "Air fryer": r"air[- ]?fr(y|ied|ier|yer)|ninja crispi|\bcrispi\b",
+    "Oven": r"\boven\b|\bbake[ds]?\b|\bbaking\b",
 }
+APPLIANCE_TAGS = {"Instant Pot", "Air fryer", "Oven"}
+MEAL_PREP_CATEGORIES = {"curry", "dal"}
+QUICK_MINUTES = 20
+HIGH_PROTEIN_GRAMS = 15
 
 AMT_RE = re.compile(r"\{([^{}]+)\}")
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
@@ -109,7 +114,7 @@ def times(recipe):
             continue  # passive time; would swamp the "quickest" sort
         if "total" in key:
             out["total"] = mins
-        elif any(w in key for w in ("cook", "morning", "bake", "fry", "pressure", "simmer")):
+        elif any(w in key for w in ("cook", "morning", "bake", "fry", "pressure", "simmer", "roast", "steam")):
             out["cook"] = out.get("cook", 0) + mins
         elif any(w in key for w in ("prep", "night", "batch", "active")):
             out["prep"] = out.get("prep", 0) + mins
@@ -172,37 +177,37 @@ def _clauses(text):
 
 
 def detect_tags(recipe):
-    text, appliances = _clauses(all_text(recipe)), _clauses(appliance_text(recipe))
-    tags = []
-    for name, pattern in AUTO_TAGS:
-        if name == "Night prep":
-            hit = bool(recipe.get("nightPrep"))
-        elif name == "Toddler-adapted":
-            hit = any(b["type"] == "toddler" for b in recipe.get("method", []))
-        elif name == "Meal prep":
-            hit = recipe.get("category") in MEAL_PREP_CATEGORIES or bool(re.search(pattern, text, re.I))
-        else:
-            hit = bool(re.search(pattern, appliances if name in APPLIANCE_TAGS else text, re.I))
-        if hit:
-            tags.append(name)
-    return tags
+    text = _clauses(all_text(recipe))
+    labels = " ".join(recipe.get("labels", []))
+    appliances = _clauses(appliance_text(recipe))
+    hits = {
+        "Quick": recipe.get("category") != "powder" and (times(recipe).get("total") or 999) <= QUICK_MINUTES,
+        "Night prep": bool(recipe.get("nightPrep")),
+        "Meal prep": (recipe.get("category") in MEAL_PREP_CATEGORIES or bool(re.search(PATTERNS["Meal prep"], text, re.I))
+                      or bool(re.search(r"meal[- ]prep|\bbatch\b", labels, re.I))),
+        "High-protein": (protein_per_adult(recipe) or 0) >= HIGH_PROTEIN_GRAMS or bool(re.search(PATTERNS["High-protein"], text, re.I)),
+    }
+    # "no-cook" is itself a negation, so it's matched before the negation filter.
+    hits["No-cook"] = bool(re.search(PATTERNS["No-cook"], all_text(recipe) + " " + labels, re.I))
+    for name in ("Instant Pot", "Air fryer", "Oven"):
+        hits[name] = bool(re.search(PATTERNS[name], appliances if name in APPLIANCE_TAGS else text, re.I))
+    return [name for name in TAG_NAMES if hits.get(name)]
 
 
-def filter_tags(recipe):
-    """Everything the front page can filter on: split recipe-tag pills plus tags."""
-    out = []
-    for raw in [part for label in recipe.get("labels", []) for part in label.split("·")] + recipe.get("tags", []):
-        t = raw.strip()
-        if not t:
-            continue
-        t = TAG_ALIASES.get(t.lower(), t[0].upper() + t[1:])
-        if t.lower() not in (o.lower() for o in out):
-            out.append(t)
-    return out
+def protein_per_adult(recipe):
+    """Lower bound of '~18–22g protein per adult …' — None when the bar isn't per adult serving."""
+    text = recipe.get("protein") or ""
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:[–-]\s*\d+(?:\.\d+)?)?\s*g\b[^·—]*per adult", text)
+    return float(m.group(1)) if m else None
 
 
 def retag(recipe, previous=None):
-    """Fresh auto tags, keeping any hand-added tags (anything outside AUTO_TAGS)."""
-    auto = {name for name, _ in AUTO_TAGS}
-    manual = [t for t in (previous if previous is not None else recipe.get("tags", [])) if t not in auto]
-    return detect_tags(recipe) + [t for t in manual if t not in detect_tags(recipe)]
+    """Fresh detected tags plus any vocabulary tag that was added by hand. Tags
+    outside the vocabulary are dropped (the validator reports them)."""
+    detected = detect_tags(recipe)
+    kept = [t for t in (previous if previous is not None else recipe.get("tags", [])) if t in TAG_NAMES]
+    return [t for t in TAG_NAMES if t in detected or t in kept and t not in AUTO_ONLY]
+
+
+# Tags whose rule is objective — a stale hand-set value shouldn't survive a retag.
+AUTO_ONLY = {"Quick", "Night prep"}

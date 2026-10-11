@@ -1,0 +1,14 @@
+{
+  "name": "dhanjas-recipes",
+  "private": true,
+  "description": "Browser checks for the generated site. The site itself is built by tools/recipes.py (Python, no dependencies).",
+  "type": "module",
+  "scripts": {
+    "check:browser": "node tools/browser-check.mjs"
+  },
+  "devDependencies": {
+    "pixelmatch": "7.1.0",
+    "playwright": "1.56.1",
+    "pngjs": "7.0.0"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "slug": "breakfast-rava-upma",
+  "category": "breakfast",
+  "title": "Rava Upma with Peanuts",
+  "subtitle": "A quick semolina upma, roasted golden and studded with peanuts.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Semolina"
+  ],
+  "meta": [
+    "Night prep: none",
+    "Morning: 20 min",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~14–16g protein per adult serving (peanuts are the primary source)",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Main",
+      "items": [
+        {"name": "Rava (semolina / sooji)", "amount": "1 cup"},
+        {"name": "Raw peanuts", "amount": "⅓ cup"},
+        {"name": "Water", "amount": "2½ cups"},
+        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
+        {"name": "Green chili, slit", "amount": "1–2 (adults)"},
+        {"name": "Ghee", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"name": "Mustard seeds", "amount": "1 tsp"},
+        {"name": "Cumin seeds", "amount": "½ tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Curry leaves", "amount": "8–10"},
+        {"name": "Cashews, optional", "amount": "10–12"}
+      ]
+    },
+    {
+      "label": "Vegetables",
+      "items": [
+        {"name": "Capsicum, finely diced", "amount": "½ cup"},
+        {"name": "Tomato, chopped", "amount": "1 medium"},
+        {"name": "Turmeric", "amount": "¼ tsp"},
+        {"name": "Salt", "amount": "to taste"},
+        {"name": "Lemon juice", "amount": "1 tsp"},
+        {"name": "Fresh coriander", "amount": "2 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Dry roast rava and peanuts",
+      "items": [
+        "Heat a wide pan on medium; add rava {1 cup} — dry roast 3–4 min, stirring constantly until lightly golden and fragrant",
+        "Remove and set aside",
+        "In the same pan, dry roast peanuts {⅓ cup} on medium 3–4 min until skins blister; set aside"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Tempering",
+      "items": [
+        "Heat ghee {2 tbsp} in the pan on medium",
+        "Add mustard seeds {1 tsp} — splutter; add cumin seeds {½ tsp}",
+        "Add hing {¼ tsp}, curry leaves {8–10}, cashews {10–12} if using — stir 30 sec",
+        "Add ginger {1 tsp} — cook 20 sec",
+        "Add capsicum {½ cup} and tomato {1 medium}; cook 2 min",
+        "Add turmeric {¼ tsp} and salt; stir"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull portion here (before chili)",
+      "items": [
+        "Scoop out the cooked vegetables {3–4 tbsp} into a separate small pan now — before adding green chili to the main pan",
+        "Add water {¼ cup} and roasted rava {3 tbsp} to her pan; cook on low, stirring until soft and water absorbed",
+        "Stir in crushed peanuts {1 tsp} or a drop of ghee",
+        "Optional: add finely diced boiled potato for extra bulk"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Add chili and cook upma",
+      "items": [
+        "Add green chili {1–2} to the adult pan; cook 20 sec",
+        "Bring water {2½ cups} to a boil in a separate pot; pour into the tempering pan carefully",
+        "Reduce heat to medium-low; slowly add remaining roasted rava while stirring continuously to avoid lumps",
+        "Stir in remaining roasted peanuts",
+        "Cover and cook 3–4 min on low until rava absorbs all water",
+        "Finish with lemon juice {1 tsp} and coriander {2 tbsp}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Roasting rava before cooking is non-negotiable — it prevents lumpy upma. Add water slowly and stir constantly as it goes in."
+    }
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-09-07"
+}

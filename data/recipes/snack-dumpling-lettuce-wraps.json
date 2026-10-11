@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "snack-dumpling-lettuce-wraps",
   "category": "snack",
   "title": "Crunchy Dumpling Lettuce Wraps",
@@ -231,7 +232,7 @@
     }
   ],
   "tags": [
-    "Toddler-adapted",
+    "High-protein",
     "Air fryer"
   ],
   "added": "2026-09-07"

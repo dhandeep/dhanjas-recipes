@@ -6,9 +6,9 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Chickpea",
+   "Quick",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~16–20g protein per adult · boosts to ~24g with paneer filling",
   "minutes": 20,
@@ -41,10 +41,9 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Dairy",
-   "High-protein",
+   "Quick",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~22–28g protein per adult bowl",
   "minutes": 10,
@@ -73,11 +72,9 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Chickpea",
-   "Batch",
    "Night prep",
-   "Toddler-adapted",
    "Meal prep",
+   "High-protein",
    "Instant Pot"
   ],
   "protein": "~16–18g protein per adult serving",
@@ -115,10 +112,10 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "No-cook",
-   "Snack",
+   "Quick",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein",
+   "No-cook"
   ],
   "protein": "~16–20g protein per adult bowl (makhana + nuts + seeds)",
   "minutes": 3,
@@ -148,10 +145,8 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Lentil",
-   "High-protein",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~18–22g protein per adult serving (3 chillas)",
   "minutes": 30,
@@ -181,10 +176,8 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Paneer",
-   "High-protein",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~28–32g protein per adult serving",
   "minutes": 25,
@@ -218,10 +211,9 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Peanut",
    "Quick",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~18–22g protein per adult (2 rolls) — peanuts + wheat",
   "minutes": 10,
@@ -251,10 +243,9 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Quinoa",
-   "High-protein",
+   "Quick",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~20–24g protein per adult serving — quinoa is a complete protein",
   "minutes": 20,
@@ -288,8 +279,7 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Semolina",
-   "Toddler-adapted"
+   "Quick"
   ],
   "protein": "~14–16g protein per adult serving (peanuts are the primary source)",
   "minutes": 20,
@@ -323,10 +313,9 @@
   "category": "breakfast",
   "categoryName": "Breakfast",
   "tags": [
-   "Multigrain",
-   "Flatbread",
+   "Quick",
    "Night prep",
-   "Toddler-adapted"
+   "High-protein"
   ],
   "protein": "~18–22g protein per adult (2 thalipeeths) — besan + jowar + wheat combined",
   "minutes": 20,
@@ -360,9 +349,6 @@
   "category": "curry",
   "categoryName": "Curry & Sabji",
   "tags": [
-   "Paneer",
-   "Curry",
-   "Toddler-adapted",
    "Meal prep"
   ],
   "protein": "~12–14g protein per adult serving — from paneer",
@@ -407,10 +393,8 @@
   "category": "dal",
   "categoryName": "Dal",
   "tags": [
-   "Tri-Dal",
    "Meal prep",
-   "Toddler-adapted",
-   "Pressure cooker"
+   "Instant Pot"
   ],
   "protein": "~10–12g protein per adult serving — from toor, urad & chana dal",
   "minutes": 30,
@@ -443,11 +427,9 @@
   "category": "dal",
   "categoryName": "Dal",
   "tags": [
-   "Dal",
-   "Meal prep",
    "Night prep",
-   "Toddler-adapted",
-   "Pressure cooker"
+   "Meal prep",
+   "Instant Pot"
   ],
   "protein": "~14–16g protein per adult serving — from urad dal",
   "minutes": 45,
@@ -483,10 +465,7 @@
   "category": "rice",
   "categoryName": "Rice",
   "tags": [
-   "Pilaf",
-   "Toddler-adapted",
-   "Instant Pot",
-   "Pressure cooker"
+   "Instant Pot"
   ],
   "protein": "~9g protein per adult serving — pair with raita, dal or a paneer sabji",
   "minutes": 30,
@@ -523,9 +502,7 @@
   "category": "snack",
   "categoryName": "Snack",
   "tags": [
-   "TVP",
-   "Fusion",
-   "Toddler-adapted",
+   "High-protein",
    "Air fryer"
   ],
   "protein": "~20g protein per adult serving — from TVP, plus peanuts in the chili crisp",
@@ -585,10 +562,7 @@
   "category": "snack",
   "categoryName": "Snack",
   "tags": [
-   "Dal Vada",
-   "Fusion",
    "Night prep",
-   "Toddler-adapted",
    "Air fryer"
   ],
   "protein": "~10–12g protein per adult serving — from moong dal or split peas",
@@ -620,9 +594,7 @@
   "category": "powder",
   "categoryName": "Powders & Chutneys",
   "tags": [
-   "Condiment",
-   "Batch",
-   "Toddler-adapted",
+   "Meal prep",
    "Air fryer"
   ],
   "protein": "~3g protein per 2 tbsp serving — from peanuts, chana dal & sesame",
@@ -650,10 +622,7 @@
   "subtitle": "A unified spice blend for Maggi noodles and more — tuned so overlapping spices don't double up.",
   "category": "powder",
   "categoryName": "Powders & Chutneys",
-  "tags": [
-   "Spice blend",
-   "Toddler-adapted"
-  ],
+  "tags": [],
   "protein": "One batch seasons ~16–18 dishes — keeps 3–4 months at room temp",
   "minutes": 5,
   "added": "2026-09-07",
@@ -681,13 +650,9 @@
   "subtitle": "A toasted spice and lentil powder — the base for sambar, rasam, and general souring or spicing.",
   "category": "powder",
   "categoryName": "Powders & Chutneys",
-  "tags": [
-   "Sambar",
-   "Spice blend",
-   "Toddler-adapted"
-  ],
+  "tags": [],
   "protein": "Makes ~1 cup — enough for many batches of sambar or rasam, keeps 3 months",
-  "minutes": 5,
+  "minutes": 15,
   "added": "2026-09-07",
   "ingredients": [
    "Chana dal (bengal gram)",
@@ -712,8 +677,7 @@
   "category": "drink",
   "categoryName": "Drink",
   "tags": [
-   "Yogurt",
-   "Toddler-adapted"
+   "Quick"
   ],
   "protein": "~8g protein per batch (~3g per 1-cup glass)",
   "minutes": 5,

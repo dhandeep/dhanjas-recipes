@@ -95,8 +95,5 @@
     if (ev.key === '/' && document.activeElement !== q) { ev.preventDefault(); q.focus(); }
   });
 
-  const more = document.querySelector('.more-tags');
-  if (more && [...more.querySelectorAll('[data-tag]')].some(b => state.tags.has(b.dataset.tag))) more.open = true;
-
   render();
 })();

@@ -1,0 +1,332 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Crunchy Dumpling Lettuce Wraps",
+  "description": "Korean-inspired lettuce wraps with a Jain TVP filling, homemade gochujang, and crunchy dumpling strips.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Snack",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "TVP · Fusion, High-protein, Air fryer, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "150g Dry TVP (granules/chunks)",
+    "2 cups Hot water",
+    "1½ tbsp Reduced-sodium soy sauce",
+    "1 tsp Fresh ginger, grated",
+    "¼ tsp Hing",
+    "½ tsp Sugar",
+    "3 tbsp Gochugaru (Korean chili flakes)",
+    "2 tbsp White miso paste",
+    "2 tbsp Light brown sugar or jaggery",
+    "1 tbsp Rice vinegar",
+    "3 tbsp Warm water",
+    "¼ tsp Salt",
+    "⅓ cup Neutral oil (peanut or canola)",
+    "1 tbsp Fresh ginger, finely julienned",
+    "2 tbsp Gochugaru or Kashmiri chili flakes",
+    "1 tbsp Sesame seeds",
+    "2 tbsp Roasted peanuts, crushed",
+    "¼ tsp Hing",
+    "½ tsp Sugar",
+    "½ tsp Salt",
+    "5 tbsp Reduced-sodium soy sauce",
+    "6 tbsp Water",
+    "2 tbsp Toasted sesame oil",
+    "2 tbsp Light brown sugar",
+    "1 tbsp Cornstarch",
+    "2 tbsp Jain gochujang (from above)",
+    "2 tbsp Neutral oil",
+    "¼ tsp Hing",
+    "2 stalks Celery, sliced thin diagonal",
+    "2 tbsp Fresh ginger, grated",
+    "~4 cups Green cabbage, shredded",
+    "1 medium Red bell pepper, julienned",
+    "14 Eggless dumpling wrappers",
+    "1 tbsp Neutral oil, for frying",
+    "¼ tsp White pepper",
+    "½ tsp Dried mushroom powder, optional",
+    "¼ tsp Sugar",
+    "¼ tsp Salt",
+    "2 heads Butter lettuce",
+    "2 tbsp Toasted sesame seeds",
+    "¼ cup Celery leaves or coriander",
+    "Jain chili crisp (from above), to taste"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Soak the TVP",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Stir together hot water (2 cups), soy sauce (1½ tbsp), grated ginger (1 tsp), hing (¼ tsp) and sugar (½ tsp) in a large bowl"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the dry TVP (150g) and stir well"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cover and set aside for 15–20 minutes. It returns in Step 8 with all its liquid."
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Make the Jain gochujang",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "In a small bowl, whisk gochugaru (3 tbsp — or 2 tbsp Kashmiri chili powder + 1 tbsp regular chili powder), white miso (2 tbsp), brown sugar (2 tbsp), rice vinegar (1 tbsp) and salt (¼ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add warm water (3 tbsp) a spoonful at a time, whisking, until it forms a thick glossy paste that falls slowly off the spoon"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Let it rest 10 minutes so the chili flakes hydrate and the raw edge softens"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Makes about ⅔ cup — you need 2 tbsp today, the rest keeps refrigerated for a month"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Make the Jain chili crisp",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Put gochugaru (2 tbsp), sesame seeds (1 tbsp), crushed peanuts (2 tbsp), hing (¼ tsp), sugar (½ tsp) and salt (½ tsp) into a heatproof bowl"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Heat neutral oil (⅓ cup) with the julienned ginger (1 tbsp) in a small pan over medium heat, 4–5 minutes, until the ginger is pale gold and the bubbling slows"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Take the pan off the heat, wait 30 seconds, then pour the oil and ginger over the bowl — it will sizzle hard for a few seconds"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir and cool completely. Set aside — it goes on at serving, Step 10."
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Mix the sauce, reserve the toddler's share",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Whisk soy sauce (5 tbsp), water (6 tbsp), toasted sesame oil (2 tbsp), brown sugar (2 tbsp) and cornstarch (1 tbsp) until completely smooth, no lumps"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Scoop 3 tbsp of this plain sauce into a small bowl and set it aside — that's the toddler's, and it returns in her portion right after Step 8, before the gochujang goes in"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Now stir the Jain gochujang (2 tbsp) into the sauce left in the big bowl. Set aside."
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Prep everything else",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Slice celery (2 stalks) thin on a sharp diagonal — you want long shards, not chunks"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Shred the cabbage (~4 cups), julienne the red bell pepper (1 medium), grate the ginger (2 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Julienne a small carrot and keep it in a separate bowl — toddler only. Microwave it with water (1 tbsp), covered, 2 minutes until just tender; drain and set aside — it returns in her portion right after Step 8."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stack the dumpling wrappers (14) and cut into strips about ½ cm wide"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Separate, wash and thoroughly dry the butter lettuce (2 heads) into cups — wet leaves make the filling slide out"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Crisp the dumpling strips",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Air fryer (recommended): toss the strips with oil (1 tbsp) until barely slicked. Spread in a single layer in the Ninja Crispi and run 330°F for 4–6 minutes, shaking at the 3-minute mark. Pull them while still pale gold — they darken and crisp further as they cool."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Deep-fry alternative: heat oil (2 cups) in a heavy saucepan over high heat; fry the strips in batches, stirring gently, until golden. Lift onto a lined plate."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Set the finished strips aside — they get seasoned next, then go on at serving, Step 10"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler — pull her strips now, before seasoning",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Take a small handful of the crisped strips out and put them on her plate"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Salt them very lightly and leave them alone otherwise"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Do this before the next step — white pepper is mild but there's no reason for her to have it"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Season the adult strips",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Toss the remaining strips with white pepper (¼ tsp), mushroom powder (½ tsp), sugar (¼ tsp) and salt (¼ tsp) while still warm"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Cook the filling",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Heat neutral oil (2 tbsp) in a large sauté pan over medium-high heat"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add hing (¼ tsp) and swirl for 10 seconds until it smells savory and nutty — don't let it brown"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the celery (2 stalks) and grated ginger (2 tbsp). Cook 2 minutes — the celery should stay squeaky, not go soft."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the shredded cabbage (~4 cups) and red bell pepper (1 medium). Cook 5–7 minutes until the cabbage wilts and the pepper just softens."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the soaked TVP (150g) from Step 1 along with all its remaining liquid. Stir through and cook 2 minutes. Stop here — nothing spicy has gone in yet."
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler — pull her filling now, before the gochujang sauce",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Scoop about 1 cup of the filling and TVP out of the pan into a small saucepan"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the softened carrot from Step 5"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pour in the plain reserved sauce (3 tbsp) from Step 4"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Simmer 2 minutes, stirring, until it thickens and coats everything"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Finish off the heat with ghee (½ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve with her plain salted strips from earlier, and either torn butter lettuce or a small bowl of rice"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Hing and ginger are already in this and both are fine for her — the only things she's missing are the gochujang and the chili crisp; everything else is identical to the adult version, carrot included"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Finish the adult filling",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Pour the gochujang sauce from Step 4 over what's left in the big pan"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cook 5–7 minutes, stirring, until the sauce is glossy and thick enough to sit in a lettuce leaf without running out the bottom"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Taste and adjust salt — it should be sweet-salty first, heat second"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Assemble",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Spoon the filling into the butter lettuce cups from Step 5"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Top each with the seasoned dumpling strips from Step 7, toasted sesame seeds (2 tbsp) and chopped celery leaves (¼ cup)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Finish with Jain chili crisp (to taste) from Step 3"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the strips right at the table — they go soft within a couple of minutes of touching the sauce"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Onion → celery, sliced thin, plus hing bloomed in the oil. Garlic → hing. Green onion → celery leaves or coriander. Carrot → red bell pepper for adults (real carrot stays only in the toddler's portion). Bouillon cube → soy sauce + ginger + hing in the soaking water — cubes almost always carry onion or garlic powder. Gochujang and chili crisp are made from scratch here since most jarred brands, including Lao Gan Ma, list garlic. \"Chicken spice\" → white pepper, sugar, salt, mushroom powder. Wrappers: buy Chinese-style (flour, water, salt) — some gyoza wrappers contain egg, check the packet."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Ninja Crispi for the strips: it runs hotter than most air fryers, 330°F is its floor and it's plenty here — start checking at 3 minutes, these go from pale to burnt in about 45 seconds. Wide sauté pan, not a wok, for the filling — you want the cabbage to wilt and lose water fast, a crowded pan steams it into mush. Small pan for the chili crisp — deep enough that ⅓ cup of oil is at least 2cm deep, or the ginger scorches before it crisps. Instant Pot isn't useful here — nothing benefits from pressure, and TVP just needs a soak."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Celery is doing real work — slice it thin on a steep diagonal; cut into rounds it reads as \"celery,\" cut into shards it reads as the sweet allium note the original wanted. Salt check: there's soy sauce in both the TVP soak and the sauce, so taste before adding extra salt at Step 9. The gochujang improves overnight — if you make it a day ahead, the miso rounds out and the chili loses its raw bite. No dumpling wrappers? Cut flour tortillas or spring roll pastry into strips instead — same treatment, slightly less shattery. Leftovers: filling keeps 3 days refrigerated and reheats well; store the strips and chili crisp separately at room temperature, never in the fridge. Heat level is moderate as written — halve the gochujang for a milder version, or serve it on the side and let people stir their own in."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-07",
+  "recipeYield": "4 servings",
+  "totalTime": "PT50M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "20 g",
+    "description": "~20g protein per adult serving — from TVP, plus peanuts in the chili crisp"
+  }
+}

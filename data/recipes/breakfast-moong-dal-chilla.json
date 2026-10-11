@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "breakfast-moong-dal-chilla",
   "category": "breakfast",
   "title": "Moong Dal Chilla",
@@ -102,9 +103,8 @@
     }
   ],
   "tags": [
-    "High-protein",
     "Night prep",
-    "Toddler-adapted"
+    "High-protein"
   ],
   "added": "2026-09-06"
 }

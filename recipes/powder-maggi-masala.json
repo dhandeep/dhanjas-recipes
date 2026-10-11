@@ -1,0 +1,129 @@
+{
+  "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "slug": "powder-maggi-masala",
+  "category": "powder",
+  "title": "Maggi Masala Powder",
+  "subtitle": "A unified spice blend for Maggi noodles and more — tuned so overlapping spices don't double up.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Spice Blend"
+  ],
+  "meta": [
+    "Yield: ~8 oz jar",
+    "Prep: 5 min",
+    "~16–18 uses"
+  ],
+  "protein": "One batch seasons ~16–18 dishes — keeps 3–4 months at room temp",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Clean base — no overlap",
+      "items": [
+        {"name": "Coriander powder", "amount": "¾ cup"},
+        {"name": "Roasted jeera (cumin) powder", "amount": "3 tsp"},
+        {"name": "Red chili powder", "amount": "2 tbsp"},
+        {"name": "Turmeric (haldi)", "amount": "1 tbsp"}
+      ]
+    },
+    {
+      "label": "Blended masalas",
+      "items": [
+        {"name": "Chaat masala", "amount": "2 tbsp"},
+        {"name": "Garam masala", "amount": "1½ tbsp"}
+      ]
+    },
+    {
+      "label": "Reduced standalones",
+      "items": [
+        {"name": "Dry ginger powder (soonth)", "amount": "¾ tsp"},
+        {"name": "Aamchur (mango powder)", "amount": "1½ tsp"},
+        {"name": "Black pepper powder", "amount": "¾ tsp"},
+        {"name": "Salt", "amount": "1½ tsp"}
+      ]
+    },
+    {
+      "label": "Body & balance",
+      "items": [
+        {"name": "Corn flour (cornstarch)", "amount": "1½ tbsp"},
+        {"name": "Sugar", "amount": "1½ tsp"},
+        {"name": "Hing", "amount": "½ tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Measure everything into one bowl",
+      "items": [
+        "Use a large dry bowl — everything goes in together",
+        "Measure coriander powder {¾ cup} first — it's your visual anchor, everything else is much smaller relative to it",
+        "Add roasted jeera {3 tsp}, chili powder {2 tbsp}, turmeric {1 tbsp}",
+        "Add chaat masala {2 tbsp} and garam masala {1½ tbsp}",
+        "Add ginger powder {¾ tsp}, aamchur {1½ tsp}, black pepper {¾ tsp}, salt {1½ tsp}",
+        "Add corn flour {1½ tbsp}, sugar {1½ tsp}, hing {½ tsp}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Mix until uniform",
+      "items": [
+        "Whisk or stir with a dry spoon for at least 1 minute",
+        "No streaks of turmeric yellow or chili red should be visible when done",
+        "Final color should be a warm reddish-brown — not orange, not dark brown"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Dry taste test",
+      "items": [
+        "Take a tiny pinch — rub between fingers and taste dry before jarring",
+        "You should get: sour hit first, then warmth, then mild heat, savory salt undertone",
+        "If something feels off, see the taste tuning notes below before transferring to jar"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Transfer to jar",
+      "items": [
+        "Use a completely dry 8 oz glass jar with a tight-sealing lid",
+        "Funnel or spoon the blend in — tap to settle, don't pack it down",
+        "Label with: Maggi Masala · date made · v1 — track adjustments batch to batch",
+        "Never close the lid if anything is warm — moisture causes clumping"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler note",
+      "items": [
+        "Use ¼ tsp maximum per toddler serving — chaat masala and chili make this moderately spiced",
+        "For her Maggi bowl: cook noodles plain, season her portion separately with ¼ tsp",
+        "Stir in small cubed boiled carrot or potato for added nutrition and bulk"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Why it's built this way",
+      "text": "Chaat masala and garam masala both carry pepper, cumin, ginger, and salt, so the standalone amounts of those four are dialed back to avoid doubling up. Aamchur replaces citric acid for a more natural sour note. Hing is added on top for Jain depth."
+    },
+    {
+      "type": "tip",
+      "label": "How to use this jar",
+      "text": "Maggi noodles: 1–1½ tsp per adult serving. Stir-fried vegetables or sabji: 1 tsp per 2 servings. Paneer marinade: 1½ tsp per 200g. Air-fryer paneer or peanuts: ¾–1 tsp per batch. Chaat sprinkle or raita seasoning: ½ tsp to taste."
+    },
+    {
+      "type": "tip",
+      "label": "Storage",
+      "text": "Keep in a cool, dark spot away from the stove. Shelf life 3–4 months at room temperature, up to 6 months refrigerated in a sealed bag. Clumping means moisture got in — break it up and use within 2 weeks. Always scoop with a dry spoon, and label the jar with the date and \"v1\" to track adjustments."
+    },
+    {
+      "type": "tip",
+      "label": "Taste tuning (after first cooked use)",
+      "text": "Too spicy: stir in a little more coriander powder to dilute this jar; reduce chili next batch. Not sour enough: add more aamchur — it adds tang without extra salt. Tastes flat: add a touch more hing, the umami anchor here. Bitter aftertaste: usually the turmeric or over-toasted jeera — make sure roasted jeera is store-bought, not home-toasted past golden. Too salty: your chaat masala brand is likely running salty — use less per serving rather than fixing the jar."
+    }
+  ],
+  "tags": [],
+  "added": "2026-09-07"
+}

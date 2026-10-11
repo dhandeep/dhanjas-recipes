@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "rice-kashmiri-pulao",
   "category": "rice",
   "title": "Kashmiri Pulao",
@@ -128,9 +129,7 @@
     }
   ],
   "tags": [
-    "Toddler-adapted",
-    "Instant Pot",
-    "Pressure cooker"
+    "Instant Pot"
   ],
   "added": "2026-09-20"
 }

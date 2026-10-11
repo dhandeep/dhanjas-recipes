@@ -15,13 +15,22 @@ instead of (or as well as) Google Drive. Pick whichever route is handiest:
 rebuilds every page and deletes the inbox file. If a check fails the file stays in
 `inbox/` and nothing is published.
 
-- **Errors (block publishing):** bad or unknown slug prefix, missing title or
-  subtitle, ingredients without amounts, empty steps, onion/garlic/eggs/meat
-  anywhere in the dish, root vegetables outside a toddler portion.
+- **Errors (block publishing):** anything that breaks `schema/recipe.schema.json`
+  (bad slug prefix, missing title or subtitle, unknown fields, empty steps),
+  ingredient amounts with no quantity the 1×/2× control can read (write `1 tsp`,
+  `2–3`, `200g`, or `to taste` / `a pinch` / `as needed` / `optional`),
+  onion/garlic/eggs/meat anywhere in the dish, root vegetables outside a toddler
+  portion.
 - **Warnings (printed, don't block):** density budget (3–5 groups of 4–8 lines,
   2–4 steps of 4–8 bullets, 1 tip), chili going in before the first toddler box,
   "add …" bullets with no `{amount}`, honey/mushroom/yeast for a second look, and
   restricted words inside tips.
+
+After the build, the workflow renders every page in Chromium
+(`tools/browser-check.mjs`): desktop and phone widths, no sideways scrolling, every
+ingredient line showing an amount, 2× scaling matching the Python reference, and
+each page pixel-identical to the standalone v2 file. Nothing is committed unless
+that passes, and the screenshots are kept on the workflow run for 14 days.
 
 These checks are a backstop. They don't replace the full `dhanjas-recipe-validator`
 skill, which also judges cooking logic.
@@ -38,6 +47,7 @@ it locally or ask Claude to).
 `python3 tools/recipes.py export <slug>` writes `export/<slug>.html`: a
 self-contained v2 file with the stylesheet inlined, identical in structure to what
 the prompt produces. Use it for sharing a single file or keeping Drive in sync.
+`--format json` / `jsonld` / `all` gives the house JSON or schema.org versions.
 
 ## Suggested prompt change
 

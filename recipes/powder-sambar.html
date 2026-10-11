@@ -8,6 +8,8 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/recipe.css">
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="alternate" type="application/json" href="powder-sambar.json" title="Recipe data (dhanjas format)">
+<link rel="alternate" type="application/ld+json" href="powder-sambar.jsonld" title="Recipe data (schema.org)">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -21,7 +23,7 @@
   "recipeCategory": "Powders & Chutneys",
   "recipeCuisine": "Indian (Jain)",
   "suitableForDiet": "https://schema.org/VegetarianDiet",
-  "keywords": "Sambar · Spice Blend, Toddler-adapted, Jain Vegetarian, Toddler-adapted",
+  "keywords": "Sambar · Spice Blend, Jain Vegetarian, Toddler-adapted",
   "recipeIngredient": [
     "1½ tbsp Chana dal (bengal gram)",
     "1½ tbsp Urad dal, skinned (black gram)",
@@ -114,9 +116,11 @@
   "datePublished": "2026-09-07",
   "recipeYield": "Yield: ~1 cup",
   "prepTime": "PT5M",
-  "totalTime": "PT5M"
+  "cookTime": "PT10M",
+  "totalTime": "PT15M"
 }
 </script>
+<script src="../assets/scale.js" defer></script>
 </head>
 <body>
 
@@ -144,7 +148,7 @@
       <div class="recipe-meta">
         <span><span class="dot">◆</span> Prep: 5 min</span>
         <span><span class="dot">◆</span> Roast: 10 min</span>
-        <span><span class="dot">◆</span> Yield: ~1 cup</span>
+        <span><span class="dot">◆</span> <data class="qt">Yield: ~<data class="q" data-q="1" data-u="cup" data-sp=" ">1 cup</data></data></span>
       </div>
     </div>
     <div class="strip-row">
@@ -156,27 +160,27 @@
         <div class="ingredient-group">
           <div class="ingredient-group-label">Dals &amp; chilies</div>
           <ul class="ingredient-list">
-            <li><span class="ing-name">Chana dal (bengal gram)</span><span class="ing-amount">1½ tbsp</span></li>
-            <li><span class="ing-name">Urad dal, skinned (black gram)</span><span class="ing-amount">1½ tbsp</span></li>
-            <li><span class="ing-name">Toor dal (split pigeon peas)</span><span class="ing-amount">1 tbsp</span></li>
-            <li><span class="ing-name">Dried red chilies</span><span class="ing-amount">8–12</span></li>
+            <li><span class="ing-name">Chana dal (bengal gram)</span><span class="ing-amount"><data class="q" data-q="1½" data-u="tbsp" data-sp=" ">1½ tbsp</data></span></li>
+            <li><span class="ing-name">Urad dal, skinned (black gram)</span><span class="ing-amount"><data class="q" data-q="1½" data-u="tbsp" data-sp=" ">1½ tbsp</data></span></li>
+            <li><span class="ing-name">Toor dal (split pigeon peas)</span><span class="ing-amount"><data class="q" data-q="1" data-u="tbsp" data-sp=" ">1 tbsp</data></span></li>
+            <li><span class="ing-name">Dried red chilies</span><span class="ing-amount"><data class="q" data-q="8" data-q2="12" data-sep="–">8–12</data></span></li>
           </ul>
         </div>
         <div class="ingredient-group">
           <div class="ingredient-group-label">Seeds</div>
           <ul class="ingredient-list">
-            <li><span class="ing-name">Coriander seeds</span><span class="ing-amount">¼ cup</span></li>
-            <li><span class="ing-name">Methi seeds (fenugreek)</span><span class="ing-amount">¾ tsp</span></li>
-            <li><span class="ing-name">Cumin seeds</span><span class="ing-amount">2 tsp</span></li>
-            <li><span class="ing-name">Black peppercorns, optional</span><span class="ing-amount">1 tsp</span></li>
+            <li><span class="ing-name">Coriander seeds</span><span class="ing-amount"><data class="q" data-q="¼" data-u="cup" data-sp=" ">¼ cup</data></span></li>
+            <li><span class="ing-name">Methi seeds (fenugreek)</span><span class="ing-amount"><data class="q" data-q="¾" data-u="tsp" data-sp=" ">¾ tsp</data></span></li>
+            <li><span class="ing-name">Cumin seeds</span><span class="ing-amount"><data class="q" data-q="2" data-u="tsp" data-sp=" ">2 tsp</data></span></li>
+            <li><span class="ing-name">Black peppercorns, optional</span><span class="ing-amount"><data class="q" data-q="1" data-u="tsp" data-sp=" ">1 tsp</data></span></li>
           </ul>
         </div>
         <div class="ingredient-group">
           <div class="ingredient-group-label">Aromatics &amp; finish</div>
           <ul class="ingredient-list">
-            <li><span class="ing-name">Curry leaves, optional</span><span class="ing-amount">2 sprigs</span></li>
-            <li><span class="ing-name">Hing</span><span class="ing-amount">⅛ tsp</span></li>
-            <li><span class="ing-name">Turmeric powder</span><span class="ing-amount">¼ tsp</span></li>
+            <li><span class="ing-name">Curry leaves, optional</span><span class="ing-amount"><data class="q" data-q="2" data-u="sprigs" data-sp=" ">2 sprigs</data></span></li>
+            <li><span class="ing-name">Hing</span><span class="ing-amount"><data class="q" data-q="⅛" data-u="tsp" data-sp=" ">⅛ tsp</data></span></li>
+            <li><span class="ing-name">Turmeric powder</span><span class="ing-amount"><data class="q" data-q="¼" data-u="tsp" data-sp=" ">¼ tsp</data></span></li>
           </ul>
         </div>
       </div>
@@ -187,11 +191,11 @@
         <div class="step-title"><span class="step-num">1</span> Dry roast in stages</div>
         <ul>
           <li>Heat a heavy pan on low flame — low heat the whole way through is what brings out the aroma, don't rush this</li>
-          <li>Add chana dal <span class="amt">(1½ tbsp)</span>, urad dal <span class="amt">(1½ tbsp)</span>, toor dal <span class="amt">(1 tbsp)</span>, and dried red chilies <span class="amt">(8–12)</span>; dry roast, stirring often, until the dals turn golden and the chilies darken slightly and smell toasty</li>
-          <li>Add coriander seeds <span class="amt">(¼ cup)</span> and methi seeds <span class="amt">(¾ tsp)</span>; roast until the coriander turns crunchy and lightly golden, and the methi turns a shade darker and smells nutty</li>
-          <li>Once fragrant, add curry leaves <span class="amt">(2 sprigs)</span> if using; roast until they turn crisp and shatter easily</li>
-          <li>Add cumin seeds <span class="amt">(2 tsp)</span> and peppercorns <span class="amt">(1 tsp)</span> if using; roast until the cumin turns crunchy and fragrant, then turn off the flame</li>
-          <li>With the flame off, stir in turmeric <span class="amt">(¼ tsp)</span> and hing <span class="amt">(⅛ tsp)</span> — residual heat blooms them without scorching</li>
+          <li>Add chana dal <span class="amt">(<data class="q" data-q="1½" data-u="tbsp" data-sp=" ">1½ tbsp</data>)</span>, urad dal <span class="amt">(<data class="q" data-q="1½" data-u="tbsp" data-sp=" ">1½ tbsp</data>)</span>, toor dal <span class="amt">(<data class="q" data-q="1" data-u="tbsp" data-sp=" ">1 tbsp</data>)</span>, and dried red chilies <span class="amt">(<data class="q" data-q="8" data-q2="12" data-sep="–">8–12</data>)</span>; dry roast, stirring often, until the dals turn golden and the chilies darken slightly and smell toasty</li>
+          <li>Add coriander seeds <span class="amt">(<data class="q" data-q="¼" data-u="cup" data-sp=" ">¼ cup</data>)</span> and methi seeds <span class="amt">(<data class="q" data-q="¾" data-u="tsp" data-sp=" ">¾ tsp</data>)</span>; roast until the coriander turns crunchy and lightly golden, and the methi turns a shade darker and smells nutty</li>
+          <li>Once fragrant, add curry leaves <span class="amt">(<data class="q" data-q="2" data-u="sprigs" data-sp=" ">2 sprigs</data>)</span> if using; roast until they turn crisp and shatter easily</li>
+          <li>Add cumin seeds <span class="amt">(<data class="q" data-q="2" data-u="tsp" data-sp=" ">2 tsp</data>)</span> and peppercorns <span class="amt">(<data class="q" data-q="1" data-u="tsp" data-sp=" ">1 tsp</data>)</span> if using; roast until the cumin turns crunchy and fragrant, then turn off the flame</li>
+          <li>With the flame off, stir in turmeric <span class="amt">(<data class="q" data-q="¼" data-u="tsp" data-sp=" ">¼ tsp</data>)</span> and hing <span class="amt">(<data class="q" data-q="⅛" data-u="tsp" data-sp=" ">⅛ tsp</data>)</span> — residual heat blooms them without scorching</li>
           <li>Transfer everything to a wide plate and spread out to cool completely, at least 20–30 minutes</li>
         </ul>
       </div>

@@ -4,6 +4,13 @@ Every recipe is one JSON file in `data/recipes/<slug>.json`. It is the source of
 truth: the recipe page, the front-page card, the search index and the
 schema.org metadata are all generated from it.
 
+The format is formally defined by **[`schema/recipe.schema.json`](../schema/recipe.schema.json)**
+(JSON Schema 2020-12, published at `https://dhanjas.com/schema/recipe.schema.json`).
+Each recipe file starts with `"$schema": "../../schema/recipe.schema.json"`, so VS Code
+and other editors validate and autocomplete it as you type, and any JSON Schema
+validator (ajv, python-jsonschema…) can check it. `recipes.py validate` checks the
+schema first, then the household rules.
+
 The fields map one-to-one onto the v2 HTML template (`RECIPE-HTML-SPEC.md`), so
 nothing about the house style is lost — a v2 HTML file can be converted to JSON
 and back without changing a word (the test suite checks this for every recipe).
@@ -62,28 +69,73 @@ and back without changing a word (the test suite checks this for every recipe).
 | `protein` | no | `.protein-bar` | |
 | `nightPrep` | no | `.night-prep` | `{label, items}`. The 🌙 is added automatically. `null` when there's no night prep. |
 | `ingredientsTitle` / `methodTitle` | no | `.section-title` | Only when not "Ingredients" / "Method". |
-| `ingredientGroups` | yes | `.ingredient-group` | `[{label, items: [{name, amount}]}]`. |
+| `ingredientGroups` | yes | `.ingredient-group` | `[{label, items: [{name, amount}]}]`. Every `amount` must lead with a quantity the batch control can read (`1½ cups`, `2–3`, `200g`) or be a phrase like `to taste` — see *Scaling*. |
 | `method` | yes | `.steps-block` children, in order | Blocks of `type` `step` (`title`, `items`), `toddler` (`label`, `items` — 👶 added automatically) and `tip` (`label`, `text`). Steps are numbered automatically. |
-| `tags` | no | — | Front-page filters. Detected on import (see below); add your own freely. |
+| `tags` | no | — | Front-page filters, from a fixed list (see below). Detected on import. |
 | `added` | no | — | `YYYY-MM-DD`, for the "Newest" sort. Set on import. |
 
 ### Inline markup
 
 Text inside method bullets, night-prep bullets, ingredient names and tips can use:
 
-- `{⅓ cup}` → `<span class="amt">(⅓ cup)</span>` — the amber per-step amount.
+- `{⅓ cup}` → `<span class="amt">(⅓ cup)</span>` — the amber per-step amount. Scales with the batch.
+- `{=~6–7 in}` → same look, but never scales (sizes, or when the rules below guess wrong).
 - `**word**` → bold.
 
 Everything else is plain text (HTML is escaped).
 
+### Scaling (1× / 2× / 3×)
+
+Quantities stay human-written, and `tools/dhanjas/quantity.py` reads the numbers in
+them at build time. Each number that grows with the batch is wrapped in an invisible
+`<data class="q" data-q="1½" data-u="cups">` marker; `assets/scale.js` multiplies the
+marked numbers in the browser and re-formats them (`⅓ cup` → `⅔ cup`, `1 pinch` →
+`2 pinches`, `Makes 6–7` → `Makes 12–14`).
+
+| Scales | Stays fixed |
+|---|---|
+| ingredient amounts · `{amounts}` in steps and night prep · yield in `meta` (`Makes 6–7 chillas`, `6 adult servings`) | times (`5 min`, `45 sec`) · per-piece amounts (`1 tsp per chilla`, `2 tbsp/roti`, `~2 tbsp each`) · sizes (`~1 inch layer`) · anything in brackets (`2–3 (1 milder)`) · `Step 1` · toddler boxes (she's one toddler however big the batch) · tips · the protein bar (it's per serving) |
+
+Try it on any page with `?scale=2`. The visible 1×/2×/3× buttons are one switch
+(`SHOW_SCALE_CONTROL` in `tools/dhanjas/render.py`). `python3 tools/recipes.py scaled
+<slug> 2` previews a recipe's amounts at any factor, and the browser check verifies
+the page shows exactly those.
+
 ### Tags
 
-On import the tool detects: **High-protein**, **Night prep**, **Toddler-adapted**,
-**Meal prep** (every curry/dal, plus "Sunday batch" style recipes), **Instant Pot**,
-**Pressure cooker**, **Air fryer**, **Oven**, **No-cook**. Appliance tags only come from
-the method, meta and appliance tips, and negated mentions ("no air fryer needed")
-are ignored. Anything else you put in `tags` is kept — `python3 tools/recipes.py retag`
-recomputes the detected ones without touching yours.
+A fixed list, so filters never overlap the Type row or each other:
+
+| Tag | Rule |
+|---|---|
+| **Quick** | 20 min or less in total (meals only, not spice powders) |
+| **Night prep** | has a night-before box |
+| **Meal prep** | every curry and dal (the 3× batch dishes), plus "Sunday batch" / bulk-batch recipes |
+| **High-protein** | 15 g+ per adult serving, read from the protein bar |
+| **No-cook** | says no-cook |
+| **Instant Pot** | Instant Pot or pressure cooker in the method |
+| **Air fryer** | Ninja Crispi / air fry in the method or appliance notes |
+| **Oven** | baked |
+
+Toddler-adapted isn't a tag — every recipe is. Dish labels like "Paneer · Curry"
+stay on the page and in search. `python3 tools/recipes.py retag` recomputes tags
+(keeping any you added by hand); `retag --reset` recomputes from scratch.
+
+## Exports — reuse the data anywhere
+
+Every recipe is published in three formats next to its page, and `export` writes
+the same files locally:
+
+| File | What it is |
+|---|---|
+| `/recipes/<slug>.html` | the web page (shared CSS, scaling) |
+| `/recipes/<slug>.json` | the house format, validated by the JSON Schema |
+| `/recipes/<slug>.jsonld` | schema.org Recipe — importable by recipe apps |
+| `/assets/recipes.json` | every recipe's card data and full text, for search or other tools |
+
+```sh
+python3 tools/recipes.py export <slug> --format html     # standalone v2 file, stylesheet inlined
+python3 tools/recipes.py export --all --format all       # every recipe, every format → export/
+```
 
 ## The standard format: schema.org/Recipe
 

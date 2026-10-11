@@ -1,0 +1,106 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Hung Curd Protein Bowl",
+  "description": "A five-minute high-protein bowl, built two ways — sweet or savory.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Breakfast",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Dairy, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "~¾ cup Hung curd (from 250g yogurt)",
+    "2 tbsp Hemp seeds",
+    "2 tbsp Pumpkin seeds",
+    "8–10 Almonds, roughly chopped",
+    "4–5 halves Walnuts, broken",
+    "1 tsp Honey or jaggery powder",
+    "½ cup Seasonal fruit",
+    "¼ tsp Roasted cumin powder",
+    "a pinch Black salt (kala namak)",
+    "¼ cup Cucumber, finely diced",
+    "1 tbsp Coriander leaves",
+    "a handful Multigrain toast or makhana"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Night Before — essential",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Line colander with muslin cloth; pour in yogurt (500g); tie and hang over a bowl in the fridge"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "By morning: thick hung curd with ~2× protein density; save drained whey for roti dough"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Morning assembly",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Unwrap hung curd — should be thick like labneh"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Divide into two adult bowls (~¾ cup each)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Sweet: drizzle honey (1 tsp), add fruit (½ cup), top with seeds and nuts"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Savory: stir in kala namak and cumin (¼ tsp), top with cucumber (¼ cup), coriander, seeds and nuts"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler bowl",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Use regular full-fat yogurt (not hung) — easier texture"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add mashed banana or soft fruit (¼ cup)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Top with finely ground almonds (1 tsp) — no whole nuts (choking hazard)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Drizzle honey — fine for age 2+"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Optional: mash in a small boiled potato for extra calories"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Hung curd yields ~10–12g protein per 100g. Hemp seeds add 10g per 3 tbsp. Together with nuts you're at 22–28g with zero cooking."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-07",
+  "recipeYield": "Serves 2 adults + toddler",
+  "prepTime": "PT5M",
+  "cookTime": "PT5M",
+  "totalTime": "PT10M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "22–28 g",
+    "description": "~22–28g protein per adult bowl"
+  }
+}

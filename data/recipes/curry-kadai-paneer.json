@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "curry-kadai-paneer",
   "category": "curry",
   "title": "Kadai Paneer Gravy",
@@ -149,7 +150,6 @@
     }
   ],
   "tags": [
-    "Toddler-adapted",
     "Meal prep"
   ],
   "added": "2026-09-07"

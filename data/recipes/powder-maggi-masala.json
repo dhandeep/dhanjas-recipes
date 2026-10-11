@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "powder-maggi-masala",
   "category": "powder",
   "title": "Maggi Masala Powder",
@@ -123,8 +124,6 @@
       "text": "Too spicy: stir in a little more coriander powder to dilute this jar; reduce chili next batch. Not sour enough: add more aamchur — it adds tang without extra salt. Tastes flat: add a touch more hing, the umami anchor here. Bitter aftertaste: usually the turmeric or over-toasted jeera — make sure roasted jeera is store-bought, not home-toasted past golden. Too salty: your chaat masala brand is likely running salty — use less per serving rather than fixing the jar."
     }
   ],
-  "tags": [
-    "Toddler-adapted"
-  ],
+  "tags": [],
   "added": "2026-09-07"
 }

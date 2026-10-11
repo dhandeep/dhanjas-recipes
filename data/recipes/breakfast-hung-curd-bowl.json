@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "breakfast-hung-curd-bowl",
   "category": "breakfast",
   "title": "Hung Curd Protein Bowl",
@@ -86,9 +87,9 @@
     }
   ],
   "tags": [
-    "High-protein",
+    "Quick",
     "Night prep",
-    "Toddler-adapted"
+    "High-protein"
   ],
   "added": "2026-09-07"
 }

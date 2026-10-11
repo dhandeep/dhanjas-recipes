@@ -21,5 +21,9 @@ touching recipe data and `docs/INGEST.md` for the publishing flow.
 2. `python3 tools/recipes.py ingest` — fix any ✗ errors it reports (content
    problems go back to the user; don't silently rewrite their recipe).
    Use `--replace` only when the user confirmed replacing an existing recipe.
-3. `python3 -m unittest discover -s tools`, then commit `data/`, `recipes/`,
-   `index.html`, `assets/recipes.json`.
+3. `python3 -m unittest discover -s tools` and `npm run check:browser` (needs
+   `npm install` once), then commit `data/`, `recipes/`, `index.html`,
+   `assets/recipes.json`.
+
+Quantities: every ingredient amount and every step `{amount}` must lead with a
+number the scaler can read; `{=…}` marks an amount that must never scale.

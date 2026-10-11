@@ -1,0 +1,142 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Besan Chilla",
+  "description": "Savory chickpea-flour crepes with warming spices — a fast, protein-rich breakfast.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Breakfast",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Chickpea, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "1½ cups Besan (chickpea flour)",
+    "¾–1 cup Water",
+    "1 tsp Fresh ginger, grated",
+    "1 (adults) Green chili, chopped",
+    "2 tbsp Coriander leaves, chopped",
+    "½ tsp Ajwain (carom seeds)",
+    "½ tsp Cumin seeds",
+    "¼ tsp Turmeric",
+    "¼ tsp (adults) Red chili powder",
+    "½ tsp Coriander powder",
+    "¼ tsp Hing",
+    "½ tsp Salt",
+    "½ cup Paneer, crumbled",
+    "¼ tsp Chaat masala",
+    "Salt, to taste",
+    "1 tsp/chilla Oil or ghee"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Night Before",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Mix all batter ingredients — under 5 min, no soaking needed; batter improves overnight"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Set aside toddler portion before adding chili; refrigerate both separately"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Prepare batter (night before)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Whisk besan (1½ cups) with water (¾ cup) gradually to avoid lumps"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add ginger (1 tsp), ajwain (½ tsp), cumin seeds (½ tsp), turmeric (¼ tsp), coriander powder (½ tsp), hing (¼ tsp), salt (½ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Fold in coriander leaves (2 tbsp)"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler — split before refrigerating",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Remove ⅓ cup of batter before adding green chili or red chili powder"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add a few drops of ghee — keeps her chillas softer"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Store separately"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Cook (morning)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Stir batter well — add water (2–3 tbsp) if thickened overnight"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add green chili (1) and red chili powder (¼ tsp) to adult batter"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "If using paneer filling: mix crumbled paneer (½ cup) with chaat masala (¼ tsp) and salt; set aside"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Heat tawa on medium; grease with ghee (½ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pour (¼ cup) and spread quickly; cook 2 min until edges golden"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add paneer filling (1 tbsp) in center if using; fold and press 1 min more"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler cooking",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Cook on medium-low; small chillas (2 tbsp batter), serve flat"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "A smear of ghee while warm adds calories"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Ajwain aids digestion and gives the chilla its savory aroma. Besan batter thickens more than moong overnight — always loosen with water before cooking."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-06",
+  "recipeYield": "Makes 6–8 chillas",
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "totalTime": "PT20M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "16–20 g",
+    "description": "~16–20g protein per adult · boosts to ~24g with paneer filling"
+  }
+}

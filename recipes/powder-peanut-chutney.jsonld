@@ -1,0 +1,198 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Dry Peanut Chutney",
+  "description": "A ground peanut condiment with chana dal and sesame — mild enough for the whole family.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Powders & Chutneys",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Condiment · Bulk Batch, Meal prep, Air fryer, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "3 cups Raw peanuts, skin-on",
+    "3 tbsp White sesame seeds",
+    "12 whole Kashmiri red chilies",
+    "1 tbsp Cumin seeds",
+    "4 tbsp Dry coconut, grated",
+    "1½ tsp Tamarind, seedless",
+    "2 sprigs Curry leaves",
+    "2 tsp Neutral oil, tempering",
+    "½ cup Roasted chana dal (dalia)",
+    "2 tsp, adjust Salt",
+    "¾ tsp Hing"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Roast peanuts (Ninja Crispi)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Spread peanuts (3 cups) in the Crispi basket in a single layer — you'll likely need 2 batches of 1½ cups each to avoid steaming"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Set to 330°F, 6 min — this is the Crispi's lowest usable setting, it won't run cooler"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Shake the basket at the 3-minute mark"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Check at 5 min: peanuts should be fragrant, skins loosening and crackled; since 330°F runs hot for this, add only 1 min at a time from here"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Spread on a plate and cool completely, at least 15 min — they crisp further as they cool"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Rub between palms to loosen skins; sieve or blow away (a little remaining skin is fine)"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Roast sesame (cooktop)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "In a dry pan over low flame, add sesame seeds (3 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir constantly 60–90 sec — they will pop and jump; keep a lid nearby"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Remove the moment they turn lightly golden and smell toasty — they burn in seconds if you walk away"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cool completely on a separate plate; keep aside for grinding"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Temper the spices",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Heat oil (2 tsp) in a small pan over medium-low"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add curry leaves (2 sprigs); fry 20–30 sec until crisp; remove and set aside"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "In the same pan on low, add Kashmiri chilies (12) and cumin seeds (1 tbsp); roast, stirring, 60–90 sec until cumin is golden — do not blacken"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add coconut (4 tbsp, or 2½ tbsp if thawed frozen) and tamarind (1½ tsp); toss 30 sec until coconut is lightly golden"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Return the curry leaves to the pan; transfer everything to a plate and cool completely"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Grind — spice base first, then peanuts",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Add the cooled chili-cumin-coconut-tamarind-curry leaf mixture to a grinder"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add chana dal (½ cup) and the toasted sesame (3 tbsp) — these must be ground fine now, not pulsed later with the peanuts"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add hing (¾ tsp) and salt (2 tsp); grind to a fine powder, 25–35 sec"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add the roasted, cooled peanuts (3 cups)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pulse only — 3–4 short bursts of 2–3 sec each — until coarse and sandy, not paste"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Taste and adjust salt"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler notes",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "This whole batch is already toddler-mild — the 12 Kashmiri chilies give color, not real heat"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "For more adult heat, add chili flakes separately at serving time rather than into the batch"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve her portion mixed with a few drops of ghee, or stirred into warm dal-rice for easier eating"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Great sprinkled on her soft roti with ghee, or mixed into yogurt rice"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Cool, store, label",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Spread the finished chutney on a wide plate; rest uncovered 20 min to drive off residual moisture"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Transfer to a clean, dry, airtight glass jar"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Store at room temperature 3–4 weeks, or refrigerate to extend to 6–8 weeks — if frozen coconut was used, drop to 2–3 weeks and refrigerate after the first week"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Always use a dry spoon — a single drop of moisture shortens shelf life fast"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Label the jar with the date made"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Grind the spice base to a fine powder before the peanuts ever go in, then only pulse the peanuts in short bursts — their oil releases fast and a few seconds too long turns the whole batch into peanut butter. If using frozen coconut, dry it on the stovetop first, not in the Crispi (it browns the dry bits before the wet ones catch up). Great over hot rice with ghee, mixed into yogurt rice, or stuffed into a roti roll."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-07",
+  "prepTime": "PT10M",
+  "cookTime": "PT20M",
+  "totalTime": "PT30M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "3 g",
+    "description": "~3g protein per 2 tbsp serving — from peanuts, chana dal & sesame"
+  }
+}

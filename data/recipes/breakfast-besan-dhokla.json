@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "breakfast-besan-dhokla",
   "category": "breakfast",
   "title": "Instant Besan Dhokla",
@@ -123,8 +124,8 @@
   ],
   "tags": [
     "Night prep",
-    "Toddler-adapted",
     "Meal prep",
+    "High-protein",
     "Instant Pot"
   ],
   "added": "2026-09-07"

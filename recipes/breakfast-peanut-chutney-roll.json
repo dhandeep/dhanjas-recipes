@@ -1,0 +1,101 @@
+{
+  "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "slug": "breakfast-peanut-chutney-roll",
+  "category": "breakfast",
+  "title": "Peanut Chutney Roti Roll",
+  "subtitle": "Whole wheat roti rolled around a coarse, spiced peanut chutney.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Peanut · Quick"
+  ],
+  "meta": [
+    "Night prep: make chutney ahead",
+    "Morning: 10 min",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~18–22g protein per adult (2 rolls) — peanuts + wheat",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Make a batch of dry peanut chutney (shengdana chutney pudi) — keeps for weeks",
+      "Mix chutney with yogurt or ghee to make a spreadable paste; refrigerate",
+      "Optionally make roti dough — keeps overnight in the fridge"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Per adult (2 rolls)",
+      "items": [
+        {"name": "Whole wheat roti", "amount": "2"},
+        {"name": "Dry peanut chutney (pudi)", "amount": "2 tbsp/roti"},
+        {"name": "Ghee or butter", "amount": "½ tsp/roti"}
+      ]
+    },
+    {
+      "label": "Filling options",
+      "items": [
+        {"name": "Paneer, thinly sliced or crumbled", "amount": "30–40g/roll"},
+        {"name": "Cucumber, julienned", "amount": "2–3 tbsp"},
+        {"name": "Capsicum, thinly sliced", "amount": "2–3 tbsp"},
+        {"name": "Thick yogurt/hung curd, binder", "amount": "1 tbsp"}
+      ]
+    },
+    {
+      "label": "For dry peanut chutney",
+      "items": [
+        {"name": "Roasted peanuts, skinned", "amount": "1 cup"},
+        {"name": "Dry red chili", "amount": "2 (adults)"},
+        {"name": "Cumin seeds", "amount": "½ tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Salt", "amount": "½ tsp"},
+        {"name": "Lemon juice or aamchur", "amount": "1 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Make dry chutney (~10 min)",
+      "items": [
+        "Pulse roasted peanuts {1 cup} in a dry blender — 5–6 short pulses until coarse crumble; do not over-blend into paste",
+        "Add dry red chili {2}, cumin seeds {½ tsp}, hing {¼ tsp}, salt {½ tsp}, aamchur {1 tsp}",
+        "Pulse 2–3 more times to combine — keep it coarse and sandy, not smooth",
+        "Stores in an airtight jar for 2–3 weeks at room temperature"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Morning assembly",
+      "items": [
+        "Heat roti on tawa — 30 sec per side; smear ghee {½ tsp} while warm",
+        "Spread dry chutney {2 tbsp} over roti — if too dry, mix a spoonful of yogurt into the chutney first",
+        "Add filling: paneer {30–40g}, cucumber, capsicum",
+        "Roll tightly and serve immediately or wrap in foil"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler version",
+      "items": [
+        "Use chutney made without dry red chili — pulse peanuts with just cumin, hing, salt, aamchur",
+        "Mix {1 tsp} chutney with yogurt {1 tbsp} to make a mild creamy spread",
+        "Soft roti cut into strips or small pieces — easier for her to manage than a roll",
+        "Add soft paneer pieces or thinly sliced cucumber inside"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The chutney is the protein workhorse here — 2 tbsp of dry peanut chutney has ~7–8g protein. Double-layer it for more flavor and protein."
+    }
+  ],
+  "tags": [
+    "Quick",
+    "Night prep",
+    "High-protein"
+  ],
+  "added": "2026-09-07"
+}

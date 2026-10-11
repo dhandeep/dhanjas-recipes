@@ -1,0 +1,182 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Moong Dal Vada / Gâteau Piment",
+  "description": "Fried lentil fritters, two ways — Indian moong dal vada or Mauritian gâteau piment.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Snack",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Dal Vada · Fusion, Night prep, Air fryer, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "1 cup Moong dal or split peas, soaked",
+    "1 tbsp Fresh ginger, grated",
+    "¼ tsp Hing",
+    "1 tsp Cumin seeds",
+    "1 tsp Coriander seeds, crushed",
+    "¼ tsp Turmeric",
+    "Salt, to taste",
+    "1–2 Green chili, chopped",
+    "10 leaves Curry leaves (or thyme)",
+    "3 tbsp Fresh cilantro, chopped",
+    "3 tbsp Boiled potato, mashed",
+    "1 tsp Ghee",
+    "Neutral oil, for frying, as needed",
+    "1 tbsp Ghee, for toddler patties"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Night Before — pick your version",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Indian moong dal vada: soak 1 cup yellow moong dal (split, skinned) 2–3 hours"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Mauritian gâteau piment: soak 1 cup yellow split peas 8–12 hours — they need much longer"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Drain well before grinding"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Grind the base",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Drain the soaked dal or split peas (1 cup) well — split peas feel firmer than dal even after a long soak"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add to a blender with ginger (1 tbsp) and a pinch of the salt"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pulse to a coarse, thick paste — no added water; batter should hold its shape on a spoon. Split peas grind a bit coarser than moong dal — a few small flecks are normal and give gâteau piment its characteristic bite."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Transfer to a mixing bowl"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Season the base",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Mix in hing (¼ tsp), cumin seeds (1 tsp), crushed coriander seeds (1 tsp), and turmeric (¼ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Mix in remaining salt to taste"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "This is the shared base — no chili has gone in yet"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler portion — pull now",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Scoop out about ⅓ cup of the seasoned base into a separate bowl before any chili is added"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Fold in mashed potato (3 tbsp) and ghee (1 tsp) to soften the texture"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Set aside — this bowl stays out of all remaining adult steps"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Spice the adult batter",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Into the remaining base, mix in green chili (1–2), and your chosen herb — curry leaves (10 leaves) for the Indian version, or fresh thyme (1 tbsp) for Mauritian — plus cilantro (3 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Mix evenly — this is now the adult batter only"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Shape and fry the adult batch",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Heat oil in a kadai or heavy pot over medium-high heat"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Wet hands, shape adult batter into small flat patties (~2 tbsp each) — for gâteau piment, shape slightly thicker in the center than a typical vada"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Fry in batches until deep golden and firm — 3–4 minutes per side for moong dal, 4–5 minutes for split peas, which take a little longer to cook through"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Drain on a rack or paper towel"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Cook the toddler patties",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Heat ghee (1 tbsp) in a small nonstick pan over medium-low heat"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Shape the toddler batter into 3–4 small, thin patties (thinner than the adult ones, for a soft bite)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pan-sear 2–3 minutes per side until set through and lightly golden — no raw batter should remain"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cool and cut into soft strips before serving to reduce choking risk"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "These are culinary cousins — both trace back to Indian indentured-labor cooking traditions, but diverged: Indian moong dal vada uses skinned split mung bean and curry leaves; Mauritian gâteau piment traditionally uses yellow split peas and thyme (often chives too, swapped here for cilantro to stay onion/garlic-free for Jain). Toor dal isn't offered as a third option — it's too soft and crumbly to hold together fried this way; it's better suited to dal fry or sambar. Texture check: batter should hold together without added water — too wet, add a spoon of chickpea flour; too dry, add a few drops of water at a time."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Stovetop kadai works best for the adult batch either way. For a lighter version in the Ninja Crispi, brush patties with oil and air-fry at 350°F for 8–10 minutes, flipping halfway — add 2–3 minutes for the split-pea version, and check a bit early since the Crispi runs hot. Toddler patties stay stovetop pan-seared, not air-fried; their thin shape dries out fast in the Crispi. Leftover vadas keep 3 days refrigerated and re-crisp nicely in a dry pan, or the Crispi at 330°F for 3–4 minutes."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-08",
+  "cookTime": "PT30M",
+  "totalTime": "PT30M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "10–12 g",
+    "description": "~10–12g protein per adult serving — from moong dal or split peas"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "slug": "breakfast-besan-dhokla",
+  "category": "breakfast",
+  "title": "Instant Besan Dhokla",
+  "subtitle": "A Sunday-batch steamed chickpea cake with a tangy mustard-seed tempering.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Chickpea · Batch"
+  ],
+  "meta": [
+    "Batch: 40 min (make Sunday)",
+    "Morning: 5 min reheat",
+    "Makes ~20 pieces"
+  ],
+  "protein": "~16–18g protein per adult serving",
+  "nightPrep": {
+    "label": "Batch on Sunday",
+    "items": [
+      "Make the full batch Sunday — keeps refrigerated 4–5 days",
+      "Reheat: microwave with a sprinkle of water, 60–90 sec, covered loosely"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Batter",
+      "items": [
+        {"name": "Besan (chickpea flour)", "amount": "2 cups"},
+        {"name": "Full-fat yogurt", "amount": "½ cup"},
+        {"name": "Water", "amount": "¾ cup"},
+        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
+        {"name": "Green chili paste", "amount": "1 tsp (adults)"},
+        {"name": "Lemon juice", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "Spices & leavening",
+      "items": [
+        {"name": "Sugar", "amount": "1 tsp"},
+        {"name": "Salt", "amount": "1 tsp"},
+        {"name": "Turmeric", "amount": "½ tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Eno fruit salt, plain", "amount": "2 tsp total"}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"name": "Oil", "amount": "2 tbsp"},
+        {"name": "Mustard seeds", "amount": "1 tsp"},
+        {"name": "Curry leaves", "amount": "10–12"},
+        {"name": "Green chili, slit", "amount": "2 (adults)"},
+        {"name": "Water", "amount": "3 tbsp"},
+        {"name": "Sugar", "amount": "1 tsp"},
+        {"name": "Lemon juice", "amount": "1 tbsp"}
+      ]
+    },
+    {
+      "label": "Garnish",
+      "items": [
+        {"name": "Fresh coriander, chopped", "amount": "2 tbsp"},
+        {"name": "Fresh coconut, grated, optional", "amount": "2 tbsp"}
+      ]
+    }
+  ],
+  "methodTitle": "Method (Sunday batch)",
+  "method": [
+    {
+      "type": "step",
+      "title": "Make batter",
+      "items": [
+        "Whisk besan {2 cups} with yogurt {½ cup} and water {¾ cup} — no lumps",
+        "Add ginger {1 tsp}, turmeric {½ tsp}, hing {¼ tsp}, lemon juice {2 tbsp}, sugar {1 tsp}, salt {1 tsp}",
+        "Split batter now — remove ¾ cup into a separate dish for toddler before adding chili",
+        "Add green chili paste {1 tsp} to adult batter only; rest both 5 min"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler batch",
+      "items": [
+        "Her ¾ cup is already set aside — mild, chili-free",
+        "Add Eno {½ tsp}, pour into greased katori; steam 8–10 min (thinner layer)"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Steam (Instant Pot)",
+      "items": [
+        "Add 1½ cups water to IP inner pot; place trivet",
+        "Add Eno {1½ tsp} to adult batter — stir quickly until foamy; do not overmix",
+        "Pour immediately into greased tin {~1 inch layer}; place on trivet",
+        "Steam 12–15 min with valve open — toothpick should come out clean",
+        "Cool 5 min before cutting"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Tempering",
+      "items": [
+        "Heat oil {2 tbsp}; add mustard seeds {1 tsp} — splutter",
+        "Add curry leaves {10–12} and green chili {2, slit}",
+        "Add water {3 tbsp}, sugar {1 tsp}, lemon juice {1 tbsp}; quick boil",
+        "Pour evenly over cut dhokla; let soak 5 min",
+        "Garnish with coriander {2 tbsp} and coconut {2 tbsp}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler reheat",
+      "items": [
+        "Reheat her pieces separately — microwave {45 sec} with a splash of water",
+        "Serve in small pieces; pair with plain yogurt or warm milk"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Key to fluffy dhokla",
+      "text": "Add Eno at the last second and get batter into the steamer within 60 seconds — the reaction is fast. Waiting = flat dhokla."
+    }
+  ],
+  "tags": [
+    "Night prep",
+    "Meal prep",
+    "High-protein",
+    "Instant Pot"
+  ],
+  "added": "2026-09-07"
+}

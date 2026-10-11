@@ -1,0 +1,205 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Kashmiri Pulao",
+  "description": "Saffron pilaf · Instant Pot · 3 adult servings + toddler",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Rice",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Pilaf, Instant Pot, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "1½ cups Basmati rice, aged",
+    "1¾ cups Water",
+    "4½ tbsp Milk, warm",
+    "3 pinches Saffron strands",
+    "½ tsp Salt",
+    "1½ tbsp Sugar (optional)",
+    "1 Bay leaf",
+    "4 Green cardamom",
+    "6 Cloves",
+    "1 inch Cinnamon stick",
+    "1 Black cardamom",
+    "¾ tsp Caraway seeds (shahi jeera)",
+    "3½ tbsp Ghee",
+    "¾ tsp Fennel seeds, crushed",
+    "¾ tsp Dry ginger powder",
+    "⅛ tsp Hing",
+    "12–15 Cashews, split",
+    "1½ tbsp Raisins",
+    "⅓ cup Pomegranate arils",
+    "¾ cup Apple + pineapple, diced"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Prep & soak",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Rinse rice (1½ cups) in several changes of water until mostly clear"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Soak in fresh water for 30 min, then drain completely"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Warm milk (4½ tbsp) for 20–30 sec; stir in saffron (3 pinches) and set aside"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Coarsely crush fennel seeds (¾ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Dice apple and pineapple (¾ cup total); refrigerate until serving"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Fry nuts, then spices",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Set Instant Pot to Sauté; heat ghee (1½ tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Fry cashews (12–15) until light golden, about 1 min"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add raisins (1½ tbsp); fry 15–20 sec until plump"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Remove cashews and raisins to a plate and set aside for garnish"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add ghee (1 tbsp), then bay leaf (1), green cardamom (4), cloves (6), cinnamon (1 inch), black cardamom (1) and caraway (¾ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir 20–30 sec until fragrant; don't let them darken"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add crushed fennel (¾ tsp), dry ginger powder (¾ tsp) and hing (⅛ tsp); stir 10 sec"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Roast rice & pressure cook",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Add drained rice (1½ cups), salt (½ tsp), sugar (1½ tbsp) and ghee (1 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Fry gently 2–3 min until grains look dry and smell nutty"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pour in saffron milk (4½ tbsp) and water (1¾ cups); scrape the bottom clean"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Taste the water — it should be lightly salty"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Lock the lid, seal the valve, Pressure Cook on High (5 min)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Natural release (5–6 min), then vent"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Open and fluff gently with a fork"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler — scoop after fluffing, before garnish",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Scoop about (½ cup) pulao into a small bowl before any garnish goes on"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pick out every whole spice: bay leaf, cardamom, cloves, cinnamon"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Optional: stir in soft boiled carrot or potato, finely diced (1–2 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Top with cashews crushed to coarse crumbs (1 tsp) and chopped raisins (1 tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add finely diced apple and pineapple (2 tbsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Let it cool to warm before serving"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Garnish & serve",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Transfer the adult pulao to a serving bowl"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Top with the set-aside cashews and raisins (rest)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Scatter pomegranate arils (⅓ cup) and diced apple and pineapple (rest of the ¾ cup)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve warm"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Store leftover rice plain in the fridge; add fruit fresh to each serving"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Reheat with a splash of water in the microwave"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Water ratio assumes aged basmati in the Instant Pot; on the stovetop use 3 cups and cook covered on the lowest heat. Best with a pomegranate raita."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-20",
+  "recipeYield": "1½ cups rice · 3 adult servings + toddler",
+  "cookTime": "PT30M",
+  "totalTime": "PT30M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "9 g",
+    "description": "~9g protein per adult serving — pair with raita, dal or a paneer sabji"
+  }
+}

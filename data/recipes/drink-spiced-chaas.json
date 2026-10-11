@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "drink-spiced-chaas",
   "category": "drink",
   "title": "Spiced Chaas",
@@ -93,7 +94,7 @@
     }
   ],
   "tags": [
-    "Toddler-adapted"
+    "Quick"
   ],
   "added": "2026-10-07"
 }

@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "breakfast-peanut-chutney-roll",
   "category": "breakfast",
   "title": "Peanut Chutney Roti Roll",
@@ -92,8 +93,9 @@
     }
   ],
   "tags": [
+    "Quick",
     "Night prep",
-    "Toddler-adapted"
+    "High-protein"
   ],
   "added": "2026-09-07"
 }

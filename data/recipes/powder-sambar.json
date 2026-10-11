@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "powder-sambar",
   "category": "powder",
   "title": "Sambar Powder",
@@ -84,8 +85,6 @@
       "text": "Stovetop pan for roasting, then a dry spice or coffee grinder for the final powder — no air fryer or pressure cooker needed here."
     }
   ],
-  "tags": [
-    "Toddler-adapted"
-  ],
+  "tags": [],
   "added": "2026-09-07"
 }

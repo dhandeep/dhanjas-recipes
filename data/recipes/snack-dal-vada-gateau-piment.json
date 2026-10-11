@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "snack-dal-vada-gateau-piment",
   "category": "snack",
   "title": "Moong Dal Vada / Gâteau Piment",
@@ -130,7 +131,6 @@
   ],
   "tags": [
     "Night prep",
-    "Toddler-adapted",
     "Air fryer"
   ],
   "added": "2026-09-08"

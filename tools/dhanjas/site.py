@@ -3,7 +3,7 @@
 import json
 from collections import Counter
 
-from .model import AUTO_TAGS, CATEGORIES, all_text, filter_tags, plain, times
+from .model import CATEGORIES, TAGS, TAG_NAMES, all_text, plain, times
 from .render import EYEBROW, SITE, e
 
 
@@ -15,7 +15,7 @@ def card_data(r):
         "subtitle": r.get("subtitle", ""),
         "category": r["category"],
         "categoryName": CATEGORIES.get(r["category"], r["category"]),
-        "tags": filter_tags(r),
+        "tags": [t for t in TAG_NAMES if t in r.get("tags", [])],
         "protein": r.get("protein") or "",
         "minutes": t.get("total"),
         "added": r.get("added", ""),
@@ -59,18 +59,12 @@ def index_page(recipes):
         '<button type="button" class="pill" data-cat="%s" aria-pressed="false">%s <span class="n">%d</span></button>' % (k, e(v), cat_counts[k])
         for k, v in CATEGORIES.items() if cat_counts[k]
     ]
-    def tag_button(t, n):
-        return ('<button type="button" class="pill pill-tag" data-tag="%s" aria-pressed="false">%s <span class="n">%d</span></button>'
-                % (e(t), e(t), n))
-
-    # A tag on every recipe filters nothing; the rest split into the everyday set
-    # (household tags + anything shared by 2+ recipes) and a folded "more" list.
-    usable = sorted(((t, n) for t, n in tag_counts.items() if n < len(recipes)), key=lambda kv: (-kv[1], kv[0]))
-    auto = {name for name, _ in AUTO_TAGS}
-    main = [tag_button(t, n) for t, n in usable if t in auto or n > 1]
-    more = [tag_button(t, n) for t, n in usable if not (t in auto or n > 1)]
-    tag_buttons = main + (['<details class="more-tags"><summary>More tags</summary><div class="pill-row">%s</div></details>'
-                           % "".join(more)] if more else [])
+    # Fixed vocabulary, in a fixed order; a tag that matches nothing (or everything) filters nothing.
+    tag_buttons = [
+        '<button type="button" class="pill pill-tag" data-tag="%s" title="%s" aria-pressed="false">%s <span class="n">%d</span></button>'
+        % (e(t), e(desc), e(t), tag_counts[t])
+        for t, desc in TAGS if 0 < tag_counts[t] < len(recipes)
+    ]
 
     data = json.dumps(cards, ensure_ascii=False).replace("</", "<\\/")
     return "\n".join([

@@ -85,7 +85,7 @@ def inline(node):
             t = c.text()
             if t.startswith("(") and t.endswith(")"):
                 t = t[1:-1]
-            out.append("{%s}" % t.strip())
+            out.append("{%s%s}" % ("=" if "data-fixed" in c.attrs else "", t.strip()))
         elif c.tag in ("strong", "b"):
             out.append("**%s**" % inline(c))
         elif c.tag == "br":

@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "dal-urad-makhani",
   "category": "dal",
   "title": "Urad Dal Makhani",
@@ -138,9 +139,8 @@
   ],
   "tags": [
     "Night prep",
-    "Toddler-adapted",
     "Meal prep",
-    "Pressure cooker"
+    "Instant Pot"
   ],
   "added": "2026-09-07"
 }

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://dhanjas.com/schema/recipe.schema.json",
+  "slug": "breakfast-besan-chilla",
+  "category": "breakfast",
+  "title": "Besan Chilla",
+  "subtitle": "Savory chickpea-flour crepes with warming spices — a fast, protein-rich breakfast.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Chickpea"
+  ],
+  "meta": [
+    "Night prep: 5 min (mix batter)",
+    "Morning: 15 min",
+    "Makes 6–8 chillas"
+  ],
+  "protein": "~16–20g protein per adult · boosts to ~24g with paneer filling",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Mix all batter ingredients — under 5 min, no soaking needed; batter improves overnight",
+      "Set aside toddler portion before adding chili; refrigerate both separately"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Batter",
+      "items": [
+        {"name": "Besan (chickpea flour)", "amount": "1½ cups"},
+        {"name": "Water", "amount": "¾–1 cup"},
+        {"name": "Fresh ginger, grated", "amount": "1 tsp"},
+        {"name": "Green chili, chopped", "amount": "1 (adults)"},
+        {"name": "Coriander leaves, chopped", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "Spices",
+      "items": [
+        {"name": "Ajwain (carom seeds)", "amount": "½ tsp"},
+        {"name": "Cumin seeds", "amount": "½ tsp"},
+        {"name": "Turmeric", "amount": "¼ tsp"},
+        {"name": "Red chili powder", "amount": "¼ tsp (adults)"},
+        {"name": "Coriander powder", "amount": "½ tsp"},
+        {"name": "Hing", "amount": "¼ tsp"},
+        {"name": "Salt", "amount": "½ tsp"}
+      ]
+    },
+    {
+      "label": "Optional paneer filling",
+      "items": [
+        {"name": "Paneer, crumbled", "amount": "½ cup"},
+        {"name": "Chaat masala", "amount": "¼ tsp"},
+        {"name": "Salt", "amount": "to taste"}
+      ]
+    },
+    {
+      "label": "For cooking",
+      "items": [
+        {"name": "Oil or ghee", "amount": "1 tsp/chilla"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Prepare batter (night before)",
+      "items": [
+        "Whisk besan {1½ cups} with water {¾ cup} gradually to avoid lumps",
+        "Add ginger {1 tsp}, ajwain {½ tsp}, cumin seeds {½ tsp}, turmeric {¼ tsp}, coriander powder {½ tsp}, hing {¼ tsp}, salt {½ tsp}",
+        "Fold in coriander leaves {2 tbsp}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — split before refrigerating",
+      "items": [
+        "Remove ⅓ cup of batter before adding green chili or red chili powder",
+        "Add a few drops of ghee — keeps her chillas softer",
+        "Store separately"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook (morning)",
+      "items": [
+        "Stir batter well — add water {2–3 tbsp} if thickened overnight",
+        "Add green chili {1} and red chili powder {¼ tsp} to adult batter",
+        "If using paneer filling: mix crumbled paneer {½ cup} with chaat masala {¼ tsp} and salt; set aside",
+        "Heat tawa on medium; grease with ghee {½ tsp}",
+        "Pour {¼ cup} and spread quickly; cook 2 min until edges golden",
+        "Add paneer filling {1 tbsp} in center if using; fold and press 1 min more"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler cooking",
+      "items": [
+        "Cook on medium-low; small chillas {2 tbsp batter}, serve flat",
+        "A smear of ghee while warm adds calories"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Ajwain aids digestion and gives the chilla its savory aroma. Besan batter thickens more than moong overnight — always loosen with water before cooking."
+    }
+  ],
+  "tags": [
+    "Quick",
+    "Night prep",
+    "High-protein"
+  ],
+  "added": "2026-09-06"
+}

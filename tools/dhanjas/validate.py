@@ -6,7 +6,9 @@ do not fail the build — tighten the writing, never the CSS.
 
 import re
 
-from .model import AMT_RE, CATEGORIES, SLUG_RE, plain
+from . import schema
+from .model import AMT_RE, CATEGORIES, SLUG_RE, TAG_NAMES, plain
+from .quantity import needs_quantity
 
 # Never allowed, for anyone.
 FORBIDDEN = [
@@ -41,6 +43,9 @@ def check(recipe):
     errors, warnings = [], []
     E, W = errors.append, warnings.append
 
+    # ---- shape: schema/recipe.schema.json ----
+    errors += schema.check(recipe)
+
     # ---- structure ----
     slug = recipe.get("slug", "")
     if not SLUG_RE.match(slug):
@@ -68,6 +73,10 @@ def check(recipe):
                 E("ingredient without a name in group %r" % g.get("label"))
             if not it.get("amount"):
                 E("ingredient %r has no amount" % it.get("name"))
+            elif needs_quantity(it["amount"]):
+                # The 1×/2× control can only scale a number it can read.
+                E("ingredient %r: amount %r has no quantity to scale — write it as '1 tsp', '2–3', "
+                  "'200g'… or use 'to taste' / 'a pinch' / 'as needed' / 'optional'" % (it.get("name"), it["amount"]))
 
     method = recipe.get("method") or []
     steps = [b for b in method if b.get("type") == "step"]
@@ -136,6 +145,11 @@ def check(recipe):
         for item in b.get("items", []):
             if not AMT_RE.search(item) and re.search(r"\b(add|stir in|mix in|fold in|pour)\b", item, re.I):
                 W("bullet adds something but carries no {amount}: %s" % plain(item))
+
+    # ---- tags ----
+    for t in recipe.get("tags", []):
+        if t not in TAG_NAMES:
+            W("tag %r isn't in the tag list (%s) — it won't show as a filter" % (t, ", ".join(TAG_NAMES)))
 
     # ---- density budget ----
     if not 3 <= len(groups) <= 5:

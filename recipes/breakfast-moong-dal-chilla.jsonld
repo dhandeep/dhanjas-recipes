@@ -1,0 +1,151 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Moong Dal Chilla",
+  "description": "High-protein · Night prep · 2 adults + toddler",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Breakfast",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Lentil, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "1 cup Yellow moong dal (split, skinned)",
+    "⅓–½ cup Water (for blending)",
+    "1 tsp Fresh ginger, grated",
+    "1 (adults only) Green chili, finely chopped",
+    "½ tsp Cumin seeds",
+    "¼ tsp Hing (asafoetida)",
+    "¼ tsp Turmeric",
+    "½ tsp Salt",
+    "¼ cup Spinach, finely chopped",
+    "¼ cup Capsicum, finely diced",
+    "½ cup Paneer, crumbled",
+    "2 tbsp Coriander leaves, chopped",
+    "1 tsp per chilla Ghee or oil"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Night Before",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Rinse moong dal and soak in water overnight (minimum 6 hrs)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Blend and refrigerate batter — takes 5 min; set toddler portion aside before adding chili"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Make batter (night before)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Drain soaked moong dal completely"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Blend with water (⅓ cup) until smooth — should coat a spoon but pour easily"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add ginger (1 tsp), cumin seeds (½ tsp), hing (¼ tsp), turmeric (¼ tsp), salt (½ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Fold in spinach (¼ cup) and capsicum (¼ cup) by hand — do not blend"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler — set aside now (night before)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Remove ⅓ cup of batter before adding green chili"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir in a pinch of turmeric and hing (tiny pinch) — skip green chili only"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Optionally stir in crumbled paneer (2 tbsp) for extra protein"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Store separately, labelled, in fridge"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Cook (morning)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Stir batter well — add water (1–2 tbsp) if too thick"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Stir green chili (1, chopped) into adult batter"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Heat tawa on medium; grease with ghee (½ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pour (~¼ cup) and spread in a circle; cook 2–3 min until edges lift"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Drizzle ghee (½ tsp) around edges, flip, cook 1–2 min more"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cook toddler batter on medium-low first — smaller chillas, serve flat"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler cooking",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Cook on medium-low; make 2 small chillas (2–3 tbsp batter each)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Press gently with spatula — no aggressive flipping"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve with plain yogurt or mild coriander chutney"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "If chillas tear, the tawa isn't hot enough — wait 30 seconds before spreading."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-06",
+  "recipeYield": "Makes 6–7 chillas",
+  "prepTime": "PT5M",
+  "cookTime": "PT25M",
+  "totalTime": "PT30M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "18–22 g",
+    "description": "~18–22g protein per adult serving (3 chillas)"
+  }
+}

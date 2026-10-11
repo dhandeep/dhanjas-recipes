@@ -5,13 +5,17 @@
   python3 tools/recipes.py build               data/recipes/*.json -> index.html + recipes/*.html
   python3 tools/recipes.py validate [SLUGS...] check recipes against the household + template rules
   python3 tools/recipes.py retag               recompute auto-detected tags (keeps hand-added ones)
-  python3 tools/recipes.py export SLUG...      write self-contained v2 HTML (style inlined) to export/
+  python3 tools/recipes.py export SLUG... [--format html|json|jsonld|all] [--all]
+                                               standalone v2 HTML (style inlined), house JSON or schema.org JSON-LD
+  python3 tools/recipes.py scaled SLUG [2]     preview the recipe's amounts at 2× (or any factor)
 
 Python 3.8+, standard library only.
 """
 
 import argparse
 import datetime
+from fractions import Fraction
+from html import unescape as html_unescape
 import json
 import re
 import sys
@@ -29,22 +33,35 @@ PAGES = ROOT / "recipes"
 ASSETS = ROOT / "assets"
 EXPORT = ROOT / "export"
 
-FIELD_ORDER = ["slug", "category", "title", "name", "subtitle", "badges", "labels", "meta", "protein",
+SCHEMA_REF = "../../schema/recipe.schema.json"            # for editors, relative to data/recipes/
+SCHEMA_URL = "https://dhanjas.com/schema/recipe.schema.json"
+
+FIELD_ORDER = ["$schema", "slug", "category", "title", "name", "subtitle", "badges", "labels", "meta", "protein",
                "nightPrep", "ingredientsTitle", "ingredientGroups", "methodTitle", "method", "tags", "added", "source"]
 
 
 def load_all():
-    return [json.loads(p.read_text("utf-8")) for p in sorted(DATA.glob("*.json"))]
+    out = []
+    for p in sorted(DATA.glob("*.json")):
+        r = json.loads(p.read_text("utf-8"))
+        r.pop("$schema", None)
+        out.append(r)
+    return out
 
 
-def save(recipe):
+def dump(recipe, schema_ref):
+    recipe = dict(recipe, **{"$schema": schema_ref})
     ordered = {k: recipe[k] for k in FIELD_ORDER if k in recipe}
     ordered.update({k: v for k, v in recipe.items() if k not in ordered})
     text = json.dumps(ordered, ensure_ascii=False, indent=2)
     # One ingredient per line keeps the files easy to read and diff.
     text = re.sub(r'\{\n\s+("name": .*?),\n\s+("amount": .*?)\n\s+\}', r"{\1, \2}", text)
+    return text + "\n"
+
+
+def save(recipe):
     DATA.mkdir(parents=True, exist_ok=True)
-    (DATA / ("%s.json" % recipe["slug"])).write_text(text + "\n", "utf-8")
+    (DATA / ("%s.json" % recipe["slug"])).write_text(dump(recipe, SCHEMA_REF), "utf-8")
 
 
 def report(slug, errors, warnings, quiet=False):
@@ -66,10 +83,10 @@ def cmd_build(args):
         if errors:
             failed = True
             report(r["slug"], errors, [], quiet=True)
-        out = PAGES / ("%s.html" % r["slug"])
-        wanted.add(out.name)
-        out.write_text(render.recipe_page(r, css), "utf-8")
-    for stale in PAGES.glob("*.html"):
+        for name, content in exports(r, css, published=True).items():
+            wanted.add(name)
+            (PAGES / name).write_text(content, "utf-8")
+    for stale in [p for ext in ("*.html", "*.json", "*.jsonld") for p in PAGES.glob(ext)]:
         if stale.name not in wanted:
             stale.unlink()
             print("removed %s" % stale.relative_to(ROOT))
@@ -105,6 +122,7 @@ def cmd_ingest(args):
         try:
             if path.suffix.lower() == ".json":
                 recipe = json.loads(path.read_text("utf-8"))
+                recipe.pop("$schema", None)
                 recipe.setdefault("slug", parse_html.slug_from_filename(path.stem))
                 recipe.setdefault("category", recipe["slug"].split("-", 1)[0])
                 if "tags" not in recipe:
@@ -149,7 +167,7 @@ def cmd_ingest(args):
 
 def cmd_retag(args):
     for r in load_all():
-        new = retag(r)
+        new = detect_tags(r) if args.reset else retag(r)
         if new != r.get("tags"):
             print("%s: %s -> %s" % (r["slug"], r.get("tags"), new))
             r["tags"] = new
@@ -157,17 +175,47 @@ def cmd_retag(args):
     return cmd_build(argparse.Namespace(strict=False))
 
 
+def exports(r, css, published=False, formats=("html", "json", "jsonld")):
+    """Every format a recipe is available in, keyed by file name.
+    published=True is the website copy (shared CSS, scale markers, nav);
+    otherwise html is a standalone v2 file with the stylesheet inlined."""
+    out = {}
+    if "html" in formats:
+        out["%s.html" % r["slug"]] = render.recipe_page(r, css, standalone=not published)
+    if "json" in formats:
+        out["%s.json" % r["slug"]] = dump(r, SCHEMA_URL)
+    if "jsonld" in formats:
+        out["%s.jsonld" % r["slug"]] = json.dumps(render.json_ld_data(r), ensure_ascii=False, indent=2) + "\n"
+    return out
+
+
 def cmd_export(args):
     css = (ASSETS / "recipe.css").read_text("utf-8")
     EXPORT.mkdir(exist_ok=True)
     recipes = {r["slug"]: r for r in load_all()}
-    for slug in args.slugs:
+    slugs = list(recipes) if args.all else args.slugs
+    formats = ("html", "json", "jsonld") if args.format == "all" else (args.format,)
+    for slug in slugs:
         if slug not in recipes:
             print("✗ no recipe %r" % slug)
             return 1
-        out = EXPORT / ("%s.html" % slug)
-        out.write_text(render.recipe_page(recipes[slug], css, standalone=True), "utf-8")
-        print("wrote %s" % out.relative_to(ROOT))
+        for name, content in exports(recipes[slug], css, formats=formats).items():
+            (EXPORT / name).write_text(content, "utf-8")
+            print("wrote export/%s" % name)
+    return 0
+
+
+def cmd_scaled(args):
+    """Print a recipe's scalable amounts at a factor — a preview, and the reference
+    the browser check compares assets/scale.js against."""
+    from dhanjas.quantity import scale_token, TOKEN
+    recipes = {r["slug"]: r for r in load_all()}
+    page = render.recipe_page(recipes[args.slug], "")
+    out = []
+    for attrs, original in re.findall(r'<data class="q"([^>]*)>([^<]*)</data>', page):
+        m = TOKEN.fullmatch(html_unescape(original))
+        out.append({"original": html_unescape(original), "scaled": scale_token(m, Fraction(args.factor))})
+    print(json.dumps(out, ensure_ascii=False, indent=1 if args.pretty else None))
     return 0
 
 
@@ -193,11 +241,20 @@ def main():
     p.set_defaults(fn=cmd_ingest)
 
     p = sub.add_parser("retag", help="recompute auto-detected tags (hand-added tags are kept)")
+    p.add_argument("--reset", action="store_true", help="drop hand-added tags too")
     p.set_defaults(fn=cmd_retag)
 
-    p = sub.add_parser("export", help="write standalone v2 HTML files to export/")
-    p.add_argument("slugs", nargs="+")
+    p = sub.add_parser("export", help="write recipes to export/ as standalone v2 HTML, house JSON or schema.org JSON-LD")
+    p.add_argument("slugs", nargs="*")
+    p.add_argument("--all", action="store_true", help="every recipe")
+    p.add_argument("--format", choices=("html", "json", "jsonld", "all"), default="html")
     p.set_defaults(fn=cmd_export)
+
+    p = sub.add_parser("scaled", help="show a recipe's scalable amounts at a factor, e.g. scaled dal-urad-makhani 2")
+    p.add_argument("slug")
+    p.add_argument("factor", nargs="?", default="2")
+    p.add_argument("--pretty", action="store_true")
+    p.set_defaults(fn=cmd_scaled)
 
     args = ap.parse_args()
     sys.exit(args.fn(args))

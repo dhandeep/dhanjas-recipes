@@ -1,0 +1,148 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Thalipeeth",
+  "description": "A multigrain flatbread of jowar, besan, and wheat, patted straight onto the tawa.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Breakfast",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Multigrain · Flatbread, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "1 cup Jowar (sorghum) flour",
+    "½ cup Besan (chickpea flour)",
+    "½ cup Whole wheat flour",
+    "¼ cup Rice flour",
+    "2 cups Bhajani flour blend",
+    "1 tsp Fresh ginger, grated",
+    "1 (adults) Green chili, very finely chopped",
+    "¾ tsp Salt",
+    "¾–1 cup Hot water, to bind",
+    "½ tsp Cumin seeds",
+    "¼ tsp Hing",
+    "¼ tsp Turmeric",
+    "3 tbsp Coriander leaves, chopped",
+    "1 tbsp Sesame seeds",
+    "1 tsp/thali Ghee or oil",
+    "alongside Plain yogurt",
+    "optional White butter (loni)"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Night Before",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Mix dry flour blend and store in a jar — lasts months, make a big batch"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Mix dough the night before with all additions; refrigerate wrapped in damp cloth"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Mix dough (night before)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Combine bhajani flour (2 cups), ginger (1 tsp), cumin seeds (½ tsp), hing (¼ tsp), turmeric (¼ tsp), sesame seeds (1 tbsp), coriander (3 tbsp), salt (¾ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add hot water (¾ cup) gradually; mix into a soft pliable dough — add more water as needed"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Set aside toddler portion (¼ cup dough) before adding green chili to adult dough"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add green chili (1, finely chopped) to adult dough; knead briefly"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Wrap both portions in damp cloth; refrigerate"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler dough",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Her ¼ cup portion is already chili-free — same flour blend, same spices except green chili"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Make 1–2 smaller, thinner thalipeeths for her — thinner = softer when cooked"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cook on medium-low; add a small cube of white butter on top while warm"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve with a small bowl of yogurt for dipping"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Cook (morning)",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Remove dough from fridge; let sit 5 min at room temperature"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Wet your palm slightly — thalipeeth dough is patted directly onto the tawa, not rolled"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Place a ball of dough (slightly larger than a golf ball) on a greased medium-hot tawa"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Pat out gently with wet fingers into a thin round circle (~6–7 in); make 3–4 small holes in the surface with your finger"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Drizzle ghee (½ tsp) into the holes and around the edges"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cook on medium 3–4 min until underside is golden; flip carefully"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Drizzle ghee (½ tsp) on the other side; cook 2–3 min more"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Serve hot with yogurt and white butter"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Wet hands are essential — thalipeeth dough is sticky and can't be rolled with a pin. Keep a small bowl of water nearby and re-wet between each one."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-07",
+  "recipeYield": "Makes 4–5 thalipeeths (2 adults + toddler)",
+  "cookTime": "PT20M",
+  "totalTime": "PT20M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "18–22 g",
+    "description": "~18–22g protein per adult (2 thalipeeths) — besan + jowar + wheat combined"
+  }
+}

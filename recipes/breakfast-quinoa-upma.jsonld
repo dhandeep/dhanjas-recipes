@@ -1,0 +1,144 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Quinoa Upma",
+  "description": "A complete-protein upma, tempered with mustard seed and curry leaf.",
+  "author": {
+    "@type": "Organization",
+    "name": "dhanjas.com"
+  },
+  "recipeCategory": "Breakfast",
+  "recipeCuisine": "Indian (Jain)",
+  "suitableForDiet": "https://schema.org/VegetarianDiet",
+  "keywords": "Quinoa · High protein, Quick, Night prep, High-protein, Jain Vegetarian, Toddler-adapted",
+  "recipeIngredient": [
+    "1 cup Quinoa, rinsed and soaked",
+    "1¾ cups Water",
+    "1 tsp Fresh ginger, grated",
+    "1–2 (adults) Green chili, slit",
+    "2 tbsp Ghee",
+    "1 tsp Lemon juice",
+    "1 tsp Mustard seeds",
+    "½ tsp Cumin seeds",
+    "¼ tsp Hing",
+    "8–10 Curry leaves",
+    "10 Cashews, optional",
+    "½ cup Capsicum, finely diced",
+    "1 medium Tomato, chopped",
+    "¼ cup Green peas, frozen",
+    "¼ tsp Turmeric",
+    "Salt, to taste",
+    "2 tbsp Fresh coriander"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToSection",
+      "name": "Night Before",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Rinse quinoa thoroughly in cold water until it runs clear (removes saponin bitterness)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Soak 15–20 min, drain, refrigerate — cuts morning cook time"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Tempering",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Heat ghee (2 tbsp) in a heavy pan on medium"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add mustard seeds (1 tsp) — splutter; add cumin seeds (½ tsp)"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add hing (¼ tsp), curry leaves (8–10), cashews (10) — stir 30 sec"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add ginger (1 tsp) — cook 20 sec"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add capsicum (½ cup) and tomato (1 medium); cook 2 min"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add peas (¼ cup), turmeric (¼ tsp), salt; stir"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "👶 Toddler — pull portion here",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Scoop out vegetables (3–4 tbsp) before adding chili to the main pan"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add water (⅓ cup) and rinsed quinoa (3 tbsp) to a small pan with her vegetables"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Cover and cook on low 12 min until quinoa is soft and water absorbed"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Mash lightly if needed; add a drop of ghee"
+        }
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Add chili and cook quinoa",
+      "itemListElement": [
+        {
+          "@type": "HowToStep",
+          "text": "Add green chili (1–2) to the adult pan; cook 20 sec"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add remaining quinoa to the tempering pan; stir to coat 1 min"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Add water (1¾ cups) and bring to a boil"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Reduce to low; cover and cook 12–14 min until water absorbed and quinoa tails appear"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Rest covered 5 min; fluff with fork"
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Finish with lemon juice (1 tsp) and coriander (2 tbsp)"
+        },
+        {
+          "@type": "HowToTip",
+          "text": "The white \"tail\" curling out of each quinoa grain means it's cooked. Don't skip the 5-minute covered rest — it makes the texture fluffy rather than sticky."
+        }
+      ]
+    }
+  ],
+  "datePublished": "2026-09-07",
+  "recipeYield": "Serves 2 adults + toddler",
+  "cookTime": "PT20M",
+  "totalTime": "PT20M",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "proteinContent": "20–24 g",
+    "description": "~20–24g protein per adult serving — quinoa is a complete protein"
+  }
+}

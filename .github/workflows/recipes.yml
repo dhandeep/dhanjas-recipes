@@ -2,15 +2,16 @@ name: Recipes
 
 # Push a v2 recipe .html (or .json) into inbox/ — from the GitHub web UI, the
 # GitHub app, or Claude — and this workflow validates it, converts it to
-# data/recipes/<slug>.json, rebuilds the site and commits the result.
+# data/recipes/<slug>.json, rebuilds the site, renders every page in Chromium
+# (tools/browser-check.mjs) and only then commits the result.
 # Pull requests get the same checks without the commit.
 
 on:
   push:
     branches: [main]
-    paths: ["inbox/**", "data/**", "tools/**", "assets/**", ".github/workflows/recipes.yml"]
+    paths: ["inbox/**", "data/**", "tools/**", "assets/**", "schema/**", "package*.json", ".github/workflows/recipes.yml"]
   pull_request:
-    paths: ["inbox/**", "data/**", "tools/**", "assets/**", ".github/workflows/recipes.yml"]
+    paths: ["inbox/**", "data/**", "tools/**", "assets/**", "schema/**", "package*.json", ".github/workflows/recipes.yml"]
   workflow_dispatch:
 
 permissions:
@@ -40,6 +41,25 @@ jobs:
         run: |
           python tools/recipes.py validate --errors-only
           python tools/recipes.py build --strict
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Browser check (every page, desktop + phone, scaling, pixel parity with v2)
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+          npm run check:browser -- --shots screenshots
+
+      - name: Keep screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots/
+          retention-days: 14
 
       - name: Commit the result
         if: github.event_name != 'pull_request'

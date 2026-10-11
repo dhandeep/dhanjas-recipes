@@ -1,4 +1,5 @@
 {
+  "$schema": "../../schema/recipe.schema.json",
   "slug": "dal-quick-tri-dal",
   "category": "dal",
   "title": "Quick Tri-Dal",
@@ -113,9 +114,8 @@
     }
   ],
   "tags": [
-    "Toddler-adapted",
     "Meal prep",
-    "Pressure cooker"
+    "Instant Pot"
   ],
   "added": "2026-09-07"
 }
