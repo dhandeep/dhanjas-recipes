@@ -1,5 +1,5 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "catra-ladoo",
   "category": "sweet",
@@ -67,5 +67,7 @@
       "label": "Tip",
       "text": "A winter sweet, eaten for warmth and immunity. Catra masala isn't spicy, so adults and the toddler eat the same ladoo."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-13"
 }
