@@ -1,0 +1,71 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "catra-ladoo",
+  "category": "sweet",
+  "title": "Catra Ladoo",
+  "subtitle": "A winter ladoo of roasted wheat flour, gond, coconut and catra masala.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-friendly"
+  ],
+  "labels": [
+    "Wheat · Sweet"
+  ],
+  "meta": [
+    "Night prep: none",
+    "Cook: ~25 min",
+    "Cool and shape: ~35 min",
+    "Makes ~25–30 ladoos"
+  ],
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Roast",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 cup"},
+        {"id": "wheat-flour", "name": "Wheat powder (atta)", "short": "wheat flour", "amount": "1 cup"},
+        {"id": "gond", "name": "Gond (edible gum)", "short": "gond", "amount": "¼ cup"},
+        {"id": "coconut", "name": "Coconut, grated (frozen or dry)", "short": "coconut", "amount": "½ cup"},
+        {"id": "dry-fruit-powder", "name": "Dry fruit powder", "short": "dry fruit powder", "amount": "¼ cup"}
+      ]
+    },
+    {
+      "label": "Flavour and sweetness",
+      "items": [
+        {"id": "catra-masala", "name": "Catra masala", "short": "catra masala", "amount": "½ cup"},
+        {"id": "ginger-powder", "name": "Ginger powder", "short": "ginger powder", "amount": "1 tsp"},
+        {"id": "jaggery", "name": "Jaggery, grated or powdered", "short": "jaggery", "amount": "¾ cup"},
+        {"id": "sugar", "name": "Sugar, fine", "short": "sugar", "amount": "1¼ cups"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Roast the base",
+      "items": [
+        "Heat {@ghee} in a wide heavy pan",
+        "Add {@wheat-flour}; roast, stirring, until it smells nutty",
+        "Add {@gond}; it puffs in the hot ghee",
+        "Add {@coconut} and {@dry-fruit-powder}; keep stirring, every 2 min",
+        "Add {@catra-masala}; cook 2 min, then turn the gas off"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Sweeten and shape",
+      "items": [
+        "Stir in {@ginger-powder}",
+        "Let the mixture cool completely",
+        "Mix in {@jaggery} and {@sugar} until evenly combined",
+        "Shape into ladoos"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "A winter sweet, eaten for warmth and immunity. Catra masala isn't spicy, so adults and the toddler eat the same ladoo."
+    }
+  ]
+}
