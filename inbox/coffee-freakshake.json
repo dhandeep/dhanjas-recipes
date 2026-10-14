@@ -1,0 +1,74 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "coffee-freakshake",
+  "category": "drink",
+  "title": "Coffee Freakshake",
+  "subtitle": "An over-the-top Oreo coffee shake in a chocolate-lined glass, piled with ice cream and whipped cream.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Coffee · Shake"],
+  "meta": ["Prep: 10 min", "Makes 1 tall glass (or 2 small)"],
+  "protein": "~12g protein per glass — from milk and ice cream",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Shake",
+      "items": [
+        {"id": "oreo", "name": "Oreo biscuits", "short": "Oreo biscuits", "amount": "6–7", "portions": {"blend": "3–4", "rim": "2", "top": "1"}},
+        {"id": "milk", "name": "Cold milk", "short": "milk", "amount": "1¼ cups"},
+        {"id": "ice-cream", "name": "Vanilla ice cream", "short": "vanilla ice cream", "amount": "2 scoops", "portions": {"blend": "1 scoop", "top": "1 scoop"}},
+        {"id": "choc-syrup", "name": "Chocolate syrup", "short": "chocolate syrup", "amount": "3–4 tbsp", "portions": {"blend": "2–3 tbsp", "glass": "1 tbsp"}},
+        {"id": "syrup", "name": "Coffee syrup (see recipe)", "short": "coffee syrup", "amount": "3–4 tbsp"}
+      ]
+    },
+    {
+      "label": "Glass & topping",
+      "items": [
+        {"id": "choc-chips", "name": "Chocolate chips", "short": "chocolate chips", "amount": "1 tbsp"},
+        {"id": "whipped-cream", "name": "Whipped cream", "short": "whipped cream", "amount": "2–3 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Prepare the glass",
+      "items": [
+        "Crush {@oreo:rim} and mix with {@choc-chips} on a plate",
+        "Drizzle {@choc-syrup:glass} around the inside and along the rim of a tall glass",
+        "Dip the rim in the crushed Oreo mix so it sticks",
+        "Chill the glass while you blend"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Blend the shake",
+      "items": [
+        "In a blender, add {@oreo:blend}, {@milk}, {@ice-cream:blend} and {@choc-syrup:blend}",
+        "Blend until smooth"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pour hers now (before the coffee)",
+      "items": [
+        "Pour {=¼ cup} of the Oreo shake into her cup — a small chocolate milkshake, no caffeine"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Add coffee and assemble",
+      "items": [
+        "Add {@syrup} to the blender; blend again 10 seconds",
+        "Pour the coffee shake into the prepared glass",
+        "Top with {@ice-cream:top}, {@whipped-cream} and {@oreo:top}",
+        "Serve at once with a wide straw and a spoon"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Ranveer Brar's card lists only ingredients; the method here is built around them. Oreos are egg-free. For a thicker shake, freeze the milk in an ice tray first."
+    }
+  ]
+}

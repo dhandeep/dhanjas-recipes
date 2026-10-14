@@ -1,0 +1,100 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "shahi-paneer",
+  "category": "curry",
+  "title": "Shahi Paneer",
+  "subtitle": "Paneer cubes in a rich tomato, cashew and malai gravy — quick, creamy and restaurant-style.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Paneer · Curry"],
+  "meta": ["Soak: 30 min (cashews)", "Cook: ~25 min", "250g paneer · 3 adult servings + toddler"],
+  "protein": "~13–15g protein per adult serving — from paneer",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Whole spices",
+      "items": [
+        {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "2–3 tbsp"},
+        {"id": "bay-leaf", "name": "Bay leaf", "short": "bay leaf", "amount": "1"},
+        {"id": "black-cardamom", "name": "Black cardamom (moti elaichi)", "short": "black cardamom", "amount": "1"},
+        {"id": "green-cardamom", "name": "Green cardamoms", "short": "green cardamoms", "amount": "2"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"}
+      ]
+    },
+    {
+      "label": "Gravy",
+      "items": [
+        {"id": "tomatoes", "name": "Medium tomatoes", "short": "tomatoes", "amount": "3–4"},
+        {"id": "ginger-paste", "name": "Ginger paste", "short": "ginger paste", "amount": "½ tsp"},
+        {"id": "cashews", "name": "Cashews", "short": "cashews", "amount": "½ tbsp"},
+        {"id": "melon-seeds", "name": "Melon seeds (magaz), optional", "short": "melon seeds", "amount": "½ tbsp"},
+        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "½ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "kasuri-methi", "name": "Kasuri methi (dried fenugreek)", "short": "kasuri methi", "amount": "1 tsp", "portions": {"masala": "¾ tsp", "garnish": "¼ tsp"}},
+        {"id": "malai", "name": "Malai or cream, beaten", "short": "malai", "amount": "1 tbsp", "portions": {"gravy": "1 tbsp", "garnish": "a drizzle"}}
+      ]
+    },
+    {
+      "label": "Paneer & adult spice",
+      "items": [
+        {"id": "paneer", "name": "Paneer, big cubes", "short": "paneer", "amount": "250g", "portions": {"toddler": "25g", "main": "rest"}},
+        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "1 tsp"},
+        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "1 tsp"},
+        {"id": "green-chili", "name": "Green chili, minced (adults)", "short": "green chili", "amount": "1"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "½ tsp"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "½ cup"},
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Prep the pastes",
+      "items": [
+        "Soak {@cashews} and {@melon-seeds} in hot water for at least 30 min",
+        "Drain and grind them to a fine, smooth paste with a little water; keep aside",
+        "Wash {@tomatoes} and blend to a puree; keep aside",
+        "Cut {@paneer} into big cubes; keep aside"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Build the gravy",
+      "items": [
+        "Heat {@ghee} in a kadai; add {@bay-leaf}, crushed {@black-cardamom}, {@green-cardamom}, {@cumin} and {@hing}",
+        "When the cumin splutters, add the tomato puree; sauté until oil releases from the sides",
+        "Add {@ginger-paste} and the nut paste; stir-fry 2–3 min",
+        "Add {@turmeric}, {@salt} and {@kasuri-methi:masala} — methi at this stage infuses a lovely aroma",
+        "Bhuno the masala 5 min, until it's really cooked and oil shows at the sides",
+        "Add {@malai:gravy}; cook until it's absorbed into the gravy"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull her portion here (before any chili)",
+      "items": [
+        "Scoop {=3–4 tbsp} of the gravy into a small pan",
+        "Add {@paneer:toddler}, cut small, and {@potato:toddler}",
+        "Loosen with a splash of water; simmer 2 min until the paneer is soft"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice, simmer and finish",
+      "items": [
+        "Add {@kashmiri-chili}, {@chili-powder} and {@green-chili} to the adult pan; sauté 1–2 min",
+        "Add {@paneer:main|the remaining paneer} and {@garam-masala}; mix with a light hand so every piece is coated",
+        "Add {@water}; cook 5 min, until oil releases at the sides again",
+        "Transfer to a serving bowl; garnish with {@malai:garnish|a drizzle of cream} and {@kasuri-methi:garnish|the rest of the kasuri methi}",
+        "Keeps 3 days refrigerated; reheat gently with a splash of water"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The chilies now go in after the gravy is cooked (the original added them with the tomato), so the toddler's portion can come out first. Ginger-green chili paste was split: ginger goes in the gravy, the chili in the adult finish. Frozen paneer: soak the cubes in hot water 30 min first — it makes them creamier. No Kashmiri chili? A pinch of red food colour gives the same colour. For a richer gravy, use up to 2 tbsp cashews, and be generous with the ghee for that restaurant taste."
+    }
+  ]
+}

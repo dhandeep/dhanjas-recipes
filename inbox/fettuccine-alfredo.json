@@ -1,0 +1,82 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "fettuccine-alfredo",
+  "category": "snack",
+  "title": "Fettuccine Alfredo",
+  "subtitle": "Fettuccine in a rich, cheesy cream sauce — lightened with ghee, in the house's smaller batch.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Pasta · Cheese"],
+  "meta": ["Prep: 5 min", "Cook: 15 min", "2 adult servings + toddler"],
+  "protein": "~25–28g protein per adult serving — from pasta and cheese",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Pasta",
+      "items": [
+        {"id": "fettuccine", "name": "Dry fettuccine", "short": "fettuccine", "amount": "8 oz"},
+        {"id": "salt-water", "name": "Salt, for the pasta water", "short": "salt", "amount": "1 tsp"},
+        {"id": "pasta-water", "name": "Pasta cooking water", "short": "pasta water", "amount": "as needed"},
+        {"id": "veg", "name": "Steamed peas or broccoli (toddler)", "short": "steamed peas or broccoli", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Alfredo sauce",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tbsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "cream", "name": "Heavy cream", "short": "heavy cream", "amount": "½ cup"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "romano", "name": "Grated Romano (veg rennet)", "short": "Romano", "amount": "¼ cup"},
+        {"id": "parmesan", "name": "Grated Parmesan (veg rennet)", "short": "Parmesan", "amount": "2½ tbsp"},
+        {"id": "pepper", "name": "Black pepper (adults)", "short": "black pepper", "amount": "to taste"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cook the pasta",
+      "items": [
+        "Bring a large pot of water to a boil with {@salt-water}",
+        "Add {@fettuccine}; cook 8–10 min, until al dente",
+        "Stir once or twice early on so the strands don't stick",
+        "Scoop out {@pasta-water|a mug of pasta water}, then drain"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the sauce and toss",
+      "items": [
+        "Warm {@ghee} in a large saucepan over low heat; add {@hing} and let it bloom a few seconds",
+        "Pour in {@cream}; add {@salt} and warm through",
+        "Raise to medium; stir in {@romano} and {@parmesan} until melted — this thickens the sauce",
+        "Add the drained pasta {from Step 1}, using enough that all the sauce is used and the pasta is thoroughly coated",
+        "Loosen with a splash of the pasta water if it tightens"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her bowl (before pepper)",
+      "items": [
+        "Lift {=½ cup} of the coated pasta into her bowl and snip the strands short",
+        "Toss with {@veg:toddler}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Serve",
+      "items": [
+        "Crack {@pepper} over the adult pasta and toss",
+        "Serve immediately — Alfredo tightens as it cools",
+        "Reheat leftovers on low with a splash of milk",
+        "Best eaten the same day"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "This is the household's version from the notes on the printout: a third of the original batch (24 oz pasta), with ghee in place of the 1 cup butter and less cream and cheese. Garlic salt → salt + a pinch of hing. Traditional Parmesan and Romano use animal rennet, so pick vegetarian (microbial-rennet) cheese."
+    }
+  ]
+}

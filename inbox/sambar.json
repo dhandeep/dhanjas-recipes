@@ -1,0 +1,111 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "sambar",
+  "category": "dal",
+  "title": "Sambar",
+  "subtitle": "A hearty South Indian toor dal and vegetable stew with tamarind and sambar powder — for idli, dosa or rice.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Lentil · Dal"],
+  "meta": ["Prep: 15 min", "Cook: ~30 min", "4 adult servings + toddler"],
+  "protein": "~7–9g protein per adult serving — from toor dal",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Tamarind, dal & sambar powder",
+      "items": [
+        {"id": "tamarind", "name": "Tamarind", "short": "tamarind", "amount": "1 tbsp"},
+        {"id": "water-tamarind", "name": "Hot water, for tamarind", "short": "hot water", "amount": "⅓ cup"},
+        {"id": "toor", "name": "Toor dal (arhar)", "short": "toor dal", "amount": "½ cup (100g)"},
+        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "½ tsp", "portions": {"dal": "¼ tsp", "veg": "¼ tsp"}},
+        {"id": "water-dal", "name": "Water, for dal", "short": "water", "amount": "1½–1¾ cups"},
+        {"id": "sambar-powder", "name": "Sambar powder", "short": "sambar powder", "amount": "1–1½ tbsp"},
+        {"id": "ghee-toddler", "name": "Ghee (toddler)", "short": "ghee", "amount": "½ tsp", "portions": {"toddler": "½ tsp"}}
+      ]
+    },
+    {
+      "label": "Vegetables",
+      "items": [
+        {"id": "vegetables", "name": "Okra, beans, brinjal, pumpkin", "short": "chopped vegetables", "amount": "1–1½ cups"},
+        {"id": "drumsticks", "name": "Drumsticks, in 3-inch sticks", "short": "drumsticks", "amount": "1–2"},
+        {"id": "pumpkin", "name": "Yellow pumpkin, extra, cubed", "short": "pumpkin", "amount": "½ cup"},
+        {"id": "tomato", "name": "Tomato, quartered", "short": "tomato", "amount": "1"},
+        {"id": "potato", "name": "Potato, cubed (toddler)", "short": "potato", "amount": "¼ cup", "portions": {"toddler": "¼ cup"}},
+        {"id": "kashmiri-chili", "name": "Kashmiri chili powder, optional", "short": "Kashmiri chili powder", "amount": "½ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "water-veg", "name": "Water, for vegetables", "short": "water", "amount": "1½–2 cups"}
+      ]
+    },
+    {
+      "label": "Tempering & garnish",
+      "items": [
+        {"id": "sesame-oil", "name": "Sesame oil (or ghee)", "short": "sesame oil", "amount": "2 tbsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "½ tsp"},
+        {"id": "methi-seeds", "name": "Fenugreek seeds, optional", "short": "fenugreek seeds", "amount": "5–6"},
+        {"id": "red-chilies", "name": "Dry red chilies, halved", "short": "dry red chilies", "amount": "1–2"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "10–12"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "2 pinches"},
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander leaves", "amount": "1 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Tamarind pulp and dal",
+      "items": [
+        "Soak {@tamarind} in {@water-tamarind} for 20–30 min",
+        "Once soft, squeeze it in the water; discard the strained tamarind and keep the pulp aside",
+        "Rinse {@toor} a couple of times; drain",
+        "Add {@toor|the rinsed dal} to a 2-litre pressure cooker with {@turmeric:dal} and {@water-dal}; mix",
+        "Pressure cook 7–8 whistles on medium heat (Instant Pot: high pressure 10 min, natural release)",
+        "When the pressure settles on its own, open and check the dal is completely mushy; mash it with a whisk, cover and keep aside"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook the vegetables",
+      "items": [
+        "While the dal cooks, prep the veg: rinse, peel and chop",
+        "Put {@vegetables}, {@drumsticks}, {@pumpkin} and {@tomato} in a pot, with {@potato:toddler|her potato cubes}",
+        "Sprinkle {@turmeric:veg} and {@salt}; add {@water-veg} and stir",
+        "Cook on medium-low to medium, checking now and then, until the vegetables are almost done — don't overcook them"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull her portion here (before sambar powder and chili)",
+      "items": [
+        "Scoop out all of her potato and {=2–3 tbsp} of the soft vegetables — no drumstick, it's too fibrous",
+        "Add {=2 tbsp} of the mashed dal and mash everything together until soft",
+        "Stir in {@ghee-toddler:toddler}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the sambar",
+      "items": [
+        "Add {@tamarind|the tamarind pulp}, {@sambar-powder} and {@kashmiri-chili} to the vegetables; mix well",
+        "Add {@toor|the mashed dal}; mix again very well",
+        "Simmer on medium-low until the sambar comes to a boil",
+        "When a frothy layer appears on top, switch off the heat; cover and set aside"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Temper and finish",
+      "items": [
+        "Heat {@sesame-oil} in a small pan; add {@mustard} and let them splutter",
+        "Add {@methi-seeds}, {@red-chilies} and {@curry-leaves}; fry until the chilies darken a shade",
+        "Add {@hing}; stir 2 seconds and pour the tempering over the sambar; cover 5 min",
+        "Garnish with {@coriander}; serve with rice, idli, dosa or medu vada",
+        "Keeps 3 days refrigerated; reheat with a splash of water"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Pearl onions → extra pumpkin, for the same soft sweetness, plus hing in the tempering. The original's potato now cooks only for the toddler. Use the site's own sambar powder recipe — store sambar powders often aren't Jain."
+    }
+  ]
+}

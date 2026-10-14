@@ -1,0 +1,59 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "coffee-syrup",
+  "category": "drink",
+  "title": "Coffee Syrup",
+  "subtitle": "A cardamom-scented coffee decoction syrup — the base for iced coffee, mocha, freakshakes and frappés.",
+  "badges": ["Jain Vegetarian"],
+  "labels": ["Coffee · Make-ahead"],
+  "meta": ["Prep: 2 min", "Cook: 10 min", "Makes ~1½ cups (10+ drinks)"],
+  "protein": "A syrup, not a protein source",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Coffee decoction",
+      "items": [
+        {"id": "water", "name": "Water", "short": "water", "amount": "1 cup"},
+        {"id": "sugar", "name": "Caster sugar", "short": "caster sugar", "amount": "1⅓ cups"},
+        {"id": "cardamom", "name": "Green cardamoms, lightly crushed", "short": "green cardamoms", "amount": "2"},
+        {"id": "coffee", "name": "Instant coffee powder", "short": "coffee powder", "amount": "½ cup"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cook the syrup",
+      "items": [
+        "In a saucepan, bring {@water}, {@sugar} and {@cardamom} to a boil, stirring until the sugar dissolves",
+        "Lower the heat; whisk in {@coffee} until there are no lumps",
+        "Simmer 3–4 min, until slightly syrupy — it thickens more as it cools",
+        "Turn off the heat"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cool and store",
+      "items": [
+        "Cool completely",
+        "Strain out the cardamom",
+        "Pour into a clean glass bottle",
+        "Keeps about 2 weeks in the fridge; shake before using"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler note",
+      "items": [
+        "This syrup is strong coffee — none for her",
+        "Each coffee drink recipe pours her a caffeine-free share before the syrup goes in"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "From Chef Ranveer Brar's cold coffee set. Use it in the iced coffee, iced mocha, coffee freakshake and frappuccino recipes. Caster sugar dissolves fastest; regular sugar works with an extra minute of stirring."
+    }
+  ]
+}

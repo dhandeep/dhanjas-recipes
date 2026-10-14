@@ -1,0 +1,110 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "palak-paneer",
+  "category": "curry",
+  "title": "Satvik Palak Paneer",
+  "subtitle": "Pureed spinach cooked in a tomato-cashew base, with paneer, cream and a Kashmiri chili butter tadka.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Paneer · Spinach · Curry"],
+  "meta": ["Prep: 15 min", "Cook: ~25 min", "200g paneer · 4 adult servings + toddler"],
+  "protein": "~10–12g protein per adult serving — from paneer, spinach and cream",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Palak & paneer",
+      "items": [
+        {"id": "palak", "name": "Clean spinach leaves (palak)", "short": "spinach", "amount": "500g"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "½ tsp"},
+        {"id": "paneer", "name": "Paneer, 1-inch cubes", "short": "paneer", "amount": "200g", "portions": {"toddler": "25g", "main": "rest"}},
+        {"id": "oil-fry", "name": "Oil, to shallow fry paneer", "short": "oil", "amount": "optional"},
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Tomato-cashew gravy",
+      "items": [
+        {"id": "tomatoes", "name": "Medium tomatoes, chopped", "short": "tomatoes", "amount": "2–3"},
+        {"id": "ginger", "name": "Ginger", "short": "ginger", "amount": "1 inch"},
+        {"id": "cashews", "name": "Cashews, chopped", "short": "cashews", "amount": "1½ tbsp"},
+        {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "2 tbsp"},
+        {"id": "cumin", "name": "Cumin seeds (jeera)", "short": "cumin seeds", "amount": "1 tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "tej-patta", "name": "Tej patta (bay leaf)", "short": "tej patta", "amount": "1"},
+        {"id": "black-cardamom", "name": "Black cardamom (badi elaichi)", "short": "black cardamom", "amount": "1–2"}
+      ]
+    },
+    {
+      "label": "Spices & cream",
+      "items": [
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1 tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "2 tbsp"},
+        {"id": "cream", "name": "Cream or beaten malai", "short": "cream", "amount": "½ cup"},
+        {"id": "green-chili", "name": "Green chilies, minced (adults)", "short": "green chilies", "amount": "2–3"},
+        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "½ tsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1 tsp"}
+      ]
+    },
+    {
+      "label": "Tadka & garnish",
+      "items": [
+        {"id": "butter", "name": "Butter", "short": "butter", "amount": "1 tbsp"},
+        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "½ tsp"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "½ tsp"},
+        {"id": "fresh-cream", "name": "Fresh cream, to garnish", "short": "fresh cream", "amount": "1 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Blanch and puree the palak",
+      "items": [
+        "Start with 750–900g of bunched palak to get 500g of clean leaves; wash 3–4 times to remove all the sand",
+        "Boil {@palak} in a little water with {@sugar} for 5–10 min",
+        "Switch off the flame and move it straight into cold water — this stops the cooking and keeps the spinach green",
+        "Once cool, puree it; keep aside",
+        "Cut {@paneer} into 1-inch cubes; if you like, shallow fry them in {@oil-fry} on medium until golden — raw paneer works too"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook the tomato-cashew base",
+      "items": [
+        "In a blender, puree {@tomatoes}, {@ginger} and {@cashews} until completely smooth — no cashew bits",
+        "Heat {@ghee} in a pan; add {@cumin}",
+        "When the cumin crackles, add {@hing}, {@tej-patta} and {@black-cardamom}",
+        "After 30 sec, add the tomato-cashew puree; cook 5 min or until the oil separates",
+        "Add {@coriander-powder} and {@salt}; mix well",
+        "Add the palak puree {from Step 1} and {@water}; cover, lower the flame and cook 10 min, stirring now and then so it doesn't catch",
+        "Stir in {@cream}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull her portion here (before chili and garam masala)",
+      "items": [
+        "Scoop {=3–4 tbsp} of the creamy palak into a small bowl",
+        "Add {@paneer:toddler}, cut small, and {@potato:toddler} — aloo palak paneer for her",
+        "Stir and let it sit a minute so the paneer warms through"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice, add paneer and finish",
+      "items": [
+        "Add {@green-chili}, {@chili-powder} and {@garam-masala} to the adult pan; mix well",
+        "Add {@paneer:main|the remaining paneer}, fried or raw; cover and cook 2 more min, then switch off",
+        "Move the palak paneer to a serving dish",
+        "In a small pan, melt {@butter}; as soon as it melts, add {@kashmiri-chili} and pour it straight over the palak paneer",
+        "Garnish with {@kasuri-methi} and {@fresh-cream}; serve with roti, naan or rice"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The green chilies used to be blended into the tomato puree, and the chili powder and garam masala went in before the palak; they now go in after the toddler's portion is pulled, so nothing changes for the adults. Garam masala usually carries black pepper, so it waits too. The cold-water plunge is an extra step, but it's what keeps the palak bright green."
+    }
+  ]
+}

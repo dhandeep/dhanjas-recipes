@@ -1,0 +1,58 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "frappuccino",
+  "category": "drink",
+  "title": "Coffee Frappuccino",
+  "subtitle": "Coffee syrup and condensed milk blitzed with ice into a thick, slushy café frappé.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Coffee · Blended"],
+  "meta": ["Prep: 3 min", "Makes 1 glass"],
+  "protein": "~3g protein per glass — from condensed milk",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Frappé",
+      "items": [
+        {"id": "syrup", "name": "Coffee syrup (see recipe)", "short": "coffee syrup", "amount": "2½ tbsp"},
+        {"id": "condensed-milk", "name": "Sweetened condensed milk", "short": "condensed milk", "amount": "1½ tbsp"},
+        {"id": "ice", "name": "Ice cubes", "short": "ice cubes", "amount": "5–6"},
+        {"id": "milk", "name": "Cold milk, toddler", "short": "cold milk", "amount": "⅓ cup", "portions": {"toddler": "⅓ cup"}}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "toddler",
+      "label": "Toddler — her glass (no coffee)",
+      "items": [
+        "Pour {@milk:toddler} into her cup; frappés are all coffee, so plain cold milk is her version"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Blend",
+      "items": [
+        "In a blender, add {@syrup} and {@condensed-milk}",
+        "Add {@ice}",
+        "Blend on high until thick, smooth and slushy, with no ice chunks left",
+        "Pour into a chilled glass and serve at once"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make it yours",
+      "items": [
+        "Taste before pouring; add a little more condensed milk for a sweeter frappé",
+        "Add a splash of water if the blender struggles",
+        "For a richer, creamier frappé, blend in a splash of cold milk too",
+        "Serve with a wide straw"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Ranveer Brar's card lists only ingredients; the method here is built around them. A good blender makes the texture — pulse a few times first to break the ice, then run it on high."
+    }
+  ]
+}

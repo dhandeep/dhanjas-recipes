@@ -1,0 +1,89 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "banana-bread-muffins",
+  "category": "sweet",
+  "title": "Eggless Banana Bread Muffins",
+  "subtitle": "One-bowl banana bread muffins — moist, flavourful and egg-free, with an optional vanilla glaze.",
+  "badges": ["Jain Vegetarian", "Toddler-friendly"],
+  "labels": ["Banana · Baked"],
+  "meta": ["Prep: 10 min", "Bake: 20 min", "Makes 12 muffins"],
+  "protein": "~2–3g protein per muffin",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Wet",
+      "items": [
+        {"id": "bananas", "name": "Very ripe bananas (~180g)", "short": "bananas", "amount": "3"},
+        {"id": "brown-sugar", "name": "Brown sugar (132g)", "short": "brown sugar", "amount": "¾ cup"},
+        {"id": "oil", "name": "Light-tasting oil (120 ml)", "short": "oil", "amount": "½ cup"},
+        {"id": "yogurt", "name": "Plain yogurt", "short": "yogurt", "amount": "¼ cup"}
+      ]
+    },
+    {
+      "label": "Dry & tin",
+      "items": [
+        {"id": "flour", "name": "All-purpose flour (210g)", "short": "flour", "amount": "1½ cups"},
+        {"id": "baking-soda", "name": "Baking soda", "short": "baking soda", "amount": "1 tsp"},
+        {"id": "baking-powder", "name": "Baking powder", "short": "baking powder", "amount": "1 tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "a pinch"},
+        {"id": "liners", "name": "Muffin liners or baking spray", "short": "muffin liners", "amount": "12"}
+      ]
+    },
+    {
+      "label": "Glaze (optional)",
+      "items": [
+        {"id": "vanilla", "name": "Pure vanilla extract", "short": "vanilla", "amount": "1½ tsp", "portions": {"batter": "1 tsp", "glaze": "½ tsp"}},
+        {"id": "powdered-sugar", "name": "Powdered sugar", "short": "powdered sugar", "amount": "½ cup"},
+        {"id": "milk", "name": "Milk", "short": "milk", "amount": "1–2 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Mix the batter",
+      "items": [
+        "Preheat the oven to 400°F; line a 12-cup muffin tin with {@liners} (or spray the tin and skip the liners)",
+        "In a large bowl, mash {@bananas} with a fork until only small chunks remain",
+        "Add {@brown-sugar}, {@oil}, {@yogurt} and {@vanilla:batter}; mix until well combined",
+        "Add {@flour}, {@baking-soda}, {@baking-powder} and {@salt}",
+        "Combine wet and dry until just combined — don't over-mix",
+        "Fill the liners ¾ full"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Bake",
+      "items": [
+        "Fill any empty cups with a little water so the tin heats evenly",
+        "Place the tin in the oven and immediately reduce the temperature to 350°F",
+        "Bake about 20 min, until a toothpick in the centre comes out clean and the tops are turning golden",
+        "Cool 5 min in the pan, then move to a wire rack to finish cooling"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her muffin (before the glaze)",
+      "items": [
+        "Set one muffin aside unglazed — the bananas already make it sweet enough",
+        "Serve it warm, broken into small pieces"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Glaze and store",
+      "items": [
+        "Combine {@powdered-sugar} with {@vanilla:glaze}",
+        "Add {@milk} a teaspoon at a time until the glaze reaches the consistency you like",
+        "Drizzle over the cooled muffins, if you like",
+        "Keeps 3 days covered at room temperature, a week in the fridge, or 3 months frozen — thaw overnight in the fridge and warm in the microwave"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Flour: all-purpose, whole wheat or gluten-free all work. Oil: any light-tasting oil — canola, coconut or vegetable. Sugar: raw cane or coconut sugar instead of brown sugar is fine."
+    }
+  ]
+}

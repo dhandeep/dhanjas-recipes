@@ -1,0 +1,85 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "mac-and-cheese",
+  "category": "snack",
+  "title": "15-Minute Veggie Mac and Cheese",
+  "subtitle": "A quick baked macaroni and cheese packed with broccoli under a buttery, golden crumb.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Pasta · Cheese"],
+  "meta": ["Prep: 5 min", "Cook: 10 min", "2 adult servings + toddler"],
+  "protein": "~30–35g protein per adult serving — from cheddar, milk and pasta",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Cheese sauce",
+      "items": [
+        {"id": "butter", "name": "Butter", "short": "butter", "amount": "½ tbsp"},
+        {"id": "flour", "name": "All-purpose flour", "short": "flour", "amount": "½ tbsp"},
+        {"id": "milk", "name": "Low-fat milk", "short": "milk", "amount": "½ cup"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "cheddar", "name": "Cheddar, shredded", "short": "shredded cheddar", "amount": "1 cup"},
+        {"id": "pepper", "name": "Black pepper (adults)", "short": "black pepper", "amount": "to taste"},
+        {"id": "chili", "name": "Kashmiri chili powder (adults)", "short": "Kashmiri chili powder", "amount": "a pinch"}
+      ]
+    },
+    {
+      "label": "Pasta & veggies",
+      "items": [
+        {"id": "pasta", "name": "Barilla Ready Pasta macaroni", "short": "Barilla Ready Pasta", "amount": "½ pouch"},
+        {"id": "broccoli", "name": "Broccoli, finely chopped", "short": "broccoli", "amount": "¾ cup"},
+        {"id": "corn", "name": "Sweet corn or diced capsicum", "short": "sweet corn", "amount": "¼ cup"},
+        {"id": "carrot", "name": "Carrot, shredded (toddler)", "short": "shredded carrot", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Topping & dish",
+      "items": [
+        {"id": "grease", "name": "Butter or cooking spray", "short": "butter", "amount": "as needed"},
+        {"id": "breadcrumbs", "name": "Plain breadcrumbs", "short": "breadcrumbs", "amount": "6 tbsp"},
+        {"id": "herbs", "name": "Dried Italian herbs", "short": "dried herbs", "amount": "¼ tsp"},
+        {"id": "butter-melted", "name": "Butter, melted", "short": "melted butter", "amount": "1 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cheese sauce and pasta",
+      "items": [
+        "Preheat the oven to 400°F; grease small baking dishes (2 per batch) and 1 ramekin for the toddler with {@grease} (crème brûlée dishes work great)",
+        "Heat a small pot over medium heat; add {@butter} to melt",
+        "Add {@flour} and whisk, continuing to whisk over the heat for 1 min",
+        "Turn the heat to low and add {@milk} in a slow, steady stream, whisking constantly until thick and smooth",
+        "Stir in {@salt}, then {@cheddar} until it melts into the smooth sauce",
+        "Turn off the heat and set the cheese sauce aside",
+        "Prepare {@pasta} per the package — vent the pouch and microwave only 1 minute",
+        "Stir the cooked noodles, {@broccoli} and {@corn} into the cheese sauce"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — fill her ramekin here (before pepper and chili)",
+      "items": [
+        "Spoon {=½ cup} of the mac and cheese into her ramekin",
+        "Stir in {@carrot:toddler}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Season, top and bake",
+      "items": [
+        "Stir {@pepper} and {@chili} into the pot",
+        "Divide the adult mac and cheese evenly between the baking dishes",
+        "Stir {@breadcrumbs}, {@herbs} and {@butter-melted} together in a small bowl; sprinkle over every dish, hers included",
+        "Bake about 7–8 min at 400°F, until the tops are golden brown and the cheese is bubbly",
+        "Serve immediately — let her ramekin cool a few minutes first"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Sriracha → a pinch of Kashmiri chili (sriracha isn't Jain). Seasoned breadcrumbs → plain crumbs + dried herbs, since seasoned ones usually aren't Jain. The carrot in the original veggie mix → sweet corn for the adults; the carrot goes in her ramekin only. No Ready Pasta? Boil 4 oz dry macaroni until just al dente."
+    }
+  ]
+}

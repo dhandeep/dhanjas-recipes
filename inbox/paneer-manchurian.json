@@ -1,0 +1,115 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "paneer-manchurian",
+  "category": "snack",
+  "title": "Paneer Manchurian",
+  "subtitle": "Restaurant-style Indo-Chinese starter — crisp fried paneer tossed in a sweet, tangy, peppery Manchurian sauce.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Paneer · Indo-Chinese"],
+  "meta": ["Prep: 10 min", "Cook: ~20 min", "3 adult servings + toddler"],
+  "protein": "~12–14g protein per adult serving — from paneer",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Batter-fried paneer",
+      "items": [
+        {"id": "paneer", "name": "Paneer, cubed", "short": "paneer cubes", "amount": "200g", "portions": {"toddler": "25g", "main": "rest"}},
+        {"id": "maida", "name": "All-purpose flour (maida)", "short": "maida", "amount": "¼ cup"},
+        {"id": "cornflour-batter", "name": "Corn flour (or rice flour)", "short": "corn flour", "amount": "3 tbsp"},
+        {"id": "salt-batter", "name": "Salt", "short": "salt", "amount": "¼ tsp"},
+        {"id": "chili-powder", "name": "Red chili powder (adults)", "short": "red chili powder", "amount": "½ tsp"},
+        {"id": "water-batter", "name": "Water, for batter", "short": "water", "amount": "as needed"},
+        {"id": "oil-fry", "name": "Oil, for deep frying", "short": "oil", "amount": "as needed"}
+      ]
+    },
+    {
+      "label": "Sauce aromatics",
+      "items": [
+        {"id": "oil", "name": "Olive or sesame oil", "short": "oil", "amount": "1 tbsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "ginger", "name": "Ginger, minced", "short": "ginger", "amount": "1–1½ tbsp"},
+        {"id": "celery", "name": "Celery, finely chopped", "short": "celery", "amount": "¼ cup"},
+        {"id": "capsicum", "name": "Capsicum, chopped", "short": "capsicum", "amount": "¼–½ cup"},
+        {"id": "celery-leaves", "name": "Celery leaves or coriander", "short": "celery leaves", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "Manchurian sauce",
+      "items": [
+        {"id": "cornflour-slurry", "name": "Corn flour, for slurry", "short": "corn flour", "amount": "1 tsp"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "½ cup", "portions": {"slurry": "½ cup", "adjust": "a splash"}},
+        {"id": "soy", "name": "Soya sauce, naturally brewed", "short": "soya sauce", "amount": "1½ tbsp"},
+        {"id": "ketchup", "name": "Tomato ketchup (Jain)", "short": "tomato ketchup", "amount": "2 tbsp"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "¾–1 tsp"},
+        {"id": "pepper", "name": "Black pepper (adults)", "short": "black pepper", "amount": "½–¾ tsp"},
+        {"id": "vinegar", "name": "Vinegar, if needed", "short": "vinegar", "amount": "½–¾ tsp"},
+        {"id": "salt", "name": "Salt, if needed", "short": "salt", "amount": "¼ tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Batter and slurry",
+      "items": [
+        "Heat {@oil-fry} in a kadai for deep frying",
+        "While it heats, mix {@cornflour-batter}, {@maida} and {@salt-batter} in a bowl",
+        "Add {@water-batter} just enough for a free-flowing batter — moderately thick, not too thick or too runny",
+        "In a small bowl, stir {@cornflour-slurry} into {@water:slurry} until lump-free; keep aside"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — fry her paneer first (before the chili goes in the batter)",
+      "items": [
+        "Dip {@paneer:toddler} in the plain batter and fry on medium until golden and crisp",
+        "Drain on kitchen paper and set aside in her bowl — she gets a spoon of sauce later"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Fry the paneer",
+      "items": [
+        "Stir {@chili-powder} into the remaining batter",
+        "Dip {@paneer:main|the remaining paneer cubes} in the batter and deep fry in the hot oil",
+        "Stir often and fry on medium heat until golden and crisp",
+        "Drain on kitchen paper"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the sauce",
+      "items": [
+        "Heat {@oil} in a wide pan on high; add {@hing}",
+        "Add {@ginger}; sauté 1 min, until the aroma comes out",
+        "Add {@celery}; fry 1–2 min",
+        "Add {@capsicum}; sauté another minute",
+        "Stir the slurry once, then pour it in with {@soy} and {@ketchup}",
+        "Add {@water:adjust} if it's too thick; reduce the flame to medium and add {@sugar}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her sauce (before pepper and vinegar)",
+      "items": [
+        "Spoon {=1 tbsp} of the sauce with a few soft capsicum pieces over her paneer and toss"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Toss and serve",
+      "items": [
+        "Taste the sauce; add {@pepper}, plus {@salt} and {@vinegar} if needed",
+        "Let the sauce turn thick, then turn off the flame",
+        "Add {@paneer:main|the fried paneer} and {@celery-leaves}",
+        "Toss so the sauce coats every piece evenly; serve hot"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Garlic → extra ginger + hing; spring onion whites → celery; spring onion greens → celery leaves or coriander. Most ketchups aren't Jain — use a no-onion-no-garlic one. Air fryer instead of deep frying: coat the cubes in a thick batter, spray with oil and cook in the Ninja Crispi at 360°F for 8–10 min, shaking once. Serve with noodles or fried rice."
+    }
+  ]
+}

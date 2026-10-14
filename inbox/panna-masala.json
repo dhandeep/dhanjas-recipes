@@ -1,0 +1,60 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "panna-masala",
+  "category": "powder",
+  "title": "Panna Masala",
+  "subtitle": "A roasted cumin, fennel and black pepper powder that seasons aam, guava and pineapple panna.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Spice Blend · Panna"],
+  "meta": ["Prep: 5 min", "Roast: 10 min", "Yield: ~¾ cup"],
+  "protein": "A pantry blend — 1 tsp seasons a glass of panna",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Seeds",
+      "items": [
+        {"id": "cumin", "name": "Cumin seeds (jeera)", "short": "cumin seeds", "amount": "¼ cup"},
+        {"id": "fennel", "name": "Fennel seeds (saunf)", "short": "fennel seeds", "amount": "¼ cup"},
+        {"id": "cardamom", "name": "Green cardamom pods", "short": "green cardamom pods", "amount": "2–3"},
+        {"id": "pepper", "name": "Black peppercorns, heaped", "short": "black peppercorns", "amount": "3 tbsp"},
+        {"id": "black-salt", "name": "Black salt (kala namak)", "short": "black salt", "amount": "½ tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Dry roast",
+      "items": [
+        "Heat a pan on low",
+        "Add {@cumin}, {@fennel}, {@cardamom}, {@pepper} and {@black-salt}",
+        "Dry roast, stirring, until they smell toasty and the cumin turns a shade darker",
+        "Tip onto a wide plate and let it cool completely"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Grind and store",
+      "items": [
+        "Once cool, transfer to a grinder jar",
+        "Grind to a fine powder",
+        "Let the powder cool again — grinding warms it",
+        "Store in an airtight jar until needed; it keeps about 3 months"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler note",
+      "items": [
+        "This masala is mostly black pepper — keep it out of her glass",
+        "In the panna recipes her share is pulled before the green chili, and her glass skips this masala"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Used in the aam panna, guava panna and pineapple panna recipes: 1 tsp per glass. It's also good sprinkled over chaas, fruit or lemonade."
+    }
+  ]
+}

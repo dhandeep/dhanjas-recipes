@@ -1,0 +1,115 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "chole",
+  "category": "curry",
+  "title": "Punjabi Chole",
+  "subtitle": "Spicy, deeply flavoured chickpea curry — stovetop or Instant Pot — for rice, poori, naan or bhatura.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Chickpeas · Curry"],
+  "meta": ["Night prep: soak chickpeas", "Cook: ~1 hr", "4 adult servings + toddler"],
+  "protein": "~10–12g protein per adult serving — from chickpeas",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Rinse {@chickpeas} in plenty of water",
+      "Soak in plenty of fresh water overnight, at least 8 hours"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Cooking chole",
+      "items": [
+        {"id": "chickpeas", "name": "Chickpeas (dried kabuli chana)", "short": "chickpeas", "amount": "1 cup"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "2½ cups", "portions": {"cook": "1½ cups", "simmer": "1 cup"}},
+        {"id": "tea-bag", "name": "Tea bag or 2 dried amla, optional", "short": "tea bag", "amount": "1"},
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Whole spices & base",
+      "items": [
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "2 tbsp"},
+        {"id": "cinnamon", "name": "Cinnamon", "short": "cinnamon", "amount": "1 inch"},
+        {"id": "cloves", "name": "Cloves", "short": "cloves", "amount": "2"},
+        {"id": "bay-leaf", "name": "Bay leaf, small", "short": "bay leaf", "amount": "1"},
+        {"id": "cardamom", "name": "Green cardamoms", "short": "green cardamoms", "amount": "2"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "ginger-paste", "name": "Ginger, finely chopped or paste", "short": "ginger", "amount": "¾–1 tbsp"},
+        {"id": "celery", "name": "Celery, finely chopped", "short": "celery", "amount": "½ cup"}
+      ]
+    },
+    {
+      "label": "Tomato & spice powders",
+      "items": [
+        {"id": "tomatoes", "name": "Tomatoes, finely chopped", "short": "tomatoes", "amount": "1½ cups (4)"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "⅛ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "¾ tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1 tsp"},
+        {"id": "green-chili", "name": "Green chilies, slit (adults)", "short": "green chili", "amount": "2", "portions": {"base": "1", "garnish": "1"}},
+        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "½–1 tsp"},
+        {"id": "chole-masala", "name": "Chole masala (Jain)", "short": "chole masala", "amount": "1 tbsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "¾ tsp"}
+      ]
+    },
+    {
+      "label": "Garnish",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tbsp"},
+        {"id": "ginger-julienne", "name": "Ginger, julienned", "short": "ginger juliennes", "amount": "½ inch"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, optional", "short": "kasuri methi", "amount": "1 tsp"},
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander leaves", "amount": "2 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Pressure cook the chickpeas",
+      "items": [
+        "Drain {@chickpeas|the soaked chickpeas} and rinse them well",
+        "Add them to a pressure cooker with {@water:cook} and {@tea-bag} — the tea gives chole its dark colour",
+        "Pressure cook 5–6 whistles on medium heat (Instant Pot: high pressure 35 min, natural release) — chole must be soft, not al dente",
+        "If they're still firm, cook 2 more whistles; discard the tea bag and keep the stock"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Build the tomato base",
+      "items": [
+        "Heat {@oil} in a pan; add {@cinnamon}, {@cloves}, {@cardamom} and {@bay-leaf}",
+        "When they begin to crackle, add {@hing} and {@ginger-paste}; sauté until the raw smell goes",
+        "Add {@celery}; sauté 3–4 min until soft",
+        "Add {@tomatoes}, {@turmeric} and {@salt}; cook until mushy and soft",
+        "Stir in {@coriander-powder}; fry 1 min"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull her portion here (before chili and chole masala)",
+      "items": [
+        "Spoon {=2 tbsp} of the tomato base into a small pan",
+        "Add {=¼ cup} of the cooked chickpeas with a little stock, and {@potato:toddler}",
+        "Simmer 3–4 min, then mash the chickpeas well — whole chickpeas are a choking risk at 2"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice and simmer",
+      "items": [
+        "Add {@green-chili:base}, {@kashmiri-chili}, {@chole-masala} and {@garam-masala} to the adult pan",
+        "Stir and fry 1–2 min until the masala smells good and the oil separates",
+        "Add the rest of the cooked chole and their stock {from Step 1}, with {@water:simmer}",
+        "Mash a few chickpeas against the pan — it thickens the gravy",
+        "Cover and simmer on low 18–20 min, until the chole absorb the masala; loosen with a splash of water if it gets too thick",
+        "When the gravy thickens, stir in {@ghee}, {@ginger-julienne}, {@green-chili:garnish} and {@kasuri-methi}; turn off and keep covered a while",
+        "Garnish with {@coriander} and serve; keeps 4 days refrigerated"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Onion → celery + hing, with a few mashed chickpeas and an extra tomato for body; ginger-garlic paste → ginger alone. Many chole masala brands aren't Jain, so check the label (or make your own). Canned chickpeas: skip the night prep and Step 1 — use 3 cups, rinsed, and simmer with 1½ cups water."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "pineapple-panna",
+  "category": "drink",
+  "title": "Pineapple Panna",
+  "subtitle": "Pineapple cooked with sugar and ginger, ground with saffron into a bright, tangy summer concentrate.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Pineapple · Summer"],
+  "meta": ["Prep: 5 min", "Cook: 15–20 min", "Concentrate for 10–15 glasses"],
+  "protein": "A cooler, not a protein source",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Panna concentrate",
+      "items": [
+        {"id": "pineapple", "name": "Pineapple, roughly chopped", "short": "pineapple", "amount": "1 whole"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "1¼ cups"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "1 cup"},
+        {"id": "ginger", "name": "Ginger, peeled and sliced", "short": "ginger", "amount": "½ inch"},
+        {"id": "green-chili", "name": "Green chili (adults)", "short": "green chili", "amount": "1"},
+        {"id": "saffron", "name": "Saffron strands", "short": "saffron", "amount": "¼ tsp"}
+      ]
+    },
+    {
+      "label": "To serve — per glass",
+      "items": [
+        {"id": "lime", "name": "Lime, juiced", "short": "lime juice", "amount": "=½"},
+        {"id": "ice", "name": "Ice cubes", "short": "ice cubes", "amount": "=2–4"},
+        {"id": "masala", "name": "Panna masala (see recipe)", "short": "panna masala", "amount": "=1 tsp"},
+        {"id": "cold-water", "name": "Ice-cold water", "short": "ice-cold water", "amount": "=1 cup"},
+        {"id": "pineapple-slice", "name": "Pineapple slice, to garnish", "short": "pineapple slice", "amount": "=1"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cook the pineapple",
+      "items": [
+        "In a kadai, add {@pineapple}, {@water}, {@salt}, {@sugar} and {@ginger}",
+        "Cover and cook on medium until the pineapple turns soft, 15–20 min",
+        "Stir once or twice so the sugar doesn't catch at the bottom",
+        "Take it off the flame and let it cool"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — keep her share (before the green chili)",
+      "items": [
+        "Blend {=2 tbsp} of the cooked pineapple with a little of its syrup until smooth; keep it in a small jar",
+        "To serve, stir {=1 tbsp} into {=½ cup} of cool water — no masala, no ice"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Grind the panna",
+      "items": [
+        "Transfer the rest of the pineapple to a grinder jar",
+        "Add {@saffron} and {@green-chili}",
+        "Grind to a smooth puree",
+        "Refrigerate in a clean jar; it keeps about a week"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Serve",
+      "items": [
+        "In a tall glass, take a spoonful (about {=2 tbsp}) of pineapple panna; add {@lime} and {@ice}",
+        "Add {@masala}; mix well",
+        "Pour in {@cold-water}; mix well",
+        "Serve chilled, garnished with {@pineapple-slice}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The green chili used to cook with the pineapple; it's now ground in raw at the end, so the toddler's share stays mild. Part of Chef Ranveer Brar's panna trio, with aam panna and guava panna."
+    }
+  ]
+}

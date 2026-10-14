@@ -1,0 +1,65 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "iced-coffee",
+  "category": "drink",
+  "title": "Home-Style Iced Coffee",
+  "subtitle": "Coffee syrup shaken frothy with a pinch of salt, ice, cold milk and a little cream.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Coffee · Cold"],
+  "meta": ["Prep: 3 min", "Makes 1 glass"],
+  "protein": "~3g protein per glass — from milk",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Coffee",
+      "items": [
+        {"id": "syrup", "name": "Coffee syrup (see recipe)", "short": "coffee syrup", "amount": "2½ tbsp"},
+        {"id": "coffee", "name": "Instant coffee powder", "short": "coffee powder", "amount": "1 tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "a pinch"},
+        {"id": "ice", "name": "Ice cubes", "short": "ice cubes", "amount": "4–5"}
+      ]
+    },
+    {
+      "label": "Milk",
+      "items": [
+        {"id": "milk", "name": "Cold milk", "short": "cold milk", "amount": "⅔ cup", "portions": {"toddler": "⅓ cup", "main": "⅓ cup"}},
+        {"id": "cream", "name": "Fresh cream, optional", "short": "fresh cream", "amount": "½ tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "toddler",
+      "label": "Toddler — her glass first (no coffee)",
+      "items": [
+        "Shake {@milk:toddler} in the jar until frothy and pour it into her cup — a little \"milk coffee\" with no caffeine"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Shake the coffee",
+      "items": [
+        "In the same jar or shaker, add {@syrup}, {@coffee} and {@salt}",
+        "Whisk or shake until the coffee powder dissolves and turns frothy",
+        "Add {@ice}",
+        "Pour in {@milk:main} and {@cream}"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Serve",
+      "items": [
+        "Close the jar and shake hard 20 seconds",
+        "Pour everything, ice and all, into a tall glass",
+        "Taste; add a little more syrup if you like it sweeter",
+        "Serve straight away"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The pinch of salt rounds off the bitterness — don't skip it. For the lighter iced coffee from the same card: shake 2 tbsp coffee syrup with ½ tbsp cream and ¼ cup milk, then pour over 6–7 ice cubes."
+    }
+  ]
+}

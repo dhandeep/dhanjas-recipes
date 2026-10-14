@@ -1,0 +1,70 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "apple-cobbler-crumble",
+  "category": "sweet",
+  "title": "Apple Cobbler Crumble",
+  "subtitle": "A super-easy layered apple cobbler — the fruit juices bake into the cinnamon crumb.",
+  "badges": ["Jain Vegetarian", "Toddler-friendly"],
+  "labels": ["Apple · Baked"],
+  "meta": ["Prep: 20 min", "Bake: 30–35 min", "Serves 9"],
+  "protein": "~2g protein per serving",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Crumble",
+      "items": [
+        {"id": "flour", "name": "Self-rising flour", "short": "self-rising flour", "amount": "1 cup"},
+        {"id": "sugar", "name": "White sugar", "short": "sugar", "amount": "½ cup"},
+        {"id": "butter", "name": "Butter, softened", "short": "butter", "amount": "⅓ cup"},
+        {"id": "cinnamon", "name": "Ground cinnamon", "short": "cinnamon", "amount": "½ tsp"}
+      ]
+    },
+    {
+      "label": "Fruit & dish",
+      "items": [
+        {"id": "apples", "name": "Granny Smith apples, sliced", "short": "apples", "amount": "4"},
+        {"id": "grease", "name": "Butter, to grease", "short": "butter", "amount": "1 tsp"},
+        {"id": "foil", "name": "Aluminium foil, if needed", "short": "foil", "amount": "optional"},
+        {"id": "ice-cream", "name": "Vanilla ice cream, to serve", "short": "vanilla ice cream", "amount": "optional"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Crumble and layers",
+      "items": [
+        "Preheat the oven to 350°F (175°C); grease a 9×9-inch baking dish with {@grease}",
+        "Core and slice {@apples}",
+        "Mix {@flour}, {@sugar}, {@butter} and {@cinnamon} in a bowl with a pastry blender or fork until crumbly",
+        "Reserve {¾ cup} of the crumb mixture for the topping",
+        "Sprinkle a light layer of crumb into the dish and top with a layer of the sliced fruit",
+        "Keep alternating crumb and apples, ending with apples; sprinkle the reserved crumb over the top"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Bake and serve",
+      "items": [
+        "Bake until the apples are tender and the topping is lightly browned, 30–35 min",
+        "If the topping browns before the apples are tender, cover loosely with {@foil}",
+        "Cool 10 min before serving",
+        "Serve warm, with {@ice-cream} if you like; keeps 3 days covered in the fridge"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her serving",
+      "items": [
+        "Scoop a small square once it has cooled to just warm — the fruit stays hot longer than the crumb",
+        "Mash the apples lightly with a fork and cut the crumb into small pieces"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Sugar and butter are the reduced amounts from the notes on the printout (the original used 1 cup sugar and ½ cup butter). No self-rising flour? Use 1 cup all-purpose flour + 1½ tsp baking powder + ¼ tsp salt. Fresh peaches work in place of apples."
+    }
+  ]
+}

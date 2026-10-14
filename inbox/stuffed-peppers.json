@@ -1,0 +1,94 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "stuffed-peppers",
+  "category": "rice",
+  "title": "Mexican Stuffed Peppers",
+  "subtitle": "Roasted bell peppers filled with pinto beans, brown rice and tomatoes, baked under melted cheese.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Beans · Rice · Baked"],
+  "meta": ["Prep: 20 min", "Cook: ~1 hr", "Makes 8 stuffed halves (4 adult servings)"],
+  "protein": "~13–15g protein per adult serving — from beans, rice and cheese",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Roasted peppers",
+      "items": [
+        {"id": "peppers", "name": "Large red bell peppers", "short": "bell peppers", "amount": "4"},
+        {"id": "olive-oil", "name": "Extra virgin olive oil", "short": "olive oil", "amount": "3 tbsp", "portions": {"roast": "1 tbsp", "filling": "2 tbsp"}},
+        {"id": "salt", "name": "Fine salt", "short": "salt", "amount": "¾ tsp", "portions": {"roast": "a pinch", "filling": "½ tsp", "adjust": "¼ tsp"}},
+        {"id": "pepper", "name": "Black pepper (adults)", "short": "black pepper", "amount": "to taste"}
+      ]
+    },
+    {
+      "label": "Filling",
+      "items": [
+        {"id": "rice", "name": "Long-grain brown rice", "short": "brown rice", "amount": "½ cup"},
+        {"id": "celery", "name": "Celery, chopped", "short": "celery", "amount": "1 cup"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "tomatoes", "name": "Cherry tomatoes, halved", "short": "cherry tomatoes", "amount": "2 cups"},
+        {"id": "cumin", "name": "Ground cumin", "short": "ground cumin", "amount": "1 tsp"},
+        {"id": "beans", "name": "Pinto beans, rinsed (1 can)", "short": "pinto beans", "amount": "1½ cups"},
+        {"id": "lime", "name": "Lime juice", "short": "lime juice", "amount": "1 tbsp"},
+        {"id": "cilantro", "name": "Fresh cilantro, chopped", "short": "cilantro", "amount": "½ cup", "portions": {"filling": "½ cup", "garnish": "a handful"}}
+      ]
+    },
+    {
+      "label": "Spice & topping",
+      "items": [
+        {"id": "chili", "name": "Kashmiri chili powder (adults)", "short": "Kashmiri chili powder", "amount": "1 tsp"},
+        {"id": "oregano", "name": "Dried oregano", "short": "dried oregano", "amount": "½ tsp"},
+        {"id": "cheese", "name": "Mozzarella or cheddar, grated", "short": "grated cheese", "amount": "1 cup (4 oz)"},
+        {"id": "garnish", "name": "Avocado or guacamole, sour cream", "short": "avocado or sour cream", "amount": "optional"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Roast the peppers and cook the rice",
+      "items": [
+        "Preheat the oven to 425°F; halve {@peppers} from stem to base, removing the seeds and membranes",
+        "Place them in a 9×13-inch dish or a lined sheet; drizzle with {@olive-oil:roast} and sprinkle with {@salt:roast}",
+        "Rub the oil over both sides; arrange cut side up and sprinkle {@pepper} on all but one half — that one is the toddler's",
+        "Bake 20–25 min, until blistered at the edges and fork-tender; set aside and leave the oven on",
+        "Meanwhile bring a large pot of water to a boil; rinse {@rice} until the water runs clear",
+        "Boil the rice uncovered 30 min (lower the heat if it froths), then drain and return to the pot"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the filling",
+      "items": [
+        "Warm {@olive-oil:filling} in a large skillet over medium heat until shimmering; add {@hing}",
+        "Add {@celery} and {@salt:filling}; cook, stirring often, until tender, about 5 min",
+        "Add {@tomatoes}; cook until lightly squishy, another 5 min",
+        "Add {@cilantro:filling} and {@cumin}; stir 30–60 sec",
+        "Take the pan off the heat; add {@rice|the cooked rice}, {@beans} and {@lime}; stir and adjust with {@salt:adjust}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — fill her pepper here (before chili)",
+      "items": [
+        "Spoon {=½ cup} of filling into her unpeppered half, lightly mashing the beans"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice, stuff and bake",
+      "items": [
+        "Return the skillet to low; stir in {@chili} and {@oregano} for 1 min",
+        "Pour off any juice pooled in the peppers, then stuff each one generously",
+        "Top every half, hers included, with {@cheese}",
+        "Bake at 425°F for 12–13 min, until the cheese is golden in spots",
+        "Serve warm with {@cilantro:garnish} and {@garnish}; leftovers keep 4 days covered in the fridge"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Onion → celery + hing; garlic → more hing. US chili powder blends usually aren't Jain, so Kashmiri chili + oregano stand in. Store salsa isn't Jain either — top with avocado or sour cream. Make ahead: cook the rice and roast the peppers early, or stuff completely and refrigerate, adding a few minutes to the bake. Leftover filling is a good side dish."
+    }
+  ]
+}

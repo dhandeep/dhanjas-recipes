@@ -1,0 +1,81 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "guava-panna",
+  "category": "drink",
+  "title": "Guava Panna",
+  "subtitle": "Guava simmered with sugar and a little chili into a sweet-spicy concentrate, served over ice with lime.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Guava · Summer"],
+  "meta": ["Prep: 5 min", "Cook: 15–20 min", "Concentrate for 10–15 glasses"],
+  "protein": "A cooler, not a protein source",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Panna concentrate",
+      "items": [
+        {"id": "guavas", "name": "Guavas, halved", "short": "guavas", "amount": "4"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "1¾ cups"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "1 cup"},
+        {"id": "red-chilies", "name": "Dry red chilies (adults)", "short": "dry red chilies", "amount": "2"},
+        {"id": "degi-chili", "name": "Degi red chili powder", "short": "degi chili powder", "amount": "1 tsp"}
+      ]
+    },
+    {
+      "label": "To serve — per glass",
+      "items": [
+        {"id": "lime", "name": "Lime, juiced", "short": "lime juice", "amount": "=½"},
+        {"id": "ice", "name": "Ice cubes", "short": "ice cubes", "amount": "=2–4"},
+        {"id": "masala", "name": "Panna masala (see recipe)", "short": "panna masala", "amount": "=1 tsp"},
+        {"id": "guava-juice", "name": "Guava juice", "short": "guava juice", "amount": "=¼ cup"},
+        {"id": "cold-water", "name": "Ice-cold water", "short": "ice-cold water", "amount": "=¾ cup"},
+        {"id": "guava-slice", "name": "Guava slice, to garnish", "short": "guava slice", "amount": "=1"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cook the guava",
+      "items": [
+        "In a kadai, add {@guavas}, {@water}, {@salt} and {@sugar}",
+        "Cover and cook on medium until the guavas turn soft and cooked through, 15–20 min",
+        "Stir once or twice so the sugar doesn't catch at the bottom"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — keep her share (before the chilies)",
+      "items": [
+        "Scoop {=2 tbsp} of the soft guava and syrup and press it through a sieve to remove the hard seeds",
+        "Keep it in a small jar; to serve, stir {=1 tbsp} into {=½ cup} of cool water — no masala, no ice"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Grind the panna",
+      "items": [
+        "Add {@red-chilies} to the kadai; simmer 2–3 min more",
+        "Take it off the flame and let it cool",
+        "Transfer to a grinder jar, add {@degi-chili} and grind to a smooth puree",
+        "Refrigerate in a clean jar; it keeps about a week"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Serve",
+      "items": [
+        "In a tall glass, take a spoonful (about {=2 tbsp}) of guava panna; add {@lime} and {@ice}",
+        "Add {@masala}; mix well",
+        "Pour in {@guava-juice} and {@cold-water}; mix well",
+        "Serve garnished with {@guava-slice}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The dry red chilies used to cook with the guava from the start; they now go in after her share is scooped. For a silkier drink, push the adult puree through a sieve too — guava seeds are hard. Part of Chef Ranveer Brar's panna trio, with aam panna and pineapple panna."
+    }
+  ]
+}

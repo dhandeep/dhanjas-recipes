@@ -1,0 +1,64 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "iced-mocha",
+  "category": "drink",
+  "title": "Iced Mocha",
+  "subtitle": "Chocolate milk and coffee syrup over ice, crowned with vanilla ice cream and choco chips.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Coffee · Chocolate"],
+  "meta": ["Prep: 5 min", "Makes 2 glasses"],
+  "protein": "~7g protein per glass — from milk and ice cream",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Mocha",
+      "items": [
+        {"id": "milk", "name": "Cold milk", "short": "milk", "amount": "1½ cups"},
+        {"id": "choc-syrup", "name": "Chocolate syrup", "short": "chocolate syrup", "amount": "2½ tbsp", "portions": {"blend": "1½ tbsp", "drizzle": "1 tbsp"}},
+        {"id": "syrup", "name": "Coffee syrup (see recipe)", "short": "coffee syrup", "amount": "5–6 tbsp"},
+        {"id": "ice", "name": "Ice cubes", "short": "ice cubes", "amount": "6–8"}
+      ]
+    },
+    {
+      "label": "Topping",
+      "items": [
+        {"id": "ice-cream", "name": "Vanilla ice cream", "short": "vanilla ice cream", "amount": "2 scoops"},
+        {"id": "choco-chips", "name": "Choco chips", "short": "choco chips", "amount": "1 tbsp"},
+        {"id": "coffee", "name": "Instant coffee powder, to dust", "short": "coffee powder", "amount": "a pinch"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Chocolate milk",
+      "items": [
+        "Chill the serving glasses in the freezer for 5 min",
+        "Whisk or blend {@milk} with {@choc-syrup:blend} until smooth and frothy"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pour hers now (before the coffee)",
+      "items": [
+        "Pour {=¼ cup} of the chocolate milk into her cup — no coffee for her"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Add coffee and serve",
+      "items": [
+        "Whisk {@syrup} into the rest of the chocolate milk",
+        "Divide {@ice} between the chilled glasses and pour the mocha over",
+        "Top each glass with a scoop of {@ice-cream|vanilla ice cream} and a sprinkle of {@choco-chips}",
+        "Drizzle with {@choc-syrup:drizzle} and dust with {@coffee}; serve straight away"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Ranveer Brar's card lists only ingredients; the method here is built around them, and the ice is added to make it an iced mocha. Chocolate syrup has a trace of caffeine, so keep her share small."
+    }
+  ]
+}

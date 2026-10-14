@@ -1,0 +1,82 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "raisin-peanut-upma",
+  "category": "breakfast",
+  "title": "Raisin & Peanut Upma",
+  "subtitle": "Soft rava upma with golden-fried peanuts, raisins and urad dal, moulded and finished with lemon.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Semolina"],
+  "meta": ["Night prep: none", "Morning: 25 min", "Serves 2 adults + toddler"],
+  "protein": "~9–11g protein per adult serving — from semolina, peanuts and urad dal",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Rava & water",
+      "items": [
+        {"id": "rava", "name": "Rava (semolina / sooji)", "short": "rava", "amount": "¾ cup", "portions": {"toddler": "2 tbsp", "main": "rest"}},
+        {"id": "water", "name": "Water, boiled", "short": "boiled water", "amount": "2¼ cups", "portions": {"toddler": "⅓ cup", "main": "rest"}},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "lemon", "name": "Lemon juice", "short": "lemon juice", "amount": "2 tsp"}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "1½ tbsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "½ tsp"},
+        {"id": "urad", "name": "Urad dal", "short": "urad dal", "amount": "¾ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "1 sprig"},
+        {"id": "green-chili", "name": "Green chilies, chopped (adults)", "short": "green chilies", "amount": "2"}
+      ]
+    },
+    {
+      "label": "Add-ins & garnish",
+      "items": [
+        {"id": "peanuts", "name": "Roasted peanuts", "short": "peanuts", "amount": "3 tbsp"},
+        {"id": "raisins", "name": "Raisins", "short": "raisins", "amount": "6"},
+        {"id": "coriander", "name": "Coriander, chopped", "short": "chopped coriander", "amount": "1 tsp"},
+        {"id": "podi", "name": "Molaga podi (chutney powder)", "short": "chutney powder", "amount": "alongside"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Tempering and roast",
+      "items": [
+        "Heat {@oil} in a heavy pan; add {@raisins}, {@mustard}, {@urad} and {@peanuts}",
+        "Fry on low until light golden; add {@hing}",
+        "Add {@rava}; stir continuously on low until it gives out a nice aroma — about 7–8 min",
+        "Meanwhile keep {@water} at a boil in a separate pot"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull her portion here (before green chili)",
+      "items": [
+        "Scoop {@rava:toddler} of the roasted rava into a small pan — pick out any whole peanuts and crush them back in, and chop the raisins",
+        "Pour in {@water:toddler}; stir on low until soft and the water is absorbed, 2–3 min"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook the upma",
+      "items": [
+        "Push {@rava:main|the remaining rava} to one side; add {@curry-leaves} and {@green-chili} to the adult pan and stir 30 sec",
+        "Add {@salt} and stir",
+        "Carefully pour in {@water:main} and stir well — use a long-handled ladle, it splutters",
+        "If it feels too dry, add a splash more water and stir",
+        "Keep on low and simmer 2–3 min; add {@lemon} and mix well",
+        "Mould into a greased cup and unmould onto the plate; garnish with {@coriander}",
+        "Serve hot with coffee or tea, with {@podi}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "This is the ¾ batch, sized for two, from the note on the original card (1 cup rava, 3 cups water). The green chilies and curry leaves now go in after the rava is roasted, so her portion comes out first. Hing was added to the tempering."
+    }
+  ]
+}

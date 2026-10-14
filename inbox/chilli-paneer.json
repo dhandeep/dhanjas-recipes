@@ -1,0 +1,109 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "chilli-paneer",
+  "category": "snack",
+  "title": "Chilli Paneer",
+  "subtitle": "Tangy, spicy and a little sweet — shallow-fried paneer and bell peppers in an Indo-Chinese sauce.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Paneer · Indo-Chinese"],
+  "meta": ["Prep: 10 min", "Cook: ~20 min", "400g paneer · 4 adult servings + toddler"],
+  "protein": "~17–19g protein per adult serving — from paneer",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Paneer",
+      "items": [
+        {"id": "paneer", "name": "Paneer cubes", "short": "paneer cubes", "amount": "400g", "portions": {"toddler": "30g", "main": "rest"}},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"},
+        {"id": "cornstarch", "name": "Corn starch", "short": "corn starch", "amount": "2 tbsp"},
+        {"id": "chili-powder", "name": "Red chili powder (adults)", "short": "red chili powder", "amount": "1 tsp"},
+        {"id": "pepper", "name": "Black pepper, fresh ground", "short": "black pepper", "amount": "to taste"},
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "3 tbsp"}
+      ]
+    },
+    {
+      "label": "Sauce",
+      "items": [
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "ginger", "name": "Ginger, finely chopped", "short": "ginger", "amount": "1 tbsp"},
+        {"id": "bell-pepper", "name": "Bell peppers, diced, mixed", "short": "bell peppers", "amount": "2 cups"},
+        {"id": "soy", "name": "Soya sauce", "short": "soya sauce", "amount": "2 tbsp"},
+        {"id": "ketchup", "name": "Tomato ketchup (Jain)", "short": "tomato ketchup", "amount": "1 tbsp"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "1 tsp"},
+        {"id": "chili-sauce", "name": "Red chili sauce (Jain)", "short": "red chili sauce", "amount": "1 tbsp"}
+      ]
+    },
+    {
+      "label": "Finish",
+      "items": [
+        {"id": "water", "name": "Water", "short": "water", "amount": "¼ cup"},
+        {"id": "cornstarch-slurry", "name": "Corn starch, for slurry", "short": "corn starch", "amount": "1 tsp"},
+        {"id": "vinegar", "name": "White vinegar", "short": "white vinegar", "amount": "½ tsp"},
+        {"id": "salt-finish", "name": "Salt, to adjust", "short": "salt", "amount": "as needed"},
+        {"id": "coriander", "name": "Coriander, finely chopped", "short": "chopped coriander", "amount": "2 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Prep and coat the paneer",
+      "items": [
+        "Dice {@bell-pepper} into 1-inch pieces and finely chop {@ginger}",
+        "In a mixing bowl, toss {@paneer} with {@salt} and {@cornstarch}",
+        "If it's too dry, sprinkle a little water so the starch coats each cube evenly",
+        "Mix {@water} with {@cornstarch-slurry}; set the slurry aside"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — set her cubes aside (before chili and pepper)",
+      "items": [
+        "Move {@paneer:toddler} of the coated cubes to a small plate — they get fried first, plain"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Shallow fry",
+      "items": [
+        "Toss {@paneer:main|the remaining cubes} with {@chili-powder} and {@pepper}",
+        "Heat {@oil} in a large frying pan; fry {@paneer:toddler|her plain cubes} first until golden on each side, then lift onto a plate for the toddler",
+        "Fry the rest until golden brown on each side",
+        "Lift onto a plate lined with paper towel; keep the oil left in the pan"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the sauce",
+      "items": [
+        "Reheat the same pan; add {@hing} and {@ginger} and sauté a few seconds",
+        "Add {@bell-pepper}; sauté on high 2 min",
+        "Keep the flame high so the peppers char at the edges rather than steam",
+        "Add {@soy}, {@ketchup} and {@sugar}; mix and turn the flame to low-medium"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her sauce (before the chili sauce)",
+      "items": [
+        "Toss her fried paneer with {=1 tbsp} of the sauce and a few soft bell pepper pieces, cut small"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Toss and finish",
+      "items": [
+        "Stir {@chili-sauce} into the pan",
+        "Add the fried paneer; mix well, then stir in the slurry {from Step 1} — the sauce turns thick for a dry chilli paneer (add more water for gravy)",
+        "Add {@vinegar}; taste and adjust {@salt-finish}",
+        "Turn off the heat; garnish with {@coriander} and serve immediately"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Many red chili sauces and ketchups aren't Jain — use no-onion-no-garlic ones. The chili powder and pepper now go on after her cubes are pulled, and the chili sauce after her spoon of sauce. Air fryer option: toss the coated cubes with 1 tsp of the oil and cook in the Ninja Crispi at 360°F for 8–10 min, shaking once."
+    }
+  ]
+}
