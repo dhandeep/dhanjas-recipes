@@ -1,0 +1,96 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "khaman-dhokla",
+  "category": "breakfast",
+  "title": "Khaman Dhokla",
+  "subtitle": "Soft, spongy steamed besan cake leavened with Eno, soaked in a sweet mustard-seed tempering.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Besan · Steamed"],
+  "meta": ["Prep: 5 min", "Cook: 20 min", "Serves 3–4"],
+  "protein": "~7–8g protein per serving — from besan",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Wet mix",
+      "items": [
+        {"id": "water", "name": "Water", "short": "water", "amount": "½ cup + 1 tbsp", "portions": {"batter": "½ cup", "eno": "1 tbsp"}},
+        {"id": "ginger", "name": "Ginger paste", "short": "ginger paste", "amount": "½ tbsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "⅓ tsp"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "1 tsp"},
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "1 tbsp", "portions": {"batter": "1 tbsp", "grease": "a little"}},
+        {"id": "lemon", "name": "Lemon juice", "short": "lemon juice", "amount": "1 tbsp"}
+      ]
+    },
+    {
+      "label": "Dry mix & leavening",
+      "items": [
+        {"id": "besan", "name": "Besan (gram flour, 125g)", "short": "besan", "amount": "1 cup"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "semolina", "name": "Fine semolina (rava)", "short": "semolina", "amount": "1 tbsp"},
+        {"id": "eno", "name": "Eno (unflavoured fruit salt)", "short": "Eno", "amount": "¾ tsp"},
+        {"id": "green-chili", "name": "Green chili paste (adults)", "short": "green chili paste", "amount": "1"},
+        {"id": "steam-water", "name": "Water, for the steamer", "short": "water", "amount": "=2 cups"}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"id": "oil-temper", "name": "Oil", "short": "oil", "amount": "1 tbsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "¾ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "⅛ tsp"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "1 sprig"},
+        {"id": "slit-chilies", "name": "Green chilies, slit", "short": "slit green chilies", "amount": "2"},
+        {"id": "sugar-temper", "name": "Sugar", "short": "sugar", "amount": "1–2 tbsp"},
+        {"id": "salt-temper", "name": "Salt", "short": "salt", "amount": "¼ tsp"},
+        {"id": "water-temper", "name": "Water", "short": "water", "amount": "½–¾ cup"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Make the batter",
+      "items": [
+        "Pour {@water:batter} into a bowl; add {@ginger}, {@salt}, {@sugar}, {@oil:batter} and {@lemon}",
+        "Stir well until the sugar dissolves; keep aside",
+        "Set a sieve over a large mixing bowl; sieve {@besan} and {@turmeric} into it, then mix in {@semolina}",
+        "Pour in the wet mix and whisk to a smooth, lump-free, flowing batter",
+        "Bring {@steam-water} to a boil in a steamer or wide pot with a stand; grease a 7–8 inch tin with {@oil:grease}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her mini dhokla (before the green chili)",
+      "items": [
+        "Spoon {=3 tbsp} of plain batter into a small greased katori — it steams beside the big tin"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Leaven and steam",
+      "items": [
+        "Stir {@green-chili} into the remaining batter",
+        "Sprinkle {@eno} over the batter, pour {@water:eno} on top to activate it and stir gently in one direction until frothy — about 10 seconds; stir a pinch of the frothy batter into her katori too",
+        "Pour straight into the greased tin and place it, with her katori, in the steamer",
+        "Cover and steam on medium-high 15–18 min (her katori: 10–12 min), until a toothpick comes out clean",
+        "Rest 5 min, then cut into squares"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Tempering",
+      "items": [
+        "Heat {@oil-temper} in a small pan; add {@mustard} and let them splutter",
+        "Add {@hing}, {@curry-leaves} and {@slit-chilies}; fry a few seconds",
+        "Add {@water-temper}, {@sugar-temper} and {@salt-temper}; bring to a boil and turn off",
+        "Spoon it evenly over the dhokla squares and let them soak 5 min; serve with green chutney"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Add the Eno only when the steamer is boiling and the tin is greased — it loses its lift within a minute. Her katori skips the chili: give her the soft dhokla with a drizzle of the tempering water, without chili pieces. Swap the lemon for ⅓ tsp citric acid if you like."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "kumbalanga-pulissery",
+  "category": "curry",
+  "title": "Kumbalanga Pulissery",
+  "name": "Kumbalanga Pulissery (Ash Gourd Mor Curry)",
+  "subtitle": "Kerala's Onam sadya favourite — tender ash gourd in a coconut-spiced curd curry.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Yogurt · Curry"],
+  "meta": ["Prep: 10 min", "Cook: 20 min", "4 servings"],
+  "protein": "~5–6g protein per serving — from curd",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Curry",
+      "items": [
+        {"id": "ash-gourd", "name": "Ash gourd (kumbalanga), cubed", "short": "ash gourd", "amount": "1 cup"},
+        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "½ cup"},
+        {"id": "curd", "name": "Curd (plain yogurt)", "short": "curd", "amount": "1½ cups", "portions": {"toddler": "2 tbsp", "main": "rest"}}
+      ]
+    },
+    {
+      "label": "For grinding",
+      "items": [
+        {"id": "rice", "name": "Raw rice", "short": "raw rice", "amount": "1 tbsp"},
+        {"id": "coconut", "name": "Grated coconut", "short": "grated coconut", "amount": "½ cup", "portions": {"toddler": "1 tsp", "main": "rest"}},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "green-chili", "name": "Green chilies (adults)", "short": "green chilies", "amount": "3"},
+        {"id": "red-chili", "name": "Dry red chili (adults)", "short": "dry red chili", "amount": "1"}
+      ]
+    },
+    {
+      "label": "For tempering",
+      "items": [
+        {"id": "coconut-oil", "name": "Coconut oil", "short": "coconut oil", "amount": "2 tsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "1 tsp"},
+        {"id": "methi", "name": "Fenugreek seeds", "short": "fenugreek seeds", "amount": "¼ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "red-chilies", "name": "Dry red chilies, broken", "short": "broken red chilies", "amount": "2"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "1 sprig"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cook the ash gourd",
+      "items": [
+        "Soak {@rice} in water for 15 min",
+        "In a saucepan, add {@ash-gourd}, {@salt}, {@turmeric} and {@water}",
+        "Cook on medium until just soft — ash gourd cooks fast, so don't overcook it",
+        "Turn the flame to the lowest setting"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her bowl (before the chili paste)",
+      "items": [
+        "Scoop {=2–3 tbsp} of the soft ash gourd into her bowl and mash lightly",
+        "Stir in {@curd:toddler} and {@coconut:toddler} — a mild coconut-curd for her"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Grind and add the curd",
+      "items": [
+        "Drain {@rice|the soaked rice}; grind it with {@coconut:main}, {@green-chili}, {@red-chili} and {@cumin} to a nice smooth paste",
+        "Whisk {@curd:main} in a bowl and stir in the ground paste",
+        "Pour this spiced mixture into the cooked ash gourd and stir well; adjust the salt",
+        "Keep on medium flame, stirring continuously for the first 3–4 min so it doesn't split",
+        "When a frothy layer forms on top, switch off — don't let it boil, or it turns watery"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Temper and serve",
+      "items": [
+        "In a separate pan, heat {@coconut-oil}; add {@mustard} and let them splutter",
+        "Add {@methi}, {@red-chilies} and {@curry-leaves}; fry a few seconds",
+        "Add {@hing} and pour the seasoning over the pulissery",
+        "Best eaten hot, alongside plain steamed rice"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Cucumber works in place of ash gourd. Keep the fenugreek to ¼ tsp — more makes the curry bitter. Slightly sour curd gives the best flavour. Hing was added to the tempering."
+    }
+  ]
+}

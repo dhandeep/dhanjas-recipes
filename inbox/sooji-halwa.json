@@ -1,0 +1,80 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "sooji-halwa",
+  "category": "sweet",
+  "title": "Sooji Halwa",
+  "subtitle": "Semolina roasted in ghee with cashews, cooked in sweetened milk and water until it leaves the pan.",
+  "badges": ["Jain Vegetarian", "Toddler-friendly"],
+  "labels": ["Semolina · Sweet"],
+  "meta": ["Prep: 5 min", "Cook: 15 min", "Serves 4"],
+  "protein": "~5g protein per serving — from semolina, milk and cashews",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Sweet milk",
+      "items": [
+        {"id": "sugar", "name": "Sugar (75g)", "short": "sugar", "amount": "⅓ cup"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "¾ cup"},
+        {"id": "milk", "name": "Milk", "short": "milk", "amount": "¾ cup"},
+        {"id": "saffron", "name": "Saffron, optional", "short": "saffron", "amount": "a pinch"}
+      ]
+    },
+    {
+      "label": "Roast",
+      "items": [
+        {"id": "ghee", "name": "Ghee, semi-solid (75g)", "short": "ghee", "amount": "⅓ cup"},
+        {"id": "sooji", "name": "Fine sooji (semolina, 90g)", "short": "sooji", "amount": "½ cup"},
+        {"id": "cashews", "name": "Cashews, broken small", "short": "cashews", "amount": "12", "portions": {"roast": "10", "garnish": "rest"}},
+        {"id": "cardamom", "name": "Cardamom powder", "short": "cardamom powder", "amount": "⅛ tsp"},
+        {"id": "raisins", "name": "Raisins or almonds, optional", "short": "raisins", "amount": "1 tbsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Warm the sweet milk",
+      "items": [
+        "In a pan, add {@sugar}, {@water}, {@milk} and {@saffron} if using",
+        "Stir and heat on medium until hot and the sugar dissolves — don't let it boil",
+        "If using saffron, let it steep 2–3 min for colour",
+        "Keep it warm on the lowest flame"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Roast the sooji",
+      "items": [
+        "Meanwhile, put a second pan on medium heat and add {@ghee}; let it melt",
+        "Add {@sooji} and stir; add {@cashews:roast} and {@raisins}",
+        "Stirring continuously, roast on low-medium heat; add {@cardamom}",
+        "Keep stirring 8–9 min, until the sooji is fragrant and just beginning to change colour (roast 1–2 min more for a darker halwa)"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Cook the halwa",
+      "items": [
+        "Add the hot syrup {from Step 1} slowly, in 2–3 parts — it bubbles and splutters a lot, so be careful",
+        "Whisk continuously with one hand as the liquid goes in",
+        "Keep stirring; the sooji absorbs the liquid and thickens",
+        "Stir 2 min more, until the halwa thickens and leaves the sides of the pan",
+        "Garnish with {@cashews:garnish} and serve warm"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her bowl",
+      "items": [
+        "Scoop {=2–3 tbsp} into her bowl and pick out the cashew pieces (or crush them fine)",
+        "Let it cool to just warm — halwa holds heat"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "This halwa is lightly sweet; use ½ cup sugar for a sweeter one. Less ghee: you can go down to ¼ cup, but not lower, or the sooji won't roast evenly."
+    }
+  ]
+}

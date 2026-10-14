@@ -1,0 +1,87 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "vegetable-pulav",
+  "category": "rice",
+  "title": "Vegetable Pulav",
+  "subtitle": "One-pot pressure-cooker rice with tomato, capsicum and peas — best with kadhi or cold curd.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Rice · One-pot"],
+  "meta": ["Prep: 10 min", "Cook: ~20 min", "Serves 2–3 + toddler"],
+  "protein": "~7–8g protein per adult serving — from rice and peas",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Rice & vegetables",
+      "items": [
+        {"id": "rice", "name": "Rice, washed and drained", "short": "rice", "amount": "1½ cups"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "1½ cups"},
+        {"id": "tomato", "name": "Tomato, finely chopped", "short": "tomato", "amount": "1"},
+        {"id": "capsicum", "name": "Green capsicum, chopped", "short": "capsicum", "amount": "¾"},
+        {"id": "peas", "name": "Green peas", "short": "green peas", "amount": "½ cup"},
+        {"id": "carrot", "name": "Boiled carrot, diced (toddler)", "short": "boiled carrot", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Mild base",
+      "items": [
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tbsp + more", "portions": {"base": "1 tbsp", "serve": "a little"}},
+        {"id": "mustard", "name": "Mustard seeds (rai)", "short": "mustard seeds", "amount": "½ tsp"},
+        {"id": "cloves", "name": "Cloves (lavang)", "short": "cloves", "amount": "3–4"},
+        {"id": "cumin", "name": "Cumin seeds (jeera)", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "5–6"},
+        {"id": "turmeric", "name": "Turmeric (haldi)", "short": "turmeric", "amount": "½ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"}
+      ]
+    },
+    {
+      "label": "Adult spice tadka",
+      "items": [
+        {"id": "ghee-tadka", "name": "Ghee", "short": "ghee", "amount": "1 tsp"},
+        {"id": "peppercorns", "name": "Black peppercorns, crushed", "short": "black peppercorns", "amount": "3–4"},
+        {"id": "green-chili", "name": "Green chili, slit", "short": "green chili", "amount": "1"},
+        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "1 tsp"},
+        {"id": "garam-masala", "name": "Garam masala powder", "short": "garam masala", "amount": "1 tsp"},
+        {"id": "coriander", "name": "Coriander, chopped", "short": "chopped coriander", "amount": "1 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Temper and cook the pulav",
+      "items": [
+        "Heat {@ghee:base} in a pressure cooker; add {@mustard} and {@cloves} and let them crackle",
+        "Add {@cumin}, {@hing} and {@curry-leaves}",
+        "Add {@tomato} and {@capsicum}; cook until soft",
+        "Add {@peas}, {@turmeric} and {@salt}",
+        "Add {@rice} and mix nicely; pour in {@water} — water should reach two finger-joints above the rice",
+        "Bring to a boil, then close the lid and cook 4–5 whistles; take off the flame and let the pressure drop on its own"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — scoop hers here (before the spice tadka)",
+      "items": [
+        "Fluff and spoon {=½ cup} of pulav into her bowl, picking out the cloves",
+        "Stir in {@carrot:toddler} and a dab of the serving ghee"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice tadka for the adults",
+      "items": [
+        "Heat {@ghee-tadka} in a small pan; add {@peppercorns} and {@green-chili}, then turn off the flame",
+        "Stir in {@chili-powder} and {@garam-masala} off the heat so they don't burn",
+        "Pour over the remaining pulav; fold through gently and sprinkle {@coriander}",
+        "Serve hot, topped with {@ghee:serve}, with kadhi or cold curd"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The peppercorns, green chili, chili powder and garam masala used to go into the cooker; they now go in as a tadka after cooking, so her portion comes out mild and the adults get a brighter spice. Hing was added to the tempering."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "curd-rice",
+  "category": "rice",
+  "title": "Curd Rice",
+  "name": "Curd Rice (Thayir Sadam)",
+  "subtitle": "Soft rice mashed into cool curd, with grated cucumber and a crackling mustard-dal tempering.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Rice · Yogurt"],
+  "meta": ["Prep: 5 min", "Cook: 30 min (incl. cooling)", "Serves 2 adults + toddler"],
+  "protein": "~10–12g protein per adult serving — from curd, rice and dals",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Rice & curd",
+      "items": [
+        {"id": "rice", "name": "Rice (or ¼ cup rice + ¼ millet)", "short": "rice", "amount": "½ cup"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "1½ cups"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "½ tsp", "portions": {"cook": "½ tsp", "adjust": "to taste"}},
+        {"id": "curd", "name": "Curd (plain yogurt)", "short": "curd", "amount": "1–1½ cups"}
+      ]
+    },
+    {
+      "label": "Veggies",
+      "items": [
+        {"id": "cucumber", "name": "Cucumber (or bottle gourd), grated", "short": "grated cucumber", "amount": "3 tbsp"},
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander leaves", "amount": "1 tsp"},
+        {"id": "carrot", "name": "Carrot, grated (toddler)", "short": "grated carrot", "amount": "1 tbsp", "portions": {"toddler": "1 tbsp"}},
+        {"id": "pomegranate", "name": "Pomegranate seeds, to garnish", "short": "pomegranate seeds", "amount": "2 tbsp", "portions": {"toddler": "1 tsp", "garnish": "rest"}}
+      ]
+    },
+    {
+      "label": "Tempering",
+      "items": [
+        {"id": "oil", "name": "Oil (or ghee)", "short": "oil", "amount": "1 tsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "½ tsp"},
+        {"id": "cumin", "name": "Cumin seeds, optional", "short": "cumin", "amount": "½ tsp"},
+        {"id": "chana", "name": "Chana dal, optional", "short": "chana dal", "amount": "¾–1 tsp"},
+        {"id": "urad", "name": "Urad dal, optional", "short": "urad dal", "amount": "¾–1 tsp"},
+        {"id": "cashews", "name": "Roasted cashews, split, optional", "short": "cashews", "amount": "6–8"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "1 pinch"}
+      ]
+    },
+    {
+      "label": "Tempering — adult heat",
+      "items": [
+        {"id": "red-chili", "name": "Dried red chili, broken", "short": "red chili", "amount": "1"},
+        {"id": "ginger", "name": "Ginger, minced", "short": "ginger", "amount": "½ tsp"},
+        {"id": "green-chili", "name": "Green chili, slit, optional", "short": "green chili", "amount": "1"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "1 sprig"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Cook the rice and mix in the curd",
+      "items": [
+        "Rinse {@rice} well a few times in a bowl",
+        "Pour in {@water} and {@salt:cook}; pressure cook 3 whistles until soft (Instant Pot: high 10 min, natural release)",
+        "When the pressure releases, mash the rice lightly (or just fluff it if you don't like it mushy); cool completely",
+        "Add {@curd} to the cooled rice and mix well until combined",
+        "Stir in {@coriander} and {@cucumber}; taste and add {@salt:adjust}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — scoop hers here (before the chili tempering)",
+      "items": [
+        "Spoon {=½ cup} of curd rice into her bowl",
+        "Stir in {@carrot:toddler} and top with {@pomegranate:toddler}, lightly crushed"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Temper and finish",
+      "items": [
+        "Heat {@oil} in a small pan; add {@cumin} and {@mustard}",
+        "When they splutter, add {@red-chili}, {@chana}, {@urad} and {@cashews}; fry until the dal turns golden",
+        "Add {@ginger}, {@green-chili} and {@curry-leaves}",
+        "When the curry leaves turn crisp, add {@hing} and turn off the stove — if using bottle gourd instead of cucumber, stir it into the hot tempering now",
+        "Pour the tempering over the curd rice and mix",
+        "Garnish with {@pomegranate:garnish}; serve with pickle, podi or papad"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "The carrot in the original veggie mix now goes in her bowl only; adults get cucumber (or bottle gourd). Curd rice firms up as it sits — loosen with a splash of milk or more curd before serving, and refrigerate leftovers up to a day."
+    }
+  ]
+}

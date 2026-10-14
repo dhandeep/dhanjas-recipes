@@ -1,0 +1,70 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "shengdana-chutney",
+  "category": "powder",
+  "title": "Shengdana Chutney",
+  "name": "Maharashtrian Shengdana Chutney",
+  "subtitle": "A quick, coarse roasted-peanut chutney powder — sprinkle it dry, or loosen it with curd or oil.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Peanut · Chutney Powder"],
+  "meta": ["Prep: 10 min", "Cook: 10 min", "Yield: ~200g (keeps 3–4 wks)"],
+  "protein": "~4g protein per 2 tbsp — from peanuts",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Roast",
+      "items": [
+        {"id": "peanuts", "name": "Raw shelled peanuts (~200g)", "short": "peanuts", "amount": "1 heaped cup"},
+        {"id": "cumin", "name": "Cumin seeds, toasted", "short": "toasted cumin", "amount": "1 heaped tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "oil", "name": "Oil, optional", "short": "oil", "amount": "½ tsp"}
+      ]
+    },
+    {
+      "label": "Grind",
+      "items": [
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"},
+        {"id": "turmeric", "name": "Turmeric powder (haldi)", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "red-chilies", "name": "Dry red chilies, whole", "short": "dry red chilies", "amount": "4–5"},
+        {"id": "deggi-mirch", "name": "Deggi mirch (mild red chili)", "short": "deggi mirch", "amount": "½ tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Roast and skin the peanuts",
+      "items": [
+        "In a tawa or skillet on medium heat, roast {@peanuts} 7–8 min, until the skins turn papery and start falling off and the nuts get dark brown spots",
+        "Take them off the heat and cool on a tray — a running fan speeds this up",
+        "Once cool, rub them between your hands to loosen the skins, then dust or blow the skins off",
+        "In the same pan, warm {@oil} if using; add {@red-chilies} and {@hing} for 20–30 sec — deeper flavour — then cool"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Grind and store",
+      "items": [
+        "Put {@peanuts|the skinned peanuts} in the medium jar of a grinder with {@cumin}, {@salt} and {@turmeric}; pulse a few times to rough chunks",
+        "Set aside her share now (see the toddler box)",
+        "Add the bloomed spice mix {from Step 1} and {@deggi-mirch}; grind further to a grainy powder",
+        "Stop before it clumps and releases its oils",
+        "Store in a clean jar in the fridge; keeps 3–4 weeks"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler note",
+      "items": [
+        "Before the chilies go into the jar, take {=¼ cup} of the plain peanut powder for her and keep it in a small jar",
+        "Stir 1 tsp of it into her curd rice, dal or ghee-rice; it's ground fine enough to be safe — never give her whole peanuts"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Garlic → hing, bloomed with the chilies. Variations: add dry-roasted coconut, curry leaves, sesame, coriander seeds or mustard seeds. To use it 'wet', mix 2 tbsp with curd or a little oil."
+    }
+  ]
+}

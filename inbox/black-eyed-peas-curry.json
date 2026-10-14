@@ -1,0 +1,111 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "black-eyed-peas-curry",
+  "category": "curry",
+  "title": "Black Eyed Peas Curry with Rice",
+  "subtitle": "Instant Pot lobia in a coconut-tomato gravy, cooked pot-in-pot with the rice.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Black Eyed Peas · Curry"],
+  "meta": ["Night prep: soak peas", "Cook: ~30 min (Instant Pot)", "6 servings"],
+  "protein": "~8–10g protein per serving — from black eyed peas",
+  "nightPrep": {
+    "label": "Night Before",
+    "items": [
+      "Soak {@peas} in 3 cups of water overnight, or at least 6 hours"
+    ]
+  },
+  "ingredientGroups": [
+    {
+      "label": "Curry paste",
+      "items": [
+        {"id": "peas", "name": "Dry black eyed peas", "short": "black eyed peas", "amount": "1 cup"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "coconut", "name": "Shredded coconut, unsweetened", "short": "coconut", "amount": "3 tbsp"},
+        {"id": "celery", "name": "Celery, roughly chopped", "short": "celery", "amount": "½ cup"},
+        {"id": "tomato", "name": "Large ripe tomato, quartered", "short": "tomato", "amount": "1"},
+        {"id": "ginger", "name": "Ginger", "short": "ginger", "amount": "1½ inches"}
+      ]
+    },
+    {
+      "label": "Spices",
+      "items": [
+        {"id": "oil", "name": "Cooking oil", "short": "oil", "amount": "1 tbsp", "portions": {"base": "2 tsp", "tadka": "1 tsp"}},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
+        {"id": "turmeric", "name": "Ground turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "cumin-powder", "name": "Ground cumin", "short": "ground cumin", "amount": "½ tbsp"},
+        {"id": "coriander-powder", "name": "Ground coriander", "short": "ground coriander", "amount": "½ tbsp"},
+        {"id": "salt", "name": "Kosher salt", "short": "salt", "amount": "2 tsp"},
+        {"id": "jaggery", "name": "Jaggery or brown sugar, optional", "short": "jaggery", "amount": "½ tbsp"}
+      ]
+    },
+    {
+      "label": "Cook & finish",
+      "items": [
+        {"id": "water", "name": "Water", "short": "water", "amount": "2 cups"},
+        {"id": "chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "1 tbsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1 tsp"},
+        {"id": "cilantro", "name": "Cilantro, chopped", "short": "chopped cilantro", "amount": "¼ cup"},
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Pot-in-pot rice",
+      "items": [
+        {"id": "rice", "name": "White rice", "short": "rice", "amount": "1 cup"},
+        {"id": "rice-water", "name": "Water, for rice", "short": "water", "amount": "1½ cups"},
+        {"id": "rice-salt", "name": "Kosher salt, for rice", "short": "salt", "amount": "1 tsp"},
+        {"id": "trivet", "name": "Tall trivet + steel bowl", "short": "tall trivet", "amount": "1"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Prep the paste and rice",
+      "items": [
+        "Drain the soaked lobia and keep aside",
+        "Rinse and drain {@rice}; put it in a steel bowl with {@rice-water} and {@rice-salt}",
+        "Roughly chop the celery and quarter the tomato",
+        "Blend {@cumin}, {@coconut}, {@celery}, {@tomato} and {@ginger} to a smooth paste"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Sauté and pressure cook",
+      "items": [
+        "Set the Instant Pot to Sauté (More); heat {@oil:base}",
+        "Add {@mustard} and let them crackle; add {@hing} and {@turmeric}",
+        "Add the paste; cook 1 min, stirring often",
+        "Add {@cumin-powder}, {@coriander-powder} and {@salt}; mix, cover with a glass lid and cook 3–4 min",
+        "Stir, scraping the bottom so no spices stick (avoids the burn notice)",
+        "Add {@jaggery}, {@peas|the drained peas} and {@water}; give it a quick stir",
+        "Set {@trivet} in the pot with the rice bowl on top; seal and Pressure Cook {=8 min}, then natural release {=10 min} or fully"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — her bowl (before the chili tadka)",
+      "items": [
+        "Lift out the rice and trivet; scoop {=¼ cup} peas with gravy into her bowl",
+        "Mash the peas well and stir in {@potato:toddler}; serve with a little of the rice"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Chili tadka and serve",
+      "items": [
+        "Heat {@oil:tadka} in a small pan; take it off the flame and stir in {@chili} and {@garam-masala}",
+        "Pour the tadka into the curry; Sauté 2–3 min so the spices cook in",
+        "Garnish with {@cilantro}; serve hot with the rice",
+        "Keeps 4 days refrigerated"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Onion → celery + hing; garlic → extra ginger. The chili powder and garam masala now go in as a tadka after cooking, so her portion comes out mild. No time to soak? Pressure cook 20 min with natural release, and use brown rice in the pot-in-pot bowl instead."
+    }
+  ]
+}
