@@ -15,7 +15,7 @@
   "meta": [
     "Night prep: soak chickpeas",
     "Cook: ~1 hr",
-    "4 adult servings + toddler"
+    "6 adult servings + toddler"
   ],
   "protein": "~10–12g protein per adult serving — from chickpeas",
   "nightPrep": {
@@ -29,45 +29,45 @@
     {
       "label": "Cooking chole",
       "items": [
-        {"id": "chickpeas", "name": "Chickpeas (dried kabuli chana)", "short": "chickpeas", "amount": "1 cup"},
-        {"id": "water", "name": "Water", "short": "water", "amount": "2½ cups", "portions": {"cook": "1½ cups", "simmer": "1 cup"}},
-        {"id": "tea-bag", "name": "Tea bag or 2 dried amla, optional", "short": "tea bag", "amount": "1"},
+        {"id": "chickpeas", "name": "Chickpeas (dried kabuli chana)", "short": "chickpeas", "amount": "1½ cups"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "3¾ cups", "portions": {"cook": "2¼ cups", "simmer": "1½ cups"}},
+        {"id": "tea-bag", "name": "Tea bag or 2 dried amla, optional", "short": "tea bag", "amount": "1–2"},
         {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
       ]
     },
     {
       "label": "Whole spices & base",
       "items": [
-        {"id": "oil", "name": "Oil", "short": "oil", "amount": "2 tbsp"},
-        {"id": "cinnamon", "name": "Cinnamon", "short": "cinnamon", "amount": "1 inch"},
-        {"id": "cloves", "name": "Cloves", "short": "cloves", "amount": "2"},
-        {"id": "bay-leaf", "name": "Bay leaf, small", "short": "bay leaf", "amount": "1"},
-        {"id": "cardamom", "name": "Green cardamoms", "short": "green cardamoms", "amount": "2"},
-        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
-        {"id": "ginger-paste", "name": "Ginger, finely chopped or paste", "short": "ginger", "amount": "¾–1 tbsp"},
-        {"id": "celery", "name": "Celery, finely chopped", "short": "celery", "amount": "½ cup"}
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "3 tbsp"},
+        {"id": "cinnamon", "name": "Cinnamon", "short": "cinnamon", "amount": "1½ inches"},
+        {"id": "cloves", "name": "Cloves", "short": "cloves", "amount": "3"},
+        {"id": "bay-leaf", "name": "Bay leaf, small", "short": "bay leaf", "amount": "2"},
+        {"id": "cardamom", "name": "Green cardamoms", "short": "green cardamoms", "amount": "3"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼–½ tsp"},
+        {"id": "ginger-paste", "name": "Ginger, finely chopped or paste", "short": "ginger", "amount": "1–1½ tbsp"},
+        {"id": "celery", "name": "Celery, finely chopped", "short": "celery", "amount": "¾ cup"}
       ]
     },
     {
       "label": "Tomato & spice powders",
       "items": [
-        {"id": "tomatoes", "name": "Tomatoes, finely chopped", "short": "tomatoes", "amount": "1½ cups (4)"},
-        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "⅛ tsp"},
-        {"id": "salt", "name": "Salt", "short": "salt", "amount": "¾ tsp"},
-        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1 tsp"},
-        {"id": "green-chili", "name": "Green chilies, slit (adults)", "short": "green chili", "amount": "2", "portions": {"base": "1", "garnish": "1"}},
-        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "½–1 tsp"},
-        {"id": "chole-masala", "name": "Chole masala (Jain)", "short": "chole masala", "amount": "1 tbsp"},
-        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "¾ tsp"}
+        {"id": "tomatoes", "name": "Tomatoes, finely chopped", "short": "tomatoes", "amount": "2¼ cups (6)"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1½ tsp"},
+        {"id": "green-chili", "name": "Green chilies, slit (adults)", "short": "green chili", "amount": "3", "portions": {"base": "2", "garnish": "1"}},
+        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "¾–1½ tsp"},
+        {"id": "chole-masala", "name": "Chole masala (Jain)", "short": "chole masala", "amount": "1½ tbsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1 tsp"}
       ]
     },
     {
       "label": "Garnish",
       "items": [
-        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tbsp"},
-        {"id": "ginger-julienne", "name": "Ginger, julienned", "short": "ginger juliennes", "amount": "½ inch"},
-        {"id": "kasuri-methi", "name": "Kasuri methi, optional", "short": "kasuri methi", "amount": "1 tsp"},
-        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander leaves", "amount": "2 tbsp"}
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1½ tbsp"},
+        {"id": "ginger-julienne", "name": "Ginger, julienned", "short": "ginger juliennes", "amount": "¾ inch"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, optional", "short": "kasuri methi", "amount": "1½ tsp"},
+        {"id": "coriander", "name": "Coriander leaves, chopped", "short": "coriander leaves", "amount": "3 tbsp"}
       ]
     }
   ],
@@ -118,7 +118,7 @@
     {
       "type": "tip",
       "label": "Tip",
-      "text": "Onion → celery + hing, with a few mashed chickpeas and an extra tomato for body; ginger-garlic paste → ginger alone. Many chole masala brands aren't Jain, so check the label (or make your own). Canned chickpeas: skip the night prep and Step 1 — use 3 cups, rinsed, and simmer with 1½ cups water."
+      "text": "Onion → celery + hing, with a few mashed chickpeas and an extra tomato for body; ginger-garlic paste → ginger alone. Many chole masala brands aren't Jain, so check the label (or make your own). Canned chickpeas: skip the night prep and Step 1 — use 4½ cups (three 15-oz cans), rinsed, and simmer with 2 cups water. Best in the Instant Pot or a stovetop pressure cooker for the chickpeas — soft chole in under an hour — then finish on the stove."
     }
   ],
   "tags": [

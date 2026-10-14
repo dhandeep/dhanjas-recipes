@@ -15,41 +15,41 @@
   ],
   "meta": [
     "Prep: 10 min",
-    "Cook: 20 min",
-    "4 servings"
+    "Cook: 25 min",
+    "6 adult servings + toddler"
   ],
-  "protein": "~5–6g protein per serving — from curd",
+  "protein": "~5–6g protein per adult serving — from curd",
   "nightPrep": null,
   "ingredientGroups": [
     {
       "label": "Curry",
       "items": [
-        {"id": "ash-gourd", "name": "Ash gourd (kumbalanga), cubed", "short": "ash gourd", "amount": "1 cup"},
-        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "¼ tsp"},
+        {"id": "ash-gourd", "name": "Ash gourd (kumbalanga), cubed", "short": "ash gourd", "amount": "1½ cups"},
+        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "⅓ tsp"},
         {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
-        {"id": "water", "name": "Water", "short": "water", "amount": "½ cup"},
-        {"id": "curd", "name": "Curd (plain yogurt)", "short": "curd", "amount": "1½ cups", "portions": {"toddler": "2 tbsp", "main": "rest"}}
+        {"id": "water", "name": "Water", "short": "water", "amount": "¾ cup"},
+        {"id": "curd", "name": "Curd (plain yogurt)", "short": "curd", "amount": "2¼ cups", "portions": {"toddler": "2 tbsp", "main": "rest"}}
       ]
     },
     {
       "label": "For grinding",
       "items": [
-        {"id": "rice", "name": "Raw rice", "short": "raw rice", "amount": "1 tbsp"},
-        {"id": "coconut", "name": "Grated coconut", "short": "grated coconut", "amount": "½ cup", "portions": {"toddler": "1 tsp", "main": "rest"}},
-        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
-        {"id": "green-chili", "name": "Green chilies (adults)", "short": "green chilies", "amount": "3"},
+        {"id": "rice", "name": "Raw rice", "short": "raw rice", "amount": "1½ tbsp"},
+        {"id": "coconut", "name": "Grated coconut", "short": "grated coconut", "amount": "¾ cup", "portions": {"toddler": "1 tsp", "main": "rest"}},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "¾ tsp"},
+        {"id": "green-chili", "name": "Green chilies (adults)", "short": "green chilies", "amount": "3–4"},
         {"id": "red-chili", "name": "Dry red chili (adults)", "short": "dry red chili", "amount": "1"}
       ]
     },
     {
       "label": "For tempering",
       "items": [
-        {"id": "coconut-oil", "name": "Coconut oil", "short": "coconut oil", "amount": "2 tsp"},
-        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "1 tsp"},
+        {"id": "coconut-oil", "name": "Coconut oil", "short": "coconut oil", "amount": "1 tbsp"},
+        {"id": "mustard", "name": "Mustard seeds", "short": "mustard seeds", "amount": "1½ tsp"},
         {"id": "methi", "name": "Fenugreek seeds", "short": "fenugreek seeds", "amount": "¼ tsp"},
         {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
-        {"id": "red-chilies", "name": "Dry red chilies, broken", "short": "broken red chilies", "amount": "2"},
-        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "1 sprig"}
+        {"id": "red-chilies", "name": "Dry red chilies, broken", "short": "broken red chilies", "amount": "3"},
+        {"id": "curry-leaves", "name": "Curry leaves", "short": "curry leaves", "amount": "2 sprigs"}
       ]
     }
   ],
@@ -96,7 +96,7 @@
     {
       "type": "tip",
       "label": "Tip",
-      "text": "Cucumber works in place of ash gourd. Keep the fenugreek to ¼ tsp — more makes the curry bitter. Slightly sour curd gives the best flavour. Hing was added to the tempering."
+      "text": "Cucumber works in place of ash gourd. Keep the fenugreek to ¼ tsp even in a bigger batch — more makes the curry bitter. Slightly sour curd gives the best flavour. Hing was added to the tempering. Stovetop in a heavy pan — curd needs gentle, watched heat so it doesn't split."
     }
   ],
   "tags": [

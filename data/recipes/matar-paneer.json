@@ -14,8 +14,8 @@
   ],
   "meta": [
     "Prep: 10 min",
-    "Cook: ~30 min",
-    "300g paneer · 4 adult servings + toddler"
+    "Cook: ~35 min",
+    "450g paneer · 6 adult servings + toddler"
   ],
   "protein": "~14–16g protein per adult serving — from paneer and peas",
   "nightPrep": null,
@@ -23,33 +23,33 @@
     {
       "label": "Gravy base",
       "items": [
-        {"id": "oil-gravy", "name": "Oil", "short": "oil", "amount": "1 tbsp"},
-        {"id": "cardamom", "name": "Green cardamoms", "short": "green cardamoms", "amount": "2"},
-        {"id": "cloves", "name": "Cloves", "short": "cloves", "amount": "3"},
-        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1 tsp"},
-        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
-        {"id": "ginger-paste", "name": "Ginger paste", "short": "ginger paste", "amount": "2 tsp"},
-        {"id": "cashews", "name": "Cashews", "short": "cashews", "amount": "10–12"},
-        {"id": "celery", "name": "Celery, finely chopped", "short": "celery", "amount": "2 small stalks"}
+        {"id": "oil-gravy", "name": "Oil", "short": "oil", "amount": "1½ tbsp"},
+        {"id": "cardamom", "name": "Green cardamoms", "short": "green cardamoms", "amount": "3"},
+        {"id": "cloves", "name": "Cloves", "short": "cloves", "amount": "4"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "1½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼–½ tsp"},
+        {"id": "ginger-paste", "name": "Ginger paste", "short": "ginger paste", "amount": "1 tbsp"},
+        {"id": "cashews", "name": "Cashews", "short": "cashews", "amount": "15–18"},
+        {"id": "celery", "name": "Celery, finely chopped", "short": "celery", "amount": "3 small stalks"}
       ]
     },
     {
       "label": "Tomato & mild spices",
       "items": [
-        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "¼ tsp"},
-        {"id": "cumin-powder", "name": "Cumin powder", "short": "cumin powder", "amount": "½ tsp"},
-        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "½ tsp"},
-        {"id": "tomatoes", "name": "Large tomatoes, chopped", "short": "tomatoes", "amount": "3"},
+        {"id": "turmeric", "name": "Turmeric powder", "short": "turmeric", "amount": "½ tsp"},
+        {"id": "cumin-powder", "name": "Cumin powder", "short": "cumin powder", "amount": "¾ tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "¾ tsp"},
+        {"id": "tomatoes", "name": "Large tomatoes, chopped", "short": "tomatoes", "amount": "4–5"},
         {"id": "salt-gravy", "name": "Salt", "short": "salt", "amount": "to taste"}
       ]
     },
     {
       "label": "Peas & paneer",
       "items": [
-        {"id": "oil", "name": "Oil", "short": "oil", "amount": "1 tsp"},
-        {"id": "peas", "name": "Green peas, boiled", "short": "boiled peas", "amount": "1 cup"},
-        {"id": "water", "name": "Water", "short": "water", "amount": "1 cup"},
-        {"id": "paneer", "name": "Paneer, cubed", "short": "paneer cubes", "amount": "300g"},
+        {"id": "oil", "name": "Oil", "short": "oil", "amount": "1½ tsp"},
+        {"id": "peas", "name": "Green peas, boiled", "short": "boiled peas", "amount": "1½ cups"},
+        {"id": "water", "name": "Water", "short": "water", "amount": "1½ cups"},
+        {"id": "paneer", "name": "Paneer, cubed", "short": "paneer cubes", "amount": "450g", "portions": {"toddler": "25g", "main": "rest"}},
         {"id": "salt", "name": "Salt, adjust", "short": "salt", "amount": "to taste"},
         {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
       ]
@@ -57,12 +57,12 @@
     {
       "label": "Adult spice & finish",
       "items": [
-        {"id": "green-chili", "name": "Green chili, chopped (adults)", "short": "green chili", "amount": "1"},
-        {"id": "peppercorns", "name": "Black peppercorns (adults)", "short": "black peppercorns", "amount": "5–6"},
-        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "1 tsp"},
-        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1 tsp"},
-        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "½ tsp"},
-        {"id": "coriander", "name": "Fresh coriander, chopped", "short": "chopped coriander", "amount": "2 tbsp"}
+        {"id": "green-chili", "name": "Green chili, chopped (adults)", "short": "green chili", "amount": "1–2"},
+        {"id": "peppercorns", "name": "Black peppercorns (adults)", "short": "black peppercorns", "amount": "8"},
+        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "1–1½ tsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1½ tsp"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "¾ tsp"},
+        {"id": "coriander", "name": "Fresh coriander, chopped", "short": "chopped coriander", "amount": "3 tbsp"}
       ]
     }
   ],
@@ -87,15 +87,15 @@
         "Heat {@oil} in the same kadai; add {@peas}, mix and cook 2 min",
         "Add the blended gravy {from Step 1}; mix well and cook 1 min",
         "Add {@water}; mix and cook another minute or two",
-        "Add {@paneer} and {@salt}; mix gently and cook 2–3 min"
+        "Add {@paneer:main} and {@salt}; mix gently and cook 2–3 min"
       ]
     },
     {
       "type": "toddler",
       "label": "Toddler — pull her portion here (before chili, pepper and garam masala)",
       "items": [
-        "Scoop {=½ cup} of matar paneer into a small bowl — gravy, peas and a few paneer cubes",
-        "Stir in {@potato:toddler}; mash the peas lightly and cut the paneer into small pieces",
+        "Scoop {=⅓ cup} of the gravy and peas into a small pan; add {@paneer:toddler}, cut small, and warm through 1 min",
+        "Stir in {@potato:toddler} and mash the peas lightly",
         "Loosen with a splash of warm water if it's thick"
       ]
     },
@@ -114,7 +114,7 @@
     {
       "type": "tip",
       "label": "Tip",
-      "text": "The peppercorns, green chili and red chili powder used to go into the blended base; they now go into the finish, so the toddler's portion can come out spice-free and the adults lose nothing. Hing stands in for the depth onion would give (onion → celery + hing). Frozen peas work: boil them 3 min first."
+      "text": "The peppercorns, green chili and red chili powder used to go into the blended base; they now go into the finish, so the toddler's portion can come out spice-free and the adults lose nothing. Hing stands in for the depth onion would give (onion → celery + hing). Frozen peas work: boil them 3 min first. Best on the stovetop in a heavy kadai — the gravy needs stirring and reducing you can see."
     }
   ],
   "tags": [

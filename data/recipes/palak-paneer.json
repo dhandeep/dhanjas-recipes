@@ -13,9 +13,9 @@
     "Paneer · Spinach · Curry"
   ],
   "meta": [
-    "Prep: 15 min",
-    "Cook: ~25 min",
-    "200g paneer · 4 adult servings + toddler"
+    "Prep: 20 min",
+    "Cook: ~30 min",
+    "300g paneer · 6 adult servings + toddler"
   ],
   "protein": "~10–12g protein per adult serving — from paneer, spinach and cream",
   "nightPrep": null,
@@ -23,9 +23,9 @@
     {
       "label": "Palak & paneer",
       "items": [
-        {"id": "palak", "name": "Clean spinach leaves (palak)", "short": "spinach", "amount": "500g"},
-        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "½ tsp"},
-        {"id": "paneer", "name": "Paneer, 1-inch cubes", "short": "paneer", "amount": "200g", "portions": {"toddler": "25g", "main": "rest"}},
+        {"id": "palak", "name": "Clean spinach leaves (palak)", "short": "spinach", "amount": "750g"},
+        {"id": "sugar", "name": "Sugar", "short": "sugar", "amount": "¾ tsp"},
+        {"id": "paneer", "name": "Paneer, 1-inch cubes", "short": "paneer", "amount": "300g", "portions": {"toddler": "25g", "main": "rest"}},
         {"id": "oil-fry", "name": "Oil, to shallow fry paneer", "short": "oil", "amount": "optional"},
         {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "2 tbsp", "portions": {"toddler": "2 tbsp"}}
       ]
@@ -33,35 +33,35 @@
     {
       "label": "Tomato-cashew gravy",
       "items": [
-        {"id": "tomatoes", "name": "Medium tomatoes, chopped", "short": "tomatoes", "amount": "2–3"},
-        {"id": "ginger", "name": "Ginger", "short": "ginger", "amount": "1 inch"},
-        {"id": "cashews", "name": "Cashews, chopped", "short": "cashews", "amount": "1½ tbsp"},
-        {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "2 tbsp"},
-        {"id": "cumin", "name": "Cumin seeds (jeera)", "short": "cumin seeds", "amount": "1 tsp"},
-        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp"},
-        {"id": "tej-patta", "name": "Tej patta (bay leaf)", "short": "tej patta", "amount": "1"},
-        {"id": "black-cardamom", "name": "Black cardamom (badi elaichi)", "short": "black cardamom", "amount": "1–2"}
+        {"id": "tomatoes", "name": "Medium tomatoes, chopped", "short": "tomatoes", "amount": "3–4"},
+        {"id": "ginger", "name": "Ginger", "short": "ginger", "amount": "1½ inches"},
+        {"id": "cashews", "name": "Cashews, chopped", "short": "cashews", "amount": "2 tbsp"},
+        {"id": "ghee", "name": "Ghee or oil", "short": "ghee", "amount": "3 tbsp"},
+        {"id": "cumin", "name": "Cumin seeds (jeera)", "short": "cumin seeds", "amount": "1½ tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼–½ tsp"},
+        {"id": "tej-patta", "name": "Tej patta (bay leaf)", "short": "tej patta", "amount": "2"},
+        {"id": "black-cardamom", "name": "Black cardamom (badi elaichi)", "short": "black cardamom", "amount": "2"}
       ]
     },
     {
       "label": "Spices & cream",
       "items": [
-        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1 tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1½ tsp"},
         {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
-        {"id": "water", "name": "Water", "short": "water", "amount": "2 tbsp"},
-        {"id": "cream", "name": "Cream or beaten malai", "short": "cream", "amount": "½ cup"},
-        {"id": "green-chili", "name": "Green chilies, minced (adults)", "short": "green chilies", "amount": "2–3"},
-        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "½ tsp"},
-        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1 tsp"}
+        {"id": "water", "name": "Water", "short": "water", "amount": "3 tbsp"},
+        {"id": "cream", "name": "Cream or beaten malai", "short": "cream", "amount": "¾ cup"},
+        {"id": "green-chili", "name": "Green chilies, minced (adults)", "short": "green chilies", "amount": "3–4"},
+        {"id": "chili-powder", "name": "Red chili powder", "short": "red chili powder", "amount": "¾ tsp"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "1½ tsp"}
       ]
     },
     {
       "label": "Tadka & garnish",
       "items": [
-        {"id": "butter", "name": "Butter", "short": "butter", "amount": "1 tbsp"},
-        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "½ tsp"},
-        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "½ tsp"},
-        {"id": "fresh-cream", "name": "Fresh cream, to garnish", "short": "fresh cream", "amount": "1 tbsp"}
+        {"id": "butter", "name": "Butter", "short": "butter", "amount": "1½ tbsp"},
+        {"id": "kashmiri-chili", "name": "Kashmiri red chili powder", "short": "Kashmiri chili powder", "amount": "¾ tsp"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "¾ tsp"},
+        {"id": "fresh-cream", "name": "Fresh cream, to garnish", "short": "fresh cream", "amount": "1½ tbsp"}
       ]
     }
   ],
@@ -70,7 +70,7 @@
       "type": "step",
       "title": "Blanch and puree the palak",
       "items": [
-        "Start with 750–900g of bunched palak to get 500g of clean leaves; wash 3–4 times to remove all the sand",
+        "Start with 1.1–1.3 kg of bunched palak to get 750g of clean leaves; wash 3–4 times to remove all the sand",
         "Boil {@palak} in a little water with {@sugar} for 5–10 min",
         "Switch off the flame and move it straight into cold water — this stops the cooking and keeps the spinach green",
         "Once cool, puree it; keep aside",
@@ -113,7 +113,7 @@
     {
       "type": "tip",
       "label": "Tip",
-      "text": "The green chilies used to be blended into the tomato puree, and the chili powder and garam masala went in before the palak; they now go in after the toddler's portion is pulled, so nothing changes for the adults. Garam masala usually carries black pepper, so it waits too. The cold-water plunge is an extra step, but it's what keeps the palak bright green."
+      "text": "The green chilies used to be blended into the tomato puree, and the chili powder and garam masala went in before the palak; they now go in after the toddler's portion is pulled, so nothing changes for the adults. Garam masala usually carries black pepper, so it waits too. The cold-water plunge is an extra step, but it's what keeps the palak bright green. Best on the stovetop; the Instant Pot dulls the spinach's colour."
     }
   ],
   "tags": [
