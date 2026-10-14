@@ -1,14 +1,23 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "kumbalanga-pulissery",
   "category": "curry",
   "title": "Kumbalanga Pulissery",
   "name": "Kumbalanga Pulissery (Ash Gourd Mor Curry)",
   "subtitle": "Kerala's Onam sadya favourite — tender ash gourd in a coconut-spiced curd curry.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Yogurt · Curry"],
-  "meta": ["Prep: 10 min", "Cook: 20 min", "4 servings"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Yogurt · Curry"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: 20 min",
+    "4 servings"
+  ],
   "protein": "~5–6g protein per serving — from curd",
   "nightPrep": null,
   "ingredientGroups": [
@@ -89,5 +98,9 @@
       "label": "Tip",
       "text": "Cucumber works in place of ash gourd. Keep the fenugreek to ¼ tsp — more makes the curry bitter. Slightly sour curd gives the best flavour. Hing was added to the tempering."
     }
-  ]
+  ],
+  "tags": [
+    "Meal prep"
+  ],
+  "added": "2026-10-14"
 }

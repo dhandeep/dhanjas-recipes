@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "vegetable-pulav",
   "category": "rice",
   "title": "Vegetable Pulav",
   "subtitle": "One-pot pressure-cooker rice with tomato, capsicum and peas — best with kadhi or cold curd.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Rice · One-pot"],
-  "meta": ["Prep: 10 min", "Cook: ~20 min", "Serves 2–3 + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Rice · One-pot"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: ~20 min",
+    "Serves 2–3 + toddler"
+  ],
   "protein": "~7–8g protein per adult serving — from rice and peas",
   "nightPrep": null,
   "ingredientGroups": [
@@ -83,5 +92,9 @@
       "label": "Tip",
       "text": "The peppercorns, green chili, chili powder and garam masala used to go into the cooker; they now go in as a tadka after cooking, so her portion comes out mild and the adults get a brighter spice. Hing was added to the tempering."
     }
-  ]
+  ],
+  "tags": [
+    "Instant Pot"
+  ],
+  "added": "2026-10-14"
 }

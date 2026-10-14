@@ -1,14 +1,23 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "shengdana-chutney",
   "category": "powder",
   "title": "Shengdana Chutney",
   "name": "Maharashtrian Shengdana Chutney",
   "subtitle": "A quick, coarse roasted-peanut chutney powder — sprinkle it dry, or loosen it with curd or oil.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Peanut · Chutney Powder"],
-  "meta": ["Prep: 10 min", "Cook: 10 min", "Yield: ~200g (keeps 3–4 wks)"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Peanut · Chutney Powder"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: 10 min",
+    "Yield: ~200g (keeps 3–4 wks)"
+  ],
   "protein": "~4g protein per 2 tbsp — from peanuts",
   "nightPrep": null,
   "ingredientGroups": [
@@ -66,5 +75,7 @@
       "label": "Tip",
       "text": "Garlic → hing, bloomed with the chilies. Variations: add dry-roasted coconut, curry leaves, sesame, coriander seeds or mustard seeds. To use it 'wet', mix 2 tbsp with curd or a little oil."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

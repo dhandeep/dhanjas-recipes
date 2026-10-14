@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "khaman-dhokla",
   "category": "breakfast",
   "title": "Khaman Dhokla",
   "subtitle": "Soft, spongy steamed besan cake leavened with Eno, soaked in a sweet mustard-seed tempering.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Besan · Steamed"],
-  "meta": ["Prep: 5 min", "Cook: 20 min", "Serves 3–4"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Besan · Steamed"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 20 min",
+    "Serves 3–4"
+  ],
   "protein": "~7–8g protein per serving — from besan",
   "nightPrep": null,
   "ingredientGroups": [
@@ -92,5 +101,7 @@
       "label": "Tip",
       "text": "Add the Eno only when the steamer is boiling and the tin is greased — it loses its lift within a minute. Her katori skips the chili: give her the soft dhokla with a drizzle of the tempering water, without chili pieces. Swap the lemon for ⅓ tsp citric acid if you like."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

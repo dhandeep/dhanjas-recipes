@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "black-eyed-peas-curry",
   "category": "curry",
   "title": "Black Eyed Peas Curry with Rice",
   "subtitle": "Instant Pot lobia in a coconut-tomato gravy, cooked pot-in-pot with the rice.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Black Eyed Peas · Curry"],
-  "meta": ["Night prep: soak peas", "Cook: ~30 min (Instant Pot)", "6 servings"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Black Eyed Peas · Curry"
+  ],
+  "meta": [
+    "Night prep: soak peas",
+    "Cook: ~30 min (Instant Pot)",
+    "6 servings"
+  ],
   "protein": "~8–10g protein per serving — from black eyed peas",
   "nightPrep": {
     "label": "Night Before",
@@ -107,5 +116,11 @@
       "label": "Tip",
       "text": "Onion → celery + hing; garlic → extra ginger. The chili powder and garam masala now go in as a tadka after cooking, so her portion comes out mild. No time to soak? Pressure cook 20 min with natural release, and use brown rice in the pot-in-pot bowl instead."
     }
-  ]
+  ],
+  "tags": [
+    "Night prep",
+    "Meal prep",
+    "Instant Pot"
+  ],
+  "added": "2026-10-14"
 }

@@ -1,14 +1,23 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "curd-rice",
   "category": "rice",
   "title": "Curd Rice",
   "name": "Curd Rice (Thayir Sadam)",
   "subtitle": "Soft rice mashed into cool curd, with grated cucumber and a crackling mustard-dal tempering.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Rice · Yogurt"],
-  "meta": ["Prep: 5 min", "Cook: 30 min (incl. cooling)", "Serves 2 adults + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Rice · Yogurt"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 30 min (incl. cooling)",
+    "Serves 2 adults + toddler"
+  ],
   "protein": "~10–12g protein per adult serving — from curd, rice and dals",
   "nightPrep": null,
   "ingredientGroups": [
@@ -89,5 +98,9 @@
       "label": "Tip",
       "text": "The carrot in the original veggie mix now goes in her bowl only; adults get cucumber (or bottle gourd). Curd rice firms up as it sits — loosen with a splash of milk or more curd before serving, and refrigerate leftovers up to a day."
     }
-  ]
+  ],
+  "tags": [
+    "Instant Pot"
+  ],
+  "added": "2026-10-14"
 }
