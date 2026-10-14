@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "shahi-paneer",
   "category": "curry",
   "title": "Shahi Paneer",
   "subtitle": "Paneer cubes in a rich tomato, cashew and malai gravy — quick, creamy and restaurant-style.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Paneer · Curry"],
-  "meta": ["Soak: 30 min (cashews)", "Cook: ~25 min", "250g paneer · 3 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Paneer · Curry"
+  ],
+  "meta": [
+    "Soak: 30 min (cashews)",
+    "Cook: ~25 min",
+    "250g paneer · 3 adult servings + toddler"
+  ],
   "protein": "~13–15g protein per adult serving — from paneer",
   "nightPrep": null,
   "ingredientGroups": [
@@ -96,5 +105,9 @@
       "label": "Tip",
       "text": "The chilies now go in after the gravy is cooked (the original added them with the tomato), so the toddler's portion can come out first. Ginger-green chili paste was split: ginger goes in the gravy, the chili in the adult finish. Frozen paneer: soak the cubes in hot water 30 min first — it makes them creamier. No Kashmiri chili? A pinch of red food colour gives the same colour. For a richer gravy, use up to 2 tbsp cashews, and be generous with the ghee for that restaurant taste."
     }
-  ]
+  ],
+  "tags": [
+    "Meal prep"
+  ],
+  "added": "2026-10-14"
 }

@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "paneer-manchurian",
   "category": "snack",
   "title": "Paneer Manchurian",
   "subtitle": "Restaurant-style Indo-Chinese starter — crisp fried paneer tossed in a sweet, tangy, peppery Manchurian sauce.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Paneer · Indo-Chinese"],
-  "meta": ["Prep: 10 min", "Cook: ~20 min", "3 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Paneer · Indo-Chinese"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: ~20 min",
+    "3 adult servings + toddler"
+  ],
   "protein": "~12–14g protein per adult serving — from paneer",
   "nightPrep": null,
   "ingredientGroups": [
@@ -111,5 +120,7 @@
       "label": "Tip",
       "text": "Garlic → extra ginger + hing; spring onion whites → celery; spring onion greens → celery leaves or coriander. Most ketchups aren't Jain — use a no-onion-no-garlic one. Air fryer instead of deep frying: coat the cubes in a thick batter, spray with oil and cook in the Ninja Crispi at 360°F for 8–10 min, shaking once. Serve with noodles or fried rice."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

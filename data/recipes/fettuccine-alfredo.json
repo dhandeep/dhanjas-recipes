@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "fettuccine-alfredo",
   "category": "snack",
   "title": "Fettuccine Alfredo",
   "subtitle": "Fettuccine in a rich, cheesy cream sauce — lightened with ghee, in the house's smaller batch.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Pasta · Cheese"],
-  "meta": ["Prep: 5 min", "Cook: 15 min", "2 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Pasta · Cheese"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 15 min",
+    "2 adult servings + toddler"
+  ],
   "protein": "~25–28g protein per adult serving — from pasta and cheese",
   "nightPrep": null,
   "ingredientGroups": [
@@ -78,5 +87,10 @@
       "label": "Tip",
       "text": "This is the household's version from the notes on the printout: a third of the original batch (24 oz pasta), with ghee in place of the 1 cup butter and less cream and cheese. Garlic salt → salt + a pinch of hing. Traditional Parmesan and Romano use animal rennet, so pick vegetarian (microbial-rennet) cheese."
     }
-  ]
+  ],
+  "tags": [
+    "Quick",
+    "High-protein"
+  ],
+  "added": "2026-10-14"
 }

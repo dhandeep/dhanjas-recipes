@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "apple-cobbler-crumble",
   "category": "sweet",
   "title": "Apple Cobbler Crumble",
   "subtitle": "A super-easy layered apple cobbler — the fruit juices bake into the cinnamon crumb.",
-  "badges": ["Jain Vegetarian", "Toddler-friendly"],
-  "labels": ["Apple · Baked"],
-  "meta": ["Prep: 20 min", "Bake: 30–35 min", "Serves 9"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-friendly"
+  ],
+  "labels": [
+    "Apple · Baked"
+  ],
+  "meta": [
+    "Prep: 20 min",
+    "Bake: 30–35 min",
+    "Serves 9"
+  ],
   "protein": "~2g protein per serving",
   "nightPrep": null,
   "ingredientGroups": [
@@ -66,5 +75,9 @@
       "label": "Tip",
       "text": "Sugar and butter are the reduced amounts from the notes on the printout (the original used 1 cup sugar and ½ cup butter). No self-rising flour? Use 1 cup all-purpose flour + 1½ tsp baking powder + ¼ tsp salt. Fresh peaches work in place of apples."
     }
-  ]
+  ],
+  "tags": [
+    "Oven"
+  ],
+  "added": "2026-10-14"
 }

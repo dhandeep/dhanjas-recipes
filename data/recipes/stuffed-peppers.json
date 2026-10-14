@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "stuffed-peppers",
   "category": "rice",
   "title": "Mexican Stuffed Peppers",
   "subtitle": "Roasted bell peppers filled with pinto beans, brown rice and tomatoes, baked under melted cheese.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Beans · Rice · Baked"],
-  "meta": ["Prep: 20 min", "Cook: ~1 hr", "Makes 8 stuffed halves (4 adult servings)"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Beans · Rice · Baked"
+  ],
+  "meta": [
+    "Prep: 20 min",
+    "Cook: ~1 hr",
+    "Makes 8 stuffed halves (4 adult servings)"
+  ],
   "protein": "~13–15g protein per adult serving — from beans, rice and cheese",
   "nightPrep": null,
   "ingredientGroups": [
@@ -90,5 +99,9 @@
       "label": "Tip",
       "text": "Onion → celery + hing; garlic → more hing. US chili powder blends usually aren't Jain, so Kashmiri chili + oregano stand in. Store salsa isn't Jain either — top with avocado or sour cream. Make ahead: cook the rice and roast the peppers early, or stuff completely and refrigerate, adding a few minutes to the bake. Leftover filling is a good side dish."
     }
-  ]
+  ],
+  "tags": [
+    "Oven"
+  ],
+  "added": "2026-10-14"
 }

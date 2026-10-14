@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "raisin-peanut-upma",
   "category": "breakfast",
   "title": "Raisin & Peanut Upma",
   "subtitle": "Soft rava upma with golden-fried peanuts, raisins and urad dal, moulded and finished with lemon.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Semolina"],
-  "meta": ["Night prep: none", "Morning: 25 min", "Serves 2 adults + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Semolina"
+  ],
+  "meta": [
+    "Night prep: none",
+    "Morning: 25 min",
+    "Serves 2 adults + toddler"
+  ],
   "protein": "~9–11g protein per adult serving — from semolina, peanuts and urad dal",
   "nightPrep": null,
   "ingredientGroups": [
@@ -78,5 +87,7 @@
       "label": "Tip",
       "text": "This is the ¾ batch, sized for two, from the note on the original card (1 cup rava, 3 cups water). The green chilies and curry leaves now go in after the rava is roasted, so her portion comes out first. Hing was added to the tempering."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

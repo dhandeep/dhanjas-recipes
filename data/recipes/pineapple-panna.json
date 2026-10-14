@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "pineapple-panna",
   "category": "drink",
   "title": "Pineapple Panna",
   "subtitle": "Pineapple cooked with sugar and ginger, ground with saffron into a bright, tangy summer concentrate.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Pineapple · Summer"],
-  "meta": ["Prep: 5 min", "Cook: 15–20 min", "Concentrate for 10–15 glasses"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Pineapple · Summer"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 15–20 min",
+    "Concentrate for 10–15 glasses"
+  ],
   "protein": "A cooler, not a protein source",
   "nightPrep": null,
   "ingredientGroups": [
@@ -78,5 +87,7 @@
       "label": "Tip",
       "text": "The green chili used to cook with the pineapple; it's now ground in raw at the end, so the toddler's share stays mild. Part of Chef Ranveer Brar's panna trio, with aam panna and guava panna."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

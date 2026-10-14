@@ -1,13 +1,21 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "iced-mocha",
   "category": "drink",
   "title": "Iced Mocha",
   "subtitle": "Chocolate milk and coffee syrup over ice, crowned with vanilla ice cream and choco chips.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Coffee · Chocolate"],
-  "meta": ["Prep: 5 min", "Makes 2 glasses"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Coffee · Chocolate"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Makes 2 glasses"
+  ],
   "protein": "~7g protein per glass — from milk and ice cream",
   "nightPrep": null,
   "ingredientGroups": [
@@ -60,5 +68,9 @@
       "label": "Tip",
       "text": "Ranveer Brar's card lists only ingredients; the method here is built around them, and the ice is added to make it an iced mocha. Chocolate syrup has a trace of caffeine, so keep her share small."
     }
-  ]
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-10-14"
 }

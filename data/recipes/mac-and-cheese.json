@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "mac-and-cheese",
   "category": "snack",
   "title": "15-Minute Veggie Mac and Cheese",
   "subtitle": "A quick baked macaroni and cheese packed with broccoli under a buttery, golden crumb.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Pasta · Cheese"],
-  "meta": ["Prep: 5 min", "Cook: 10 min", "2 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Pasta · Cheese"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 10 min",
+    "2 adult servings + toddler"
+  ],
   "protein": "~30–35g protein per adult serving — from cheddar, milk and pasta",
   "nightPrep": null,
   "ingredientGroups": [
@@ -81,5 +90,11 @@
       "label": "Tip",
       "text": "Sriracha → a pinch of Kashmiri chili (sriracha isn't Jain). Seasoned breadcrumbs → plain crumbs + dried herbs, since seasoned ones usually aren't Jain. The carrot in the original veggie mix → sweet corn for the adults; the carrot goes in her ramekin only. No Ready Pasta? Boil 4 oz dry macaroni until just al dente."
     }
-  ]
+  ],
+  "tags": [
+    "Quick",
+    "High-protein",
+    "Oven"
+  ],
+  "added": "2026-10-14"
 }

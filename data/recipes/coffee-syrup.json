@@ -1,13 +1,21 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "coffee-syrup",
   "category": "drink",
   "title": "Coffee Syrup",
   "subtitle": "A cardamom-scented coffee decoction syrup — the base for iced coffee, mocha, freakshakes and frappés.",
-  "badges": ["Jain Vegetarian"],
-  "labels": ["Coffee · Make-ahead"],
-  "meta": ["Prep: 2 min", "Cook: 10 min", "Makes ~1½ cups (10+ drinks)"],
+  "badges": [
+    "Jain Vegetarian"
+  ],
+  "labels": [
+    "Coffee · Make-ahead"
+  ],
+  "meta": [
+    "Prep: 2 min",
+    "Cook: 10 min",
+    "Makes ~1½ cups (10+ drinks)"
+  ],
   "protein": "A syrup, not a protein source",
   "nightPrep": null,
   "ingredientGroups": [
@@ -55,5 +63,9 @@
       "label": "Tip",
       "text": "From Chef Ranveer Brar's cold coffee set. Use it in the iced coffee, iced mocha, coffee freakshake and frappuccino recipes. Caster sugar dissolves fastest; regular sugar works with an extra minute of stirring."
     }
-  ]
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-10-14"
 }

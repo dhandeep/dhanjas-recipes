@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "palak-paneer",
   "category": "curry",
   "title": "Satvik Palak Paneer",
   "subtitle": "Pureed spinach cooked in a tomato-cashew base, with paneer, cream and a Kashmiri chili butter tadka.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Paneer · Spinach · Curry"],
-  "meta": ["Prep: 15 min", "Cook: ~25 min", "200g paneer · 4 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Paneer · Spinach · Curry"
+  ],
+  "meta": [
+    "Prep: 15 min",
+    "Cook: ~25 min",
+    "200g paneer · 4 adult servings + toddler"
+  ],
   "protein": "~10–12g protein per adult serving — from paneer, spinach and cream",
   "nightPrep": null,
   "ingredientGroups": [
@@ -106,5 +115,9 @@
       "label": "Tip",
       "text": "The green chilies used to be blended into the tomato puree, and the chili powder and garam masala went in before the palak; they now go in after the toddler's portion is pulled, so nothing changes for the adults. Garam masala usually carries black pepper, so it waits too. The cold-water plunge is an extra step, but it's what keeps the palak bright green."
     }
-  ]
+  ],
+  "tags": [
+    "Meal prep"
+  ],
+  "added": "2026-10-14"
 }

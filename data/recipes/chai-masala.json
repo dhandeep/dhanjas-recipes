@@ -1,14 +1,23 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "chai-masala",
   "category": "powder",
   "title": "Chai Masala",
   "name": "Chai Masala Powder",
   "subtitle": "A roasted cardamom, clove, pepper and dry ginger blend for masala tea — plus how to brew 2 cups.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Spice Blend · Tea"],
-  "meta": ["Prep: 5 min", "Roast: 5 min", "Yield: 1 box (~1 cup)"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Spice Blend · Tea"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Roast: 5 min",
+    "Yield: 1 box (~1 cup)"
+  ],
   "protein": "A pantry blend — ½ tsp flavours 2 cups of chai",
   "nightPrep": null,
   "ingredientGroups": [
@@ -85,5 +94,7 @@
       "label": "Tip",
       "text": "Keep the roast low and slow — the spices burn quickly and turn bitter. A coarse grind gives the chai more body than a fine powder."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

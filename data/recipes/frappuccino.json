@@ -1,13 +1,21 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "frappuccino",
   "category": "drink",
   "title": "Coffee Frappuccino",
   "subtitle": "Coffee syrup and condensed milk blitzed with ice into a thick, slushy café frappé.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Coffee · Blended"],
-  "meta": ["Prep: 3 min", "Makes 1 glass"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Coffee · Blended"
+  ],
+  "meta": [
+    "Prep: 3 min",
+    "Makes 1 glass"
+  ],
   "protein": "~3g protein per glass — from condensed milk",
   "nightPrep": null,
   "ingredientGroups": [
@@ -54,5 +62,9 @@
       "label": "Tip",
       "text": "Ranveer Brar's card lists only ingredients; the method here is built around them. A good blender makes the texture — pulse a few times first to break the ice, then run it on high."
     }
-  ]
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-10-14"
 }

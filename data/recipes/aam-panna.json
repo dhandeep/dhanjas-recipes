@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "aam-panna",
   "category": "drink",
   "title": "Aam Panna",
   "subtitle": "Raw mango cooked with jaggery and ginger into a tangy concentrate — the classic summer cooler.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Raw Mango · Summer"],
-  "meta": ["Prep: 5 min", "Cook: 20–25 min", "Concentrate for 10–15 glasses"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Raw Mango · Summer"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 20–25 min",
+    "Concentrate for 10–15 glasses"
+  ],
   "protein": "A cooler, not a protein source",
   "nightPrep": null,
   "ingredientGroups": [
@@ -77,5 +86,7 @@
       "label": "Tip",
       "text": "The green chili used to cook with the mango; it's now ground in afterwards, so the toddler's share stays mild. From Chef Ranveer Brar's panna trio — see also guava panna and pineapple panna, all seasoned with the same panna masala."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

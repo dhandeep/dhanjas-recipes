@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "banana-bread-muffins",
   "category": "sweet",
   "title": "Eggless Banana Bread Muffins",
   "subtitle": "One-bowl banana bread muffins — moist, flavourful and egg-free, with an optional vanilla glaze.",
-  "badges": ["Jain Vegetarian", "Toddler-friendly"],
-  "labels": ["Banana · Baked"],
-  "meta": ["Prep: 10 min", "Bake: 20 min", "Makes 12 muffins"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-friendly"
+  ],
+  "labels": [
+    "Banana · Baked"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Bake: 20 min",
+    "Makes 12 muffins"
+  ],
   "protein": "~2–3g protein per muffin",
   "nightPrep": null,
   "ingredientGroups": [
@@ -85,5 +94,9 @@
       "label": "Tip",
       "text": "Flour: all-purpose, whole wheat or gluten-free all work. Oil: any light-tasting oil — canola, coconut or vegetable. Sugar: raw cane or coconut sugar instead of brown sugar is fine."
     }
-  ]
+  ],
+  "tags": [
+    "Oven"
+  ],
+  "added": "2026-10-14"
 }

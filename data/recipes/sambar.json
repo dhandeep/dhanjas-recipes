@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "sambar",
   "category": "dal",
   "title": "Sambar",
   "subtitle": "A hearty South Indian toor dal and vegetable stew with tamarind and sambar powder — for idli, dosa or rice.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Lentil · Dal"],
-  "meta": ["Prep: 15 min", "Cook: ~30 min", "4 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Lentil · Dal"
+  ],
+  "meta": [
+    "Prep: 15 min",
+    "Cook: ~30 min",
+    "4 adult servings + toddler"
+  ],
   "protein": "~7–9g protein per adult serving — from toor dal",
   "nightPrep": null,
   "ingredientGroups": [
@@ -107,5 +116,10 @@
       "label": "Tip",
       "text": "Pearl onions → extra pumpkin, for the same soft sweetness, plus hing in the tempering. The original's potato now cooks only for the toddler. Use the site's own sambar powder recipe — store sambar powders often aren't Jain."
     }
-  ]
+  ],
+  "tags": [
+    "Meal prep",
+    "Instant Pot"
+  ],
+  "added": "2026-10-14"
 }

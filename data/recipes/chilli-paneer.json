@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "chilli-paneer",
   "category": "snack",
   "title": "Chilli Paneer",
   "subtitle": "Tangy, spicy and a little sweet — shallow-fried paneer and bell peppers in an Indo-Chinese sauce.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Paneer · Indo-Chinese"],
-  "meta": ["Prep: 10 min", "Cook: ~20 min", "400g paneer · 4 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Paneer · Indo-Chinese"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: ~20 min",
+    "400g paneer · 4 adult servings + toddler"
+  ],
   "protein": "~17–19g protein per adult serving — from paneer",
   "nightPrep": null,
   "ingredientGroups": [
@@ -105,5 +114,9 @@
       "label": "Tip",
       "text": "Many red chili sauces and ketchups aren't Jain — use no-onion-no-garlic ones. The chili powder and pepper now go on after her cubes are pulled, and the chili sauce after her spoon of sauce. Air fryer option: toss the coated cubes with 1 tsp of the oil and cook in the Ninja Crispi at 360°F for 8–10 min, shaking once."
     }
-  ]
+  ],
+  "tags": [
+    "High-protein"
+  ],
+  "added": "2026-10-14"
 }

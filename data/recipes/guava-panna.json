@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "guava-panna",
   "category": "drink",
   "title": "Guava Panna",
   "subtitle": "Guava simmered with sugar and a little chili into a sweet-spicy concentrate, served over ice with lime.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Guava · Summer"],
-  "meta": ["Prep: 5 min", "Cook: 15–20 min", "Concentrate for 10–15 glasses"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Guava · Summer"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Cook: 15–20 min",
+    "Concentrate for 10–15 glasses"
+  ],
   "protein": "A cooler, not a protein source",
   "nightPrep": null,
   "ingredientGroups": [
@@ -77,5 +86,7 @@
       "label": "Tip",
       "text": "The dry red chilies used to cook with the guava from the start; they now go in after her share is scooped. For a silkier drink, push the adult puree through a sieve too — guava seeds are hard. Part of Chef Ranveer Brar's panna trio, with aam panna and pineapple panna."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

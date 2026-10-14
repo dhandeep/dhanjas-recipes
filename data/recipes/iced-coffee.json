@@ -1,13 +1,21 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "iced-coffee",
   "category": "drink",
   "title": "Home-Style Iced Coffee",
   "subtitle": "Coffee syrup shaken frothy with a pinch of salt, ice, cold milk and a little cream.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Coffee · Cold"],
-  "meta": ["Prep: 3 min", "Makes 1 glass"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Coffee · Cold"
+  ],
+  "meta": [
+    "Prep: 3 min",
+    "Makes 1 glass"
+  ],
   "protein": "~3g protein per glass — from milk",
   "nightPrep": null,
   "ingredientGroups": [
@@ -61,5 +69,9 @@
       "label": "Tip",
       "text": "The pinch of salt rounds off the bitterness — don't skip it. For the lighter iced coffee from the same card: shake 2 tbsp coffee syrup with ½ tbsp cream and ¼ cup milk, then pour over 6–7 ice cubes."
     }
-  ]
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-10-14"
 }

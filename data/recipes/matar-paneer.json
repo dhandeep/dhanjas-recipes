@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "matar-paneer",
   "category": "curry",
   "title": "Matar Paneer",
   "subtitle": "Soft paneer and green peas in a cashew-tomato gravy — spicy, tangy and a little sweet.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Paneer · Curry"],
-  "meta": ["Prep: 10 min", "Cook: ~30 min", "300g paneer · 4 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Paneer · Curry"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Cook: ~30 min",
+    "300g paneer · 4 adult servings + toddler"
+  ],
   "protein": "~14–16g protein per adult serving — from paneer and peas",
   "nightPrep": null,
   "ingredientGroups": [
@@ -107,5 +116,9 @@
       "label": "Tip",
       "text": "The peppercorns, green chili and red chili powder used to go into the blended base; they now go into the finish, so the toddler's portion can come out spice-free and the adults lose nothing. Hing stands in for the depth onion would give (onion → celery + hing). Frozen peas work: boil them 3 min first."
     }
-  ]
+  ],
+  "tags": [
+    "Meal prep"
+  ],
+  "added": "2026-10-14"
 }

@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "chole",
   "category": "curry",
   "title": "Punjabi Chole",
   "subtitle": "Spicy, deeply flavoured chickpea curry — stovetop or Instant Pot — for rice, poori, naan or bhatura.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Chickpeas · Curry"],
-  "meta": ["Night prep: soak chickpeas", "Cook: ~1 hr", "4 adult servings + toddler"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Chickpeas · Curry"
+  ],
+  "meta": [
+    "Night prep: soak chickpeas",
+    "Cook: ~1 hr",
+    "4 adult servings + toddler"
+  ],
   "protein": "~10–12g protein per adult serving — from chickpeas",
   "nightPrep": {
     "label": "Night Before",
@@ -111,5 +120,11 @@
       "label": "Tip",
       "text": "Onion → celery + hing, with a few mashed chickpeas and an extra tomato for body; ginger-garlic paste → ginger alone. Many chole masala brands aren't Jain, so check the label (or make your own). Canned chickpeas: skip the night prep and Step 1 — use 3 cups, rinsed, and simmer with 1½ cups water."
     }
-  ]
+  ],
+  "tags": [
+    "Night prep",
+    "Meal prep",
+    "Instant Pot"
+  ],
+  "added": "2026-10-14"
 }

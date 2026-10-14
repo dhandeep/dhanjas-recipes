@@ -1,13 +1,22 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "panna-masala",
   "category": "powder",
   "title": "Panna Masala",
   "subtitle": "A roasted cumin, fennel and black pepper powder that seasons aam, guava and pineapple panna.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Spice Blend · Panna"],
-  "meta": ["Prep: 5 min", "Roast: 10 min", "Yield: ~¾ cup"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Spice Blend · Panna"
+  ],
+  "meta": [
+    "Prep: 5 min",
+    "Roast: 10 min",
+    "Yield: ~¾ cup"
+  ],
   "protein": "A pantry blend — 1 tsp seasons a glass of panna",
   "nightPrep": null,
   "ingredientGroups": [
@@ -56,5 +65,7 @@
       "label": "Tip",
       "text": "Used in the aam panna, guava panna and pineapple panna recipes: 1 tsp per glass. It's also good sprinkled over chaas, fruit or lemonade."
     }
-  ]
+  ],
+  "tags": [],
+  "added": "2026-10-14"
 }

@@ -1,13 +1,21 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "coffee-freakshake",
   "category": "drink",
   "title": "Coffee Freakshake",
   "subtitle": "An over-the-top Oreo coffee shake in a chocolate-lined glass, piled with ice cream and whipped cream.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Coffee · Shake"],
-  "meta": ["Prep: 10 min", "Makes 1 tall glass (or 2 small)"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Coffee · Shake"
+  ],
+  "meta": [
+    "Prep: 10 min",
+    "Makes 1 tall glass (or 2 small)"
+  ],
   "protein": "~12g protein per glass — from milk and ice cream",
   "nightPrep": null,
   "ingredientGroups": [
@@ -70,5 +78,9 @@
       "label": "Tip",
       "text": "Ranveer Brar's card lists only ingredients; the method here is built around them. Oreos are egg-free. For a thicker shake, freeze the milk in an ice tray first."
     }
-  ]
+  ],
+  "tags": [
+    "Quick"
+  ],
+  "added": "2026-10-14"
 }
