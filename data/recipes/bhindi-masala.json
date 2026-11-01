@@ -1,0 +1,111 @@
+{
+  "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
+  "slug": "bhindi-masala",
+  "category": "curry",
+  "title": "Bhindi Masala (Jain)",
+  "subtitle": "Okra sautéed until dry, then folded into a jammy tomato-cashew masala with amchur and kasuri methi.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Okra · Sabji"
+  ],
+  "meta": [
+    "Prep: 15 min (+ 20 min drying okra)",
+    "Cook: 35 min",
+    "Serves 2 adults × 3 meals + toddler"
+  ],
+  "protein": "~3g protein per adult serving (low — pair with dal, dahi or paneer)",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Okra and tempering",
+      "items": [
+        {"id": "okra", "name": "Okra (bhindi)", "short": "okra", "amount": "450g", "portions": {"toddler": "50g", "main": "rest"}},
+        {"id": "oil", "name": "Neutral oil (sunflower or peanut)", "short": "oil", "amount": "3 tbsp"},
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "1 tbsp"},
+        {"id": "cumin", "name": "Cumin seeds", "short": "cumin seeds", "amount": "½ tsp"},
+        {"id": "hing", "name": "Hing (asafoetida)", "short": "hing", "amount": "¼ tsp"}
+      ]
+    },
+    {
+      "label": "Tomato masala",
+      "items": [
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "2 tsp"},
+        {"id": "tomatoes", "name": "Tomatoes, finely chopped", "short": "tomatoes", "amount": "3 large"},
+        {"id": "cashew-powder", "name": "Cashew powder (or ground cashews)", "short": "cashew powder", "amount": "2 tbsp"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "½ tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1½ tsp"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "1 tsp", "portions": {"toddler": "a pinch", "main": "1 tsp"}}
+      ]
+    },
+    {
+      "label": "Finishing",
+      "items": [
+        {"id": "chili-powder", "name": "Kashmiri chili powder", "short": "Kashmiri chili powder", "amount": "1 tsp (adults)"},
+        {"id": "garam-masala", "name": "Garam masala", "short": "garam masala", "amount": "¾ tsp"},
+        {"id": "jaggery", "name": "Jaggery powder", "short": "jaggery", "amount": "1 tsp"},
+        {"id": "amchur", "name": "Amchur (dry mango powder)", "short": "amchur", "amount": "1 tsp"},
+        {"id": "kasuri-methi", "name": "Kasuri methi, crushed", "short": "kasuri methi", "amount": "1½ tsp"},
+        {"id": "coriander-leaves", "name": "Fresh coriander, chopped", "short": "fresh coriander", "amount": "3 tbsp"},
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "3 tbsp", "portions": {"toddler": "3 tbsp"}}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Dry and sauté the okra",
+      "items": [
+        "Wash {@okra} and spread on a clean towel; let it dry fully, at least 20 min — moisture is what makes it slimy",
+        "Trim stems and tips; cut into 1-inch pieces",
+        "Heat {@oil} in a wide kadai on medium-high; add the pieces in a single layer (two batches if crowded)",
+        "Sauté uncovered {10 min}, stirring often, until the sticky strings disappear and the edges are lightly browned",
+        "Set aside on a plate; keep the same pan"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Tomato masala",
+      "items": [
+        "Heat {@ghee} in the same pan on medium",
+        "Add {@cumin}; when it sizzles, add {@hing}",
+        "Add {@ginger}; cook {20 sec}",
+        "Add {@tomatoes} and {@cashew-powder}; cook uncovered {8 min}, mashing, until jammy and the ghee separates (splash in water {2–3 tbsp} if it sticks)",
+        "Add {@turmeric} and {@coriander-powder}; cook {1 min}"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull portion here (before chili and garam masala)",
+      "items": [
+        "Scoop out the masala {3–4 tbsp} into a small pan",
+        "Cut {@okra:toddler|her share of the sautéed okra} small and add it with {@salt:toddler}",
+        "Cover and cook on low {3 min} until soft",
+        "Optional: stir in {@potato:toddler|finely diced boiled potato} for extra bulk"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Finish the adult masala",
+      "items": [
+        "Add {@chili-powder} and {@garam-masala} to the main pan; cook {30 sec} on low",
+        "Stir in {@salt:main} and {@jaggery}",
+        "Return {@okra:main|the remaining sautéed okra}; fold gently so it doesn't mash",
+        "Add {@amchur} and {@kasuri-methi}; cook uncovered on low {3 min} until the masala clings",
+        "Garnish with {@coriander-leaves}; cool and refrigerate up to 3 days, reheating in a pan"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Keep okra away from steam: dry it fully, sauté it before it meets the tomatoes, and keep the pan uncovered. onion → tomato cooked until jammy + cashew powder + hing, so the masala needs no extra thickener."
+    }
+  ],
+  "tags": [
+    "Meal prep"
+  ],
+  "added": "2026-10-31"
+}
