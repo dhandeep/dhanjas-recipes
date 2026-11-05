@@ -25,6 +25,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      ingest: ${{ steps.ingest.outcome }}
     steps:
       - uses: actions/checkout@v4
 
@@ -35,7 +37,11 @@ jobs:
       - name: Tests
         run: python -m unittest discover -s tools
 
+      # A rejected inbox file stays in inbox/ and fails the run (see the inbox job below),
+      # but it must not stop the rest of the site from being built and deployed.
       - name: Ingest inbox/
+        id: ingest
+        continue-on-error: true
         run: python tools/recipes.py ingest
 
       - name: Validate and build
@@ -104,3 +110,13 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Turns the run red when an inbox recipe was rejected, after the site has deployed.
+  inbox:
+    needs: [build, deploy]
+    if: always() && needs.build.outputs.ingest == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::error::A recipe in inbox/ was rejected and stays there. The errors are in the build job's 'Ingest inbox/' step. The rest of the site was still deployed."
+          exit 1

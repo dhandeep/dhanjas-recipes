@@ -1,12 +1,17 @@
 {
-  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "$schema": "../../schema/recipe.schema.json",
   "format": 3,
   "slug": "soya-chukauni",
   "category": "snack",
   "title": "High-Protein Soya Chukauni",
   "subtitle": "Spiced soya mini chunks tossed in a smoky mustard-oil Greek yogurt dressing.",
-  "badges": ["Jain Vegetarian", "Toddler-adapted"],
-  "labels": ["Soya · Yogurt"],
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Soya · Yogurt"
+  ],
   "meta": [
     "Night prep: none",
     "Total: 25 min",
@@ -38,16 +43,11 @@
       ]
     },
     {
-      "label": "Yogurt",
+      "label": "Yogurt & tadka",
       "items": [
         {"id": "yogurt", "name": "High-protein Greek yogurt", "short": "Greek yogurt", "amount": "500g", "portions": {"toddler": "60g", "main": "rest"}},
         {"id": "salt-yogurt", "name": "Salt, for the yogurt", "short": "salt", "amount": "1 tsp"},
-        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
-      ]
-    },
-    {
-      "label": "Tadka",
-      "items": [
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}},
         {"id": "mustard-oil", "name": "Mustard oil", "short": "mustard oil", "amount": "4 tbsp"},
         {"id": "kasuri", "name": "Kasuri methi", "short": "kasuri methi", "amount": "2 tsp"}
       ]
@@ -60,7 +60,7 @@
       "items": [
         "Bring {@water} and {@salt-boil} to a boil",
         "Add {@soya} and boil 5 min",
-        "Drain, cool slightly, then squeeze out all the water",
+        "Drain, cool slightly, then squeeze them dry",
         "Heat {@ghee} in a wide pan on medium",
         "Add {@hing:masala}, {@turmeric:masala} and {@coriander-powder}; stir 10 sec",
         "Add {@ginger}; stir 20 sec",
@@ -86,7 +86,7 @@
         "Heat {@mustard-oil} until it just starts smoking; switch off the heat",
         "Add {@hing:tadka}, {@turmeric:tadka}, {@chili:tadka|chili powder} and {@kasuri}; swirl 5 sec",
         "Pour the tadka into the yogurt and mix",
-        "Pour the yogurt over the soya, mix everything together and serve"
+        "Pour the dressing over the soya, mix everything together and serve"
       ]
     },
     {
@@ -94,5 +94,9 @@
       "label": "Tip",
       "text": "Alliums aren't Jain; celery + hing give the crunch and savoury bite instead. The yogurt thins as it sits, so dress the soya just before eating. Mustard oil can be cut to 3 tbsp if you want it lighter."
     }
-  ]
+  ],
+  "tags": [
+    "High-protein"
+  ],
+  "added": "2026-11-05"
 }
