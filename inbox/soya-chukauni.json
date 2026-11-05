@@ -1,0 +1,98 @@
+{
+  "$schema": "https://recipes.dhanjas.com/schema/recipe.schema.json",
+  "format": 3,
+  "slug": "soya-chukauni",
+  "category": "snack",
+  "title": "High-Protein Soya Chukauni",
+  "subtitle": "Spiced soya mini chunks tossed in a smoky mustard-oil Greek yogurt dressing.",
+  "badges": ["Jain Vegetarian", "Toddler-adapted"],
+  "labels": ["Soya · Yogurt"],
+  "meta": [
+    "Night prep: none",
+    "Total: 25 min",
+    "Serves 2 adults + toddler"
+  ],
+  "protein": "~55–60g protein per adult serving (soya chunks + Greek yogurt)",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Soya",
+      "items": [
+        {"id": "soya", "name": "Raw soya mini chunks", "short": "soya chunks", "amount": "200g", "portions": {"toddler": "20g", "main": "rest"}},
+        {"id": "water", "name": "Water, for boiling", "short": "water", "amount": "4 cups"},
+        {"id": "salt-boil", "name": "Salt, for boiling", "short": "salt", "amount": "2 tsp"},
+        {"id": "ghee", "name": "Ghee", "short": "ghee", "amount": "2 tbsp"}
+      ]
+    },
+    {
+      "label": "Masala",
+      "items": [
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "¼ tsp", "portions": {"masala": "⅛ tsp", "tadka": "⅛ tsp"}},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "1 tsp", "portions": {"masala": "½ tsp", "tadka": "½ tsp"}},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "2 tsp"},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "2 tsp"},
+        {"id": "chili", "name": "Red chili powder", "short": "chili powder", "amount": "4 tsp", "portions": {"masala": "2 tsp", "tadka": "2 tsp"}},
+        {"id": "celery", "name": "Celery, finely sliced", "short": "celery", "amount": "1 stalk"},
+        {"id": "green-chili", "name": "Green chili, sliced", "short": "green chili", "amount": "2 (adults)"},
+        {"id": "coriander", "name": "Fresh coriander, chopped", "short": "coriander", "amount": "3 tbsp"}
+      ]
+    },
+    {
+      "label": "Yogurt",
+      "items": [
+        {"id": "yogurt", "name": "High-protein Greek yogurt", "short": "Greek yogurt", "amount": "500g", "portions": {"toddler": "60g", "main": "rest"}},
+        {"id": "salt-yogurt", "name": "Salt, for the yogurt", "short": "salt", "amount": "1 tsp"},
+        {"id": "potato", "name": "Boiled potato, diced (toddler)", "short": "boiled potato", "amount": "1–2 tbsp", "portions": {"toddler": "1–2 tbsp"}}
+      ]
+    },
+    {
+      "label": "Tadka",
+      "items": [
+        {"id": "mustard-oil", "name": "Mustard oil", "short": "mustard oil", "amount": "4 tbsp"},
+        {"id": "kasuri", "name": "Kasuri methi", "short": "kasuri methi", "amount": "2 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Boil and sauté the soya (no chili yet)",
+      "items": [
+        "Bring {@water} and {@salt-boil} to a boil",
+        "Add {@soya} and boil 5 min",
+        "Drain, cool slightly, then squeeze out all the water",
+        "Heat {@ghee} in a wide pan on medium",
+        "Add {@hing:masala}, {@turmeric:masala} and {@coriander-powder}; stir 10 sec",
+        "Add {@ginger}; stir 20 sec",
+        "Add the squeezed {@soya}; sauté 3 min until it picks up the masala"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull portion here (before chili)",
+      "items": [
+        "Scoop {@soya:toddler|soya chunks} into a small bowl and chop small",
+        "Mix with {@yogurt:toddler|plain Greek yogurt} and {@potato:toddler|finely diced boiled potato}",
+        "No chili, tadka or salt for her bowl"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Finish the adult soya, tadka and serve",
+      "items": [
+        "Add {@chili:masala|chili powder} to the remaining {@soya:main|soya} in the pan; toss 30 sec",
+        "Add {@celery}, {@green-chili} and {@coriander}; mix well and set aside",
+        "Whisk {@yogurt:main|the remaining Greek yogurt} with {@salt-yogurt} in a large bowl",
+        "Heat {@mustard-oil} until it just starts smoking; switch off the heat",
+        "Add {@hing:tadka}, {@turmeric:tadka}, {@chili:tadka|chili powder} and {@kasuri}; swirl 5 sec",
+        "Pour the tadka into the yogurt and mix",
+        "Pour the yogurt over the soya, mix everything together and serve"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Alliums aren't Jain; celery + hing give the crunch and savoury bite instead. The yogurt thins as it sits, so dress the soya just before eating. Mustard oil can be cut to 3 tbsp if you want it lighter."
+    }
+  ]
+}
