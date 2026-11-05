@@ -308,12 +308,15 @@ class BuildIsolation(unittest.TestCase):
                     setattr(R, k, v)
             self.assertEqual((loose, strict), (0, 1))
             self.assertIn("Rava Upma", (tmp / "rava-upma.html").read_text("utf-8"))
-            for slug in ("besan-chilla", "broken-file"):
-                self.assertIn("recipe-unavailable", (tmp / ("%s.html" % slug)).read_text("utf-8"), slug)
+            for slug, why in (("besan-chilla", "without a reference"), ("broken-file", "not valid JSON")):
+                page = (tmp / ("%s.html" % slug)).read_text("utf-8")
+                self.assertIn("recipe-unavailable", page, slug)
+                self.assertIn(why, page, slug)                              # the reason, under "What's wrong"
             front = (tmp / "index.html").read_text("utf-8")
-            self.assertIn("rava-upma", front)
-            self.assertNotIn('data-slug="besan-chilla"', front)
-            self.assertNotIn("recipe-unavailable", front)
+            self.assertIn('<li class="card" data-slug="rava-upma">', front)
+            for slug in ("besan-chilla", "broken-file"):                    # still listed, marked
+                self.assertIn('<li class="card card-unavailable" data-slug="%s">' % slug, front)
+            self.assertNotIn('data-slug="index"', front)
             cards = json.loads((tmp / "assets" / "recipes.json").read_text("utf-8"))
             self.assertEqual([c["slug"] for c in cards], ["rava-upma"])
         finally:

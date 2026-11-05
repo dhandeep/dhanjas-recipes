@@ -26,15 +26,38 @@ def card_data(r):
 
 def sort_key(r):
     order = list(CATEGORIES)
-    return (order.index(r["category"]) if r["category"] in order else 99, r["title"].lower())
+    return (order.index(r["category"]) if r["category"] in order else 99, str(r["title"]).lower())
+
+
+def held_card(slug, recipe=None):
+    """Front-page card for a recipe the build held back: as much of its normal card as
+    can still be read, marked unavailable. It links to the stand-in page."""
+    from .portions import lower
+    c = None
+    for attempt in (lambda: card_data(lower(recipe, 1)), lambda: card_data(recipe)):
+        try:
+            c = attempt() if recipe else None
+            break
+        except Exception:
+            continue
+    if c is None:
+        cat = recipe.get("category", "") if isinstance(recipe, dict) else ""
+        title = recipe.get("title") if isinstance(recipe, dict) and isinstance(recipe.get("title"), str) else None
+        c = {"slug": slug, "title": title or slug.replace("-", " ").title(), "subtitle": "",
+             "category": cat, "categoryName": CATEGORIES.get(cat, cat), "tags": [], "protein": "",
+             "minutes": None, "added": "", "ingredients": [], "url": slug}
+    c.update(slug=slug, url=slug, unavailable=True)
+    return c
 
 
 def card_html(c):
     chips = "".join('<span class="chip">%s</span>' % e(t) for t in c["tags"])
     time = '<span>⏱ %d min</span>' % c["minutes"] if c["minutes"] else ""
+    held = c.get("unavailable")
     return (
-        '<li class="card" data-slug="%(slug)s">'
+        '<li class="card%(cls)s" data-slug="%(slug)s">'
         '<a href="%(url)s">'
+        '%(status)s'
         '<span class="card-cat">%(cat)s</span>'
         '<span class="card-title">%(title)s</span>'
         '<span class="card-sub">%(sub)s</span>'
@@ -43,15 +66,18 @@ def card_html(c):
         '<span class="card-foot">%(time)s</span>'
         "</a></li>"
     ) % {
+        "cls": " card-unavailable" if held else "", "status": '<span class="card-status">Being updated</span>' if held else "",
         "slug": e(c["slug"]), "url": e(c["url"]), "cat": e(c["categoryName"]), "title": e(c["title"]),
         "sub": e(c["subtitle"]), "protein": e(c["protein"]), "chips": chips, "time": time,
     }
 
 
-def index_page(recipes):
-    recipes = sorted(recipes, key=sort_key)
-    cards = [card_data(r) for r in recipes]
-    cat_counts = Counter(r["category"] for r in recipes)
+def index_page(recipes, held=()):
+    """recipes: published recipes (format-2 views). held: cards from held_card() for
+    recipes the build held back — shown too, marked "Being updated"."""
+    cards = sorted([card_data(r) for r in recipes] + list(held), key=sort_key)
+    recipes = cards
+    cat_counts = Counter(c["category"] for c in cards)
     tag_counts = Counter(t for c in cards for t in c["tags"])
 
     cat_buttons = ['<button type="button" class="pill" data-cat="" aria-pressed="true">All <span class="n">%d</span></button>' % len(recipes)]

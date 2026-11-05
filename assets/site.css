@@ -120,3 +120,13 @@
 .card-foot:empty { display: none; }
 
 .empty { margin: 2rem 0; text-align: center; color: var(--ink-soft); }
+
+/* ---------- a recipe the build held back (tools/recipes.py build) ---------- */
+.card-unavailable a { opacity: 0.62; border-style: dashed; }
+.card-unavailable a:hover { opacity: 0.85; }
+.card-status {
+  align-self: flex-start; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--saffron); border: 1px solid var(--saffron); border-radius: 999px; padding: 0.05rem 0.5rem;
+}
+.unavailable-why { max-width: 40rem; margin: 1.2rem auto; padding: 0 var(--gut); font-size: 0.8rem; color: var(--ink-soft); }
+.unavailable-why summary { cursor: pointer; }

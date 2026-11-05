@@ -155,7 +155,7 @@ TO_TOP = """<button class="to-top" aria-label="Back to top">↑</button>
 </script>"""
 
 
-def unavailable_page(slug, title=None):
+def unavailable_page(slug, title=None, why=None):
     """Stand-in page for a recipe that can't be published right now (validation
     errors, a broken file, a render crash). Its address keeps working and the rest
     of the site is unaffected; the build log says what's wrong."""
@@ -182,6 +182,7 @@ def unavailable_page(slug, title=None):
         "  <h1>%s</h1>" % name,
         '  <p class="subtitle">This recipe is being updated and will be back shortly.</p>',
         "</header>",
+        ('<details class="unavailable-why"><summary>What\'s wrong</summary><p>%s</p></details>' % e(why)) if why else "",
         "</body>",
         "</html>",
         "",

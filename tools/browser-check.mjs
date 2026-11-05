@@ -228,13 +228,18 @@ for (const [vpName, viewport] of Object.entries(VIEWPORTS)) {
   const p = await page(viewport, errors);
   await p.goto(`${BASE}/`);
   const cards = await p.locator('.card').count();
-  if (cards !== slugs.length) fail(where, `${cards} cards for ${slugs.length} recipes`);
+  if (cards !== slugs.length + held.length) fail(where, `${cards} cards for ${slugs.length} recipes + ${held.length} held back`);
+  for (const slug of held) {
+    if (await p.locator(`.card-unavailable[data-slug="${slug}"]`).count() !== 1) fail(where, `held-back ${slug} has no "Being updated" card`);
+  }
   const overflow = await p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
   if (overflow > 0) fail(where, `page is ${overflow}px wider than the screen`);
   if (SHOTS) await p.screenshot({ path: join(ROOT, SHOTS, `index.${vpName}.png`), fullPage: true });
 
   if (vpName === 'desktop') {
-    const all = Object.values(recipes);
+    // the cards' own data (held-back recipes included), as the filters see it
+    const all = await p.evaluate(() => JSON.parse(document.getElementById('recipe-data').textContent));
+    for (const s of slugs) if (!all.some(c => c.slug === s)) fail(where, `${s} is missing from the front page data`);
     for (const cat of await p.locator('[data-cat]').evaluateAll(bs => bs.map(b => b.dataset.cat))) {
       await p.click(`[data-cat="${cat}"]`);
       const shown = await p.locator('.card:not([hidden])').count();
@@ -251,7 +256,7 @@ for (const [vpName, viewport] of Object.entries(VIEWPORTS)) {
       if (shown !== want) fail(where, `Tag "${tag}" shows ${shown}, data has ${want}`);
       await p.click(`[data-tag="${tag}"]`);
     }
-    await p.locator('.card a').first().click();
+    await p.locator('.card:not(.card-unavailable) a').first().click();
     await p.waitForLoadState();
     if (!/\/[a-z0-9-]+$/.test(p.url()) || !(await p.locator('.recipe').count())) fail(where, `card link went to ${p.url()}`);
   }
