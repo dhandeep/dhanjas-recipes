@@ -9,3 +9,4 @@ _site/
 /*.html
 /recipes/
 /assets/recipes.json
+browser-report.json

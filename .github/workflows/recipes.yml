@@ -25,8 +25,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Each check below reports without stopping the run: one bad recipe gets a stand-in
+    # page and the rest of the site still deploys. Only a broken front page blocks the
+    # deploy (the last good version then stays live). The "problems" job turns the run red.
     outputs:
+      tests: ${{ steps.tests.outcome }}
       ingest: ${{ steps.ingest.outcome }}
+      validate: ${{ steps.validate.outcome }}
+      browser: ${{ steps.browser.outcome }}
     steps:
       - uses: actions/checkout@v4
 
@@ -35,19 +41,24 @@ jobs:
           python-version: "3.12"
 
       - name: Tests
+        id: tests
+        continue-on-error: true
         run: python -m unittest discover -s tools
 
-      # A rejected inbox file stays in inbox/ and fails the run (see the inbox job below),
-      # but it must not stop the rest of the site from being built and deployed.
+      # A rejected inbox file stays in inbox/; the rest of the site still builds.
       - name: Ingest inbox/
         id: ingest
         continue-on-error: true
         run: python tools/recipes.py ingest
 
-      - name: Validate and build
-        run: |
-          python tools/recipes.py validate --errors-only
-          python tools/recipes.py build --strict
+      - name: Validate
+        id: validate
+        continue-on-error: true
+        run: python tools/recipes.py validate --errors-only
+
+      # A recipe with errors is held back: a stand-in page at its address, off the front page.
+      - name: Build
+        run: python tools/recipes.py build
 
       - uses: actions/setup-node@v4
         with:
@@ -55,10 +66,27 @@ jobs:
           cache: npm
 
       - name: Browser check (every page, desktop + phone, scaling, pixel parity with v2)
+        id: browser
+        continue-on-error: true
         run: |
           npm ci
           npx playwright install --with-deps chromium
-          npm run check:browser -- --shots screenshots
+          npm run check:browser -- --shots screenshots --report browser-report.json
+
+      # The one thing that blocks a deploy: a front page that didn't pass (or a check that
+      # never ran). The site then keeps serving its last good version.
+      - name: Front page must pass before deploying
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, sys
+          p = pathlib.Path("browser-report.json")
+          if not p.exists():
+              print("::error::The browser check didn't run, so nothing is deployed."); sys.exit(1)
+          r = json.loads(p.read_text())
+          if not r["indexOk"]:
+              print("::error::The front page failed the browser check, so nothing is deployed."); sys.exit(1)
+          print("Front page OK — deploying. Held back:", ", ".join(r["held"]) or "none")
+          PY
 
       # Only what the website needs is published — not docs/, tools/, data/ or inbox/.
       - name: Assemble the public site
@@ -111,12 +139,15 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-  # Turns the run red when an inbox recipe was rejected, after the site has deployed.
-  inbox:
+  # Turns the run red when any check found a problem, after the rest of the site deployed.
+  problems:
     needs: [build, deploy]
-    if: always() && needs.build.outputs.ingest == 'failure'
+    if: >-
+      always() && (needs.build.outputs.tests == 'failure' || needs.build.outputs.ingest == 'failure' ||
+      needs.build.outputs.validate == 'failure' || needs.build.outputs.browser == 'failure')
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "::error::A recipe in inbox/ was rejected and stays there. The errors are in the build job's 'Ingest inbox/' step. The rest of the site was still deployed."
+          echo "Tests: ${{ needs.build.outputs.tests }} · Inbox: ${{ needs.build.outputs.ingest }} · Validate: ${{ needs.build.outputs.validate }} · Browser check: ${{ needs.build.outputs.browser }}"
+          echo "::error::Something needs fixing (see the build job's red steps). Recipes with errors show a stand-in page; the rest of the site was deployed."
           exit 1

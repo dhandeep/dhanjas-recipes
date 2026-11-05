@@ -155,6 +155,39 @@ TO_TOP = """<button class="to-top" aria-label="Back to top">↑</button>
 </script>"""
 
 
+def unavailable_page(slug, title=None):
+    """Stand-in page for a recipe that can't be published right now (validation
+    errors, a broken file, a render crash). Its address keeps working and the rest
+    of the site is unaffected; the build log says what's wrong."""
+    name = e(title or slug.replace("-", " ").title())
+    return "\n".join([
+        "<!DOCTYPE html>",
+        '<html lang="en">',
+        "<head>",
+        '<meta charset="UTF-8">',
+        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
+        GENERATOR,
+        '<meta name="robots" content="noindex">',
+        "<title>%s — %s</title>" % (name, SITE),
+        '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">',
+        '<link rel="stylesheet" href="assets/recipe.css">',
+        '<link rel="stylesheet" href="assets/site.css">',
+        "</head>",
+        "<body>",
+        '<nav class="site-nav" aria-label="Site">',
+        '  <a class="site-nav-home" href="./">← All recipes</a>',
+        "</nav>",
+        '<header class="site-header recipe-unavailable" data-slug="%s">' % e(slug),
+        '  <div class="eyebrow">%s</div>' % e(EYEBROW),
+        "  <h1>%s</h1>" % name,
+        '  <p class="subtitle">This recipe is being updated and will be back shortly.</p>',
+        "</header>",
+        "</body>",
+        "</html>",
+        "",
+    ])
+
+
 def iso_minutes(m):
     h, mm = divmod(m, 60)
     return "PT" + ("%dH" % h if h else "") + ("%dM" % mm if mm or not h else "")

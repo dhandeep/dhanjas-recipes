@@ -23,7 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from dhanjas import parse_html, render, site, validate  # noqa: E402
-from dhanjas.model import detect_tags, retag  # noqa: E402
+from dhanjas.model import RESERVED_SLUGS, SLUG_RE, detect_tags, retag  # noqa: E402
 from dhanjas.portions import lower  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -41,13 +41,33 @@ FIELD_ORDER = ["$schema", "format", "slug", "category", "title", "name", "subtit
                "nightPrep", "ingredientsTitle", "ingredientGroups", "methodTitle", "method", "tags", "added", "source"]
 
 
-def load_all():
-    out = []
+def load_files():
+    """(recipes, broken): every data/recipes/*.json that parses, and the ones that
+    don't as (slug from the file name, error). One bad file never stops the rest."""
+    out, broken = [], []
     for p in sorted(DATA.glob("*.json")):
-        r = json.loads(p.read_text("utf-8"))
+        try:
+            r = json.loads(p.read_text("utf-8"))
+            if not isinstance(r, dict):
+                raise ValueError("the file isn't a JSON object")
+        except ValueError as exc:            # json.JSONDecodeError is a ValueError
+            broken.append((p.stem, "data/recipes/%s: not valid JSON (%s)" % (p.name, exc)))
+            continue
         r.pop("$schema", None)
         out.append(r)
-    return out
+    return out, broken
+
+
+def load_all():
+    recipes, broken = load_files()
+    for slug, why in broken:
+        print("  ✗ %s: %s" % (slug, why), file=sys.stderr)   # stderr: stdout may be data (scaled)
+    return recipes
+
+
+def publishable_slug(slug):
+    """A slug we may write a page for — never index.html or a site folder's name."""
+    return isinstance(slug, str) and bool(SLUG_RE.match(slug)) and slug not in RESERVED_SLUGS
 
 
 def dump(recipe, schema_ref):
@@ -83,20 +103,39 @@ def report(slug, errors, warnings, quiet=False):
 
 
 def cmd_build(args):
-    recipes = load_all()
+    """Build the whole site. A recipe that can't be published (validation errors, a
+    broken file, a render crash) gets a stand-in page at its address and is left off
+    the front page; every other recipe is built as normal."""
+    recipes, broken = load_files()
     css = (ASSETS / "recipe.css").read_text("utf-8")
     FEEDS.mkdir(exist_ok=True)
     wanted = set()
-    failed = False
+    held = {}                                   # slug -> (title, first problem)
+    for slug, why in broken:
+        held[slug] = (None, why)
+    published = []
     for r in recipes:
-        errors, _ = validate.check(r)
-        if errors:
-            failed = True
-            report(r["slug"], errors, [], quiet=True)
-        for name, content in exports(r, css, published=True).items():
+        slug = r.get("slug") if isinstance(r.get("slug"), str) else "(no slug)"
+        try:
+            errors, _ = validate.check(r)
+            if errors:
+                raise ValueError(errors[0] + ("" if len(errors) == 1 else " (+%d more)" % (len(errors) - 1)))
+            files = exports(r, css, published=True)
+            view = lower(r, 1)
+        except Exception as exc:                # one recipe must never take the site down
+            held[slug] = (r.get("title"), "%s: %s" % (type(exc).__name__, exc) if not isinstance(exc, ValueError) else str(exc))
+            continue
+        for name, content in files.items():
             path = (PAGES if name.endswith(".html") else FEEDS) / name
             wanted.add(path)
             path.write_text(content, "utf-8")
+        published.append(view)
+    for slug, (title, why) in sorted(held.items()):
+        print("  ✗ %s: held back — %s" % (slug, why))
+        if publishable_slug(slug):
+            path = PAGES / ("%s.html" % slug)
+            wanted.add(path)
+            path.write_text(render.unavailable_page(slug, title), "utf-8")
     # a page is ours if the generator stamped it; never touch other HTML at the root
     stale = [p for p in PAGES.glob("*.html") if render.GENERATOR in p.read_text("utf-8")[:2000]]
     stale += [p for ext in ("*.json", "*.jsonld") for p in FEEDS.glob(ext)]
@@ -104,24 +143,27 @@ def cmd_build(args):
         if path not in wanted:
             path.unlink()
             print("removed %s" % path.relative_to(ROOT))
-    views = [lower(r, 1) for r in recipes]
-    (ROOT / "index.html").write_text(site.index_page(views), "utf-8")
-    (ASSETS / "recipes.json").write_text(site.search_index(views), "utf-8")
-    print("built %d recipe pages + index.html" % len(recipes))
-    return 1 if failed and args.strict else 0
+    (ROOT / "index.html").write_text(site.index_page(published), "utf-8")
+    (ASSETS / "recipes.json").write_text(site.search_index(published), "utf-8")
+    print("built %d recipe pages + index.html" % len(published)
+          + ("; %d held back with a stand-in page: %s" % (len(held), ", ".join(sorted(held))) if held else ""))
+    return 1 if held and args.strict else 0
 
 
 def cmd_validate(args):
-    recipes = load_all()
+    recipes, broken = load_files()
     if args.slugs:
         recipes = [r for r in recipes if r["slug"] in args.slugs]
-    n_err = n_warn = 0
+        broken = [b for b in broken if b[0] in args.slugs]
+    n_err, n_warn = len(broken), 0
+    for slug, why in broken:
+        print("  ✗ %s: %s" % (slug, why))
     for r in recipes:
         errors, warnings = validate.check(r)
         n_err += len(errors)
         n_warn += len(warnings)
         report(r["slug"], errors, warnings, quiet=args.errors_only)
-    print("%d recipes · %d errors · %d warnings" % (len(recipes), n_err, n_warn))
+    print("%d recipes · %d errors · %d warnings" % (len(recipes) + len(broken), n_err, n_warn))
     return 1 if n_err else 0
 
 
@@ -216,6 +258,9 @@ def cmd_export(args):
         if slug not in recipes:
             print("✗ no recipe %r" % slug)
             return 1
+        if args.all and validate.check(recipes[slug])[0]:
+            print("· skipped %s — it has validation errors" % slug)
+            continue
         for name, content in exports(recipes[slug], css, formats=formats).items():
             (EXPORT / name).write_text(content, "utf-8")
             print("wrote export/%s" % name)
@@ -225,7 +270,7 @@ def cmd_export(args):
 def cmd_scaled(args):
     """Print a recipe's scalable amounts at a factor — a preview, and the reference
     the browser check compares assets/scale.js against."""
-    recipes = {r["slug"]: r for r in load_all()}
+    recipes = {r["slug"]: r for r in load_files()[0]}
     page = render.recipe_page(recipes[args.slug], "")
     out = []
     for attrs, original in re.findall(r'<data class="q"([^>]*)>([^<]*)</data>', page):

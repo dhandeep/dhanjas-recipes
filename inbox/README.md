@@ -8,6 +8,6 @@ Older **v2 HTML files** still work; their names start with a category
 On push to `main`, the Recipes workflow validates each file, saves it as
 `data/recipes/<slug>.json`, rebuilds the site (the page goes live at
 `recipes.dhanjas.com/<slug>`) and removes it from this folder.
-A file that fails validation stays here and the workflow run shows why.
+A file that fails validation stays here and the workflow run shows why; the rest of the site still updates.
 
 Locally: `python3 tools/recipes.py ingest` does the same thing.

@@ -170,5 +170,5 @@ Each recipe is its own offline run: write the JSON, validate it, then commit it.
    - it renders the page in a browser to check it
    - it publishes the page at `recipes.dhanjas.com/<dish>` within a couple of minutes
 
-   If a check fails, the file stays in `inbox/`, nothing is published, and the Action log names the exact line to fix.
+   If a check fails, the file stays in `inbox/`, that recipe isn't published (the rest of the site is unaffected), and the Action log names the exact line to fix.
 4. To get a single self-contained HTML file (for sharing or keeping a copy elsewhere), run `python3 tools/recipes.py export <slug>`.

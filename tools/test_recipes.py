@@ -271,3 +271,50 @@ class Scaling(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class BuildIsolation(unittest.TestCase):
+    """One broken recipe gets a stand-in page; the rest of the site still builds."""
+
+    def test_broken_recipes_are_held_back(self):
+        import argparse
+        import contextlib
+        import io
+        import shutil
+        import tempfile
+        import recipes as R
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            (tmp / "data" / "recipes").mkdir(parents=True)
+            (tmp / "assets").mkdir()
+            shutil.copy(ROOT / "assets" / "recipe.css", tmp / "assets" / "recipe.css")
+            good = load("rava-upma")
+            (tmp / "data" / "recipes" / "rava-upma.json").write_text(json.dumps(good), "utf-8")
+            bad = load("besan-chilla")
+            bad["method"][0]["items"].append("Add salt and stir")          # validation error
+            (tmp / "data" / "recipes" / "besan-chilla.json").write_text(json.dumps(bad), "utf-8")
+            (tmp / "data" / "recipes" / "broken-file.json").write_text("{ not json", "utf-8")
+            index = load("thalipeeth")
+            index["slug"] = "index"                                         # must never overwrite the front page
+            (tmp / "data" / "recipes" / "index.json").write_text(json.dumps(index), "utf-8")
+            saved = {k: getattr(R, k) for k in ("ROOT", "DATA", "PAGES", "FEEDS", "ASSETS")}
+            R.ROOT, R.DATA, R.PAGES, R.FEEDS, R.ASSETS = tmp, tmp / "data" / "recipes", tmp, tmp / "recipes", tmp / "assets"
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    loose = R.cmd_build(argparse.Namespace(strict=False))
+                    strict = R.cmd_build(argparse.Namespace(strict=True))
+            finally:
+                for k, v in saved.items():
+                    setattr(R, k, v)
+            self.assertEqual((loose, strict), (0, 1))
+            self.assertIn("Rava Upma", (tmp / "rava-upma.html").read_text("utf-8"))
+            for slug in ("besan-chilla", "broken-file"):
+                self.assertIn("recipe-unavailable", (tmp / ("%s.html" % slug)).read_text("utf-8"), slug)
+            front = (tmp / "index.html").read_text("utf-8")
+            self.assertIn("rava-upma", front)
+            self.assertNotIn('data-slug="besan-chilla"', front)
+            self.assertNotIn("recipe-unavailable", front)
+            cards = json.loads((tmp / "assets" / "recipes.json").read_text("utf-8"))
+            self.assertEqual([c["slug"] for c in cards], ["rava-upma"])
+        finally:
+            shutil.rmtree(tmp)

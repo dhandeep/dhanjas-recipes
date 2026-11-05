@@ -29,6 +29,10 @@ import { extname, join, normalize } from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname;
 const shotsArg = process.argv.indexOf('--shots');
 const SHOTS = shotsArg > -1 ? process.argv[shotsArg + 1] || 'screenshots' : null;
+// --report <file>: writes {indexOk, failures, held}. The workflow deploys only when the
+// front page is fine; problems on single recipe pages are reported but don't block it.
+const reportArg = process.argv.indexOf('--report');
+const REPORT = reportArg > -1 ? process.argv[reportArg + 1] : null;
 if (SHOTS) mkdirSync(join(ROOT, SHOTS), { recursive: true });
 
 const failures = [];
@@ -36,7 +40,11 @@ const fail = (where, msg) => { failures.push(`${where}: ${msg}`); console.log(` 
 
 // ---- build the standalone exports to compare against ----
 execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'export', '--all', '--format', 'html'], { cwd: ROOT, stdio: 'ignore' });
-const slugs = readdirSync(join(ROOT, 'data/recipes')).filter(f => f.endsWith('.json')).map(f => f.slice(0, -5)).sort();
+// Published recipes are the ones the build put on the front page (assets/recipes.json);
+// any other data file was held back with a stand-in page, which is checked separately.
+const slugs = JSON.parse(readFileSync(join(ROOT, 'assets/recipes.json'), 'utf8')).map(c => c.slug).sort();
+const held = readdirSync(join(ROOT, 'data/recipes')).filter(f => f.endsWith('.json')).map(f => f.slice(0, -5))
+  .filter(s => !slugs.includes(s) && existsSync(join(ROOT, s + '.html'))).sort();
 const recipes = Object.fromEntries(slugs.map(s => [s, JSON.parse(readFileSync(join(ROOT, 'data/recipes', s + '.json'), 'utf8'))]));
 
 // ---- static server for the repo root (behaves like GitHub Pages) ----
@@ -74,6 +82,7 @@ async function recipeShot(p) {
 for (const slug of slugs) {
   console.log(slug);
   const r = recipes[slug];
+  try {
   for (const [vpName, viewport] of Object.entries(VIEWPORTS)) {
     const where = `${slug} @${vpName}`;
     const errors = [];
@@ -197,6 +206,18 @@ for (const slug of slugs) {
     await c.close();
     if (errors.length) fail(where, `browser errors: ${errors.join(' | ')}`);
   }
+  } catch (err) {   // one page's crash is that page's failure, not the whole check's
+    fail(slug, `check crashed: ${String(err && err.message || err).split('\n')[0]}`);
+  }
+}
+
+// ---- recipes held back by the build: their address must still answer ----
+for (const slug of held) {
+  console.log(`${slug} (held back)`);
+  const p = await page(VIEWPORTS.phone, []);
+  const resp = await p.goto(`${BASE}/${slug}`);
+  if (!resp || resp.status() !== 200 || !(await p.locator('.recipe-unavailable').count())) fail(`${slug} @held`, 'stand-in page did not load');
+  await p.close();
 }
 
 // ---- front page ----
@@ -240,5 +261,8 @@ for (const [vpName, viewport] of Object.entries(VIEWPORTS)) {
 
 await browser.close();
 server.close();
-console.log(failures.length ? `\n${failures.length} problem(s)` : `\nAll checks passed: ${slugs.length} recipes × 2 viewports + front page`);
+const indexOk = !failures.some(f => f.startsWith('index @'));
+if (REPORT) writeFileSync(REPORT, JSON.stringify({ indexOk, failures, held }, null, 1) + '\n');
+if (held.length) console.log(`\nHeld back (stand-in page): ${held.join(', ')}`);
+console.log(failures.length ? `\n${failures.length} problem(s)${indexOk ? ' — front page OK' : ' — FRONT PAGE BROKEN'}` : `\nAll checks passed: ${slugs.length} recipes × 2 viewports + front page`);
 process.exit(failures.length ? 1 : 0);

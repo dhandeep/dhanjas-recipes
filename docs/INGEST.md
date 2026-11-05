@@ -14,7 +14,7 @@ Use whichever route is handiest:
 
 `ingest` reads the JSON (or an older v2 `.html`), runs the checks below, writes `data/recipes/<slug>.json`,
 rebuilds every page and deletes the inbox file. If a check fails the file stays in
-`inbox/` and nothing is published.
+`inbox/` and that recipe isn't published; the rest of the site is.
 
 - **Errors (block publishing):** anything that breaks `schema/recipe.schema.json`
   (bad slug prefix, missing title or subtitle, unknown fields, empty steps),
@@ -32,8 +32,23 @@ rebuilds every page and deletes the inbox file. If a check fails the file stays 
 After the build, the workflow renders every page in Chromium
 (`tools/browser-check.mjs`): desktop and phone widths, no sideways scrolling, every
 ingredient line showing an amount, 2× scaling matching the Python reference, the
-instruction checkboxes working, and each page pixel-identical to the standalone v2 file. Nothing is committed unless
-that passes, and the screenshots are kept on the workflow run for 14 days.
+instruction checkboxes working, and each page pixel-identical to the standalone v2 file. The
+screenshots are kept on the workflow run for 14 days.
+
+### One bad recipe never takes the site down
+
+- A recipe that can't be published (validation errors, a file that isn't valid JSON, a
+  crash while rendering it) is **held back**: its address shows a short "being updated"
+  page, it's left off the front page, and every other recipe is built as normal.
+- A rejected inbox file stays in `inbox/`; the rest of the inbox is still ingested.
+- Tests, validation and the browser check report but don't stop the deploy. If any of
+  them finds a problem, the run's final **problems** job turns red, so it gets noticed.
+- The one thing that blocks a deploy is a front page that fails the browser check (or a
+  browser check that didn't run). The site then keeps serving its last good version.
+
+This relies on Settings → Pages → Source being **GitHub Actions**. With "Deploy from a
+branch", GitHub also publishes `main` as committed on every push. That copy has no
+built pages, so the site goes blank until the workflow's deploy lands.
 
 These checks are a backstop. They don't replace the `dhanjas-recipe-validator`
 skill ([`.claude/skills/dhanjas-recipe-validator/SKILL.md`](../.claude/skills/dhanjas-recipe-validator/SKILL.md)),
