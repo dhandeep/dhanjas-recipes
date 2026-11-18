@@ -132,7 +132,7 @@ marked numbers in the browser and re-formats them (`⅓ cup` → `⅔ cup`, `1 p
 |---|---|
 | ingredient amounts · `{amounts}` in steps and night prep · yield in `meta` (`Makes 6–7 chillas`, `6 adult servings`) | times (`5 min`, `45 sec`) · per-piece amounts (`1 tsp per chilla`, `2 tbsp/roti`, `~2 tbsp each`) · sizes (`~1 inch layer`) · anything in brackets (`2–3 (1 milder)`) · `Step 1` · toddler boxes (she's one toddler however big the batch) · tips · the protein bar (it's per serving) |
 
-Try it on any page with `?scale=2`. The visible 1×/1½×/2×/3× buttons are one switch
+Try it on any page with `?scale=2`. The visible − / + batch control (1× → 1½× → 2× → 3×) is one switch
 (`SHOW_SCALE_CONTROL` in `tools/dhanjas/render.py`). `python3 tools/recipes.py scaled
 <slug> 2` previews a recipe's amounts at any factor, and the browser check verifies
 the page shows exactly those.

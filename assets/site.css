@@ -17,18 +17,29 @@
   font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
   border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 0.15rem 0.6rem !important;
 }
-.scale-control { display: inline-flex; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; overflow: hidden; }
-.scale-control button {
-  font: inherit; font-size: 0.7rem; font-weight: 600; cursor: pointer;
-  background: none; border: none; color: #DCEBCC; padding: 0.15rem 0.6rem;
+/* batch size: − [1½×] + */
+.scale-control {
+  display: inline-flex; align-items: center; flex: none;
+  border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; overflow: hidden;
 }
-.scale-control button[aria-pressed="true"] { background: var(--cream); color: var(--green); }
+.scale-step {
+  font: inherit; font-size: 0.95rem; font-weight: 600; line-height: 1; cursor: pointer;
+  background: none; border: none; color: #DCEBCC; padding: 0.2rem 0.65rem; min-width: 2rem;
+}
+.scale-step:hover:not(:disabled) { color: var(--cream); background: rgba(255,255,255,0.08); }
+.scale-step:disabled { opacity: 0.35; cursor: default; }
+.scale-value {
+  font-size: 0.72rem; font-weight: 700; color: var(--green); background: var(--cream);
+  padding: 0.2rem 0.5rem; min-width: 2.6rem; text-align: center; font-variant-numeric: tabular-nums;
+}
 .site-nav a { white-space: nowrap; }
 /* Phones: four batch buttons leave no room for the category pill; the category still
    shows on the recipe itself, just under the header. */
 @media (max-width: 480px) {
   .site-nav { gap: 0.5rem; }
   .site-nav-cat { display: none; }
+  .tick-status { gap: 0.4rem; margin-right: 0; }
+  .tick-clear .long { display: none; }          /* "Clear ticks" -> "Clear" */
 }
 @media print { .site-nav { display: none; } }
 
@@ -43,7 +54,7 @@
 }
 .night-prep li.cl > .tick { top: 0.1rem; width: 0.95rem; height: 0.95rem; }
 .cl.done { opacity: 0.5; text-decoration: line-through; text-decoration-thickness: 1px; }
-.tick-status { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; margin-right: 0.8rem; }
+.tick-status { display: flex; align-items: center; gap: 0.6rem; margin-left: auto; margin-right: 0.8rem; white-space: nowrap; }
 .tick-status[hidden] { display: none; }
 .tick-count { font-size: 0.7rem; color: #DCEBCC; }
 .tick-clear {

@@ -268,9 +268,15 @@ def json_ld_data(recipe):
 
 
 def scale_control():
-    buttons = "".join('<button type="button" data-scale="%s" aria-pressed="%s">%s</button>'
-                      % (scale_key(n), "true" if n == 1 else "false", scale_label(n)) for n in SCALE_STEPS)
-    return '  <div class="scale-control" role="group" aria-label="Batch size">%s</div>' % buttons
+    """− [1×] + : steps through SCALE_STEPS (assets/scale.js). Narrow enough for a phone's
+    nav bar even with the tick counter in it."""
+    steps = " ".join(scale_key(n) for n in SCALE_STEPS)
+    labels = "|".join(scale_label(n) for n in SCALE_STEPS)
+    return ('  <div class="scale-control" role="group" aria-label="Batch size" data-steps="%s" data-labels="%s">'
+            '<button type="button" class="scale-step" data-step="-1" aria-label="Smaller batch" disabled>−</button>'
+            '<output class="scale-value" data-scale="1" aria-live="polite">%s</output>'
+            '<button type="button" class="scale-step" data-step="1" aria-label="Bigger batch">+</button></div>'
+            % (steps, e(labels), scale_label(SCALE_STEPS[0])))
 
 
 def recipe_page(recipe, css, standalone=False):

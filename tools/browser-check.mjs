@@ -8,7 +8,7 @@
 //   · every ingredient line shows an amount
 //   · pixel parity: the page (shared recipe.css) renders identically to the
 //     standalone v2 file (stylesheet inlined) that `recipes.py export` writes
-//   · the 1½×, 2× and 3× buttons — every scalable number matches `recipes.py scaled` (Python is the
+//   · the − [1×] + stepper at 1½×, 2× and 3× — every scalable number matches `recipes.py scaled` (Python is the
 //     reference), toddler boxes untouched; ?scale=1 changes nothing
 //   · checkboxes — one per instruction line; tapping a line ticks it, ticks survive
 //     a reload, "Clear ticks" resets them, nothing overflows on a phone
@@ -143,35 +143,40 @@ for (const slug of slugs) {
     await sp.close();
 
     if (vpName === 'desktop') {
-      // scaling: browser (assets/scale.js) vs Python reference
+      // scaling: browser (assets/scale.js) vs Python reference, driven by the − [1×] + stepper
       await p.goto(`${BASE}/${slug}`);
-      const want = JSON.parse(execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'scaled', slug, '2'], { cwd: ROOT }).toString());
-      const before = await p.evaluate(() => [...document.querySelectorAll('data.q')].map(s => s.textContent));
-      const toddlerBefore = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
-      // the 1×/2×/3× buttons in the nav drive it
-      if (await p.locator('.scale-control [data-scale]').count() !== 4) fail(where, 'scale: the 1×/1½×/2×/3× buttons are missing');
       const amounts = () => p.evaluate(() => [...document.querySelectorAll('data.q')].map(s => s.textContent));
-      await p.click('.scale-control [data-scale="2"]');
-      const got = await amounts();
-      if (!(await p.evaluate(() => location.search === '?scale=2' && document.querySelector('.scale-control [data-scale="2"]').getAttribute('aria-pressed') === 'true')))
-        fail(where, 'scale: the 2× button did not mark itself pressed / set ?scale=2');
-      if (got.length !== want.length) fail(where, `scale: ${got.length} scalable amounts on the page, Python found ${want.length}`);
-      want.forEach((w, i) => {
-        if (before[i] !== w.original) fail(where, `scale: amount ${i} reads ${JSON.stringify(before[i])}, expected ${JSON.stringify(w.original)}`);
-        if (got[i] !== w.scaled) fail(where, `scale 2×: ${JSON.stringify(w.original)} → ${JSON.stringify(got[i])}, Python says ${JSON.stringify(w.scaled)}`);
-      });
-      const toddlerAfter = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
-      if (JSON.stringify(toddlerAfter) !== JSON.stringify(toddlerBefore)) fail(where, 'scale: a toddler box changed');
-      if (SHOTS) await p.screenshot({ path: join(ROOT, SHOTS, `${slug}.scale2.png`), fullPage: true });
-      for (const k of ['1.5', '3']) {
-        await p.click(`.scale-control [data-scale="${k}"]`);
-        const wantK = JSON.parse(execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'scaled', slug, k], { cwd: ROOT }).toString());
-        const gotK = await amounts();
-        wantK.forEach((w, i) => { if (gotK[i] !== w.scaled) fail(where, `scale ${k}×: ${JSON.stringify(w.original)} → ${JSON.stringify(gotK[i])}, Python says ${JSON.stringify(w.scaled)}`); });
-        if (!(await p.evaluate(k => location.search === `?scale=${k}`, k))) fail(where, `scale: the ${k}× button did not set ?scale=${k}`);
+      const stepper = () => p.evaluate(() => ({
+        label: document.querySelector('.scale-control .scale-value').textContent,
+        minus: document.querySelector('.scale-control [data-step="-1"]').disabled,
+        plus: document.querySelector('.scale-control [data-step="1"]').disabled,
+        search: location.search,
+      }));
+      const before = await amounts();
+      const toddlerBefore = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
+      let st = await stepper();
+      if (st.label !== '1×' || !st.minus || st.plus) fail(where, `scale: stepper starts as ${JSON.stringify(st)}`);
+      const sizes = [['1.5', '1½×'], ['2', '2×'], ['3', '3×']];
+      for (const [k, label] of sizes) {
+        await p.click('.scale-control [data-step="1"]');
+        const want = JSON.parse(execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'scaled', slug, k], { cwd: ROOT }).toString());
+        const got = await amounts();
+        if (got.length !== want.length) fail(where, `scale: ${got.length} scalable amounts on the page, Python found ${want.length}`);
+        want.forEach((w, i) => {
+          if (before[i] !== w.original) fail(where, `scale: amount ${i} reads ${JSON.stringify(before[i])}, expected ${JSON.stringify(w.original)}`);
+          if (got[i] !== w.scaled) fail(where, `scale ${k}×: ${JSON.stringify(w.original)} → ${JSON.stringify(got[i])}, Python says ${JSON.stringify(w.scaled)}`);
+        });
+        st = await stepper();
+        if (st.label !== label || st.search !== `?scale=${k}` || st.minus || st.plus !== (k === '3'))
+          fail(where, `scale: after + the stepper shows ${JSON.stringify(st)}, expected ${label}`);
+        const toddlerAfter = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
+        if (JSON.stringify(toddlerAfter) !== JSON.stringify(toddlerBefore)) fail(where, `scale ${k}×: a toddler box changed`);
+        if (SHOTS && k === '2') await p.screenshot({ path: join(ROOT, SHOTS, `${slug}.scale2.png`), fullPage: true });
       }
-      await p.click('.scale-control [data-scale="1"]');
+      for (let n = 0; n < sizes.length; n++) await p.click('.scale-control [data-step="-1"]');
+      st = await stepper();
       const back = await amounts();
+      if (st.label !== '1×' || st.search !== '' || !st.minus) fail(where, `scale: after stepping back down the stepper shows ${JSON.stringify(st)}`);
       if (JSON.stringify(back) !== JSON.stringify(before)) fail(where, 'scale: 1× does not restore the original amounts');
     }
     await p.close();
@@ -197,8 +202,18 @@ for (const slug of slugs) {
     }));
     let st = await status();
     if (st.done !== 2 || st.checked.filter(Boolean).length !== 2) fail(where, `checkboxes: ${st.done} lines ticked after 2 taps`);
-    if (!st.bar || st.count !== `✓ 2 of ${wantLines}`) fail(where, `checkboxes: status bar shows "${st.count}"`);
+    if (!st.bar || st.count !== `✓ 2/${wantLines}`) fail(where, `checkboxes: status bar shows "${st.count}"`);
     if (st.overflow > 0) fail(where, `checkboxes: page is ${st.overflow}px wider than the screen`);
+    // with the tick counter in the nav, the stepper must still be whole, on screen, on the same row
+    const navFit = await c.evaluate(() => {
+      const r = el => el.getBoundingClientRect();
+      const sc = r(document.querySelector('.scale-control')), ts = r(document.querySelector('.tick-status'));
+      const one = el => el.getBoundingClientRect().height;
+      return { scRight: sc.right, scW: sc.width, w: innerWidth, sameRow: Math.abs((sc.top + sc.bottom) / 2 - (ts.top + ts.bottom) / 2) < 6,
+               countLines: Math.round(one(document.querySelector('.tick-count')) / parseFloat(getComputedStyle(document.querySelector('.tick-count')).lineHeight || 16)) };
+    });
+    if (navFit.scRight > navFit.w || !navFit.sameRow || navFit.countLines > 1)
+      fail(where, `nav with ticks doesn't fit: ${JSON.stringify(navFit)}`);
     if (SHOTS) await c.screenshot({ path: join(ROOT, SHOTS, `${slug}.${vpName}.ticks.png`), fullPage: true });
     await c.reload();
     st = await status();

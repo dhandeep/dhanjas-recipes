@@ -14,13 +14,14 @@
   const nav = document.querySelector('.site-nav');
   const bar = document.createElement('div');
   bar.className = 'tick-status';
-  bar.innerHTML = '<span class="tick-count" aria-live="polite"></span><button type="button" class="tick-clear">Clear ticks</button>';
+  bar.innerHTML = '<span class="tick-count" aria-live="polite"></span><button type="button" class="tick-clear" aria-label="Clear ticks">Clear<span class="long"> ticks</span></button>';
   if (nav) nav.insertBefore(bar, nav.querySelector('.site-nav-cat'));
   const count = bar.querySelector('.tick-count');
 
   function refresh() {
     bar.hidden = done.size === 0;
-    count.textContent = `✓ ${done.size} of ${lines.length}`;
+    count.textContent = `✓ ${done.size}/${lines.length}`;
+    count.title = `${done.size} of ${lines.length} lines done`;
     save(done);
   }
 
