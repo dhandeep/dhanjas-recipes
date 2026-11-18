@@ -24,9 +24,7 @@ concurrency:
 
 jobs:
   build:
-    # Pinned: Playwright 1.56.1 can't install Chromium on ubuntu-latest (26.04). Move both
-    # together — bump playwright in package.json, then this.
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     # Each check below reports without stopping the run: one bad recipe gets a stand-in
     # page and the rest of the site still deploys. Only a broken front page blocks the
     # deploy (the last good version then stays live). The "problems" job turns the run red.
