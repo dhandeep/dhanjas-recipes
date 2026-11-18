@@ -8,7 +8,7 @@
 //   · every ingredient line shows an amount
 //   · pixel parity: the page (shared recipe.css) renders identically to the
 //     standalone v2 file (stylesheet inlined) that `recipes.py export` writes
-//   · the 2× and 3× buttons — every scalable number matches `recipes.py scaled` (Python is the
+//   · the 1½×, 2× and 3× buttons — every scalable number matches `recipes.py scaled` (Python is the
 //     reference), toddler boxes untouched; ?scale=1 changes nothing
 //   · checkboxes — one per instruction line; tapping a line ticks it, ticks survive
 //     a reload, "Clear ticks" resets them, nothing overflows on a phone
@@ -149,7 +149,7 @@ for (const slug of slugs) {
       const before = await p.evaluate(() => [...document.querySelectorAll('data.q')].map(s => s.textContent));
       const toddlerBefore = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
       // the 1×/2×/3× buttons in the nav drive it
-      if (await p.locator('.scale-control [data-scale]').count() !== 3) fail(where, 'scale: the 1×/2×/3× buttons are missing');
+      if (await p.locator('.scale-control [data-scale]').count() !== 4) fail(where, 'scale: the 1×/1½×/2×/3× buttons are missing');
       const amounts = () => p.evaluate(() => [...document.querySelectorAll('data.q')].map(s => s.textContent));
       await p.click('.scale-control [data-scale="2"]');
       const got = await amounts();
@@ -163,10 +163,13 @@ for (const slug of slugs) {
       const toddlerAfter = await p.evaluate(() => [...document.querySelectorAll('.toddler-box')].map(b => b.textContent));
       if (JSON.stringify(toddlerAfter) !== JSON.stringify(toddlerBefore)) fail(where, 'scale: a toddler box changed');
       if (SHOTS) await p.screenshot({ path: join(ROOT, SHOTS, `${slug}.scale2.png`), fullPage: true });
-      await p.click('.scale-control [data-scale="3"]');
-      const want3 = JSON.parse(execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'scaled', slug, '3'], { cwd: ROOT }).toString());
-      const got3 = await amounts();
-      want3.forEach((w, i) => { if (got3[i] !== w.scaled) fail(where, `scale 3×: ${JSON.stringify(w.original)} → ${JSON.stringify(got3[i])}, Python says ${JSON.stringify(w.scaled)}`); });
+      for (const k of ['1.5', '3']) {
+        await p.click(`.scale-control [data-scale="${k}"]`);
+        const wantK = JSON.parse(execFileSync('python3', [join(ROOT, 'tools/recipes.py'), 'scaled', slug, k], { cwd: ROOT }).toString());
+        const gotK = await amounts();
+        wantK.forEach((w, i) => { if (gotK[i] !== w.scaled) fail(where, `scale ${k}×: ${JSON.stringify(w.original)} → ${JSON.stringify(gotK[i])}, Python says ${JSON.stringify(w.scaled)}`); });
+        if (!(await p.evaluate(k => location.search === `?scale=${k}`, k))) fail(where, `scale: the ${k}× button did not set ?scale=${k}`);
+      }
       await p.click('.scale-control [data-scale="1"]');
       const back = await amounts();
       if (JSON.stringify(back) !== JSON.stringify(before)) fail(where, 'scale: 1× does not restore the original amounts');

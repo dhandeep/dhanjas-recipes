@@ -10,7 +10,7 @@ vegetables — published with GitHub Pages at **https://recipes.dhanjas.com**.
   be bookmarked.
 - **Recipe pages** (`/<slug>`, built as `<slug>.html`): the v2 house format, all pages sharing
   one stylesheet, with schema.org Recipe metadata so recipe apps can import them.
-  Every quantity scales with the 1×/2×/3× buttons (or `?scale=2`), and every
+  Every quantity scales with the 1×/1½×/2×/3× buttons (or `?scale=2`), and every
   instruction line has a checkbox to tick off while cooking.
 - **Data** (`recipes/<slug>.json`, `.jsonld`): each recipe in the house format
   (defined by `schema/recipe.schema.json`) and as schema.org JSON-LD.

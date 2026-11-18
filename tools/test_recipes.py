@@ -46,8 +46,8 @@ class RoundTrip(unittest.TestCase):
     def test_amount_markup(self):
         self.assertEqual(render.rich("Add salt {½ tsp} & **stir**"),
                          'Add salt <span class="amt">(½ tsp)</span> &amp; <strong>stir</strong>')
-        self.assertEqual(render.rich("Add {½ tsp}", ["Add {1 tsp}", "Add {1½ tsp}"]),
-                         'Add <span class="amt">(<data class="q" data-x2="1 tsp" data-x3="1½ tsp">½ tsp</data>)</span>')
+        self.assertEqual(render.rich("Add {½ tsp}", ["Add {¾ tsp}", "Add {1 tsp}", "Add {1½ tsp}"]),
+                         'Add <span class="amt">(<data class="q" data-x1_5="¾ tsp" data-x2="1 tsp" data-x3="1½ tsp">½ tsp</data>)</span>')
         self.assertEqual(render.rich("Cook {5 min}", ["Cook {5 min}", "Cook {5 min}"]),
                          'Cook <span class="amt">(5 min)</span>')
 

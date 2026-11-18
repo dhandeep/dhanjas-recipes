@@ -23,6 +23,13 @@
   background: none; border: none; color: #DCEBCC; padding: 0.15rem 0.6rem;
 }
 .scale-control button[aria-pressed="true"] { background: var(--cream); color: var(--green); }
+.site-nav a { white-space: nowrap; }
+/* Phones: four batch buttons leave no room for the category pill; the category still
+   shows on the recipe itself, just under the header. */
+@media (max-width: 480px) {
+  .site-nav { gap: 0.5rem; }
+  .site-nav-cat { display: none; }
+}
 @media print { .site-nav { display: none; } }
 
 /* ---------- instruction checkboxes (assets/checklist.js) ---------- */

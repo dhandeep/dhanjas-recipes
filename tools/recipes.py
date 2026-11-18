@@ -7,13 +7,14 @@
   python3 tools/recipes.py retag               recompute auto-detected tags (keeps hand-added ones)
   python3 tools/recipes.py export SLUG... [--format html|json|jsonld|all] [--all]
                                                standalone v2 HTML (style inlined), house JSON or schema.org JSON-LD
-  python3 tools/recipes.py scaled SLUG [2]     preview the recipe's amounts at 2× (or any factor)
+  python3 tools/recipes.py scaled SLUG [2]     preview the recipe's amounts at 1.5×, 2× or 3×
 
 Python 3.8+, standard library only.
 """
 
 import argparse
 import datetime
+from fractions import Fraction
 from html import unescape as html_unescape
 import json
 import re
@@ -276,7 +277,7 @@ def cmd_scaled(args):
     page = render.recipe_page(recipes[args.slug], "")
     out = []
     for attrs, original in re.findall(r'<data class="q"([^>]*)>([^<]*)</data>', page):
-        scaled = re.search(r'data-x%s="([^"]*)"' % args.factor, attrs)
+        scaled = re.search(r'%s="([^"]*)"' % render.scale_attr(Fraction(args.factor)), attrs)
         out.append({"original": html_unescape(original), "scaled": html_unescape(scaled.group(1)) if scaled else html_unescape(original)})
     print(json.dumps(out, ensure_ascii=False, indent=1 if args.pretty else None))
     return 0
@@ -315,7 +316,7 @@ def main():
 
     p = sub.add_parser("scaled", help="show a recipe's scalable amounts at a factor, e.g. scaled dal-urad-makhani 2")
     p.add_argument("slug")
-    p.add_argument("factor", nargs="?", default="2", choices=("2", "3"))
+    p.add_argument("factor", nargs="?", default="2", choices=("1.5", "2", "3"))
     p.add_argument("--pretty", action="store_true")
     p.set_defaults(fn=cmd_scaled)
 

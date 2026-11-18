@@ -2,7 +2,7 @@
 
 This is the contract for writing a dhanjas.com recipe. Whoever writes the recipe
 (you, or Claude from the recipe prompt) produces **one JSON file** that follows it.
-The website, the 1×/2×/3× batch control, the instruction checkboxes, the
+The website, the 1×/1½×/2×/3× batch control, the instruction checkboxes, the
 schema.org data and every validation check are generated from that file.
 
 The household rules — Jain diet, toddler adaptations, serving logic, appliances —
@@ -26,7 +26,7 @@ reader sees:       "Slowly add remaining roasted rava (¾ cup + 1 tbsp) while st
 ```
 
 Nobody ever writes "remaining" without a number again: `rest` is computed
-(1 cup − 3 tbsp = ¾ cup + 1 tbsp), it changes correctly at 2× and 3×, and the
+(1 cup − 3 tbsp = ¾ cup + 1 tbsp), it changes correctly at 1½×, 2× and 3×, and the
 toddler's 3 tbsp stays 3 tbsp because she's one toddler however big the batch.
 
 ---
@@ -144,7 +144,7 @@ Descriptions that don't use an ingredient need nothing: "Cook until the rava abs
 
 ---
 
-## 5. Batch size (1× / 2× / 3×)
+## 5. Batch size (1× / 1½× / 2× / 3×)
 
 | Scales | Stays fixed |
 |---|---|
@@ -152,6 +152,9 @@ Descriptions that don't use an ingredient need nothing: "Cook until the rava abs
 
 The list total at 2× is 2 × (total − toddler) + toddler, so the list and the
 instructions always agree.
+
+At 1½× counted items can come out in halves ("1½ green chilies", "4½ tomatoes");
+that's intended — the cook rounds where a half makes no sense.
 
 ---
 

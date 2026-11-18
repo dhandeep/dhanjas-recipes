@@ -120,7 +120,7 @@ and "Clear ticks" in the top bar resets them. Printed copies show empty boxes to
 with a pen. This is site-only (`assets/checklist.js`): the recipe markup and the
 standalone v2 export are unchanged.
 
-### Scaling (1× / 2× / 3×)
+### Scaling (1× / 1½× / 2× / 3×)
 
 Quantities stay human-written, and `tools/dhanjas/quantity.py` reads the numbers in
 them at build time. Each number that grows with the batch is wrapped in an invisible
@@ -132,7 +132,7 @@ marked numbers in the browser and re-formats them (`⅓ cup` → `⅔ cup`, `1 p
 |---|---|
 | ingredient amounts · `{amounts}` in steps and night prep · yield in `meta` (`Makes 6–7 chillas`, `6 adult servings`) | times (`5 min`, `45 sec`) · per-piece amounts (`1 tsp per chilla`, `2 tbsp/roti`, `~2 tbsp each`) · sizes (`~1 inch layer`) · anything in brackets (`2–3 (1 milder)`) · `Step 1` · toddler boxes (she's one toddler however big the batch) · tips · the protein bar (it's per serving) |
 
-Try it on any page with `?scale=2`. The visible 1×/2×/3× buttons are one switch
+Try it on any page with `?scale=2`. The visible 1×/1½×/2×/3× buttons are one switch
 (`SHOW_SCALE_CONTROL` in `tools/dhanjas/render.py`). `python3 tools/recipes.py scaled
 <slug> 2` previews a recipe's amounts at any factor, and the browser check verifies
 the page shows exactly those.

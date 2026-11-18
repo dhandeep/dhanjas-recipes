@@ -2,6 +2,7 @@
 the only additions are a site nav bar and schema.org JSON-LD in <head>."""
 
 import json
+from fractions import Fraction
 from html import escape
 
 from .model import AMT_RE, BOLD_RE, CATEGORIES, plain, protein_grams, times, yield_text
@@ -12,27 +13,40 @@ SITE = "dhanjas.com"
 GENERATOR = '<meta name="generator" content="dhanjas recipes.py">'
 EYEBROW = "dhanjas.com · Jain Kitchen"
 
-# The 1× / 2× / 3× batch control in the nav bar. Scaling already works on every
-# page via ?scale=2 (assets/scale.js); flip this to show the buttons.
+# The 1× / 1½× / 2× / 3× batch control in the nav bar (assets/scale.js; ?scale=1.5 works too).
 SHOW_SCALE_CONTROL = True
-SCALE_STEPS = (1, 2, 3)
+SCALE_STEPS = (1, Fraction(3, 2), 2, 3)
+
+
+def scale_key(k):
+    """How a batch size is named in URLs and data-scale: "1", "1.5", "2", "3"."""
+    return format(float(k), "g")
+
+
+def scale_attr(k):
+    """Its data attribute on a scalable amount: data-x2, data-x1_5 (dots can't go in a dataset key)."""
+    return "data-x" + scale_key(k).replace(".", "_")
+
+
+def scale_label(k):
+    return {Fraction(3, 2): "1½"}.get(Fraction(k), scale_key(k)) + "×"
 
 
 def amount_html(text, alts=()):
     """An amount, escaped. When the batch size changes it (alts = the same amount at
-    2× and 3×), it's wrapped in <data class="q" data-x2 data-x3> for assets/scale.js
+    1½×, 2× and 3×), it's wrapped in <data class="q" data-x1_5 data-x2 data-x3> for assets/scale.js
     (<data>, not <span>: recipe.css styles every span inside .recipe-meta)."""
     fixed = text.startswith("=")
     text = text.lstrip("=")
     alts = [a.lstrip("=") for a in alts]
     if fixed or not alts or all(a == text for a in alts):
         return escape(text, quote=False)
-    attrs = "".join(' data-x%d="%s"' % (k, escape(a)) for k, a in zip(SCALE_STEPS[1:], alts))
+    attrs = "".join(' %s="%s"' % (scale_attr(k), escape(a)) for k, a in zip(SCALE_STEPS[1:], alts))
     return '<data class="q"%s>%s</data>' % (attrs, escape(text, quote=False))
 
 
 def rich(text, alts=()):
-    """Inline markup -> HTML. alts: the same text at 2× and 3× (from lower()); each
+    """Inline markup -> HTML. alts: the same text at 1½×, 2× and 3× (from lower()); each
     {amount} that differs between them becomes scalable."""
     alt_amounts = [AMT_RE.findall(a) for a in alts]
     found = AMT_RE.findall(text)
@@ -65,7 +79,7 @@ def _ul(items, indent, alts=()):
 def recipe_body(r, alts=()):
     """The <header> + <section class="recipe"> markup, byte-compatible with v2.
     r is a lowered recipe (portions.lower(recipe, 1)); alts are the same recipe
-    lowered at 2× and 3× — amounts that differ carry scale markers. No alts (the
+    lowered at 1½×, 2× and 3× — amounts that differ carry scale markers. No alts (the
     standalone export) means plain v2 markup."""
     L = []
     L.append('<header class="site-header">')
@@ -254,8 +268,8 @@ def json_ld_data(recipe):
 
 
 def scale_control():
-    buttons = "".join('<button type="button" data-scale="%d" aria-pressed="%s">%d×</button>'
-                      % (n, "true" if n == 1 else "false", n) for n in SCALE_STEPS)
+    buttons = "".join('<button type="button" data-scale="%s" aria-pressed="%s">%s</button>'
+                      % (scale_key(n), "true" if n == 1 else "false", scale_label(n)) for n in SCALE_STEPS)
     return '  <div class="scale-control" role="group" aria-label="Batch size">%s</div>' % buttons
 
 

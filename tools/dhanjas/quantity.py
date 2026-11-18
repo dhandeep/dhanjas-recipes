@@ -1,4 +1,4 @@
-"""Quantities inside amount text, so a 1×/2×/3× control can scale a recipe.
+"""Quantities inside amount text, so a 1×/1½×/2×/3× control can scale a recipe.
 
 Amounts stay human-written ("1½ cups", "2–3, deseeded", "1 tsp per chilla"). This
 module finds the number(s) in them and decides which ones scale with the batch:
