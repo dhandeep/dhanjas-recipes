@@ -1,0 +1,116 @@
+{
+  "$schema": "../../schema/recipe.schema.json",
+  "format": 3,
+  "slug": "hidden-veggie-paratha",
+  "category": "bread",
+  "title": "Hidden Veggie Paratha",
+  "subtitle": "Soft multigrain parathas with broccoli, spinach, peas and paneer blended into the dough.",
+  "badges": [
+    "Jain Vegetarian",
+    "Toddler-adapted"
+  ],
+  "labels": [
+    "Multigrain · Bread"
+  ],
+  "meta": [
+    "Prep: 20 min + 10 min rest",
+    "Cook: 25 min",
+    "Makes 8–9 parathas"
+  ],
+  "protein": "~15–17g protein per adult serving (2 parathas; paneer, hemp hearts and besan carry most of it)",
+  "nightPrep": null,
+  "ingredientGroups": [
+    {
+      "label": "Veggie purée",
+      "items": [
+        {"id": "peas", "name": "Green peas", "short": "green peas", "amount": "¼ cup"},
+        {"id": "broccoli", "name": "Broccoli florets", "short": "broccoli", "amount": "½ cup"},
+        {"id": "spinach", "name": "Spinach leaves", "short": "spinach", "amount": "2 fistfuls"},
+        {"id": "cashews", "name": "Cashews", "short": "cashews", "amount": "2 tbsp"},
+        {"id": "paneer", "name": "Paneer (or firm tofu)", "short": "paneer", "amount": "100g"},
+        {"id": "greek-yogurt", "name": "Greek yogurt", "short": "Greek yogurt", "amount": "3 tbsp"},
+        {"id": "ginger", "name": "Fresh ginger, grated", "short": "ginger", "amount": "½ tsp"},
+        {"id": "water", "name": "Water, for a thick purée", "short": "water", "amount": "as needed"}
+      ]
+    },
+    {
+      "label": "Flours, oil and ghee",
+      "items": [
+        {"id": "wheat", "name": "Whole wheat flour", "short": "whole wheat flour", "amount": "1 cup"},
+        {"id": "besan", "name": "Besan (gram flour)", "short": "besan", "amount": "⅓ cup"},
+        {"id": "jowar", "name": "Jowar flour", "short": "jowar flour", "amount": "⅓ cup"},
+        {"id": "oats", "name": "Oats flour", "short": "oats flour", "amount": "⅓ cup"},
+        {"id": "avocado-oil", "name": "Avocado oil, for the dough", "short": "avocado oil", "amount": "1–2 tbsp"},
+        {"id": "ghee", "name": "Ghee, per paratha", "short": "ghee", "amount": "=1 tsp"},
+        {"id": "serving-yogurt", "name": "Plain yogurt or chutney, to serve", "short": "yogurt", "amount": "alongside"}
+      ]
+    },
+    {
+      "label": "Seeds and spices",
+      "items": [
+        {"id": "hemp", "name": "Hemp hearts", "short": "hemp hearts", "amount": "2 tbsp"},
+        {"id": "sesame", "name": "Sesame seeds", "short": "sesame seeds", "amount": "1 tbsp"},
+        {"id": "ajwain", "name": "Ajwain (carom seeds), crushed", "short": "crushed ajwain", "amount": "1 tsp"},
+        {"id": "hing", "name": "Hing", "short": "hing", "amount": "a pinch"},
+        {"id": "salt", "name": "Salt", "short": "salt", "amount": "to taste"},
+        {"id": "turmeric", "name": "Turmeric", "short": "turmeric", "amount": "½ tsp"},
+        {"id": "coriander-powder", "name": "Coriander powder", "short": "coriander powder", "amount": "1 tsp"},
+        {"id": "garam-masala", "name": "Garam masala (adults' dough only)", "short": "garam masala", "amount": "1 tsp"}
+      ]
+    }
+  ],
+  "method": [
+    {
+      "type": "step",
+      "title": "Steam and blend the purée",
+      "items": [
+        "Steam {@peas}, {@broccoli}, {@spinach} and {@cashews} together until tender, 5–6 min (or on the Instant Pot steam rack, 1 min on high pressure)",
+        "Let the vegetables cool until just warm",
+        "Blend with {@paneer}, {@greek-yogurt} and {@ginger}",
+        "Add {@water} a splash at a time until the purée is thick and smooth"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Make the dough",
+      "items": [
+        "In a wide bowl, mix {@wheat}, {@besan}, {@jowar} and {@oats}",
+        "Add {@hemp}, {@sesame}, {@ajwain}, {@hing}, {@salt}, {@turmeric} and {@coriander-powder}; mix well",
+        "Add the purée {from Step 1} and {@avocado-oil}",
+        "Knead into a soft, slightly sticky dough",
+        "Cover and rest 10 min; the besan, jowar and oats absorb moisture and firm it up"
+      ]
+    },
+    {
+      "type": "toddler",
+      "label": "Toddler — pull portion here (before the spice blend)",
+      "items": [
+        "Pinch off {=2 lime-size balls} of dough for her now, before the adults' spice blend goes in",
+        "Roll thin and cook on a medium tawa with {@ghee} spread over both sides, 1–2 min per side, until soft and lightly golden",
+        "Cut into strips and serve with {@serving-yogurt|plain yogurt}; keep any chili chutney for adults"
+      ]
+    },
+    {
+      "type": "step",
+      "title": "Spice, roll and cook",
+      "items": [
+        "Knead {@garam-masala} into the remaining dough",
+        "Divide into equal lime-size balls; roll each into a {=~6 inch} round with light dusting",
+        "Heat a tawa or flat pan on medium-high",
+        "Cook each paratha about 1 min until it puffs slightly, then flip",
+        "Spread {@ghee} over both sides; press gently and cook 1–2 min per side until golden spots appear",
+        "Serve hot with {@serving-yogurt|a favourite dip}"
+      ]
+    },
+    {
+      "type": "tip",
+      "label": "Tip",
+      "text": "Jowar and oats flours have no gluten, so this dough is more fragile than plain roti dough: rest it, roll gently and patch cracks with your fingers. Substitution: garlic → hing + ginger for the savoury depth."
+    }
+  ],
+  "tags": [
+    "High-protein",
+    "Instant Pot"
+  ],
+  "added": "2026-11-22"
+}
